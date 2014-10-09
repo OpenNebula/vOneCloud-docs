@@ -1,0 +1,4 @@
+Admin Guide
+===========
+
+.. todo:: content
