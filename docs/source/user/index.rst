@@ -1,4 +1,0 @@
-User Guide
-==========
-
-.. todo:: content
