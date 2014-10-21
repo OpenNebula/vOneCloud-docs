@@ -8,7 +8,7 @@ vOneCloud Documentation
 .. toctree::
    :maxdepth: 2
 
-   introduction/index
+   release_notes/index
    simple_cloud_deployment/index
    security_and_resource_consumption_control/index
    infrastructure_configuration/index

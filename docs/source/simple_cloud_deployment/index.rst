@@ -8,6 +8,7 @@ Simple Cloud Deployment
    Download and Deploy <download_and_deploy>
    Import Existing vCenter <import_vcenter>
    Create a Virtual Data Center <create_vdc>
+   Interfaces <interfaces>
    VDC Admin View <vdc_admin_view>
    Cloud View <cloud_view>
 
