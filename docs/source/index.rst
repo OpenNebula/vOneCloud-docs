@@ -1,7 +1,7 @@
 vOneCloud Documentation
 =======================
 
-|docs| |projectversion|
+|state| |projectversion|
 
 .. _vcloud_entry_point:
 
@@ -13,7 +13,7 @@ vOneCloud Documentation
    security_and_resource_consumption_control/index
    infrastructure_configuration/index
 
-.. |docs| image:: http://img.shields.io/badge/Docs-development-red.svg
+.. |state| image:: http://img.shields.io/badge/State-development-red.svg
     :alt: Documentation Status
     :scale: 100%
     :target: http://docs.vonecloud.today
