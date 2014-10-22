@@ -6,9 +6,12 @@ Add New vCenters
 
 vOneCloud can manage more than one instance of vCenter. Each vCenter is going to be represented by an vOneCloud host, which in turn abstracts all the ESX hosts managed by that particular instance of vCenter.
 
-This approach is quite similar to the hybrid approach. The suggested usage is to build vOneCloud templates that represents the same Virtual Machine Template across different vCenters (or their equivalent vOneCloud hosts). vOneCloud scheduler will decide which vCenter is suitable to host a VM requested by the user, based on based on performance metrics. 
+This approach is quite similar to the hybrid approach. The suggested usage is to build vOneCloud templates that represents the same VM Template across different vCenters. The built in scheduler in vOneCloud will decide which vCenter is suitable to host a VM requested by the user, based on based on performance metrics. 
 
-The mechanism to add a new vCenter is exactly the same as the one used to :ref:`import the first one into vOneCloud <import_vcenter>`.
+The mechanism to add a new vCenter is exactly the same as the one used to :ref:`import the first one into vOneCloud <import_vcenter>`. It can be performed graphicaly from the vCenter View:
+
+.. image:: /images/add_new_vcenter.png
+    :align: center
 
 Everything is clearer with an example, so here we go:
 
@@ -34,3 +37,5 @@ Everything is clearer with an example, so here we go:
       TYPE="vcenter",
       LOCATION="vCenterB",
       VM_TEMPLATE="uuidB" ]
+
+Read more about the `vCenter drivers <http://docs.opennebula.org/4.10/administration/virtualization/vcenterg.html>`__.

@@ -23,4 +23,14 @@ Tacking the usage on:
 | Images     | Limit the how many VM instances from a given user/group are using a given image        |
 +------------+----------------------------------------------------------------------------------------+
 
+Quotas can be updated either from the vCenter View:
+
+.. image:: /images/sunstone_update_quota.png
+    :align: center
+
+or from the VDC Admin View:
+
+.. image:: /images/vdc_admin_update_quota.png
+    :align: center
+
 Writing (or even reading) ACL rules is not trivial. Please refer to `this guide <http://docs.opennebula.org/4.10/administration/users_and_groups/quota_auth.html>`__ to find out more.

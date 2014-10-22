@@ -9,11 +9,13 @@ vOneCloud offers a rich set of interfaces to interact with your cloud infrastruc
 Web Interface (Sunstone)
 ------------------------
 
-vOneCloud web interface, called Sunstone, offers two main views:
+vOneCloud web interface, called Sunstone, offers three main views:
 
 - `Sunstone vCenter view <http://docs.opennebula.org/4.10/administration/sunstone_gui/suns_views.html#vcenter-view>`__: Aimed at cloud administrators, this view is tailored to present all the available options to manage the physical and virtual aspects of your vCenter infrastructure. 
 
-- `Sunstone Cloud View <http://docs.opennebula.org/4.10/administration/sunstone_gui/cloud_view.html>`__: Aimed at cloud end users, this interface eases virtual resource provisioning and hides all the complexity of the cloud that is going on behind the scenes.
+- `Sunstone VDC Admin View <http://docs.opennebula.org/4.10/administration/sunstone_gui/vdc_admin_view.html>`__: Aimed at Virtual Datacenter administrators, this interface is designed to manage all the virtual resources of the VDC, including the creation of new users.
+
+- `Sunstone Cloud View <http://docs.opennebula.org/4.10/administration/sunstone_gui/cloud_view.html>`__: Aimed at end users, this interface eases virtual resource provisioning and hides all the complexity of the cloud that is going on behind the scenes.
 
 
 Command Line Interface (CLI)

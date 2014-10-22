@@ -15,8 +15,8 @@ Step 1. Sunstone login
 
 Log in into Sunstone as **vonecloud**, as explained in :ref:`the previous section <download_and_deploy>`.
 
-Step 2. Acquire vCenter Clusters
---------------------------------
+Step 2. Acquire vCenter Resources
+---------------------------------
 
 In Sunstone, proceed to the ``Infrastructure --> Hosts`` tab and click on the "+" green icon.
 
@@ -36,15 +36,19 @@ In the dialog that pops up, select vCenter as Type in the dropdown. You now need
 .. image:: /images/vcenter_create.png
     :align: center
 
-Step 3. Acquire vCenter VM Templates
-------------------------------------
-
 After the vCenter cluster is selected in Step 2, a list of vCenter VM templates will be presented to be imported into vOneCloud. Select all the templates you want to import, and vOneCloud will generate vOneCloud VM template resources representing the vCenter VM templates.
+
+Step 3. Check resources
+-----------------------
+
+Now it's time to check that the vCenter import has been succesful. In ``Infrastructure --> Hosts`` check vCenter has been imported, and if all the ESX hosts are available:
+
+.. image:: /images/import_vcenter_esx_view.png
+    :align: center
 
 Step 4. Instantiate a VM Template
 ---------------------------------
 
-Everything is ready! Now vOneCloud is prepared to launch VM. In Sunstone, go to ``Virtual Resources --> Templates``, select one of the templates imported in **Step 3** and click on Instantiate.
+Everything is ready! Now vOneCloud is prepared to launch VM. In Sunstone, go to ``Virtual Resources --> Templates``, select one of the templates imported in **Step 2** and click on Instantiate.
 
-You can keep track of the VM. More information on available operations -and management of- VMs `here <http://docs.opennebula.org/4.10/user/virtual_resource_management/vm_guide_2.html>`__.
-
+You can keep track of the VM. More information on available operations over VMs `here <http://docs.opennebula.org/4.10/user/virtual_resource_management/vm_guide_2.html>`__.
