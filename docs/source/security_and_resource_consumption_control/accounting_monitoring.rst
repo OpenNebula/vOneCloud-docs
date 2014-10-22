@@ -4,7 +4,7 @@
 Accounting & Monitoring
 =======================
 
-vOneCloud is constantly monitoring the infrastructure and the users to keep track of the resource consumption. The objective is twofold, being able to have a clear picture of the infrastructure to aid in the resource scheduling, as well as being able to enforce :ref:`resource quotas <resource_quotas>` and give accounting information.
+vOneCloud is constantly monitoring the infrastructure resources to keep track of resource consumption. The objective is twofold: being able to have a clear picture of the infrastructure to aid in the resource scheduling, as well as being able to enforce :ref:`resource quotas <resource_quotas>` and give accounting information.
 
 The monitoring subsystem gathers information relative to hosts and virtual machines, such as host and VM status, basic performance indicators and capacity consumption. vOneCloud comes preconfigured to retrieve such information directly from vCenter.
 

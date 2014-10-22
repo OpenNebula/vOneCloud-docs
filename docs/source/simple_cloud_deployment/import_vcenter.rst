@@ -4,11 +4,9 @@
 Import Existing vCenter
 =======================
 
-Importing a vCenter infrastructure into vOneCloud is a task carried out easily through the Sunstone Web UI. Follow the next steps is to import an existing vCenter in your shiny new vOneCloud environment, as well as the vCenter VM templates already defined in the vCenter.
+Importing a vCenter infrastructure into vOneCloud can be carried out easily through the Sunstone Web UI. Follow the next steps to import an existing vCenter as well as any already defined VM Template.
 
-You will need the IP or hostname of the vCenter server, as well as an administrator username/password credentials to successfuly import resources from the existing vCenter.
-
-Take into account that one vCenter cluster (with all its ESX hosts) will be represented as one vOneCloud host.
+You will need the IP or hostname of the vCenter server, as well as an administrator credentials to successfuly import resources from vCenter.
 
 Step 1. Sunstone login
 -----------------------
@@ -43,12 +41,14 @@ Step 3. Check resources
 
 Now it's time to check that the vCenter import has been succesful. In ``Infrastructure --> Hosts`` check vCenter has been imported, and if all the ESX hosts are available:
 
+.. note:: Take into account that one vCenter cluster (with all its ESX hosts) will be represented as one vOneCloud host.
+
 .. image:: /images/import_vcenter_esx_view.png
     :align: center
 
 Step 4. Instantiate a VM Template
 ---------------------------------
 
-Everything is ready! Now vOneCloud is prepared to launch VM. In Sunstone, go to ``Virtual Resources --> Templates``, select one of the templates imported in **Step 2** and click on Instantiate.
+Everything is ready! Now vOneCloud is prepared to manage Virtual Machines. In Sunstone, go to ``Virtual Resources --> Templates``, select one of the templates imported in **Step 2** and click on Instantiate. Now you will be able to control the lifecycle of the VM.
 
-You can keep track of the VM. More information on available operations over VMs `here <http://docs.opennebula.org/4.10/user/virtual_resource_management/vm_guide_2.html>`__.
+More information on available operations over VMs `here <http://docs.opennebula.org/4.10/user/virtual_resource_management/vm_guide_2.html>`__.

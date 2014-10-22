@@ -1,12 +1,12 @@
 .. _hybrid_cloud:
 
-============
-Hybrid Cloud
-============
+=============
+Hybrid Clouds
+=============
 
 vOneCloud is capable of outsourcing virtual machines to public cloud providers. This is known as cloud bursting, and it is a feature of hybrid clouds where VMs are launched in public clouds if the local infrastructure is saturated.
 
-If you want to extend your private cloud (formed by vOneCloud and vCenter) to create a hybrid cloud, you will need to configure at least one of the supported public clouds: `Amazon EC2 <http://docs.opennebula.org/4.10/advanced_administration/cloud_bursting/ec2g.html>`__, `IBM SoftLayer <http://docs.opennebula.org/4.10/advanced_administration/cloud_bursting/slg.html>`__ or `Microsoft Azure <http://docs.opennebula.org/4.10/advanced_administration/cloud_bursting/azg.html>`__. All hybrid drivers are already enabled in vOneCloud.
+If you want to extend your private cloud (formed by vOneCloud and vCenter) to create a hybrid cloud, you will need to configure at least one of the supported public clouds: `Amazon EC2 <http://docs.opennebula.org/4.10/advanced_administration/cloud_bursting/ec2g.html>`__, `IBM SoftLayer <http://docs.opennebula.org/4.10/advanced_administration/cloud_bursting/slg.html>`__ or `Microsoft Azure <http://docs.opennebula.org/4.10/advanced_administration/cloud_bursting/azg.html>`__. All hybrid drivers are already enabled in vOneCloud, but you need to configure them first with your public cloud credentials.
 
 You can add hybrid hosts from the vCenter View:
 

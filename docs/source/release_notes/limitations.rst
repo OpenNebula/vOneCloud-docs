@@ -4,13 +4,13 @@
 vOneCloud Limitations
 =====================
 
-vOneCloud will use pre defined Virtual Machine Templates existing in the vCenter to launch Virtual Machines, very much like it does in its hybrid drivers to access Amazon EC2, IBM SoftLayer and Microsoft Azure.
+vOneCloud will use pre defined Templates existing in the vCenter to launch Virtual Machines, very much like it does in its hybrid drivers to access Amazon EC2, IBM SoftLayer and Microsoft Azure.
 
 The following limitations come mainly from this hybrid approach:
 
-**No Context**
+**No VM Contextextualization**
 
-Virtual Machines won’t have the ability of being contextualized, so CONTEXT sections of the VM Templates won’t be honored.
+Virtual Machines won’t have the ability of being contextualized, thus the CONTEXT sections of VM Templates won’t be honored.
 
 **VM Unsupported Operations**
 

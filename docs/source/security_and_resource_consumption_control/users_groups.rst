@@ -4,7 +4,7 @@
 Users, Groups and ACLs
 ======================
 
-vOneCloud offers a powerful mechanism for managing users, grouping them and assign roles to them. Permissions and Access Control List mechanisms ensures the ability to allow or forbid access to any resource controlled by vOneCloud, being physical or virtual
+vOneCloud offers a powerful mechanism for managing, grouping and assigning roles to users. Permissions and Access Control List mechanisms ensures the ability to allow or forbid access to any resource controlled by vOneCloud, being physical or virtual.
 
 User & Roles
 ------------
@@ -54,4 +54,5 @@ vOneCloud implements a very useful ACL mechanism that enables fine-tuning of all
 .. image:: /images/sunstone_acl_list.png
     :align: center
 
-Read more about `ACLs <http://docs.opennebula.org/4.10/administration/users_and_groups/manage_acl.html>`__.
+Writing (or even reading) ACL rules is not trivial, more information about `ACLs here <http://docs.opennebula.org/4.10/administration/users_and_groups/manage_acl.html>`__.
+

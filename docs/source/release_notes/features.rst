@@ -4,7 +4,7 @@
 vOneCloud Features
 ==================
 
-vOneCloud leverages the functionality of OpenNebula 4.10, and as such delivers all the OpenNebula functionality. Although the configuration is tailored for vCenter infrastructures, all the power of OpenNebula is contained in vOneCloud and it can be unleashed!
+vOneCloud leverages the functionality of OpenNebula 4.10, and as such delivers all the OpenNebula functionality.
 
 - `Advanced Multi-tenancy with Group Management <http://docs.opennebula.org/4.10/release_notes/release_notes/features.html#advanced-multi-tenancy-with-group-management>`__. Create and group users, and their access to infrastructure resources.
 
@@ -27,3 +27,6 @@ vOneCloud leverages the functionality of OpenNebula 4.10, and as such delivers a
 - `Management of Multi-tier Applications <http://docs.opennebula.org/4.10/release_notes/release_notes/features.html#management-of-multi-tier-applications>`__. Execution of multi-tiered applications with automatic scaling, write elasticity rules using selected key performance indicators from the hypervisor or `from the application <http://docs.opennebula.org/4.10/release_notes/release_notes/features.html#gain-insight-into-cloud-applications>`__.
 
 - `Reliability, Efficiency and Massive Scalability <http://docs.opennebula.org/4.10/release_notes/release_notes/features.html#reliability-efficiency-and-massive-scalability>`__. Leverage years of testing and production use, and be sure that your Cloud Mangement Platform will be up to the task.
+
+Although the configuration is tailored for vCenter infrastructures, all the power of OpenNebula is contained in vOneCloud and it can be unleashed!
+
