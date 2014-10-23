@@ -4,11 +4,11 @@
 Download and Deploy
 ================================================================================
 
-vOneCloud can be download as an appliance from here:
-`http://appliances.c12g.com/vOneCloud/vOneCloud-4.10-beta.ova <http://appliances.c12g.com/vOneCloud/vOneCloud-4.10-beta.ova>`_
+vOneCloud can be downloaded as an appliance using this link: `http://appliances.c12g.com/vOneCloud/vOneCloud-4.10-beta.ova`__.
+
 
 You can import this OVA appliance to your vCenter infrastructure. It is based on
-`CentOS 7 <http://www.centos.org/>`_ and has the VMware tools enabled.
+`CentOS 7 <http://www.centos.org/>`__ and has the VMware tools enabled.
 
 The appliance requirements are kept to a strict minimum so it can be executed in
 any vCenter installation. However, before deploying it, please read the :ref:`system requirements <system_requirements>`.
@@ -16,7 +16,7 @@ any vCenter installation. However, before deploying it, please read the :ref:`sy
 Deploying the OVA
 --------------------------------------------------------------------------------
 
-Login to your vCenter installation and select the appropriate datacenter and cluster, where you want to deploy the appliance. Select the ``Deplpy OVF Template``.
+Login to your vCenter installation and select the appropriate datacenter and cluster, where you want to deploy the appliance. Select the ``Deploy OVF Template``.
 
 .. image:: /images/vOneCloud-download-deploy-001.png
     :align: center
