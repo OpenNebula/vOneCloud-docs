@@ -4,7 +4,7 @@
 Download and Deploy
 ================================================================================
 
-vOneCloud can be downloaded as an appliance using this link: `http://appliances.c12g.com/vOneCloud/vOneCloud-4.10-beta.ova`__.
+vOneCloud can be downloaded as an appliance using this link: `http://appliances.c12g.com/vOneCloud/vOneCloud-4.10-beta.ova <http://appliances.c12g.com/vOneCloud/vOneCloud-4.10-beta.ova>`_.
 
 
 You can import this OVA appliance to your vCenter infrastructure. It is based on
@@ -88,4 +88,4 @@ with these credentials:
 - **Username**: root
 - **Password**: opennebula
 
-Note that SSH access to the root account has been disable.
+Note that SSH access to the root account has been disabled.
