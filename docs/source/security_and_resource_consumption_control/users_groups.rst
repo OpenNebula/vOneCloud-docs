@@ -11,19 +11,19 @@ User & Roles
 
 vOneCloud can manage different types of users, attending to the permissions they have over infrastructure and logical resources.
 
-+----------------------+-------------------------------------------------------------------------------------------------------------------+
-|    **User Type**     |                                                  **Permissions**                                                  |
-+----------------------+-------------------------------------------------------------------------------------------------------------------+
-| Cloud Administrators | enough privileges to perform any operation on any object                                                          |
-+----------------------+-------------------------------------------------------------------------------------------------------------------+
-| Infrastructure User  | may access most of the functionality to manage resources                                                          |
-+----------------------+-------------------------------------------------------------------------------------------------------------------+
-| VDC Administrators   | manage a limited set of resources and users.                                                                      |
-+----------------------+-------------------------------------------------------------------------------------------------------------------+
-| VDC Users            | access a simplified Sunstone view with limited actions to create new VMs, and perform basic life cycle operations |
-+----------------------+-------------------------------------------------------------------------------------------------------------------+
-| Public users         | can only access OpenNebula through a public API, but can not access the xml-rpc API directly                      |
-+----------------------+-------------------------------------------------------------------------------------------------------------------+
++----------------------+-----------------------------------------------------------------------------------+
+|    **User Type**     |                                  **Permissions**                                  |
++----------------------+-----------------------------------------------------------------------------------+
+| Cloud Administrators | enough privileges to perform any operation on any object                          |
++----------------------+-----------------------------------------------------------------------------------+
+| Infrastructure User  | may access most of the functionality to manage resources                          |
++----------------------+-----------------------------------------------------------------------------------+
+| VDC Administrators   | manage a limited set of resources and users.                                      |
++----------------------+-----------------------------------------------------------------------------------+
+| VDC Users            | access a simplified Sunstone view with limited actions to create new VMs          |
++----------------------+-----------------------------------------------------------------------------------+
+| Public users         | access vOneCloud through a public API                                             |
++----------------------+-----------------------------------------------------------------------------------+
 
 .. note:: VDC is the acronym for Virtual Datacenter
 
@@ -37,7 +37,7 @@ Group & VDC Management
 
 A **group** in vOneCloud is an authorization boundary for users, but it can also be used to partition the cloud infrastructure and define what resources are available to each group.
 
-A **resource provider** is a set of physical hosts and associated datastores and virtual networks, which is logically grouped into a cluster. When you assign a resource provider to a group, users in that group will be able to use the Datastores and Virtual Networks of that cluster.
+A **resource provider** is a set of physical hosts and associated datastores and virtual networks, which is logically grouped into a cluster. When you assign a resource provider to a group, users in that group will be able to use resources of that cluster.
 
 A group and an associated resource provider forms a **Virtual Datacenter (VDC)**. VDCs are a great way to partition your cloud into smaller clouds, with their administrator and users, completely isolated from other VDCs.
 
