@@ -18,6 +18,8 @@ import os
 
 import sphinx_rtd_theme
 
+sys.path.append(os.path.abspath('ext'))
+
 # If extensions (or modules to document with autodoc) are in another directory,
 # add these directories to sys.path here. If the directory is relative to the
 # documentation root, use os.path.abspath to make it absolute, like shown here.
@@ -32,7 +34,17 @@ import sphinx_rtd_theme
 # extensions coming with Sphinx (named 'sphinx.ext.*') or your custom
 # ones.
 extensions = [
-    'sphinx.ext.todo',
+    'sphinx.ext.todo', 'versions'
+]
+
+PRODUCTION_DOMAIN = "http://docs.vonecloud.today"
+
+current_version = "latest"
+
+versions = [
+      [ 'stable',  PRODUCTION_DOMAIN + '/4.10' ]
+    , [ 'develop', PRODUCTION_DOMAIN + '/4.10' ]
+    , [ '4.10' ,   PRODUCTION_DOMAIN + '/4.10' ]
 ]
 
 # Add any paths that contain templates here, relative to this directory.
