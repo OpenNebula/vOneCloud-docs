@@ -44,6 +44,6 @@ vOneCloud is distributed as a virtual appliance in OVA format for vSphere. It co
 +----------------------+--------------------------------------------------------------------------------------+
 | **Simple**           | | Very easy to install, upgrade, and maintain, with easy-to-use graphical interfaces |
 +----------------------+--------------------------------------------------------------------------------------+
-| **Enterprise-ready** | | Certified, production-ready with commercial support subscriptions and professional |
-|                      | | services                                                                           |
+| **Enterprise-ready** | | Certified, production-ready with commercial support subscriptions and              |
+|                      | | professional services                                                              |
 +----------------------+--------------------------------------------------------------------------------------+
