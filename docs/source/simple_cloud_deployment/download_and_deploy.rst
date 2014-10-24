@@ -4,7 +4,7 @@
 Download and Deploy
 ================================================================================
 
-vOneCloud can be downloaded as an appliance using this link: `http://appliances.c12g.com/vOneCloud/vOneCloud-4.10-beta.ova <http://appliances.c12g.com/vOneCloud/vOneCloud-4.10-beta.ova>`_.
+vOneCloud can be downloaded as an appliance using this link: `http://appliances.opennebula.systems/vOneCloud/vOneCloud-4.10-beta.ova <http://appliances.opennebula.systems/vOneCloud/vOneCloud-4.10-beta.ova>`_.
 
 
 You can import this OVA appliance to your vCenter infrastructure. It is based on
@@ -13,7 +13,7 @@ You can import this OVA appliance to your vCenter infrastructure. It is based on
 The appliance requirements are kept to a strict minimum so it can be executed in
 any vCenter installation. However, before deploying it, please read the :ref:`system requirements <system_requirements>`.
 
-Deploying the OVA
+Step 1. Deploying the OVA
 --------------------------------------------------------------------------------
 
 Login to your vCenter installation and select the appropriate datacenter and cluster, where you want to deploy the appliance. Select the ``Deploy OVF Template``.
@@ -26,30 +26,30 @@ You have the option now to input the URL of the appliance (you can find it at th
 .. image:: /images/vOneCloud-download-deploy-001a.png
     :align: center
 
-Input a name for and select the cluster:
-
 .. image:: /images/vOneCloud-download-deploy-002.png
     :align: center
 
-Select the resource:
+Select the name and folder:
 
 .. image:: /images/vOneCloud-download-deploy-003.png
     :align: center
 
-Select the storage:
+Select a resource to run the appliance:
 
 .. image:: /images/vOneCloud-download-deploy-004.png
     :align: center
 
-Select the Network. You will need to choose a network that has access to the vCenter hosts.
+Select the datastore:
 
 .. image:: /images/vOneCloud-download-deploy-005.png
     :align: center
 
-Review the settings selection and click finish. Wait for the Virtual Machine to appear in the cluster.
+Select the Network. You will need to choose a network that has access to the vCenter hosts.
 
 .. image:: /images/vOneCloud-download-deploy-006.png
     :align: center
+
+Review the settings selection and click finish. Wait for the Virtual Machine to appear in the cluster.
 
 .. image:: /images/vOneCloud-download-deploy-007.png
     :align: center
@@ -64,7 +64,7 @@ Allow for a few minutes for the Appliance start and report the IP.
 .. image:: /images/vOneCloud-download-deploy-010.png
     :align: center
 
-Connecting to the Sunstone Interface
+Step 2. Connecting to the Sunstone Interface
 --------------------------------------------------------------------------------
 
 Now that you have the IP of the appliance you can open the Sunstone Web Interface: ``http://<appliance-ip>:9869``.
@@ -77,15 +77,16 @@ To login type in these credentials:
 - **Username**: vOneCloud
 - **Password**: opennebula
 
-Advanced Usage - Login to the Appliance
+Advanced Usage (optional) - Login to the Appliance
 --------------------------------------------------------------------------------
 
-All the functionality you need to run your vOneCloud can be accessed via
-Sunstone. However, if you are an advanced user and want to log into the
-appliance, you can do so by opening a console in your vCenter client and log in
-with these credentials:
+All the :ref:`features <features>` of vOneCloud ara available via the Sunstone
+interface. However, if you are an advanced user and want to log into the
+appliance to perform advanced and unsupported tasks, you can do so by opening a
+console in your vCenter client and log in with these credentials:
 
 - **Username**: root
 - **Password**: opennebula
 
 Note that SSH access to the root account has been disabled.
+
