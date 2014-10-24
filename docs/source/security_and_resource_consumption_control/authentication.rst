@@ -12,17 +12,17 @@ If you want vOneCloud to have your users pulled from a corporate Active Director
 
 You will need to change the following values in the configuration file (/etc/one/auth/ldap_auth.conf):
 
-+--------------+---------------------------------------------------------------------------------+
-| :user:       | Active Directory user with read permissions in the user’s tree plus the domain. |
-+--------------+---------------------------------------------------------------------------------+
-| :password:   | password of this user                                                           |
-+--------------+---------------------------------------------------------------------------------+
-| :host:       | hostname or IP of the Domain Controller                                         |
-+--------------+---------------------------------------------------------------------------------+
-| :base:       | base DN to search for users.                                                    |
-+--------------+---------------------------------------------------------------------------------+
-| :user_field: | Set it to "sAMAccountName"                                                      |
-+--------------+---------------------------------------------------------------------------------+
++-------------+---------------------------------------------------------------------------------+
+| user        | Active Directory user with read permissions in the user’s tree plus the domain. |
++-------------+---------------------------------------------------------------------------------+
+| password    | password of this user                                                           |
++-------------+---------------------------------------------------------------------------------+
+| host        | hostname or IP of the Domain Controller                                         |
++-------------+---------------------------------------------------------------------------------+
+| base        | base DN to search for users.                                                    |
++-------------+---------------------------------------------------------------------------------+
+| user_field  | Set it to "sAMAccountName"                                                      |
++-------------+---------------------------------------------------------------------------------+
 
 
 You can find more infromation on the integration with Active Directory `in this guide <http://docs.opennebula.org/4.10/administration/authentication/ldap.html#active-directory>`__ .
