@@ -78,6 +78,10 @@ To login type in these credentials:
 - **Username**: vOneCloud
 - **Password**: opennebula
 
+Now you will be able to use the :ref:`out-of-the-box features <features_outofthebox>` of vOneCloud!
+
+.. _advanced_login:
+
 Step 3. Advanced Usage - Login to the Appliance [Optional]
 --------------------------------------------------------------------------------
 
