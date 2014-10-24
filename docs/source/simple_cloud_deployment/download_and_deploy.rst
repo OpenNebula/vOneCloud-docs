@@ -13,6 +13,8 @@ You can import this OVA appliance to your vCenter infrastructure. It is based on
 The appliance requirements are kept to a strict minimum so it can be executed in
 any vCenter installation. However, before deploying it, please read the :ref:`system requirements <system_requirements>`.
 
+Follow the next steps to deploy a fully functional vOneCloud:
+
 Step 1. Deploying the OVA
 --------------------------------------------------------------------------------
 
@@ -77,16 +79,16 @@ To login type in these credentials:
 - **Username**: vOneCloud
 - **Password**: opennebula
 
-Advanced Usage (optional) - Login to the Appliance
+Step 3. Advanced Usage - Login to the Appliance [Optional]
 --------------------------------------------------------------------------------
 
-All the :ref:`features <features>` of vOneCloud ara available via the Sunstone
-interface. However, if you are an advanced user and want to log into the
-appliance to perform advanced and unsupported tasks, you can do so by opening a
-console in your vCenter client and log in with these credentials:
+All the functionality you need to run your vOneCloud can be accessed via
+Sunstone. However, in order to enable some of the :ref:`advanced features
+<features_advanceconf>` of vOneCloud some extra configurations steps are needed
+that must be performed in the command line of vOneCloud, and can be carrid out
+opening a console in your vCenter client and log in with these credentials:
 
 - **Username**: root
 - **Password**: opennebula
 
-Note that SSH access to the root account has been disabled.
-
+.. note:: SSH access to the root account has been disabled.

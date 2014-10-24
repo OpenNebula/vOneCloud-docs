@@ -40,10 +40,10 @@ vOneCloud is distributed as a virtual appliance in OVA format for vSphere. It co
 +----------------------+--------------------------------------------------------------------------------------+
 | **Flexible**         | | Completely open, customizable and modular, so it can be adapted to your needs      |
 +----------------------+--------------------------------------------------------------------------------------+
-| **No Lock-in**       | | Platform independent, you can gradually migrate to other virtualization platforms  |
+| **No Lock-in**       | | Platform independent, gradually migrate to other virtualization platforms          |
 +----------------------+--------------------------------------------------------------------------------------+
 | **Simple**           | | Very easy to install, upgrade, and maintain, with easy-to-use graphical interfaces |
 +----------------------+--------------------------------------------------------------------------------------+
-| **Enterprise-ready** | | Certified, production-ready with commercial support subscriptions and professional |
-|                      | | services                                                                           |
+| **Enterprise-ready** | | Certified, production-ready with commercial support subscriptions and              |
+|                      | | professional services                                                              |
 +----------------------+--------------------------------------------------------------------------------------+

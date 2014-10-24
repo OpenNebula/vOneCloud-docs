@@ -20,5 +20,8 @@ vOneCloud will use pre defined Templates existing in the vCenter to launch Virtu
 | **No Security Groups**         | | Firewall rules as defined in Security Groups cannot be enforced in      |
 |                                | | vCenter VMs.                                                            |
 +--------------------------------+---------------------------------------------------------------------------+
+| **No MultivCenter Templates**  | | vOneCloud Templates representing two or more vCenter VM                 |
+|                                | | Templates cannot currently be defined.                                  |
++--------------------------------+---------------------------------------------------------------------------+
 
 These limitations will be addressed in future versions of vOneCloud.
