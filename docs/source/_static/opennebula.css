@@ -1,0 +1,35 @@
+body {
+    color: #353735;
+}
+
+a {
+    color: #0098c3;
+}
+
+.rst-versions {
+    background-color: #353735;
+    border-top: 0;
+}
+
+
+.wy-side-nav-search {
+    background-color: #0098c3;
+}
+
+.wy-nav-side {
+    background-color: #353735;
+}
+
+.wy-side-nav-search>a, .wy-side-nav-search .wy-dropdown>a {
+    display: none;
+}
+
+.wy-side-nav-search img {
+    display: inline;
+    margin: 0;
+    height: auto;
+    width: auto;
+    background-color: transparent;
+    padding: 0;
+    border-radius: 0;
+}
