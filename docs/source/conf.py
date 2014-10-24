@@ -15,6 +15,7 @@
 
 import sys
 import os
+import yaml
 
 import sphinx_rtd_theme
 
@@ -41,11 +42,10 @@ PRODUCTION_DOMAIN = "http://docs.vonecloud.today"
 
 current_version = "latest"
 
-versions = [
-      [ 'stable',  PRODUCTION_DOMAIN + '/4.10' ]
-    , [ 'develop', PRODUCTION_DOMAIN + '/4.10' ]
-    , [ '4.10' ,   PRODUCTION_DOMAIN + '/4.10' ]
-]
+site_conf = yaml.load(os.popen('git show master:docs/source/site_conf.yml'))
+
+versions  = site_conf['versions']
+downloads = site_conf['downloads']
 
 # Add any paths that contain templates here, relative to this directory.
 templates_path = ['_templates']
@@ -257,7 +257,7 @@ man_pages = [
 # (source start file, target name, title, author,
 #  dir menu entry, description, category)
 texinfo_documents = [
-  ('index', 'vOneCloud', 'vOneCloud Documentation',
+  ('index', 'vOneCloud-' + version , 'vOneCloud Documentation',
    'OpenNebula Systems', 'vOneCloud', 'One line description of project.',
    'Miscellaneous'),
 ]
