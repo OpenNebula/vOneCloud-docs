@@ -44,7 +44,8 @@ vOneCloud leverages the functionality of OpenNebula. The following features come
   * Powerful CLI that resembles typical UNIX commands applications
   * SunStone Portal for administrators and advanced users
 
-* **Reliability, Efficiency and Massive Scalability ** 
+* **Reliability, Efficiency and Massive Scalability** 
+
   * Leverage years of testing and production use
   * Be sure that your Cloud Mangement Platform will be up to the task
 
