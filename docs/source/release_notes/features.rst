@@ -12,7 +12,7 @@ vOneCloud leverages the functionality of OpenNebula. The following features come
   * AWS EC2 and EBS APIs
   * Simple, clean, intuitive portals for cloud consumers and VDC admins
 
-* `On-demand Provision of Virtual Data Centers <http://docs.opennebula.org/4.10/release_notes/release_notes/features.html#on-demand-provision-of-virtual-data-centers>`__. 
+* **On-demand Provision of Virtual Data Centers** 
   * Dynamic creation of Virtual Data Centers (VDCs) as fully-isolated virtual infrastructure environments where a group of users, under the control of the VDC administrator, can create and manage compute, storage and networking capacity
   * Placement of VDCs to multiple vCenters
 
