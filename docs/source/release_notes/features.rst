@@ -6,7 +6,7 @@ vOneCloud Features
 
 .. _features_outofthebox:
 
-vOneCloud leverages the functionality of OpenNebula. The following features come preconfigured and can be used **out-of-the-box** with vOneCloud:
+vOneCloud leverages the `functionality of OpenNebula <http://docs.opennebula.org/4.10/release_notes/release_notes/features.html>`__. The following features come preconfigured and can be used **out-of-the-box** with vOneCloud:
 
 * **Cloud User Interfaces**
 
