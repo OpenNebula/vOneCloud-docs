@@ -9,6 +9,7 @@ vOneCloud Features
 vOneCloud leverages the functionality of OpenNebula. The following features come preconfigured and can be used **out-of-the-box** with vOneCloud:
 
 * **Cloud User Interfaces**
+
   * AWS EC2 and EBS APIs
   * Simple, clean, intuitive portals for cloud consumers and VDC admins
 
