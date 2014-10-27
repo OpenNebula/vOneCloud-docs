@@ -8,6 +8,38 @@ vOneCloud Features
 
 vOneCloud leverages the functionality of OpenNebula. The following features come preconfigured and can be used **out-of-the-box** with vOneCloud:
 
+* **Cloud User Interfaces**
+  * AWS EC2 and EBS APIs
+  * Simple, clean, intuitive portals for cloud consumers and VDC admins
+
+* `On-demand Provision of Virtual Data Centers <http://docs.opennebula.org/4.10/release_notes/release_notes/features.html#on-demand-provision-of-virtual-data-centers>`__. 
+  * Dynamic creation of Virtual Data Centers (VDCs) as fully-isolated virtual infrastructure environments where a group of users, under the control of the VDC administrator, can create and manage compute, storage and networking capacity
+  * Placement of VDCs to multiple vCenters
+
+* **Hybrid Cloud and Federation**
+  * Cloud-bursting of VMs to public clouds
+  * Federation of multiple OpenNebula Zones for scalability, isolation or multiple-site support
+
+* **Fast Provisioning**
+  * VM and service (multi-VM apps) templates
+  * Automatic provision of VM and service (multi-VM apps) from a catalog
+  * Automatic execution and scaling of multi-tiered applications 
+  * Snapshotting 
+
+* **Security and Resource Consumption Control**
+  * Resource Quota Management to track and limit computing, storage and networking resource utilization
+  * Integration with user management services like LDAP, Active Directory…
+  * Fine-grained accounting and monitoring
+  * Complete isolated VDCs and organizations
+  * Fine-grained ACLs and user quotas
+  * Powerful user, group and role management
+
+* **Cloud Admin Interfaces**
+  * Powerful CLI that resembles typical UNIX commands applications
+  * SunStone Portal for administrators and advanced users
+
+
+
 * `Standard Cloud Interfaces and Simple Provisioning Portal for Cloud Consumers <http://docs.opennebula.org/4.10/release_notes/release_notes/features.html#standard-cloud-interfaces-and-simple-provisioning-portal-for-cloud-consumers>`__. AWS EC2 and EBS APIs. Simple, clean, intuitive portals for cloud consumers and VDC admins.
 
 * `On-demand Provision of Virtual Data Centers <http://docs.opennebula.org/4.10/release_notes/release_notes/features.html#on-demand-provision-of-virtual-data-centers>`__. Dynamic creation of Virtual Data Centers (VDCs) as fully-isolated virtual infrastructure environments where a group of users, under the control of the VDC administrator, can create and manage compute, storage and networking capacity. Placement of VDCs to multiple vCenters
