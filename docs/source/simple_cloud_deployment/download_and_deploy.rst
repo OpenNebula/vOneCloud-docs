@@ -88,7 +88,7 @@ Step 3. Advanced Usage - Login to the Appliance [Optional]
 All the functionality you need to run your vOneCloud can be accessed via
 Sunstone. However, in order to enable some of the :ref:`advanced features
 <features_advanceconf>` of vOneCloud some extra configurations steps are needed
-that must be performed in the command line of vOneCloud, and can be carrid out
+that must be performed in the command line of vOneCloud, and can be carried out
 opening a console in your vCenter client and log in with these credentials:
 
 - **Username**: root
