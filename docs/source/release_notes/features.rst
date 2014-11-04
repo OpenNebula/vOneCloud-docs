@@ -15,7 +15,7 @@ vOneCloud leverages the `functionality of OpenNebula <http://docs.opennebula.org
 
 * **On-demand Provision of Virtual Data Centers** 
 
-  * Dynamic creation of Virtual Data Centers (VDCs) as fully-isolated virtual infrastructure environments where a group of users, under the control of the VDC administrator, can create and manage compute, storage and networking capacity
+  * Dynamic creation of Virtual Data Centers (VDCs) as fully-isolated virtual infrastructure environments where a group of users, under the control of the VDC administrator, can create and manage compute capacity
   * Placement of VDCs to multiple vCenters
 
 * **Hybrid Cloud**
@@ -31,7 +31,7 @@ vOneCloud leverages the `functionality of OpenNebula <http://docs.opennebula.org
 
 * **Security and Resource Consumption Control**
 
-  * Resource Quota Management to track and limit computing, storage and networking resource utilization
+  * Resource Quota Management to track and limit computing resource utilization
   * Integration with user management services like LDAP, Active Directory…
   * Fine-grained accounting and monitoring
   * Complete isolated VDCs and organizations
