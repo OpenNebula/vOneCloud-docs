@@ -12,7 +12,7 @@ The following components are needed to be present in the infrastructure to imple
 |                   | | 2. DRS needs to be enabled in vCenter.                                                                                                     |
 |                   | | 3. All ESX belonging to the same vCenter cluster to be exposed to                                                                          |
 |                   | | vOneCloud need to share at least one datastore among them.                                                                                 |
-|                   | | 4. VMs that will be instantiated through vOneCloud saved as VMs Templates.                                                                 |
+|                   | | 4. VMs that will be instantiated through vOneCloud saved as VMs Templates in vCenter.                                                                 |
 +-------------------+----------------------------------------------------------------------------------------------------------------------------------------------+
 | ESX 5.1 / 5.5     | | With at least 2 GB of free RAM and 1 free CPU                                                                                              |
 +-------------------+----------------------------------------------------------------------------------------------------------------------------------------------+
