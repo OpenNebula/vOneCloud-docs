@@ -33,7 +33,7 @@ Your EC2 ready applications can run on top of vOneCloud, since it implements the
 Application Programming Interfaces (API)
 ----------------------------------------
 
-If you are a DevOp, you are probably use to build scripts to automate tasks for you. vOneCloud offers a rich set of APIs to build scripts to perform these tasks in different programming languages:
+If you are a DevOp, you are probably used to build scripts to automate tasks for you. vOneCloud offers a rich set of APIs to build scripts to perform these tasks in different programming languages:
 
 - `xmlrpc API <http://docs.opennebula.org/4.10/integration/system_interfaces/api.html>`__ Talk directly to the OpenNebula core
 - `Ruby OpenNebula Cloud API (OCA) <http://docs.opennebula.org/4.10/integration/system_interfaces/ruby.html>`__ Build tasks in Ruby
