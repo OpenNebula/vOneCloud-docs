@@ -7,7 +7,7 @@ vOneCloud Limitations
 vOneCloud will use pre defined Templates existing in the vCenter to launch Virtual Machines, as such the following limitations apply:
 
 +--------------------------------+---------------------------------------------------------------------------+
-| **No VM Contextextualization** | | Virtual Machines won’t have the ability of being contextualized,        |
+| **No VM Contextualization** | | Virtual Machines won’t have the ability of being contextualized,        |
 |                                | | thus the CONTEXT sections of VM Templates won’t be honored.             |
 +--------------------------------+---------------------------------------------------------------------------+
 | **VM Unsupported Operations**  | | The following operations are NOT supported on vCenter VMs               |
