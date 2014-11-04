@@ -18,10 +18,9 @@ vOneCloud leverages the `functionality of OpenNebula <http://docs.opennebula.org
   * Dynamic creation of Virtual Data Centers (VDCs) as fully-isolated virtual infrastructure environments where a group of users, under the control of the VDC administrator, can create and manage compute, storage and networking capacity
   * Placement of VDCs to multiple vCenters
 
-* **Hybrid Cloud and Federation**
+* **Hybrid Cloud**
 
   * Cloud-bursting of VMs to public clouds
-  * Federation of multiple OpenNebula Zones for scalability, isolation or multiple-site support
 
 * **Fast Provisioning**
 
