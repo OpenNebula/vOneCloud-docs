@@ -19,20 +19,12 @@ Everything is clearer with an example, so here we go:
 
   A cloud administrator builds two vOneCloud templates to represent one vCenter VM Template avaiable in vCenterA and another available in vCenterB. As previous work, the cloud administrator creates `two vCenter VM templates <https://pubs.vmware.com/vsphere-50/index.jsp?topic=%2Fcom.vmware.vsphere.vm_admin.doc_50%2FGUID-40BC4243-E4FA-4A46-8C8B-F50D92C186ED.html>`__, one in each vCenter.
 
-  To create a vOneCloud VM template representing a vCloud vM Template, log in into Sunstone as **vOneCloud** user as in explained :ref:`here <download_and_deploy>`, proceed to the ``Virtual Resources -> Templates``, and click on the **+** sign. In the upper right corner there will be two tabs, click on "Advanced" and input something along the lines of:
+  To create a vOneCloud VM template representing a vCloud vM Template, log in into Sunstone as **vOneCloud** user as in explained :ref:`here <download_and_deploy>`, proceed to the ``Virtual Resources -> Templates``, and click on the **+** sign. Select *vCenter* as the hypervisor, and type in the *vCenter Template UUID*. In the *Scheduling* tab you can select the hostname of the specific vCenter.
 
-.. code::
+  .. image:: /images/vcenter_wizard.png
+    :align: center
 
-    CPU=1
-    MEMORY=1024
-
-    PUBLIC_CLOUD=[
-      TYPE="vcenter",
-      VM_TEMPLATE="uuidA" ]
-
-    REQUIREMENTS = HOSTNAME = "vCenterA"
-
-  The above template instantiates vCenter VM Template with **uuidA** in vCenterA. Repeat for vCenterB.
+  Fill in with UUID **uuidA** in and select host vCenterA. Repeat for vCenterB.
 
   If a user instantiates one of these templates, the `vOneCloud scheduler <http://docs.opennebula.org/4.10/administration/references/schg.html>`__ will pick the right vCenter in which to instantiate the VM Template.
 
