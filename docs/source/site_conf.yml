@@ -1,12 +1,10 @@
 ---
 versions:
-- - stable
-  - http://docs.vonecloud.today/4.10
-- - develop
-  - http://docs.vonecloud.today/4.10
-- - 4.10
+- - "latest"
+  - http://docs.vonecloud.today/latest
+- - "4.10-beta"
   - http://docs.vonecloud.today/4.10
 
 downloads:
-- - PDF
-  - http://docs.vonecloud.today/pdf/vOneCloud-4.10.pdf
+- - "4.10-beta"
+  - http://docs.vonecloud.today/pdf/vOneCloud-4.10-beta.pdf
