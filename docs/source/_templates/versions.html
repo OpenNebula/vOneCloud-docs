@@ -1,7 +1,7 @@
   <div class="rst-versions" data-toggle="rst-versions" role="note" aria-label="versions">
     <span class="rst-current-version" data-toggle="rst-current-version">
       <span class="fa fa-book"> vOneCloud</span>
-      v: {{ version }}
+      v: {{ release }}
       <span class="fa fa-caret-down"></span>
     </span>
     <div class="rst-other-versions">
@@ -12,7 +12,7 @@
         {% endfor %}
       </dl>
       <dl>
-        <dt>Downloads</dt>
+        <dt>PDF Guides</dt>
         {% for type, url in downloads %}
           <dd><a href="{{ url }}">{{ type }}</a></dd>
         {% endfor %}
