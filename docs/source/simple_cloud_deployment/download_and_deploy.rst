@@ -80,10 +80,17 @@ To login type in these credentials:
 
 Now you will be able to use the :ref:`out-of-the-box features <features_outofthebox>` of vOneCloud!
 
+
+Advanced Usage [Optional]
+-------------------------
+
+.. warning::
+    This section is entirely optional and only advanced users should perform these actions.
+
 .. _advanced_login:
 
-Step 3. Advanced Usage - Login to the Appliance [Optional]
---------------------------------------------------------------------------------
+Login to the Appliance
+~~~~~~~~~~~~~~~~~~~~~~
 
 All the functionality you need to run your vOneCloud can be accessed via
 Sunstone. However, in order to enable some of the :ref:`advanced features
@@ -95,3 +102,17 @@ opening a console in your vCenter client and log in with these credentials:
 - **Password**: opennebula
 
 .. note:: SSH access to the root account has been disabled.
+
+Change *oneadmin* Password
+~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+The *oneadmin* password is ``opennebula`` by default. This can be changed by following these steps:
+
+1. Login into the Appliance as explained in the previous section
+2. Switch to the *oneadmin* user: ``# su - oneadmin``
+3. Change the passsword: ``$ oneuser passwd oneadmin <newpassword>``
+4. Write the auth file: ``$ echo oneadmin:<newpassword> > /var/lib/one/.one/one_auth``
+5. Logout of the *oneadmin* account into the *root* account: ``$ exit``
+6. Restart the OpenNebula service: ``# service opennebula restart``
+
+.. note:: All other user passwords can be changed in the Sunstone interface.
