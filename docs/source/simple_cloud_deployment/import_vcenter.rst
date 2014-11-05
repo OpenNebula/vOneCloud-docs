@@ -11,7 +11,7 @@ You will need the IP or hostname of the vCenter server, as well as an administra
 Step 1. Sunstone login
 -----------------------
 
-Log in into Sunstone as **vonecloud**, as explained in :ref:`the previous section <download_and_deploy>`.
+Log in into Sunstone as **vOneCloud**, as explained in :ref:`the previous section <download_and_deploy>`.
 
 Step 2. Acquire vCenter Resources
 ---------------------------------
