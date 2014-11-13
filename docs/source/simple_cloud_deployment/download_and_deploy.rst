@@ -5,9 +5,8 @@ Download and Deploy
 ================================================================================
 
 Download links:
-
-- `vOneCloud-4_10-beta.ova <http://appliances.opennebula.systems/vOneCloud/vOneCloud-4_10-beta.ova>`_.
-- `md5sum.txt <http://appliances.opennebula.systems/vOneCloud/md5sum.txt>`_.
+- `vOneCloud-4_10-beta.ova <http://appliances.opennebula.systems/vOneCloud/vOneCloud-4_10-beta.ova>`__
+- `md5sum.txt <http://appliances.opennebula.systems/vOneCloud/md5sum.txt>`__
 
 You can import this OVA appliance to your vCenter infrastructure. It is based on
 `CentOS 7 <http://www.centos.org/>`__ and has the VMware tools enabled.
