@@ -4,7 +4,7 @@
 Download and Deploy
 ================================================================================
 
-vOneCloud can be downloaded as an appliance using this link: `http://appliances.opennebula.systems/vOneCloud/vOneCloud-4.10-beta.ova <http://appliances.opennebula.systems/vOneCloud/vOneCloud-4.10-beta.ova>`_.
+vOneCloud can be downloaded as an appliance using this link: `http://appliances.opennebula.systems/vOneCloud/vOneCloud-4_10-beta.ova <http://appliances.opennebula.systems/vOneCloud/vOneCloud-4_10-beta.ova>`_.
 
 You can import this OVA appliance to your vCenter infrastructure. It is based on
 `CentOS 7 <http://www.centos.org/>`__ and has the VMware tools enabled.
