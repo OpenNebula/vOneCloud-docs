@@ -13,6 +13,10 @@ The mechanism to add a new vCenter is exactly the same as the one used to :ref:`
 .. image:: /images/add_new_vcenter.png
     :align: center
 
+.. note::
+
+   vOneCloud will create a special key at boot time and save it in /var/lib/one/.one/one_key. This key will be used as a private key to encrypt and decrypt all the passwords for all the vCenters that vOneCloud can access. Thus, the password shown in the vOneCloud host represneting the vCenter is the original password encrypted with this special key.
+
 Everything is clearer with an example, so here we go:
 
   Firsts things first, to avoid misunderstandings, there are two VM templates we will refer to: the vOneCloud VM Templates and the vCenter VM Templates. The formers are created in the vOneCloud web interface (Sunstone), whereas the latters are created directly through the vCenter Web Client.

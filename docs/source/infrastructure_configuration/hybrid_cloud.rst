@@ -23,22 +23,15 @@ Afterwards, hybrid hosts can be added from the vCenter View:
 .. image:: /images/hybrid_vcenter_view.png
     :align: center
 
-The hybrid approach is carried out using hybrid templates, which represents the virtual machines locally and remotely. The idea is to build a vOneCloud hybrid VM template that represents the same VM in vCenter and in the public cloud. Let's see an example of such a template, assuming that vCenter Template uuidA and Amazon EC2 AMI ami-xxxx represents the same virtual machine (for instance, a web server serving a web portal):
+The hybrid approach is carried out using hybrid templates, which represents the virtual machines locally and remotely. The idea is to build a vOneCloud hybrid VM template that represents the same VM in vCenter and in the public cloud. This can be carried out using the hybrid section of the VM Template creation dialog (you can add one or more public cloud provider)
 
-.. code::
+.. image:: /images/hybrid_create_template.png
+    :align: center
 
-    CPU=1
-    MEMORY=1024
+Moreover, you need to add in the Scheduling tab a proper host representing the appropriate public cloud provider. For instance, for an EC2 hybrid VM Template:
 
-    PUBLIC_CLOUD=[
-      TYPE="vcenter",
-      VM_TEMPLATE="uuidA" ]
-
-    PUBLIC_CLOUD=[
-      TYPE="ec2",
-      AMI="ami-00bafcb5",
-      KEYPAIR="gsg-keypair",
-      INSTANCETYPE=m1.small]
+.. image:: /images/scheduling_hybrid_template.png
+    :align: center
 
 Once templates are ready, they can be consumed at VM creation time from the Cloud View:
 
