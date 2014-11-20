@@ -8,10 +8,23 @@ vOneCloud can manage an unlimited number of vCenters. Each vCenter is going to b
 
 The suggested usage is to build vOneCloud templates for each VM Template in each vCenter. The built in scheduler in vOneCloud will decide which vCenter has the VM Template needed to launch the VM.
 
+.. _contextualization:
+
+In order to pass information to the instantiated VM template, the Context section of the vOneCloudVM Template can be used. All kinds of text data can be passed onto the VM, to be used for network set-up, user creation, ssh credentials injection, applications licensing, and so on. This information (encoded in base64) is then presented within the VM through the VMware Tools, and is used by the vOneCloud contextualization packages to perform network setup and other administration tasks. Also, it can be used to pass any arbitrary data, that can be consumed in the guest through the following command (in linux guests):
+
+.. code::
+
+   vmtoolsd --cmd 'info-get guestinfo.opennebula.context' | base64 -d
+
+.. image:: /images/vm_template_context.png
+    :align: center
+
 The mechanism to add a new vCenter is exactly the same as the one used to :ref:`import the first one into vOneCloud <import_vcenter>`. It can be performed graphically from the vCenter View:
 
 .. image:: /images/add_new_vcenter.png
     :align: center
+
+.. _encrypt_key:
 
 .. note::
 
