@@ -12,4 +12,4 @@ Additionally, three new features were introduced in this stable release:
 
 - :ref:`Ability to search for VM templates recursively <acquire_resources>`. Do not miss a VM Template!
 - :ref:`VCenter password encrypted in vOneCloud host templates <encrypt_key>`. Protect your infrastructure.
-- :ref: `Contextualization for vCenter VMs <contextualization>`. Pass information (licenses, ssh keys, networking information) onto your vCenter VMs through vOneCloud.
+- :ref:`Contextualization for vCenter VMs <contextualization>`. Pass information (licenses, ssh keys, networking information) onto your vCenter VMs through vOneCloud.
