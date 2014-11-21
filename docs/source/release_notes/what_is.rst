@@ -8,19 +8,18 @@ What Is?
     :align: center
 
 **The Open Replacement for vCloud**
- 
-vOneCloud extends vCenter with cloud features such as provisioning, elasticity and multi-tenancy. vOneCloud is designed for companies that want to create a self-service cloud environment on top of their VMware infrastructure without having to abandon their investment in VMware and retool the entire stack. vOneCloud leverages advanced features such as vMotion, HA or DRS scheduling provided by the VMware vSphere product family. 
 
-vOneCloud is an OpenNebula distribution optimized to work on existing VMware vCenter deployments. It deploys an enterprise-ready OpenNebula cloud just in a few minutes where the infrastructure is managed by already familiar VMware tools, such as vSphere and vCenter Operations Manager, and the provisioning, elasticity and multi-tenancy cloud features are offered by OpenNebula. It inherits all the `benefits <http://opennebula.org/about/technology/>`__ from the open source cloud managment platform, adding an easy to deploy, easy to use aspect due to pre configuration of the OpenNebula install contained within the appliance. 
+vOneCloud extends vCenter with cloud features such as provisioning, elasticity and multi-tenancy. vOneCloud is designed for companies that want to create a self-service cloud environment on top of their VMware infrastructure without having to abandon their investment in VMware and retool the entire stack. vOneCloud leverages advanced features such as vMotion, HA or DRS scheduling provided by the VMware vSphere product family.
 
-vOneCloud is distributed as a virtual appliance in OVA format for vSphere. It contains all required OpenNebula services within a single CentOS Linux appliance. All components are fully open-source and have been certified to work in enterprise environments, vOneCloud 4.10 Beta includes:
+vOneCloud is an OpenNebula distribution optimized to work on existing VMware vCenter deployments. It deploys an enterprise-ready OpenNebula cloud just in a few minutes where the infrastructure is managed by already familiar VMware tools, such as vSphere and vCenter Operations Manager, and the provisioning, elasticity and multi-tenancy cloud features are offered by OpenNebula. It inherits all the `benefits <http://opennebula.org/about/technology/>`__ from the open source cloud managment platform, adding an easy to deploy, easy to use aspect due to pre configuration of the OpenNebula install contained within the appliance.
+
+vOneCloud is distributed as a virtual appliance in OVA format for vSphere. It contains all required OpenNebula services within a single CentOS Linux appliance. All components are fully open-source and have been certified to work in enterprise environments, vOneCloud 1.0 RC includes:
 
 +----------------+--------+
-|   **CentOS**   | | 7.0  |
+|   **CentOS**   |  7.0   |
 +----------------+--------+
-| **OpenNebula** | | 4.10 |
+| **OpenNebula** | 4.10.1 |
 +----------------+--------+
-
 
 .. image:: /images/cloud_vonecloud_image.png
     :align: center
