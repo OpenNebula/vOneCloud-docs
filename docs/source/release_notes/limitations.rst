@@ -4,24 +4,21 @@
 vOneCloud Limitations
 =====================
 
-vOneCloud will use pre defined Templates existing in the vCenter to launch Virtual Machines, as such the following limitations apply:
+vOneCloud will use pre defined Templates existing in the vCenter to launch Virtual Machines. The following limitations apply:
 
-+----------------------------------------------+--------------------------------------------------------------------+
-| **No Files Support in VM Contextualization** | Passing entire files to VMs is not supported,                      |
-|                                              | but all the other CONTEXT sections will be honored                 |
-+----------------------------------------------+--------------------------------------------------------------------+
-| **VM Unsupported Operations**                | The following operations are NOT supported on vCenter VMs          |
-|                                              | managed by OpenNebula, although they can be perfomed               |
-|                                              | through vCenter                                                    |
-|                                              | - Attach/detach disk to a running VM                               |
-|                                              | - Attach/detach network interface to a running VM                  |
-|                                              | - Migrate VM to different ESX clusters                             |
-+----------------------------------------------+--------------------------------------------------------------------+
-| **No Security Groups**                       | Firewall rules as defined in Security Groups cannot be enforced in |
-|                                              | vCenter VMs.                                                       |
-+----------------------------------------------+--------------------------------------------------------------------+
-| **No MultivCenter Templates**                | vOneCloud Templates representing two or more vCenter VM            |
-|                                              | Templates cannot currently be defined.                             |
-+----------------------------------------------+--------------------------------------------------------------------+
++----------------------------------------------+--------------------------------------------------------------------------------------------------+
+| **No Automatic Guest Configuration**         | :ref:`Contextualization <build_template_context>` mechanism in vOneCloud does not provide        |
+|                                              | packages to automatically configure guest OS (Linux or Windows)                                  |
++----------------------------------------------+--------------------------------------------------------------------------------------------------+
+| **VM Unsupported Operations**                | The following operations are only supported from vCenter:                                        |
+|                                              | - Attach/detach disk to a running VM                                                             |
+|                                              | - Attach/detach network interface to a running VM                                                |
+|                                              | - Migrate VM to different ESX clusters                                                           |
++----------------------------------------------+--------------------------------------------------------------------------------------------------+
+| **No MultivCenter Templates**                | vOneCloud Templates representing two or more vCenter VM                                          |
+|                                              | Templates cannot currently be defined.                                                           |
++----------------------------------------------+--------------------------------------------------------------------------------------------------+
 
-These limitations will be addressed in future versions of vOneCloud.
+These limitations will be addressed in future versions of vOneCloud. The vOneCloud roadmap can be consulted in the `OpenNebula development portal <http://dev.opennebula.org/projects/opennebula/issues?query_id=61>`__.
+
+If you feel that there is a particular feature interesting for the general public and it is missing from the roadmap, feel free to add a feature request in the development portal (via the New Issue tab).

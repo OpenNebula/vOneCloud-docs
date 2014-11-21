@@ -38,7 +38,7 @@ In the dialog that pops up, select vCenter as Type in the dropdown. You now need
 
 After the vCenter cluster is selected in Step 2, a list of vCenter VM templates will be presented to be imported into vOneCloud. Select all the templates you want to import, and vOneCloud will generate vOneCloud VM template resources representing the vCenter VM templates.
 
-These vOneCloud VM templates can be edited to add information to be passed into the instantiated VM. This process is called :ref:`Contextualization <contextualization>`.
+These vOneCloud VM templates can be edited to add information to be passed into the instantiated VM. This process is called :ref:`Contextualization <build_template_context>`.
 
 .. note:: The vCenter VM Templates can be imported regardless of their position inside VM Folders, since vOneCloud will search recursively for them.
 

@@ -10,6 +10,3 @@ Simple Cloud Deployment
    Import Existing vCenter <import_vcenter>
    Create a Virtual Data Center <create_vdc>
    Interfaces <interfaces>
-   vCenter View <vcenter_view>
-   VDC Admin View <vdc_admin_view>
-   Cloud View <cloud_view>
