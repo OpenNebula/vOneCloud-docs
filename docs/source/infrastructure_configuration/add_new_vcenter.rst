@@ -28,7 +28,7 @@ The mechanism to add a new vCenter is exactly the same as the one used to :ref:`
 
 .. note::
 
-   vOneCloud will create a special key at boot time and save it in /var/lib/one/.one/one_key. This key will be used as a private key to encrypt and decrypt all the passwords for all the vCenters that vOneCloud can access. Thus, the password shown in the vOneCloud host represneting the vCenter is the original password encrypted with this special key.
+   vOneCloud will create a special key at boot time and save it in /var/lib/one/.one/one_key. This key will be used as a private key to encrypt and decrypt all the passwords for all the vCenters that vOneCloud can access. Thus, the password shown in the vOneCloud host representing the vCenter is the original password encrypted with this special key.
 
 Everything is clearer with an example, so here we go:
 
