@@ -6,7 +6,7 @@ Download and Deploy
 
 Download links:
 
-- `vOneCloud-1_0-RC.ova <http://appliances.opennebula.systems/vOneCloud/vOneCloud-1_0-RC.ova>`__
+- `vOneCloud-1_0.ova <http://appliances.opennebula.systems/vOneCloud/vOneCloud-1_0.ova>`__
 - `md5sum.txt <http://appliances.opennebula.systems/vOneCloud/md5sum.txt>`__
 
 You can import this OVA appliance to your vCenter infrastructure. It is based on
