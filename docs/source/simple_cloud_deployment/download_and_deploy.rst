@@ -90,6 +90,8 @@ Advanced Usage [Optional]
 .. warning::
     This section is entirely optional and only advanced users should perform these actions.
 
+    If you make **any** changes to OpenNebula configuration files under ``/etc/one`` please note the they **will** be discarded and overwritten in the next vOneCloud upgrade. Only changes documented in this documentation: :ref:`LDAP authentication <authentication>` and :ref:`Hybrid cloud configuration <hybrid_cloud>` will be supported.
+
 .. _advanced_login:
 
 Login to the Appliance

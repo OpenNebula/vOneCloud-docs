@@ -8,6 +8,7 @@ Release Notes vOneCloud 1.0 RC
    What Is? <what_is>
    What's New <whats_new>
    Features <features>
+   Upgrade <upgrade>
    System Requirements <system_requirements>
    Known Issues <known_issues>
    Resolved Issues <resolved_issues>
