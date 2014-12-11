@@ -25,3 +25,12 @@ The following components are needed to be present in the infrastructure to imple
    - In the vSphere client proceed to Home -> Inventory -> Hosts and Clusters
    - Select the ESX host, Configuration tab and select Security Profile in the Software category.
    - In the Firewall section, select the Properties. Enable GDB Server, then click OK.
+
+vOneCloud ships with a default of 2 CPUs and 2 GB of RAM, and as such it has been certified for infrastructures of the following dimensions:
+
+- Up to 4 vCenters
+- Up to 40 ESXs managed by each vCenter
+- Up to a 1.000 VMs in total, each vCenter managing up to 250 VMs
+- Up to 100 users, being the concurrent limit 10 users accessing the system simultaneously
+
+.. note:: For infrastructures exceeding the aforementioned limits, we recommend an installation of OpenNebula from scracth on a bare metal server, using the `vCenter drivers <http://docs.opennebula.org/4.10/administration/virtualization/vcenterg.html>`__
