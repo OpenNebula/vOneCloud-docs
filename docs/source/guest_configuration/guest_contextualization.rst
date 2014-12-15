@@ -26,6 +26,9 @@ Packages for Linux and Windows exist that can collect this data and configure so
 | ``DNS``            | Add DNS entries to ``resolv.conf`` file. Only for Linux |
 |                    | guests.                                                 |
 +--------------------+---------------------------------------------------------+
+| ``NETWORK``        | If set to "YES" vOneCloud will pass Networking          |
+|                    | for the different NICs onto the VM                      |
++--------------------+---------------------------------------------------------+
 
 In Linux guests, the information can be consumed using the following command (and acted accordingly):
 

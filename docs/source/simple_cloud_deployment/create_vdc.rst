@@ -27,6 +27,8 @@ As *vOneCloud* user, in the vCenter View, you will be able to see all the VM Tem
 .. image:: /images/create_vdc_change_template.png
     :align: center
 
+The same applies for Virtual Networks these VM Templates may use.
+
 If you log with *vdcuser*, the view will change to the Cloud View, where **vdcuser** can start consuming VMs based on the VM Template shared by the **cloud administrator** and allowed by the **vdcadmin**:
 
 .. image:: /images/create_vdc_cloudview.png

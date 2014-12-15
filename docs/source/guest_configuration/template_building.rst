@@ -16,6 +16,8 @@ Different kinds of context information can be passed onto the VMs:
 Network & SSH
 -------------
 
+Networking information can be passed onto the VM, namely the information needed to correctly configure each one of the VM network interfaces.
+
 You can add here an public keys that will be available in the VM at launch time to configure user access through SSH.
 
 User Inputs

@@ -1,8 +1,8 @@
 .. _add_new_vcenter:
 
-=================================
-Add New vCenters And VM Templates
-=================================
+===========================================
+Add New vCenters, VM Templates and Networks
+===========================================
 
 vOneCloud can manage an unlimited number of vCenters. Each vCenter is going to be represented by an vOneCloud host, which in turn abstracts all the ESX hosts managed by that particular instance of vCenter.
 
@@ -37,5 +37,12 @@ To create a new vOneCloud VM Template, let's see an example:
   If a user instantiates one of these templates, the `vOneCloud scheduler <http://docs.opennebula.org/4.10/administration/references/schg.html>`__ will pick the right vCenter in which to instantiate the VM Template.
 
 Using :ref:`the automated process for importing vCenter infrastructures <import_vcenter>`, vOneCloud will generate the above template for you at the time of importing vCenterA.
+
+A representation of a vCenter Network in vOneCloud can be created in vOneCloud by creating a Virtual Network and setting the BRIDGE property to **exactly the same name as the vCenter Network**.
+
+.. image:: /images/vnet_bridge.png
+  :align: center
+
+Several different Address Ranges can be added as well in the Virtual Network creation and/or Update dialog, pretty much in the same way as it can be done at the time of acquiring the resources explained in the :ref:`Import vCenter guide <acquire_resources>`.
 
 Read more about the `vCenter drivers <http://docs.opennebula.org/4.10/administration/virtualization/vcenterg.html>`__.

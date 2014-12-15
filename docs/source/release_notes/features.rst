@@ -37,6 +37,7 @@ vOneCloud leverages the `functionality of OpenNebula <http://docs.opennebula.org
   * Complete isolated VDCs and organizations
   * Fine-grained ACLs and user quotas
   * Powerful user, group and role management
+  * Virtual Network management
 
 * **Cloud Admin Interfaces**
 

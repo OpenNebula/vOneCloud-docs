@@ -31,7 +31,7 @@ Command Line Interface (CLI)
 
 If you are a SysAdmin, you will probably appreciate vOneCloud's `CLI <http://docs.opennebula.org/4.10/user/references/cli.html>`__, which uses the same design philosophy behind \*nix commands (one command for each task).
 
-Moreover, vOneCloud ships with a powerful tool (``onevcenter``) to import vCenter clusters and VM Templates. The tools is self-explanatory, just set the credentials and IP to access the vCenter host and follow on screen instructions.
+Moreover, vOneCloud ships with a powerful tool (``onevcenter``) to import vCenter clusters, VM Templates and Networks. The tools is self-explanatory, just set the credentials and IP to access the vCenter host and follow on screen instructions.
 
 Cloud Interfaces
 ----------------

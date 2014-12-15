@@ -12,7 +12,6 @@ vOneCloud will use pre defined Templates existing in the vCenter to launch Virtu
 +----------------------------------------------+--------------------------------------------------------------------------------------------------+
 | **VM Unsupported Operations**                | The following operations are only supported from vCenter:                                        |
 |                                              | - Attach/detach disk to a running VM                                                             |
-|                                              | - Attach/detach network interface to a running VM                                                |
 |                                              | - Migrate VM to different ESX clusters                                                           |
 +----------------------------------------------+--------------------------------------------------------------------------------------------------+
 | **No MultivCenter Templates**                | vOneCloud Templates representing two or more vCenter VM                                          |

@@ -4,7 +4,7 @@
 Import Existing vCenter
 =======================
 
-Importing a vCenter infrastructure into vOneCloud can be carried out easily through the Sunstone Web UI. Follow the next steps to import an existing vCenter as well as any already defined VM Template.
+Importing a vCenter infrastructure into vOneCloud can be carried out easily through the Sunstone Web UI. Follow the next steps to import an existing vCenter as well as any already defined VM Template and Networkscp .
 
 You will need the IP or hostname of the vCenter server, as well as an administrator credentials to successfuly import resources from vCenter.
 
@@ -36,11 +36,20 @@ In the dialog that pops up, select vCenter as Type in the dropdown. You now need
 .. image:: /images/vcenter_create.png
     :align: center
 
-After the vCenter cluster is selected in Step 2, a list of vCenter VM templates will be presented to be imported into vOneCloud. Select all the templates you want to import, and vOneCloud will generate vOneCloud VM template resources representing the vCenter VM templates.
+After the vCenter cluster is selected in Step 2, a list of vCenter VM Templates and Networks will be presented to be imported into vOneCloud. Select all the Templates and Networks you want to import, and vOneCloud will generate vOneCloud VM Template and Virtual Networks resources representing the vCenter VM templates and vCenter Networks respectively.
 
-These vOneCloud VM templates can be edited to add information to be passed into the instantiated VM. This process is called :ref:`Contextualization <build_template_context>`.
+Additionally, these vOneCloud VM templates can be edited to add information to be passed into the instantiated VM. This process is called :ref:`Contextualization <build_template_context>`. 
 
-.. note:: The vCenter VM Templates can be imported regardless of their position inside VM Folders, since vOneCloud will search recursively for them.
+Also, Virtual Networks can be further refined with the inclusion of different `Address Ranges <http://docs.opennebula.org/4.10/user/virtual_resource_management/vgg.html#the-address-range-ar>`__. This refinement can be done at import time, defining the size of the network one of the following supported Address Ranges:
+
+- IPv4: Need to define at least starting IP address. MAC address can be defined as well
+- IPv6: Can oprionllty define starting MAC adddress, GLOBAL PREFIX and ULA PREFIX 
+- Ethernet: Does not manage IP addresses but rather MAC addresses. If a starting MAC is not provided, vOneCloud will generate one.
+
+The networking information will also be passed onto the VM in the :ref:`Contextualization <build_template_context>` process. 
+
+
+.. note:: The vCenter VM Templates and Networks can be imported regardless of their position inside VM Folders, since vOneCloud will search recursively for them.
 
 Step 3. Check resources
 -----------------------
