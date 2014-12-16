@@ -1,8 +1,8 @@
 .. _whats_new:
 
-===========================
-What's New vOneCloud 1.0 RC
-===========================
+========================
+What's New vOneCloud 1.0
+========================
 
 This is the release candidate of the vOneCloud 1.0 appliance. The appliance is powered by OpenNebula Fox Fur, and, as such, includes all the functionality present in `OpenNebula Fox Fur 4.10.1 <http://docs.opennebula.org/4.10/release_notes/release_notes/index.html>`__.
 

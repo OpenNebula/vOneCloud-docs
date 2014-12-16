@@ -6,7 +6,7 @@ Download and Deploy
 
 Download links:
 
-- `vOneCloud-1_0-RC.ova <http://appliances.opennebula.systems/vOneCloud/vOneCloud-1_0-RC.ova>`__
+- `vOneCloud-1_0.ova <http://appliances.opennebula.systems/vOneCloud/vOneCloud-1_0.ova>`__
 - `md5sum.txt <http://appliances.opennebula.systems/vOneCloud/md5sum.txt>`__
 
 You can import this OVA appliance to your vCenter infrastructure. It is based on
@@ -89,6 +89,8 @@ Advanced Usage [Optional]
 
 .. warning::
     This section is entirely optional and only advanced users should perform these actions.
+
+    If you make **any** changes to OpenNebula configuration files under ``/etc/one`` please note that they **will** be discarded and overwritten in the next vOneCloud upgrade. Only changes documented in this documentation: :ref:`LDAP authentication <authentication>` and :ref:`Hybrid cloud configuration <hybrid_cloud>` will be supported.
 
 .. _advanced_login:
 
