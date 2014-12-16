@@ -27,7 +27,15 @@ To create a new vOneCloud VM Template, let's see an example:
 
   A cloud administrator builds two vOneCloud templates to represent one vCenter VM Template avaiable in vCenterA and another available in vCenterB. As previous work, the cloud administrator creates `two vCenter VM templates <https://pubs.vmware.com/vsphere-50/index.jsp?topic=%2Fcom.vmware.vsphere.vm_admin.doc_50%2FGUID-40BC4243-E4FA-4A46-8C8B-F50D92C186ED.html>`__, one in each vCenter. 
 
-  To create a vOneCloud VM template representing a vCloud VM Template, log in into Sunstone as **vOneCloud** user as in explained :ref:`here <download_and_deploy>`, proceed to the ``Virtual Resources -> Templates``, and click on the **+** sign. Select *vCenter* as the hypervisor, and type in the *vCenter Template UUID*. In the *Scheduling* tab you can select the hostname of the specific vCenter. The *Context* tab allows to pass information onto the VM to tailor it for its final use (read more about it :ref:`here <build_template_context>`).
+  To create a vOneCloud VM template representing a vCloud VM Template, log in into Sunstone as **vOneCloud** user as in explained :ref:`here <download_and_deploy>`, proceed to the ``Virtual Resources -> Templates``, and click on the **+** sign. Select *vCenter* as the hypervisor, and type in the *vCenter Template UUID*. In the *Scheduling* tab you can select the hostname of the specific vCenter. The *Context* tab allows to pass information onto the VM to tailor it for its final use (read more about it :ref:`here <build_template_context>`). In *Network* tab a valid Virtul Network (see below) can added to the VM, possible values for the MODEL type of the network card are:
+
+  - virtuale1000
+  - virtuale1000e
+  - virtualpcnet32
+  - virtualsriovethernetcard
+  - virtualvmxnetm
+  - virtualvmxnet2
+  - virtualvmxnet3
 
   .. image:: /images/vcenter_wizard.png
     :align: center
