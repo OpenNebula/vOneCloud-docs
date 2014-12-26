@@ -121,3 +121,8 @@ The *oneadmin* password is ``opennebula`` by default. This can be changed by fol
 6. Restart the OpenNebula service: ``# service opennebula restart``
 
 .. note:: All other user passwords can be changed in the Sunstone interface.
+
+Configure the Network
+~~~~~~~~~~~~~~~~~~~~~
+
+vOneCloud tries to obtain its IP using DHCP on the network interface. If you need to configure a static network, follow generic instructions to configure the the static IP for RHEL 7 / CentOS 7 systems, for example the `Configuring a Network Interface Using ifcfg Files <https://access.redhat.com/documentation/en-US/Red_Hat_Enterprise_Linux/7-Beta/html/Networking_Guide/sec-Using_the_Command_Line_Interface.html>`__ guide.
