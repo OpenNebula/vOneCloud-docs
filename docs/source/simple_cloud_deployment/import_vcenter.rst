@@ -23,6 +23,8 @@ In Sunstone, proceed to the ``Infrastructure --> Hosts`` tab and click on the "+
 .. image:: /images/import_cluster.png
     :align: center
 
+.. note:: Remember that vOneCloud does not currently support spaces in vCenter cluster names
+
 In the dialog that pops up, select vCenter as Type in the dropdown. You now need to fill in the data according to the following table:
 
 +--------------+------------------------------------------------------+
