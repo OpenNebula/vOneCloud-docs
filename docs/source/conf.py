@@ -38,6 +38,8 @@ extensions = [
     'sphinx.ext.todo', 'versions'
 ]
 
+todo_include_todos = True
+
 PRODUCTION_DOMAIN = "http://docs.vonecloud.today"
 
 latest = "1.0"

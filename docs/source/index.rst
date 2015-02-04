@@ -11,3 +11,6 @@ vOneCloud Documentation
    security_and_resource_consumption_control/index
    guest_configuration/index
    infrastructure_configuration/index
+   appliance_configuration/index
+
+.. todolist::
