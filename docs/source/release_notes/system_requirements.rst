@@ -4,7 +4,11 @@
 System Requirements
 ===================
 
-.. note:: It is advised to manage one vCenter by only one vOneCloud. Otherwise VMs from both server will clash and poduce errors. 
+.. todo::
+
+   Review requirements for 1.2. It will probably stay the same.
+
+.. note:: It is advised to manage one vCenter by only one vOneCloud. Otherwise VMs from both server will clash and poduce errors.
 
 The following components are needed to be present in the infrastructure to implement a cloud infrastructure run by vOneCloud:
 

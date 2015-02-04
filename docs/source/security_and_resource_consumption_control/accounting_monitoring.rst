@@ -8,7 +8,7 @@ vOneCloud is constantly monitoring the infrastructure resources to keep track of
 
 The monitoring subsystem gathers information relative to hosts and virtual machines, such as host and VM status, basic performance indicators and capacity consumption. vOneCloud comes preconfigured to retrieve such information directly from vCenter.
 
-Using the information form the monitoring subsystem, vOneCloud is able to provide accounting information, both in text and graphically. An administrator can see the consumption of a particular user or group in terms of hours of CPU consumed, or total memory used in a given time window. This information is useful to feed a chargeback or billing platform. 
+Using the information form the monitoring subsystem, vOneCloud is able to provide accounting information, both in text and graphically. An administrator can see the consumption of a particular user or group in terms of hours of CPU consumed, or total memory used in a given time window. This information is useful to feed a chargeback or billing platform.
 
 Accounting information is available from the vCenter View:
 
@@ -24,5 +24,9 @@ And from the Cloud View:
 
 .. image:: /images/accounting_cloud_view.png
     :align: center
+
+.. todo::
+
+   Add vCenter Cloud View
 
 Learn more on the `monitoring <http://docs.opennebula.org/4.10/administration/monitoring/mon.html>`__ and `accounting <http://docs.opennebula.org/4.10/administration/users_and_groups/accounting.html>`__ subsystems

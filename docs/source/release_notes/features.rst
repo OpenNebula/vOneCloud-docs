@@ -4,6 +4,10 @@
 vOneCloud Features
 ==================
 
+.. todo::
+
+   Review features for 1.2
+
 .. _features_outofthebox:
 
 vOneCloud leverages the `functionality of OpenNebula <http://docs.opennebula.org/4.10/release_notes/release_notes/features.html>`__. The following features come preconfigured and can be used **out-of-the-box** with vOneCloud:
@@ -13,7 +17,7 @@ vOneCloud leverages the `functionality of OpenNebula <http://docs.opennebula.org
   * AWS EC2 and EBS APIs
   * Simple, clean, intuitive portals for cloud consumers and VDC admins
 
-* **On-demand Provision of Virtual Data Centers** 
+* **On-demand Provision of Virtual Data Centers**
 
   * Dynamic creation of Virtual Data Centers (VDCs) as fully-isolated virtual infrastructure environments where a group of users, under the control of the VDC administrator, can create and manage compute capacity
   * Placement of VDCs to multiple vCenters
@@ -26,8 +30,8 @@ vOneCloud leverages the `functionality of OpenNebula <http://docs.opennebula.org
 
   * VM and service (multi-VM apps) templates
   * Automatic provision of VM and service (multi-VM apps) from a catalog
-  * Automatic execution and scaling of multi-tiered applications 
-  * Snapshotting 
+  * Automatic execution and scaling of multi-tiered applications
+  * Snapshotting
 
 * **Security and Resource Consumption Control**
 
@@ -44,7 +48,7 @@ vOneCloud leverages the `functionality of OpenNebula <http://docs.opennebula.org
   * Powerful CLI that resembles typical UNIX commands applications
   * SunStone Portal for administrators and advanced users
 
-* **Reliability, Efficiency and Massive Scalability** 
+* **Reliability, Efficiency and Massive Scalability**
 
   * Leverage years of testing and production use
   * Be sure that your Cloud Mangement Platform will be up to the task

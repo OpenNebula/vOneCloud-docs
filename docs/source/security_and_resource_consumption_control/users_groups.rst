@@ -11,6 +11,10 @@ User & Roles
 
 vOneCloud can manage different types of users, attending to the permissions they have over infrastructure and logical resources.
 
+.. todo::
+
+   Take into account vcenter-cloud view in this section.
+
 +----------------------+-----------------------------------------------------------------------------------+
 |    **User Type**     |                                  **Permissions**                                  |
 +----------------------+-----------------------------------------------------------------------------------+

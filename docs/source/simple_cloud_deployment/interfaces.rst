@@ -23,11 +23,20 @@ vOneCloud web interface, called Sunstone, offers three main views:
 
 - `Sunstone Cloud View <http://docs.opennebula.org/4.10/administration/sunstone_gui/cloud_view.html>`__: Aimed at end users, this interface eases virtual resource provisioning and hides all the complexity of the cloud that is going on behind the scenes.
 
+
+.. todo::
+
+   Document vCenter-Cloud view
+
 .. image:: /images/cloud_dash.png
     :align: center
 
 Command Line Interface (CLI)
 ----------------------------
+
+.. todo::
+
+   Remove this section? users should not login to the appliance.
 
 If you are a SysAdmin, you will probably appreciate vOneCloud's `CLI <http://docs.opennebula.org/4.10/user/references/cli.html>`__, which uses the same design philosophy behind \*nix commands (one command for each task).
 
@@ -36,7 +45,13 @@ Moreover, vOneCloud ships with a powerful tool (``onevcenter``) to import vCente
 Cloud Interfaces
 ----------------
 
-Your EC2 ready applications can run on top of vOneCloud, since it implements the `EC2 Query API <http://docs.opennebula.org/4.10/advanced_administration/public_cloud/introc.html>`__.
+.. todo::
+
+   Rewrite this:
+
+   Your EC2 ready applications can run on top of vOneCloud, since it implements the `EC2 Query API <http://docs.opennebula.org/4.10/advanced_administration/public_cloud/introc.html>`__.
+
+   A link to the hybrid configurations is better.
 
 Application Programming Interfaces (API)
 ----------------------------------------

@@ -6,7 +6,7 @@ Download and Deploy
 
 Download links:
 
-- `vOneCloud-1_0.ova <http://downloads.vonecloud.today>`__
+- `vOneCloud-1.2.ova <http://downloads.vonecloud.today>`__
 - `md5sum.txt <http://appliances.opennebula.systems/vOneCloud/md5sum.txt>`__
 
 You can import this OVA appliance to your vCenter infrastructure. It is based on
@@ -63,66 +63,42 @@ Now you can power on the Virtual Machine:
 .. image:: /images/vOneCloud-download-deploy-008.png
     :align: center
 
-Allow for a few minutes for the Appliance start and report the IP.
+.. todo::
 
-.. image:: /images/vOneCloud-download-deploy-010.png
-    :align: center
-
-Step 2. Connecting to the Sunstone Interface
---------------------------------------------------------------------------------
-
-Now that you have the IP of the appliance you can open the Sunstone Web Interface: ``http://<appliance-ip>:9869``.
-
-.. image:: /images/sunstone_login.png
-    :align: center
-
-To login type in these credentials:
-
-- **Username**: vOneCloud
-- **Password**: opennebula
-
-Now you will be able to use the :ref:`out-of-the-box features <features_outofthebox>` of vOneCloud!
-
+    Divided into steps: Open VMware console (screenshot). Run initial bootstrap, login to vOneCloud Control Center, configure OpenNebula, start OpenNebula, open Sunstone (info about credentials). Link to: Now you will be able to use the :ref:`out-of-the-box features <features_outofthebox>` of vOneCloud!
 
 Advanced Usage [Optional]
 -------------------------
 
+.. todo::
+
+   add vOneCloud Control Center link in the following section
+
 .. warning::
     This section is entirely optional and only advanced users should perform these actions.
 
-    If you make **any** changes to OpenNebula configuration files under ``/etc/one`` please note that they **will** be discarded and overwritten in the next vOneCloud upgrade. Only changes documented in this documentation: :ref:`LDAP authentication <authentication>` and :ref:`Hybrid cloud configuration <hybrid_cloud>` will be supported.
+    If you make **any** changes to OpenNebula configuration files under ``/etc/one`` please note that they **will** be either discarded in the next upgrade, or overwritten by vOneCloud Control Center and overwritten by the  upgrade.
 
 .. _advanced_login:
 
 Login to the Appliance
 ~~~~~~~~~~~~~~~~~~~~~~
 
-All the functionality you need to run your vOneCloud can be accessed via
-Sunstone. However, in order to enable some of the :ref:`advanced features
-<features_advanceconf>` of vOneCloud some extra configurations steps are needed
-that must be performed in the command line of vOneCloud, and can be carried out
-opening a console in your vCenter client and log in with these credentials:
+.. todo::
 
-- **Username**: root
-- **Password**: opennebula
+   Rewrite this:
 
-.. note:: SSH access to the root account has been disabled.
+   All the functionality you need to run your vOneCloud can be accessed via
+   Sunstone. However, in order to enable some of the :ref:`advanced features
+   <features_advanceconf>` of vOneCloud some extra configurations steps are needed
+   that must be performed in the command line of vOneCloud, and can be carried out
+   opening a console in your vCenter client and log in with these credentials:
 
-Change *oneadmin* Password
-~~~~~~~~~~~~~~~~~~~~~~~~~~
+   - **Username**: root
+   - **Password**: opennebula
 
-The *oneadmin* password is ``opennebula`` by default. This can be changed by following these steps:
+   .. note:: SSH access to the root account has been disabled.
 
-1. Login into the Appliance as explained in the previous section
-2. Switch to the *oneadmin* user: ``# su - oneadmin``
-3. Change the passsword: ``$ oneuser passwd oneadmin <newpassword>``
-4. Write the auth file: ``$ echo oneadmin:<newpassword> > /var/lib/one/.one/one_auth``
-5. Logout of the *oneadmin* account into the *root* account: ``$ exit``
-6. Restart the OpenNebula service: ``# service opennebula restart``
+.. todo::
 
-.. note:: All other user passwords can be changed in the Sunstone interface.
-
-Configure the Network
-~~~~~~~~~~~~~~~~~~~~~
-
-vOneCloud tries to obtain its IP using DHCP on the network interface. If you need to configure a static network, follow generic instructions to configure the the static IP for RHEL 7 / CentOS 7 systems, for example the `Configuring a Network Interface Using ifcfg Files <https://access.redhat.com/documentation/en-US/Red_Hat_Enterprise_Linux/7-Beta/html/Networking_Guide/sec-Using_the_Command_Line_Interface.html>`__ guide.
+   Change oneadmin password and configure the network have been removed from this guide. Decide whether to place links to those actions.

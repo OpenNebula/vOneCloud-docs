@@ -21,6 +21,10 @@ vOneCloud is distributed as a virtual appliance in OVA format for vSphere. It co
 | **OpenNebula** | 4.10.1 |
 +----------------+--------+
 
+.. todo::
+
+   Talk about vOneCloud Control Center (CC), Control Console, Control Panel
+
 .. image:: /images/cloud_vonecloud_image.png
     :align: center
     :scale: 50 %

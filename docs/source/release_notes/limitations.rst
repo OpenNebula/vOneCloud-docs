@@ -4,6 +4,10 @@
 vOneCloud Limitations
 =====================
 
+.. todo::
+
+   Re-evaluate limitations
+
 vOneCloud will use pre defined Templates existing in the vCenter to launch Virtual Machines. The following limitations apply:
 
 +--------------------------------------+-------------------------------------------------------------------------------------------+

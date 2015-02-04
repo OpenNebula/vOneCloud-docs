@@ -4,6 +4,10 @@
 Authentication
 ==============
 
+.. todo::
+
+   Rewrite this entire guide taking vOneCloud Control Center into account
+
 By default, vOneCloud authentication uses an internal user/password system with user and group information stored in an internal database.
 
 If you want vOneCloud to have your users pulled from a corporate Active Directory, all the needed components are enabled and just an extra configuration step is needed. As requirements, you will need an Active Directory server with support for simple user/password authentication, as well as a user with read permissions in the Active Directory user’s tree.

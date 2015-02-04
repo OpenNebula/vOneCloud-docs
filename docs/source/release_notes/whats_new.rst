@@ -10,6 +10,10 @@ Compared to the beta version of vOneCloud, this stable release comes with a numb
 
 Additionally, three new features were introduced in this stable release:
 
+.. todo::
+
+   This release introduces new components: vOneCloud Control Center...
+
 - :ref:`Ability to search for VM templates recursively <acquire_resources>`. Do not miss a VM Template!
 - :ref:`VCenter password encrypted in vOneCloud host templates <encrypt_key>`. Protect your infrastructure.
 - :ref:`Contextualization for vCenter VMs <build_template_context>`. Pass information (licenses, ssh keys, networking information) onto your vCenter VMs through vOneCloud.
