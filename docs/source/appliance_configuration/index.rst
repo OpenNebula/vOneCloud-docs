@@ -8,7 +8,5 @@ Appliance Configuration
    :maxdepth: 2
 
    Introduction <app_conf_intro>
-   Initial Bootstrap and Basic Configuration <initial_bootstrap>
-   OpenNebula Services Management <services_management>
-   Automatic Upgrade Management <upgrade_management>
-   Infrastructure Configuration Management <infrastructure_management>
+   Control Console <control_console>
+   Control Panel <control_panel>
