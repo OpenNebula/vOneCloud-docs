@@ -50,10 +50,14 @@ The OpenNebula services can be managed in the main dashboard: start, stop and re
 
 Any of this actions will trigger one or more tasks. If one of this tasks fails, the user will be notified, and paying customers will be able to send the error report to the vOneCloud Support.
 
+.. _control_panel_automatic_upgrades:
+
 Automatic Upgrades
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-When a new vOneCloud release is available for download users will be notified. Paying customers will be able to upgrade with a single click.
+When a new vOneCloud release is available for download users will be notified. Paying customers will be able to upgrade with a single click. In the main Dashboard area the user will be notified if there is a new release available. In that case the user will be able to click a button that will start the upgrade.
+
+
 
 .. note::
     Before running an automatic upgrade users are recommend to create a vCenter snapshot of the vOneCloud appliance in order to revert back to it in case of failure.

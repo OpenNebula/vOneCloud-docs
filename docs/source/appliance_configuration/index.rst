@@ -10,3 +10,4 @@ Appliance Configuration
    Introduction <app_conf_intro>
    Control Console <control_console>
    Control Panel <control_panel>
+   Troubleshooting <app_conf_trouble>

@@ -6,4 +6,4 @@ Upgrade
 
 .. todo::
 
-   Link to vOneCloud Control Center Automatic Upgrade Management
+   Is not supported

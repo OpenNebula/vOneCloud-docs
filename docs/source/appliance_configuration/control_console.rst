@@ -29,6 +29,8 @@ Once this wizard has been executed the user is ready to open the vOneCloud Contr
 
 Note that during this step the `oneadmin` account password will be set, which will be then used to access the vOneCloud Control Panel.
 
+.. _control_console_basic_configuration:
+
 Basic Configuration
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
