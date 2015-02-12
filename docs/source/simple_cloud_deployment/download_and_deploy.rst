@@ -106,6 +106,8 @@ Step 4. Enjoy the Out-of-the-Box Features
 
 After opening the Sunstone interface (`http://<appliance_ip>` with `CloudAdmin` / `CloudAdmin` user and password) you are now ready to enjoy the :ref:`out-of-the-box features <features_outofthebox>` of vOneCloud!
 
+Move on to the :ref:`next section <import_vcenter>` to start using your cloud by importing your vCenter infrastructure.
+
 .. _advanced_login:
 
 Login to the Appliance
