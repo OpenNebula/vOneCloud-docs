@@ -68,12 +68,12 @@ Now you can power on the Virtual Machine:
 Step 2. vOneCloud Control Console - Initial Configuration
 --------------------------------------------------------------------------------
 
-When the VM boots up you will see in the vCenter console in vCenter the vOneCloud Control Console, showing this wizard:
+When the VM boots up you will see in the vCenter console in vCenter the :ref:`vOneCloud Control Console <control_console>`, showing this wizard:
 
 .. image:: /images/control-console.png
     :align: center
 
-In this wizard you should configure the network if you are using a static network configuration. If you are using DHCP you can simply skip to the next item.
+In this wizard you should configure the network. If you are using DHCP you can simply skip to the next item. If you are using a static network configuration, you will need to use the ncurses interface and "Edit a connection", select "Wirect connection 1", change IPv4 CONFIGURATION from <Automatic> to <Manual> and select "Show", input the desired IP address/24 in Addresses, input Gateway and DNS Servers, select OK and then quit the dialog.
 
 Next you need to define a root password. You won't be using this very often, so write it down somewhere safe. It's your master password to the appliance.
 
@@ -118,4 +118,4 @@ Login to the Appliance
 
 All the functionality you need to run your vOneCloud can be accessed via Sunstone, and all the support configuration parameters are available either in the :ref:`vOneCloud Control Console <control_console>` or in the :ref:`vOneCloud Control Panel <control_panel>`.
 
-However, if you want to access the vOneCloud command line interface you can open the vCenter console of the vOneCloud Virtual Machine appliance and log in with the `root` account and the password you used in the :ref:`initial configuration <download_and_deploy_control_console>`.
+To access the :ref:`vOneCloud command line interface <cli_interface>` open the vCenter console of the vOneCloud Virtual Machine appliance and change the tty (Ctrl + Alt + F2). Afterwards, log in with the `root` account and the password you used in the :ref:`initial configuration <download_and_deploy_control_console>`, and switch to the `oneadmin` user.

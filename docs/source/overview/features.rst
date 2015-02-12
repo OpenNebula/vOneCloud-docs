@@ -4,18 +4,33 @@
 vOneCloud Features
 ==================
 
-.. todo::
-
-   Review features for 1.2
-
 .. _features_outofthebox:
 
 vOneCloud leverages the `functionality of OpenNebula <http://docs.opennebula.org/4.10/release_notes/release_notes/features.html>`__. The following features come preconfigured and can be used **out-of-the-box** with vOneCloud:
 
 * **Cloud User Interfaces**
 
-  * AWS EC2 and EBS APIs
   * Simple, clean, intuitive portals for cloud consumers and VDC admins
+
+* **Cloud Admin Interfaces**
+
+  * SunStone Portal for administrators and advanced users
+  * Powerful CLI that resembles typical UNIX commands applications
+
+* **Easy Appliance and Services Configuration**
+
+  * Control Console for vOneCloud appliance configuration
+  * Control Panel (Web UI) for vOneCloud services configuration
+
+* **Smooth Upgrade Process**
+
+  * Accessible for paying customers through the Control Panel
+
+* **Import Existing Resources**
+
+  * Import existing vCenter VM Templates
+  * Import existing vCenter Networks and Distributed vSwitches
+  * Import existing running Virtual Machines
 
 * **On-demand Provision of Virtual Data Centers**
 
@@ -28,30 +43,31 @@ vOneCloud leverages the `functionality of OpenNebula <http://docs.opennebula.org
 
 * **Fast Provisioning**
 
-  * VM and service (multi-VM apps) templates
-  * Automatic provision of VM and service (multi-VM apps) from a catalog
-  * Automatic execution and scaling of multi-tiered applications
+  * Automatic provision of Virtual Machines from a Template catalog
+  * VM Template cloning and editing capabilities to maintain Template catalog
   * Snapshotting
 
 * **Security and Resource Consumption Control**
 
   * Resource Quota Management to track and limit computing resource utilization
-  * Integration with user management services like LDAP, Active Directory…
   * Fine-grained accounting and monitoring
   * Complete isolated VDCs and organizations
   * Fine-grained ACLs and user quotas
   * Powerful user, group and role management
-  * Virtual Network management
+  * vCenter Network and Distributed vSwitch support
+  * Attach/detach network interfaces funcionality
 
-* **Cloud Admin Interfaces**
+* **Enterprise Datacenter Component Integration Capabilities**
 
-  * Powerful CLI that resembles typical UNIX commands applications
-  * SunStone Portal for administrators and advanced users
+  * Integration with user management services like Active Directory and LDAP.
+  * HTTP Proxy support
 
 * **Reliability, Efficiency and Massive Scalability**
 
   * Leverage years of testing and production use
   * Be sure that your Cloud Mangement Platform will be up to the task
+
+If you feel that there is a particular feature interesting for the general public, feel free to add a feature request in `Community - Feature Request section of the vOneCloud Support Portal <https://support.vonecloud.com/hc/communities/public/topics/200215442-Community-Feature-Requests>`__.
 
 .. _features_advanceconf:
 
@@ -64,5 +80,7 @@ vOneCloud can levarage all the functionality that OpenNebula delivers, but some 
 * `Broad Commodity and Enterprise Platform Support <http://docs.opennebula.org/4.10/release_notes/release_notes/features.html#broad-commodity-and-enterprise-platform-support>`__. Underlying OpenNebula software features an amazingly flexible and plugin oriented architecture that eases the integration with existing datacenter components. Do no reinvent your datacenter, evolve it!.
 
 * `Virtual <http://docs.opennebula.org/4.10/release_notes/release_notes/features.html#advanced-control-and-monitoring-of-virtual-infrastructure>`__ & `Physical <http://docs.opennebula.org/4.10/release_notes/release_notes/features.html#advanced-control-and-monitoring-of-physical-infrastructure>`__ Infrastructure Control. Manage all aspects of your physical (hypervisors, storage backends, etc) & virtualized (VM lifecycle, VM images, virtual networks, etc) from a centralized web interface (Sunstone).
+
+* `Management of multi-VM application (services) through the OneFlow component `OneFlow guide <http://docs.opennebula.org/4.10/advanced_administration/application_flow_and_auto-scaling/oneapps_overview.html>`__. OneFlow allows users and administrators to define, execute and manage multi-tiered applications, or services composed of interconnected Virtual Machines with deployment dependencies between them. Each group of Virtual Machines is deployed and managed as a single entity.
 
 Although the configuration is tailored for vCenter infrastructures, all the power of OpenNebula is contained in vOneCloud and it can be unleashed!

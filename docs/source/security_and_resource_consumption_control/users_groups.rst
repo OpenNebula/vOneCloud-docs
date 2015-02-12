@@ -11,9 +11,6 @@ User & Roles
 
 vOneCloud can manage different types of users, attending to the permissions they have over infrastructure and logical resources.
 
-.. todo::
-
-   Take into account vcenter-cloud view in this section.
 
 +----------------------+-----------------------------------------------------------------------------------+
 |    **User Type**     |                                  **Permissions**                                  |
@@ -24,7 +21,7 @@ vOneCloud can manage different types of users, attending to the permissions they
 +----------------------+-----------------------------------------------------------------------------------+
 | VDC Administrators   | manage a limited set of resources and users.                                      |
 +----------------------+-----------------------------------------------------------------------------------+
-| VDC Users            | access a simplified Sunstone view with limited actions to create new VMs          |
+| VDC & End Users      | access a simplified view (vcenter-cloud) with limited actions to create new VMs   |
 +----------------------+-----------------------------------------------------------------------------------+
 | Public users         | access vOneCloud through a public API                                             |
 +----------------------+-----------------------------------------------------------------------------------+

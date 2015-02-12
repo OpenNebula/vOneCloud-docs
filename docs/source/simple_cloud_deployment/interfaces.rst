@@ -31,27 +31,17 @@ vOneCloud web interface, called Sunstone, offers three main views:
 .. image:: /images/cloud_dash.png
     :align: center
 
+.. _cli_interface:
+
 Command Line Interface (CLI)
 ----------------------------
-
-.. todo::
-
-   Remove this section? users should not login to the appliance.
 
 If you are a SysAdmin, you will probably appreciate vOneCloud's `CLI <http://docs.opennebula.org/4.10/user/references/cli.html>`__, which uses the same design philosophy behind \*nix commands (one command for each task).
 
 Moreover, vOneCloud ships with a powerful tool (``onevcenter``) to import vCenter clusters, VM Templates and Networks. The tools is self-explanatory, just set the credentials and IP to access the vCenter host and follow on screen instructions.
 
-Cloud Interfaces
-----------------
+To access the vOneCloud command line interface open the vCenter console of the vOneCloud Virtual Machine appliance and change the tty (Ctrl + Alt + F2). Afterwards, log in with the `root` account and the password you used in the :ref:`initial configuration <download_and_deploy_control_console>`, and switch to the `oneadmin` user.
 
-.. todo::
-
-   Rewrite this:
-
-   Your EC2 ready applications can run on top of vOneCloud, since it implements the `EC2 Query API <http://docs.opennebula.org/4.10/advanced_administration/public_cloud/introc.html>`__.
-
-   A link to the hybrid configurations is better.
 
 Application Programming Interfaces (API)
 ----------------------------------------
@@ -61,4 +51,3 @@ If you are a DevOp, you are probably used to build scripts to automate tasks for
 - `xmlrpc API <http://docs.opennebula.org/4.10/integration/system_interfaces/api.html>`__ Talk directly to the OpenNebula core
 - `Ruby OpenNebula Cloud API (OCA) <http://docs.opennebula.org/4.10/integration/system_interfaces/ruby.html>`__ Build tasks in Ruby
 - `Java OpenNebula Cloud API (OCA) <http://docs.opennebula.org/4.10/integration/system_interfaces/java.html>`__ Build tasks in Java
-- `OneFlow API <http://docs.opennebula.org/4.10/integration/system_interfaces/appflow_api.html>`__ Build tasks to manage Multi-VM services

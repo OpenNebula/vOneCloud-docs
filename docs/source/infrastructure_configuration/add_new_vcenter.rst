@@ -8,7 +8,7 @@ vOneCloud can manage an unlimited number of vCenters. Each vCenter is going to b
 
 The suggested usage is to build vOneCloud templates for each VM Template in each vCenter. The built in scheduler in vOneCloud will decide which vCenter has the VM Template needed to launch the VM.
 
-The mechanism to add a new vCenter is exactly the same as the one used to :ref:`import the first one into vOneCloud <import_vcenter>`. It can be performed graphically from the vCenter View:
+The mechanism to add a **new vCenter** is exactly the same as the one used to :ref:`import the first one into vOneCloud <import_vcenter>`. It can be performed graphically from the vCenter View:
 
 .. image:: /images/add_new_vcenter.png
     :align: center
@@ -21,7 +21,7 @@ The mechanism to add a new vCenter is exactly the same as the one used to :ref:`
 
 .. _add_new_vm_template:
 
-To create a new vOneCloud VM Template, let's see an example:
+To create a new **vOneCloud VM Template**, let's see an example:
 
   Firsts things first, to avoid misunderstandings, there are two VM templates we will refer to: the vOneCloud VM Templates and the vCenter VM Templates. The formers are created in the vOneCloud web interface (Sunstone), whereas the latters are created directly through the vCenter Web Client.
 
@@ -44,13 +44,11 @@ To create a new vOneCloud VM Template, let's see an example:
 
   If a user instantiates one of these templates, the `vOneCloud scheduler <http://docs.opennebula.org/4.10/administration/references/schg.html>`__ will pick the right vCenter in which to instantiate the VM Template.
 
-.. todo::
-
-   Import Networks?
-
 Using :ref:`the automated process for importing vCenter infrastructures <import_vcenter>`, vOneCloud will generate the above template for you at the time of importing vCenterA.
 
-A representation of a vCenter Network in vOneCloud can be created in vOneCloud by creating a Virtual Network and setting the BRIDGE property to **exactly the same name as the vCenter Network**.
+**vCenter Networks/Distributed vSwitches** and **running VMs** for a particular vCenter cluster can be imported in vOneCloud after the cluster is imported by vOnecloud using the `same procedure <import_running_vms>`__ to import the same resource at the time of importing the vCenter cluster, making use of the ``Infrastructure --> Hosts`` tab in the vCenter View.
+
+A representation of a vCenter Network or Distributed vSwitch in vOneCloud can be created in vOneCloud by creating a Virtual Network and setting the BRIDGE property to **exactly the same name as the vCenter Network**.
 
 .. image:: /images/vnet_bridge.png
   :align: center

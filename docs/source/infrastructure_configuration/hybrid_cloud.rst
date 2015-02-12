@@ -22,6 +22,9 @@ To configure the drivers you need first to :ref:`log into the vOneCloud console 
 | `Microsoft Azure <http://docs.opennebula.org/4.10/advanced_administration/cloud_bursting/azg.html>`__ | az_driver.conf  |
 +-------------------------------------------------------------------------------------------------------+-----------------+
 
+.. note:: If vOneCloud is running behind a corporate http proxy, the SoftLayer hybrid connectors won't be available 
+.. note:: Azure hybrid connectors only support non authenticated http proxy  
+
 Afterwards, hybrid hosts can be added from the vCenter View:
 
 .. image:: /images/hybrid_vcenter_view.png
