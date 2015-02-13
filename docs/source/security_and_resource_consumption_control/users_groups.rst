@@ -11,20 +11,15 @@ User & Roles
 
 vOneCloud can manage different types of users, attending to the permissions they have over infrastructure and logical resources.
 
-
-+----------------------+-----------------------------------------------------------------------------------+
-|    **User Type**     |                                  **Permissions**                                  |
-+----------------------+-----------------------------------------------------------------------------------+
-| Cloud Administrators | enough privileges to perform any operation on any object                          |
-+----------------------+-----------------------------------------------------------------------------------+
-| Infrastructure User  | may access most of the functionality to manage resources                          |
-+----------------------+-----------------------------------------------------------------------------------+
-| VDC Administrators   | manage a limited set of resources and users.                                      |
-+----------------------+-----------------------------------------------------------------------------------+
-| VDC & End Users      | access a simplified view (vcenter-cloud) with limited actions to create new VMs   |
-+----------------------+-----------------------------------------------------------------------------------+
-| Public users         | access vOneCloud through a public API                                             |
-+----------------------+-----------------------------------------------------------------------------------+
++----------------------+-----------------------------------------------------------------+------------------+
+|    **User Type**     |                         **Permissions**                         |     **View**     |
++----------------------+-----------------------------------------------------------------+------------------+
+| Cloud Administrators | enough privileges to perform any operation on any object        | vcenter          |
++----------------------+-----------------------------------------------------------------+------------------+
+| VDC Administrators   | manage a limited set of resources and users                     | vdcadmin_vcenter |
++----------------------+-----------------------------------------------------------------+------------------+
+| VDC & End Users      | access a simplified view with limited actions to create new VMs | cloud_vcenter    |
++----------------------+-----------------------------------------------------------------+------------------+
 
 .. note:: VDC is the acronym for Virtual Datacenter
 
@@ -32,6 +27,8 @@ vOneCloud can manage different types of users, attending to the permissions they
     :align: center
 
 Learn more about user management `here <http://docs.opennebula.org/4.10/administration/users_and_groups/manage_users.html>`__.
+
+.. _vdc_management:
 
 Group & VDC Management
 ----------------------

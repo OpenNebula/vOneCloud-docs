@@ -4,7 +4,7 @@
 Import Existing vCenter
 =======================
 
-Importing a vCenter infrastructure into vOneCloud can be carried out easily through the Sunstone Web UI. Follow the next steps to import an existing vCenter as well as any already defined VM Template and Networkscp .
+Importing a vCenter infrastructure into vOneCloud can be carried out easily through the Sunstone Web UI. Follow the next steps to import an existing vCenter as well as any already defined VM Template and Networks.
 
 You will need the IP or hostname of the vCenter server, as well as an administrator credentials to successfuly import resources from vCenter.
 
@@ -58,16 +58,23 @@ Regarding the vCenter VM Templates and Networks, is important to take into accou
 
 - We recommend therefore to use **VM Templates in vCenter without defined NICs**, to add them later on in the vOneCloud VM Templates 
 
+.. note:: Running VMs panel won't be filled if the vCenter cluster is not imported. To import running VMs from a Cluster, the vCenter cluster needs to be imported first as a vOneCloud host.
+
 .. _import_running_vms:
 
 (Optional) Step 3. Import vCenter Running Virtual Machines / Reacquire VM Templates and Networks
 ------------------------------------------------------------------------------------------------
 
-If the vCenter infrastructure has running Virtual Machines, vOneCloud can import and subsequiently manage them. The process involves using the same dialog as in Step 2, which will now present the running VMs for the vCenter clusters already imported in vOneCloud. Again, in Sunstone, proceed to the ``Infrastructure --> Hosts`` tab and click on the "+" green icon.  Select vCenter as Type in the dropdown and fill in the credentials and the IP or hostname of vCenter.
+If the vCenter infrastructure has running Virtual Machines, vOneCloud can import and subsequiently manage them. The process involves using the same dialog as in Step 2, which will now present the running VMs for the vCenter clusters already imported in vOneCloud. To import running vCenter VMs:
 
-You will now see running vCenter VMs that can be imported in vOneCloud. Also, you can use this dialog to reacquire new VM Templates, Networks or Distributed vSwitches created in vCenter after their importatoin in Step 2.
+- 1. Proceed to the ``Infrastructure --> Hosts`` tab and click on the "+" green icon.  Select vCenter as Type in the dropdown and fill in the credentials and the IP or hostname of vCenter.
 
- .. todo:: Screenshot
+- 2. You will now see running vCenter VMs that can be imported in vOneCloud. Select the VMs that need to be imported one and click import button.
+
+- 3. After the VMs are imported you can operate on their lifecycle, asign them to particular users, attach or detach network interfaces, create snapshots, etc. All the funcionality that vOneCloud supports for regular VMs is present for imported VMs.
+
+.. image:: /images/import_running_vms.png
+    :align: center
 
 .. note:: The vCenter VM Templates, Networks, Distributed vSwitches and running Virtual Machines can be imported regardless of their position inside VM Folders, since vOneCloud will search recursively for them.
 

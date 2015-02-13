@@ -17,7 +17,7 @@ vOneCloud leverages the `functionality of OpenNebula <http://docs.opennebula.org
   * SunStone Portal for administrators and advanced users
   * Powerful CLI that resembles typical UNIX commands applications
 
-* **Easy Appliance and Services Configuration**
+* **Appliance and Services Configuration**
 
   * Control Console for vOneCloud appliance configuration
   * Control Panel (Web UI) for vOneCloud services configuration

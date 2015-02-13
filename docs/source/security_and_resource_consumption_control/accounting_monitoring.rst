@@ -20,13 +20,9 @@ From the VDC Admin View:
 .. image:: /images/accounting_vdcadmin_view.png
     :align: center
 
-And from the Cloud View:
+And from the vCenter Cloud View:
 
 .. image:: /images/accounting_cloud_view.png
     :align: center
-
-.. todo::
-
-   Add vCenter Cloud View
 
 Learn more on the `monitoring <http://docs.opennebula.org/4.10/administration/monitoring/mon.html>`__ and `accounting <http://docs.opennebula.org/4.10/administration/users_and_groups/accounting.html>`__ subsystems

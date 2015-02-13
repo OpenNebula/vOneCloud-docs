@@ -21,12 +21,7 @@ vOneCloud web interface, called Sunstone, offers three main views:
 .. image:: /images/vdcadmin_dash.png
     :align: center
 
-- `Sunstone Cloud View <http://docs.opennebula.org/4.10/administration/sunstone_gui/cloud_view.html>`__: Aimed at end users, this interface eases virtual resource provisioning and hides all the complexity of the cloud that is going on behind the scenes.
-
-
-.. todo::
-
-   Document vCenter-Cloud view
+- Sunstone vCenter Cloud View: Aimed at end users, this interface eases virtual resource provisioning and hides all the complexity of the cloud that is going on behind the scenes. It is a tailored version of the Sunstone `Cloud View <http://docs.opennebula.org/4.10/administration/sunstone_gui/cloud_view.html>`__, with adjusted functionality relevant to vOneCloud and vCenter.
 
 .. image:: /images/cloud_dash.png
     :align: center
@@ -40,7 +35,7 @@ If you are a SysAdmin, you will probably appreciate vOneCloud's `CLI <http://doc
 
 Moreover, vOneCloud ships with a powerful tool (``onevcenter``) to import vCenter clusters, VM Templates and Networks. The tools is self-explanatory, just set the credentials and IP to access the vCenter host and follow on screen instructions.
 
-To access the vOneCloud command line interface open the vCenter console of the vOneCloud Virtual Machine appliance and change the tty (Ctrl + Alt + F2). Afterwards, log in with the `root` account and the password you used in the :ref:`initial configuration <download_and_deploy_control_console>`, and switch to the `oneadmin` user.
+To access the vOneCloud command line interface you need to :ref:`login into the vOneCloud appliance <advanced_login>`, and switch to the `oneadmin` user.
 
 
 Application Programming Interfaces (API)

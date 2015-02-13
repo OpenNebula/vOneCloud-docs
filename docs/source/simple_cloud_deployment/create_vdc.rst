@@ -6,9 +6,9 @@ Create a Virtual Datacenter
 
 The provisioning model by default in vOneCloud is based on three different :ref:`roles <user_groups>` using three different web :ref:`interfaces <interfaces>`.
 
-*vOneCloud* user comes preconfigured and is the **cloud administrator**, in full control of all the physical and virtual resources and using the vCenter view.
+*vOneCloud* user comes preconfigured and is the **Cloud Administrator**, in full control of all the physical and virtual resources and using the vCenter view.
 
-The whole cloud can be divided in isolated partitions, called Virtual Datacenters, or VDCs. VDC are defined as group of users with access to a set of physical hosts and their associated resources in a transparent way. A **VDC Admin** manages her partition of the cloud, including user management, but only within her VDC, not for the whole cloud like the **cloud administrator**.
+The whole cloud can be divided in isolated partitions, called Virtual Datacenters, or VDCs. VDC are defined as group of users with access to a set of physical hosts and their associated resources in a transparent way. A **VDC Admin** manages her partition of the cloud, including user management, but only within her VDC, not for the whole cloud like the **Cloud Administrator**.
 
 Let's create a VDC named *ProductionVDC* with an administrator called **vdcadmin**:
 
@@ -29,7 +29,7 @@ As *vOneCloud* user, in the vCenter View, you will be able to see all the VM Tem
 
 The same applies for Virtual Networks these VM Templates may use.
 
-If you log with *vdcuser*, the view will change to the Cloud View, where **vdcuser** can start consuming VMs based on the VM Template shared by the **cloud administrator** and allowed by the **vdcadmin**:
+If you log with *vdcuser*, the view will change to the vCenter Cloud View, where **vdcuser** can start consuming VMs based on the VM Template shared by the **cloud administrator** and allowed by the **vdcadmin**:
 
 .. image:: /images/create_vdc_cloudview.png
     :align: center

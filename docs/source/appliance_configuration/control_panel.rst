@@ -4,7 +4,10 @@
 Control Panel
 ================================================================================
 
-This is a web based interface available at `http://<appliance_ip>:8000`. Handles many aspects of the vOneCloud platform configuration.
+This is a web based interface available at `http://<appliance_ip>:8000`. Handles many aspects of the vOneCloud platform configuration. The Control Panel can be reached at any time from the Sunstone GUI using the Control Panel link in the bottom of the left hand side menu.
+
+.. image:: /images/control_panel_link.png
+    :align: center
 
 To log in the administrator will need the `oneadmin` account, which is set in the initial configuration of the Control Console.
 
@@ -27,6 +30,9 @@ In the dashboard of the Control Panel you will be able to see the following info
 | Upgrade Date      | Records the date of last vOneCloud upgrade.                                                                                                               |
 +-------------------+-----------------------------------------------------------------------------------------------------------------------------------------------------------+
 
+.. image:: /images/control_panel_dashboard.png
+    :align: center
+
 Additionally vOneCloud will report the subscription status:
 
 * No subscription detected
@@ -38,7 +44,7 @@ Configuration Management
 
 The configuration action handles the supported configuration of the vOneCloud appliance:
 
-* Hybrid drivers (EC2, SoftLayer, Azure).
+* Hybrid drivers (Amazon EC2, IBM SoftLayer, MS Azure).
 * Active Directory or LDAP integration.
 
 If the configuration is changed while OpenNebula is running, it will need to be restarted. A warning will appear in the dashboard reminding the user to restart the OpenNebula service.
@@ -56,8 +62,6 @@ Automatic Upgrades
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 When a new vOneCloud release is available for download users will be notified. Paying customers will be able to upgrade with a single click. In the main Dashboard area the user will be notified if there is a new release available. In that case the user will be able to click a button that will start the upgrade.
-
-
 
 .. note::
     Before running an automatic upgrade users are recommend to create a vCenter snapshot of the vOneCloud appliance in order to revert back to it in case of failure.
