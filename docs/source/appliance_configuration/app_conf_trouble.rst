@@ -17,7 +17,7 @@ This means that the appliance cannot reach the appliance repository at vonecloud
 
     {"error":"Invalid Data."}
 
-If that works, then it's probably a networking configuration error. Make sure that the network of the appliance has been properly set (see :ref:`here <control_console_basic_configuration>`). It also might be a proxy problem if the appliance requires a proxy to access the internet. If you are sure these configuration parameters are correct, perform a :ref:`manual login to the appliance <advanced_login>` and check the following items:
+If that works, then it's probably a networking configuration error. Make sure that the network of the appliance has been properly set (see :ref:`here <control_console_basic_configuration>` ). It also might be a proxy problem if the appliance requires a proxy to access the internet. If you are sure these configuration parameters are correct, perform a :ref:`manual login to the appliance <advanced_login>` and check the following items:
 
 * Inspect the routes `ip route`
 * If you are not using a proxy, make sure you can reach the Google DNS to test internet connection: `ping 8.8.8.8`.
