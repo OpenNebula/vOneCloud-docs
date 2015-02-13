@@ -7,9 +7,9 @@ vOneCloud Limitations
 vOneCloud will use pre defined Templates existing in the vCenter to launch Virtual Machines. The following limitations apply:
 
 +------------------------------------+----------------------------------------------------------------------------------------+
-| **VM Unsupported Operations**      | The following operations are only supported from vCenter:                              |
-|                                    |  - Attach/detach disk to a running VM                                                  |
-|                                    |  - Migrate VM to different ESX clusters                                                |
+|   **VM Unsupported Operations**    |               The following operations are only supported from vCenter:                |
+|                                    |                          - Attach/detach disk to a running VM                          |
+|                                    |                         - Migrate VM to different ESX clusters                         |
 +------------------------------------+----------------------------------------------------------------------------------------+
 | **No MultivCenter Templates**      | vOneCloud Templates representing two or more vCenter VM                                |
 |                                    | Templates cannot currently be defined.                                                 |
@@ -18,6 +18,9 @@ vOneCloud will use pre defined Templates existing in the vCenter to launch Virtu
 +------------------------------------+----------------------------------------------------------------------------------------+
 | **No proxy support for SoftLayer** | If vOneCloud is running behind a corporate http proxy, the SoftLayer hybrid connectors |
 |                                    | won't be available                                                                     |
++------------------------------------+----------------------------------------------------------------------------------------+
+| **No auth proxy support            | Azure driver only supports proxies without authentication. That is, without            |
+| for Azure**                        | username and password.                                                                 |
 +------------------------------------+----------------------------------------------------------------------------------------+
 | **No FILES support in context**    | Contextualization in vOneCloud does not support passing files to Virtual Machines      |
 +------------------------------------+----------------------------------------------------------------------------------------+
