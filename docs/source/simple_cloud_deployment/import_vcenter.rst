@@ -38,6 +38,8 @@ In the dialog that pops up, select vCenter as Type in the dropdown. You now need
 .. image:: /images/vcenter_create.png
     :align: center
 
+.. note:: Running VMs panel won't be filled if the vCenter cluster is not imported. To import running VMs from a Cluster, the vCenter cluster needs to be imported first as a vOneCloud host.
+
 After the vCenter cluster is selected in Step 2, a list of vCenter VM Templates and both Networks and Distributed vSwitches will be presented to be imported into vOneCloud. Select all the Templates, Networks and Distributed vSwitches you want to import, and vOneCloud will generate vOneCloud VM Template and Virtual Networks resources representing the vCenter VM templates and vCenter Networks and Distributed vSwitches respectively.
 
 Additionally, these vOneCloud VM templates can be edited to add information to be passed into the instantiated VM. This process is called :ref:`Contextualization <build_template_context>`. 
@@ -56,9 +58,7 @@ Regarding the vCenter VM Templates and Networks, is important to take into accou
 
 - vCenter **VM Templates with already defined NICs** that reference Networks in vCenter will be imported without this information in vOneCloud. These NICs will be invisible for vOneCloud, and therefore cannot be detached from the Virtual Machines. The imported Templates in vOneCloud can be updated to add NICs from Virtual Networks imported from vCenter (being Networks or Distributed vSwitches).
 
-- We recommend therefore to use **VM Templates in vCenter without defined NICs**, to add them later on in the vOneCloud VM Templates 
-
-.. note:: Running VMs panel won't be filled if the vCenter cluster is not imported. To import running VMs from a Cluster, the vCenter cluster needs to be imported first as a vOneCloud host.
+- We recommend therefore to use **VM Templates in vCenter without defined NICs**, to add them later on in the vOneCloud VM Templates
 
 .. _import_running_vms:
 

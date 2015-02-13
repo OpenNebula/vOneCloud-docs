@@ -8,7 +8,7 @@ By default, vOneCloud authentication uses an internal user/password system with 
 
 vOneCloud can pull users from a corporate Active Directory, all the needed components are enabled and just an extra configuration step is needed. As requirements, you will need an Active Directory server with support for simple user/password authentication, as well as a user with read permissions in the Active Directory user’s tree.
 
-You will need to access the :ref:`Control Panel <control_panel>` in order to configure the Active Directory support in vOneCloud. After the configuiration is done, users that exist in Active Directory can begin using vOneCloud.
+You will need to access the :ref:`Control Panel <control_panel>` in order to configure the Active Directory support in vOneCloud. After the configuration is done, users that exist in Active Directory can begin using vOneCloud.
 
 Step 1. Configure Active Directory support
 --------------------------------------------------------------------------------

@@ -21,7 +21,9 @@ vOneCloud web interface, called Sunstone, offers three main views:
 .. image:: /images/vdcadmin_dash.png
     :align: center
 
-- Sunstone vCenter Cloud View: Aimed at end users, this interface eases virtual resource provisioning and hides all the complexity of the cloud that is going on behind the scenes. It is a tailored version of the Sunstone `Cloud View <http://docs.opennebula.org/4.10/administration/sunstone_gui/cloud_view.html>`__, with adjusted functionality relevant to vOneCloud and vCenter.
+.. _vcenter_cloud_view:
+
+- **Sunstone vCenter Cloud View**: Aimed at end users, this interface eases virtual resource provisioning and hides all the complexity of the cloud that is going on behind the scenes. It is a tailored version of the Sunstone `Cloud View <http://docs.opennebula.org/4.10/administration/sunstone_gui/cloud_view.html>`__, with adjusted functionality relevant to vOneCloud and vCenter.
 
 .. image:: /images/cloud_dash.png
     :align: center

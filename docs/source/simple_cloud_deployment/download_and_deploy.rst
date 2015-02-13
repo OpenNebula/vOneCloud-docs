@@ -73,20 +73,29 @@ When the VM boots up you will see in the vCenter console in vCenter the :ref:`vO
 .. image:: /images/control-console.png
     :align: center
 
-In this wizard you should configure the network. If you are using DHCP you can simply skip to the next item. If you are using a static network configuration, you will need to use the ncurses interface and "Edit a connection", select "Wirect connection 1", change IPv4 CONFIGURATION from <Automatic> to <Manual> and select "Show", input the desired IP address/24 in Addresses, input Gateway and DNS Servers, select OK and then quit the dialog.
+In this wizard you should **configure the network**. If you are using DHCP you can simply skip to the next item. 
 
-Next you need to define a root password. You won't be using this very often, so write it down somewhere safe. It's your master password to the appliance.
+If you are using a static network configuration, answer yes and you will need to use a ncurses interface to:
 
-The next item is the `oneadmin` account password. You will only need this to login to the vOneCloud Control Panel, a web-based configuration interface we will see very shortly.
+- "Edit a connection"
+- Select "Wirect connection 1"
+- Change IPv4 CONFIGURATION from <Automatic> to <Manual> and select "Show"
+- Input the desired IP address/24 in Addresses
+- Input Gateway and DNS Servers
+- Select OK and then quit the dialog.
 
-Finally you can configure the proxy if your network topology requires a proxy to access the internet. However please note that it's absolutely fine to use vOneCloud without any internet access at all, as you will be able to do most of the things, except for: automatic upgrades and hybrid cloud access.
+Next, you can **configure the proxy** if your network topology requires a proxy to access the internet. However please note that it's absolutely fine to use vOneCloud without any internet access at all, as you will be able to do most of the things, except for automatic upgrades and hybrid cloud access.
+
+Afterwrds you need to define a **root password.** You won't be using this very often, so write it down somewhere safe. It's your master password to the appliance. 
+
+The next item is the **`oneadmin` account password**. You will only need this to login to the vOneCloud Control Panel, a web-based configuration interface we will see very shortly. Check the :ref:`roles section <roles>` to learn more about vOneCloud roles and users.
 
 We have now finished the vOneCloud Control Console initial configuration wizard. As the wizard itself will point out now you can open the vOneCloud Control Panel by pointing your browser to `http://<appliance_ip>:8000` and using the `oneadmin` account and password just chosen.
 
 Step 3. vOneCloud Control Panel - Manage Services
 --------------------------------------------------------------------------------
 
-The vOneCloud Control Panel will allow the administrator to:
+The :ref:`vOneCloud Control Panel <control_panel>` will allow the administrator to:
 
 - Check for new vOneCloud versions and manage upgrades.
 - Configure Active Directory / LDAP integration and hybrid cloud drivers: Amazon EC2, Windows Azure and IBM SoftLayer.
@@ -95,7 +104,7 @@ The vOneCloud Control Panel will allow the administrator to:
 
 Click on the configuration icon if you need to configure one of the supported options. Keep in mind that you can run this configuration at any moment. We recommend to start inspecting vOneCloud's functionality before delving into advanced configuration options like the aforementioned ones.
 
-After clicking on the Start button, we can log in to Sunstone (OpenNebula's frontend) by opening: `http://<appliance_ip>` and using the default login `CloudAdmin` / `CloudAdmin` user and password.
+After clicking on the Start button, proceed to log in to Sunstone (OpenNebula's frontend) by opening: `http://<appliance_ip>` and using the default login `CloudAdmin` / `CloudAdmin` user and password.
 
 .. note::
 

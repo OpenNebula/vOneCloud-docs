@@ -8,27 +8,27 @@ The information defined at the :ref:`VM Template building <build_template_contex
 
 Packages for Linux and Windows exist that can collect this data and configure some parameters.
 
-+--------------------+---------------------------------------------------------+
-|     Parameter      |                       Description                       |
-+====================+=========================================================+
-| ``SET_HOST``       | Change the hostname of the VM. In Windows the machine   |
-|                    | needs to be restarted.                                  |
-+--------------------+---------------------------------------------------------+
-| ``SSH_PUBLIC_KEY`` | SSH public keys to add to authorized_keys file.         |
-|                    | This parameter only works with Linux guests.            |
-+--------------------+---------------------------------------------------------+
-| ``USERNAME``       | Create a new administrator user with the given          |
-|                    | user name. Only for Windows guests.                     |
-+--------------------+---------------------------------------------------------+
-| ``PASSWORD``       | Password for the new administrator user. Used with      |
-|                    | ``USERNAME`` and only for Windows guests.               |
-+--------------------+---------------------------------------------------------+
-| ``DNS``            | Add DNS entries to ``resolv.conf`` file. Only for Linux |
-|                    | guests.                                                 |
-+--------------------+---------------------------------------------------------+
-| ``NETWORK``        | If set to "YES" vOneCloud will pass Networking          |
-|                    | for the different NICs onto the VM                      |
-+--------------------+---------------------------------------------------------+
++----------------+---------------------------------------------------------+
+| **Parameter**  |                     **Description**                     |
++================+=========================================================+
+| SET_HOST       | Change the hostname of the VM. In Windows the machine   |
+|                | needs to be restarted.                                  |
++----------------+---------------------------------------------------------+
+| SSH_PUBLIC_KEY | SSH public keys to add to authorized_keys file.         |
+|                | This parameter only works with Linux guests.            |
++----------------+---------------------------------------------------------+
+| USERNAME       | Create a new administrator user with the given          |
+|                | user name. Only for Windows guests.                     |
++----------------+---------------------------------------------------------+
+| PASSWORD       | Password for the new administrator user. Used with      |
+|                | ``USERNAME`` and only for Windows guests.               |
++----------------+---------------------------------------------------------+
+| DNS            | Add DNS entries to ``resolv.conf`` file. Only for Linux |
+|                | guests.                                                 |
++----------------+---------------------------------------------------------+
+| NETWORK        | If set to "YES" vOneCloud will pass Networking          |
+|                | for the different NICs onto the VM                      |
++----------------+---------------------------------------------------------+
 
 In Linux guests, the information can be consumed using the following command (and acted accordingly):
 

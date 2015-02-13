@@ -24,7 +24,7 @@ vOneCloud leverages the `functionality of OpenNebula <http://docs.opennebula.org
 
 * **Smooth Upgrade Process**
 
-  * Accessible for paying customers through the Control Panel
+  * Automatic upgrade process and notifications available for paying customers through the Control Panel
 
 * **Import Existing Resources**
 

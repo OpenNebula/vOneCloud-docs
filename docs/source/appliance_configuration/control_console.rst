@@ -38,6 +38,6 @@ At any given moment, the vOneCloud administrator may choose to open the vOneClou
 
 * Networking configuration, which is useful if the networking configuration changes at any given time.
 * Proxy configuration.
-* Change the oneadmin password. Note that this step requires that the vOneCloud administrator restarts the OpenNebula service in the vOneCloud Control Panel.
+* Change the oneadmin password. Note that this step requires that the vOneCloud administrator restarts the OpenNebula service in the :ref:`vOneCloud Control Panel <control_panel>`.
 
 

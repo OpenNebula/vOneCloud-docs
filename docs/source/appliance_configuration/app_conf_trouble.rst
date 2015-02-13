@@ -4,7 +4,7 @@
 Troubleshooting
 ================================================================================
 
-This section details what actions to take if any of the Appliance configuration functions fails.
+This section details what actions to take if any of the vOneCloud appliance configuration functions fails.
 
 Cannot Check for Upgrades
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -23,13 +23,13 @@ If that works, then it's probably a networking configuration error. Make sure th
 * If you are not using a proxy, make sure you can reach the Google DNS to test internet connection: `ping 8.8.8.8`.
 * Run the following command: `curl -kv  https://downloads.vonecloud.com/version`. If you are using a proxy run this instead: `HTTPS_PROXY=http://<proxy_user>:<proxy_pass>@<proxy_host>:<proxy_port> curl -kv  https://downloads.vonecloud.com/version`.
 
-If you are sure the network is properly configured, please feel free to submit a support to <a href="https://support.vonecloud.com/">vOneCloud Support</a>.
+If you are sure the network is properly configured, please feel free to submit a support to `vOneCloud Support <https://support.vonecloud.com/>`__.
 
 .. _app_conf_trouble_job_failure:
 
 Job Failure
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-A job should never fail. If it fails you should submit a support ticket with the attached Job Crashed Report (link found in the Job page) to <a href="https://support.vonecloud.com/">vOneCloud Support</a>.
+A job should never fail. If it fails you should submit a support ticket with the attached Job Crashed Report (link found in the Job page) to `vOneCloud Support <https://support.vonecloud.com/>`__.
 
 

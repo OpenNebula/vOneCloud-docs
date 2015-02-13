@@ -4,7 +4,7 @@
 Control Panel
 ================================================================================
 
-This is a web based interface available at `http://<appliance_ip>:8000`. Handles many aspects of the vOneCloud platform configuration. The Control Panel can be reached at any time from the Sunstone GUI using the Control Panel link in the bottom of the left hand side menu.
+This is a web based interface available at `http://<appliance_ip>:8000` which handles many aspects of the vOneCloud platform configuration. The Control Panel can be reached at any time from the Sunstone GUI using the Control Panel link in the bottom of the left hand side menu.
 
 .. image:: /images/control_panel_link.png
     :align: center
@@ -44,8 +44,8 @@ Configuration Management
 
 The configuration action handles the supported configuration of the vOneCloud appliance:
 
-* Hybrid drivers (Amazon EC2, IBM SoftLayer, MS Azure).
-* Active Directory or LDAP integration.
+* :ref:`Hybrid drivers (Amazon EC2, IBM SoftLayer, MS Azure) <hybrid_cloud>`.
+* :ref:`Active Directory or LDAP integration <authentication>`.
 
 If the configuration is changed while OpenNebula is running, it will need to be restarted. A warning will appear in the dashboard reminding the user to restart the OpenNebula service.
 

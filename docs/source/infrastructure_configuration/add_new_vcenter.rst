@@ -46,7 +46,7 @@ To create a new **vOneCloud VM Template**, let's see an example:
 
 Using :ref:`the automated process for importing vCenter infrastructures <import_vcenter>`, vOneCloud will generate the above template for you at the time of importing vCenterA.
 
-**vCenter Networks/Distributed vSwitches** and **running VMs** for a particular vCenter cluster can be imported in vOneCloud after the cluster is imported by vOnecloud using the `same procedure <import_running_vms>`__ to import the same resource at the time of importing the vCenter cluster, making use of the ``Infrastructure --> Hosts`` tab in the vCenter View.
+**vCenter Networks/Distributed vSwitches** and **running VMs** for a particular vCenter cluster can be imported in vOneCloud after the cluster is imported using the `same procedure <import_running_vms>`__ to import the vCenter cluster, making use of the ``Infrastructure --> Hosts`` tab in the vCenter View.
 
 A representation of a vCenter Network or Distributed vSwitch in vOneCloud can be created in vOneCloud by creating a Virtual Network and setting the BRIDGE property to **exactly the same name as the vCenter Network**.
 

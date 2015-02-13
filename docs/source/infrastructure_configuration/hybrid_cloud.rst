@@ -43,7 +43,7 @@ You need the Access and Secret key to be retrieved from your AWS account. More i
 
 **MS Azure**
 
-.. image:: /images/cp_hybrid_azure.png
+.. image:: /images/cp_hybrid_az.png
     :align: center
 
 The capacity that you attach to this region will define the maximum number and type of Virtual Machines that vOneCloud will be able to launch in the represented MS Azure region.  The different instance types are defined as follows:
@@ -85,6 +85,7 @@ You need the Pem Management Certificate to be retrieved from your AWS account. F
 
 - Third, the certificate file (.cer) has to be uploaded to Settings -> Management Certificates
 
+Afterwards, copy the context of the .pem certificate in the clipboard and paste it in the text area of the Control Panel Pem Management Certificate field.
 
 More information on MS Azure support can be found `here <http://docs.opennebula.org/4.10/advanced_administration/cloud_bursting/azg.html>`__.
 
