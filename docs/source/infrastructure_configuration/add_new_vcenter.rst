@@ -48,7 +48,7 @@ Using :ref:`the automated process for importing vCenter infrastructures <import_
 
 **vCenter Networks/Distributed vSwitches** and **running VMs** for a particular vCenter cluster can be imported in vOneCloud after the cluster is imported using the `same procedure <import_running_vms>`__ to import the vCenter cluster, making use of the ``Infrastructure --> Hosts`` tab in the vCenter View.
 
-A representation of a vCenter Network or Distributed vSwitch in vOneCloud can be created in vOneCloud by creating a Virtual Network and setting the BRIDGE property to **exactly the same name as the vCenter Network**.
+A representation of a vCenter Network or Distributed vSwitch in vOneCloud can be created in vOneCloud by creating a Virtual Network and setting the BRIDGE property to **exactly the same name as the vCenter Network**. Leave "Default" network model if you don't need to define VLANs for htis network, otherwise chose the "VMware" network model.
 
 .. image:: /images/vnet_bridge.png
   :align: center
