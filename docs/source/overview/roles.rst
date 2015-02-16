@@ -43,6 +43,6 @@ The `oneadmin` account password is set by the admin user during the initial conf
 
 This account is used to log into Sunstone. It is a Cloud Administrator account, capable of running any task within OpenNebula, however, since this account cannot log into the vOneCloud Control Panel, it cannot control Appliance infrastructure, only the virtual resources.
 
-This account should also be used to create other accounts within Sunstone, either with the same level of privileges (by placing a new account in the `oneadmin` group) or final user with privileges. These final user can either be :ref:`VDCadmins or cloud consumers <vdc_management>`.
+This account should also be used to create other accounts within Sunstone, either with the same level of privileges (by placing a new account in the `oneadmin` group) or final user without admin privileges. These final users can either be :ref:`VDCadmins or cloud consumers <vdc_management>`.
 
 The default password for this account is `CloudAdmin` (just like the username). Make sure you change the password within Sunstone once you log in.

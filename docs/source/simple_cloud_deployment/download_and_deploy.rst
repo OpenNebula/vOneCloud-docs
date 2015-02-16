@@ -6,8 +6,10 @@ Download and Deploy
 
 Download links:
 
-- `vOneCloud-1.2.ova <http://downloads.vonecloud.today>`__
+- `vOneCloud-1.2.ova <http://downloads.vonecloud.com>`__
 - `md5sum.txt <http://appliances.opennebula.systems/vOneCloud/md5sum.txt>`__
+
+.. todo:: Real link
 
 You can import this OVA appliance to your vCenter infrastructure. It is based on
 `CentOS 7 <http://www.centos.org/>`__ and has the VMware tools enabled.
@@ -19,6 +21,8 @@ Follow the next steps to deploy a fully functional vOneCloud:
 
 Step 1. Deploying the OVA
 --------------------------------------------------------------------------------
+
+.. todo:: update screenshots
 
 Login to your vCenter installation and select the appropriate datacenter and cluster, where you want to deploy the appliance. Select the ``Deploy OVF Template``.
 
@@ -50,6 +54,8 @@ Select the datastore:
 
 Select the Network. You will need to choose a network that has access to the vCenter hosts.
 
+.. todo:: ESX hosts might be more clear?
+
 .. image:: /images/vOneCloud-download-deploy-006.png
     :align: center
 
@@ -73,7 +79,7 @@ When the VM boots up you will see in the vCenter console in vCenter the :ref:`vO
 .. image:: /images/control-console.png
     :align: center
 
-In this wizard you should **configure the network**. If you are using DHCP you can simply skip to the next item. 
+In this wizard you should **configure the network**. If you are using DHCP you can simply skip to the next item.
 
 If you are using a static network configuration, answer yes and you will need to use a ncurses interface to:
 
@@ -86,9 +92,9 @@ If you are using a static network configuration, answer yes and you will need to
 
 Next, you can **configure the proxy** if your network topology requires a proxy to access the internet. However please note that it's absolutely fine to use vOneCloud without any internet access at all, as you will be able to do most of the things, except for automatic upgrades and hybrid cloud access.
 
-Afterwrds you need to define a **root password.** You won't be using this very often, so write it down somewhere safe. It's your master password to the appliance. 
+Afterwards you need to define a **root password.** You won't be using this very often, so write it down somewhere safe. It's your master password to the appliance.
 
-The next item is the **`oneadmin` account password**. You will only need this to login to the vOneCloud Control Panel, a web-based configuration interface we will see very shortly. Check the :ref:`roles section <roles>` to learn more about vOneCloud roles and users.
+The next item is the **oneadmin account password**. You will only need this to login to the vOneCloud Control Panel, a web-based configuration interface we will see very shortly. Check the :ref:`roles section <roles>` to learn more about vOneCloud roles and users.
 
 We have now finished the vOneCloud Control Console initial configuration wizard. As the wizard itself will point out now you can open the vOneCloud Control Panel by pointing your browser to `http://<appliance_ip>:8000` and using the `oneadmin` account and password just chosen.
 

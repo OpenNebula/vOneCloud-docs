@@ -64,20 +64,20 @@ vOneCloud leverages the `functionality of OpenNebula <http://docs.opennebula.org
 
 * **Reliability, Efficiency and Massive Scalability**
 
-  * Leverage years of testing and production use
+  * Profit from years of testing and production use
   * Be sure that your Cloud Mangement Platform will be up to the task
 
 If you feel that there is a particular feature interesting for the general public, feel free to add a feature request in `Community - Feature Request section of the vOneCloud Support Portal <https://support.vonecloud.com/hc/communities/public/topics/200215442-Community-Feature-Requests>`__.
 
 .. _features_advanceconf:
 
-vOneCloud can levarage all the functionality that OpenNebula delivers, but some of it needs **additional configuration** steps:
+vOneCloud can leverage all the functionality that OpenNebula delivers, but some of it needs **additional configuration** steps:
 
-* `Centralized Management of Multiple Zones <http://docs.opennebula.org/4.10/release_notes/release_notes/features.html#centralized-management-of-multiple-zones>`__. Federate different datancenters by joining several vOneCloud instances.
+* `Centralized Management of Multiple Zones <http://docs.opennebula.org/4.10/release_notes/release_notes/features.html#centralized-management-of-multiple-zones>`__. Federate different datacenters by joining several vOneCloud instances.
 
 * `Community Virtual Appliance Marketplace <http://docs.opennebula.org/4.10/release_notes/release_notes/features.html#community-virtual-appliance-marketplace>`__. Create your own marketplace or benefit from community contributions with an online catalog of ready-to-run virtual appliances.
 
-* `Broad Commodity and Enterprise Platform Support <http://docs.opennebula.org/4.10/release_notes/release_notes/features.html#broad-commodity-and-enterprise-platform-support>`__. Underlying OpenNebula software features an amazingly flexible and plugin oriented architecture that eases the integration with existing datacenter components. Do no reinvent your datacenter, evolve it!.
+* `Broad Commodity and Enterprise Platform Support <http://docs.opennebula.org/4.10/release_notes/release_notes/features.html#broad-commodity-and-enterprise-platform-support>`__. Underlying OpenNebula software features an amazingly flexible and plugin oriented architecture that eases the integration with existing datacenter components. Do no reinvent your datacenter, evolve it!
 
 * `Virtual <http://docs.opennebula.org/4.10/release_notes/release_notes/features.html#advanced-control-and-monitoring-of-virtual-infrastructure>`__ & `Physical <http://docs.opennebula.org/4.10/release_notes/release_notes/features.html#advanced-control-and-monitoring-of-physical-infrastructure>`__ Infrastructure Control. Manage all aspects of your physical (hypervisors, storage backends, etc) & virtualized (VM lifecycle, VM images, virtual networks, etc) from a centralized web interface (Sunstone).
 

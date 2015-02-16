@@ -6,6 +6,8 @@ What's New vOneCloud 1.2
 
 vOneCloud 1.2 is powered by OpenNebula Fox Fur, and, as such, includes all the functionality present in `OpenNebula Fox Fur 4.10.2 <http://docs.opennebula.org/4.10/release_notes/release_notes/index.html>`__.
 
+.. todo:: OpenNebula 4.10.3
+
 Compared to the 1.0 version of vOneCloud, this stable release comes with a number of bug fixes that can be consulted in the `OpenNebula development portal <http://dev.opennebula.org/projects/opennebula/issues?query_id=62>`__.
 
 The following features and components are being introduced in vOneCloud 1.2 and are worth to be highlighted for their relevance:

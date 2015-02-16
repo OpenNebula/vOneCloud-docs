@@ -9,7 +9,7 @@ In order to pass information to the instantiated VM template, the Context sectio
 .. image:: /images/vm_template_context.png
     :align: center
 
-.. note:: Passing files and network information to VMs through contextualization is currently not supported
+.. warning:: Passing files and network information to VMs through contextualization is currently not supported
 
 Different kinds of context information can be passed onto the VMs:
 

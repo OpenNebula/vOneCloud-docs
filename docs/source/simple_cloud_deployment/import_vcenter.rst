@@ -23,12 +23,12 @@ In Sunstone, proceed to the ``Infrastructure --> Hosts`` tab and click on the "+
 .. image:: /images/import_cluster.png
     :align: center
 
-.. note:: Remember that vOneCloud does not currently support spaces in vCenter cluster names
+.. warning:: vOneCloud does not currently support spaces in vCenter cluster names
 
 In the dialog that pops up, select vCenter as Type in the dropdown. You now need to fill in the data according to the following table:
 
 +--------------+------------------------------------------------------+
-| **Hostname** | vCenter hostname or IP address                       |
+| **Hostname** | vCenter hostname (FQDN) or IP address                |
 +--------------+------------------------------------------------------+
 | **User**     | Username of a vCenter user with administrator rights |
 +--------------+------------------------------------------------------+
@@ -42,12 +42,12 @@ In the dialog that pops up, select vCenter as Type in the dropdown. You now need
 
 After the vCenter cluster is selected in Step 2, a list of vCenter VM Templates and both Networks and Distributed vSwitches will be presented to be imported into vOneCloud. Select all the Templates, Networks and Distributed vSwitches you want to import, and vOneCloud will generate vOneCloud VM Template and Virtual Networks resources representing the vCenter VM templates and vCenter Networks and Distributed vSwitches respectively.
 
-Additionally, these vOneCloud VM templates can be edited to add information to be passed into the instantiated VM. This process is called :ref:`Contextualization <build_template_context>`. 
+Additionally, these vOneCloud VM templates can be edited to add information to be passed into the instantiated VM. This process is called :ref:`Contextualization <build_template_context>`.
 
 Also, Virtual Networks can be further refined with the inclusion of different `Address Ranges <http://docs.opennebula.org/4.10/user/virtual_resource_management/vgg.html#the-address-range-ar>`__. This refinement can be done at import time, defining the size of the network one of the following supported Address Ranges:
 
 - IPv4: Need to define at least starting IP address. MAC address can be defined as well
-- IPv6: Can oprionllty define starting MAC adddress, GLOBAL PREFIX and ULA PREFIX 
+- IPv6: Can oprionllty define starting MAC adddress, GLOBAL PREFIX and ULA PREFIX
 - Ethernet: Does not manage IP addresses but rather MAC addresses. If a starting MAC is not provided, vOneCloud will generate one.
 
 The networking information will also be passed onto the VM in the :ref:`Contextualization <build_template_context>` process.
@@ -65,13 +65,11 @@ Regarding the vCenter VM Templates and Networks, is important to take into accou
 (Optional) Step 3. Import vCenter Running Virtual Machines / Reacquire VM Templates and Networks
 ------------------------------------------------------------------------------------------------
 
-If the vCenter infrastructure has running Virtual Machines, vOneCloud can import and subsequiently manage them. The process involves using the same dialog as in Step 2, which will now present the running VMs for the vCenter clusters already imported in vOneCloud. To import running vCenter VMs:
+If the vCenter infrastructure has running Virtual Machines, vOneCloud can import and subsequently manage them. The process involves using the same dialog as in Step 2, which will now present the running VMs for the vCenter clusters already imported in vOneCloud. To import running vCenter VMs:
 
-- 1. Proceed to the ``Infrastructure --> Hosts`` tab and click on the "+" green icon.  Select vCenter as Type in the dropdown and fill in the credentials and the IP or hostname of vCenter.
-
-- 2. You will now see running vCenter VMs that can be imported in vOneCloud. Select the VMs that need to be imported one and click import button.
-
-- 3. After the VMs are imported you can operate on their lifecycle, asign them to particular users, attach or detach network interfaces, create snapshots, etc. All the funcionality that vOneCloud supports for regular VMs is present for imported VMs.
+1. Proceed to the ``Infrastructure --> Hosts`` tab and click on the "+" green icon.  Select vCenter as Type in the dropdown and fill in the credentials and the IP or hostname of vCenter.
+2. You will now see running vCenter VMs that can be imported in vOneCloud. Select the VMs that need to be imported one and click import button.
+3. After the VMs are imported you can operate on their lifecycle, asign them to particular users, attach or detach network interfaces, create snapshots, etc. All the funcionality that vOneCloud supports for regular VMs is present for imported VMs.
 
 .. image:: /images/import_running_vms.png
     :align: center

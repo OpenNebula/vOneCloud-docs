@@ -4,7 +4,7 @@
 System Requirements
 ===================
 
-.. note:: It is advised to manage one vCenter by only one vOneCloud. Otherwise VMs from both server will clash and poduce errors.
+.. warning:: It is advised to manage one vCenter by only one vOneCloud. Otherwise VMs from both server will clash and poduce errors.
 
 The following components are needed to be present in the infrastructure to implement a cloud infrastructure run by vOneCloud:
 
@@ -19,7 +19,7 @@ The following components are needed to be present in the infrastructure to imple
 +---------------------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
 | ESX 5.5             | With at least 2 GB of free RAM and 1 free CPU                                                                                                                                                               |
 +                     +-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-|                     | To enable VNC functionality from vOneCloud there are two requirements: 1) the ESX hosts need to be accesible from vOneCloud and 2) the ESX firewall should allow for VNC connections (see the note below)   |
+|                     | To enable VNC functionality from vOneCloud there are two requirements: 1) the ESX hosts need to be reachable from vOneCloud and 2) the ESX firewall should allow for VNC connections (see the note below)   |
 +---------------------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
 
 .. note:: To enable VNC functionality for vOneCloud, repeat the following procedure for each ESX:
@@ -28,6 +28,8 @@ The following components are needed to be present in the infrastructure to imple
    - Select the ESX host, Configuration tab and select Security Profile in the Software category.
    - In the Firewall section, select the Properties. Enable GDB Server, then click OK.
 
+   Make sure that the ESX hosts are reachable from vOneCloud.
+
 vOneCloud ships with a default of 2 CPUs and 2 GB of RAM, and as such it has been certified for infrastructures of the following dimensions:
 
 - Up to 4 vCenters
@@ -35,4 +37,4 @@ vOneCloud ships with a default of 2 CPUs and 2 GB of RAM, and as such it has bee
 - Up to 1.000 VMs in total, each vCenter managing up to 250 VMs
 - Up to 100 users, being the concurrent limit 10 users accessing the system simultaneously
 
-.. note:: For infrastructures exceeding the aforementioned limits, we recommend an installation of OpenNebula from scracth on a bare metal server, using the `vCenter drivers <http://docs.opennebula.org/4.10/administration/virtualization/vcenterg.html>`__
+.. note:: For infrastructures exceeding the aforementioned limits, we recommend an installation of OpenNebula from scratch on a bare metal server, using the `vCenter drivers <http://docs.opennebula.org/4.10/administration/virtualization/vcenterg.html>`__

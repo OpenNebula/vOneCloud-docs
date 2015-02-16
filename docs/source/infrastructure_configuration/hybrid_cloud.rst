@@ -8,7 +8,7 @@ vOneCloud is capable of outsourcing virtual machines to public cloud providers. 
 
 If you want to extend your private cloud (formed by vOneCloud and vCenter) to create a hybrid cloud, you will need to configure at least one of the supported public clouds: Amazon EC2, IBM SoftLayer and Microsoft Azure. All hybrid drivers are already enabled in vOneCloud, but you need to configure them first with your public cloud credentials.
 
-You will need to access the :ref:`Control Panel <control_panel>` in order to configure the hybrid support in vOneCloud. 
+You will need to access the :ref:`Control Panel <control_panel>` in order to configure the hybrid support in vOneCloud.
 
 Step 1. Configure a Hybrid Region
 --------------------------------------------------------------------------------
@@ -112,7 +112,7 @@ Follow the tool tips that appear on mouse over to correctly configure the parame
 
 You need your SoftLayer Username and the API Key that can be retrieved from your SoftLayer Control Panel. More information on IBM SoftLayer support can be found `here <http://docs.opennebula.org/4.10/advanced_administration/cloud_bursting/slg.html>`__.
 
-.. note:: If vOneCloud is running behind a corporate http proxy, the SoftLayer hybrid connectors won't be available 
+.. warning:: If vOneCloud is running behind a corporate http proxy, the SoftLayer hybrid connectors won't be available
 
 Step 2. Restart vOneCloud services
 --------------------------------------------------------------------------------
