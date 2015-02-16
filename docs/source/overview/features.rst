@@ -67,7 +67,7 @@ vOneCloud additionally brings new configuration and upgrade tools:
 
 * **Smooth Upgrade Process**
 
-  * Automatic upgrade process and notifications available for users with an active support subscription through the Control Panel
+  * Automatic upgrade process and notifications through the Control Panel available for users with an active support subscription 
 
 If you feel that there is a particular feature interesting for the general public, feel free to add a feature request in `Community - Feature Request section of the vOneCloud Support Portal <https://support.vonecloud.com/hc/communities/public/topics/200215442-Community-Feature-Requests>`__.
 
