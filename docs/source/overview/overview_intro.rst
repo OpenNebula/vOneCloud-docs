@@ -6,4 +6,4 @@ Introduction
 
 vOneCloud extends vCenter with cloud features such as provisioning, elasticity and multi-tenancy. vOneCloud is designed for companies that want to create a self-service cloud environment on top of their VMware infrastructure without having to abandon their investment in VMware and retool the entire stack. vOneCloud leverages advanced features such as vMotion, HA or DRS scheduling provided by the VMware vSphere product family.
 
-This section describes the vOneCloud platform as a whole: its components, features and roles.
+This section describes the vOneCloud platform as a whole, and its components, features and roles.
