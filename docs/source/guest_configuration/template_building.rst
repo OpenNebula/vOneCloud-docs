@@ -1,10 +1,14 @@
 .. _build_template_context:
 
-========================================
-Building a Template for Contextulization
-========================================
+=========================================
+Building a Template for Contextualization
+=========================================
 
-In order to pass information to the instantiated VM template, the Context section of the vOneCloudVM Template can be used. These templates can be update in the Virtual Resources -> Templates tab of the vOneCloud GUI, and they can be updated regardless if they are :ref:`directly imported from vCenter <acquire_resources>` or :ref:`created through the vOneCloud Templates tab <add_new_vm_template>`.
+In order to pass information to the instantiated VM template, the Context section of the vOneCloudVM Template can be used. These templates can be updated in the Virtual Resources -> Templates tab of the vOneCloud GUI, and they can be updated regardless if they are :ref:`directly imported from vCenter <acquire_resources>` or :ref:`created through the vOneCloud Templates tab <add_new_vm_template>`.
+
+.. note::
+
+    Installing the Contextualization packages in the Virtual Machine image is required to pass this information to the instantantiated VM template. Make sure you follow the :ref:`Guest Contextualization <guest_contextualization>` guide to properly prepare your VM templates.
 
 .. image:: /images/vm_template_context.png
     :align: center

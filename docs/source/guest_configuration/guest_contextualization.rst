@@ -6,7 +6,7 @@ Guest Contextualization
 
 The information defined at the :ref:`VM Template building <build_template_context>` time is presented to the VM using the VMware VMCI channel. This information comes encoded in base64 can be gathered using the VMware Tools.
 
-Packages for Linux and Windows exist that can collect this data and configure some parameters.
+In order to make your VMs aware of OpenNebula, you **must** install the :ref:`official packages <guest_contextualization_packages>`. Packages for both Linux and Windows exist that can collect this data and configure the supported parameters.
 
 +----------------+---------------------------------------------------------+
 | **Parameter**  |                     **Description**                     |
@@ -38,6 +38,8 @@ In Linux guests, the information can be consumed using the following command (an
    MYSQLPASSWORD = 'MyPassword'
    ENABLEWORDPRESS = 'YES'
 
+
+.. _guest_contextualization_packages:
 
 Linux Packages
 ==============
