@@ -17,15 +17,6 @@ vOneCloud leverages the `functionality of OpenNebula <http://docs.opennebula.org
   * SunStone Portal for administrators and advanced users
   * Powerful CLI that resembles typical UNIX commands applications
 
-* **Appliance and Services Configuration**
-
-  * Control Console for vOneCloud appliance configuration
-  * Control Panel (Web UI) for vOneCloud services configuration
-
-* **Smooth Upgrade Process**
-
-  * Automatic upgrade process and notifications available for users with an active support subscription through the Control Panel
-
 * **Import Existing Resources**
 
   * Import existing vCenter VM Templates
@@ -66,6 +57,17 @@ vOneCloud leverages the `functionality of OpenNebula <http://docs.opennebula.org
 
   * Profit from years of testing and production use
   * Be sure that your Cloud Mangement Platform will be up to the task
+  
+vOneCloud additionally brings new configuration and upgrade tools:
+  
+* **Appliance and Services Configuration**
+
+  * Control Console for vOneCloud appliance configuration
+  * Control Panel (Web UI) for vOneCloud services configuration
+
+* **Smooth Upgrade Process**
+
+  * Automatic upgrade process and notifications available for users with an active support subscription through the Control Panel
 
 If you feel that there is a particular feature interesting for the general public, feel free to add a feature request in `Community - Feature Request section of the vOneCloud Support Portal <https://support.vonecloud.com/hc/communities/public/topics/200215442-Community-Feature-Requests>`__.
 
