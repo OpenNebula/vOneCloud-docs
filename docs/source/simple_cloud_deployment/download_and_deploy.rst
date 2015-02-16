@@ -94,7 +94,7 @@ Next, you can **configure the proxy** if your network topology requires a proxy 
 
 Afterwards you need to define a **root password.** You won't be using this very often, so write it down somewhere safe. It's your master password to the appliance.
 
-The next item is the **oneadmin account password**. You will only need this to login to the vOneCloud Control Panel, a web-based configuration interface we will see very shortly. Check the :ref:`roles section <roles>` to learn more about vOneCloud roles and users.
+The next item is the **oneadmin account password**. You will only need this to login to the vOneCloud Control Panel, a web-based configuration interface we will see very shortly. Check the :ref:`Accounts section <accounts>` to learn more about vOneCloud roles and users.
 
 We have now finished the vOneCloud Control Console initial configuration wizard. As the wizard itself will point out now you can open the vOneCloud Control Panel by pointing your browser to `http://<appliance_ip>:8000` and using the `oneadmin` account and password just chosen.
 

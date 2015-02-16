@@ -10,7 +10,7 @@ vOneCloud leverages the `functionality of OpenNebula <http://docs.opennebula.org
 
 * **Cloud User Interfaces**
 
-  * Simple, clean, intuitive portals for cloud consumers and VDC admins
+  * Simple, clean, intuitive portals for cloud consumers and Virtual Datacenter (VDC) administrators.
 
 * **Cloud Admin Interfaces**
 
@@ -24,7 +24,7 @@ vOneCloud leverages the `functionality of OpenNebula <http://docs.opennebula.org
 
 * **Smooth Upgrade Process**
 
-  * Automatic upgrade process and notifications available for paying customers through the Control Panel
+  * Automatic upgrade process and notifications available for users with an active support subscription through the Control Panel
 
 * **Import Existing Resources**
 

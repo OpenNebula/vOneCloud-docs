@@ -6,20 +6,22 @@ Users, Groups and ACLs
 
 vOneCloud offers a powerful mechanism for managing, grouping and assigning roles to users. Permissions and Access Control List mechanisms ensures the ability to allow or forbid access to any resource controlled by vOneCloud, being physical or virtual.
 
+.. _users_and_roles:
+
 User & Roles
 ------------
 
 vOneCloud can manage different types of users, attending to the permissions they have over infrastructure and logical resources.
 
-+----------------------+-----------------------------------------------------------------+------------------+
-|    **User Type**     |                         **Permissions**                         |     **View**     |
-+----------------------+-----------------------------------------------------------------+------------------+
-| Cloud Administrators | enough privileges to perform any operation on any object        | vcenter          |
-+----------------------+-----------------------------------------------------------------+------------------+
-| VDC Administrators   | manage a limited set of resources and users                     | vdcadmin_vcenter |
-+----------------------+-----------------------------------------------------------------+------------------+
-| VDC & End Users      | access a simplified view with limited actions to create new VMs | cloud_vcenter    |
-+----------------------+-----------------------------------------------------------------+------------------+
++----------------------+-----------------------------------------------------------------+----------+
+|    **User Type**     |                         **Permissions**                         | **View** |
++----------------------+-----------------------------------------------------------------+----------+
+| Cloud Administrators | enough privileges to perform any operation on any object        | vcenter  |
++----------------------+-----------------------------------------------------------------+----------+
+| VDC Administrators   | manage a limited set of resources and users                     | vdcadmin |
++----------------------+-----------------------------------------------------------------+----------+
+| VDC & End Users      | access a simplified view with limited actions to create new VMs | cloud    |
++----------------------+-----------------------------------------------------------------+----------+
 
 .. note:: VDC is the acronym for Virtual Datacenter
 

@@ -1,7 +1,7 @@
-.. _roles:
+.. _accounts:
 
 ================================================================================
-Roles
+Accounts
 ================================================================================
 
 The vOneCloud platform ships with several pre-created user accounts which will be described in this section:
@@ -13,10 +13,10 @@ The vOneCloud platform ships with several pre-created user accounts which will b
 +------------+-------------------------+-----------------------------------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
 | oneadmin   | vOneCloud Control Panel | vOneCloud Appliance administrator | Used to configure several aspects of the vOneCloud Appliance infrastructure: OpenNebula services, automatic upgrades, and drivers configuration (hybrid drivers and Active Directory integration). |
 +------------+-------------------------+-----------------------------------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-| oneadmin   | OpenNebula (Sunstone)   | Cloud Administrator               | **NOT RECOMMENDED**, use `CloudAdmin` instead.                                                                                                                                                     |
-+------------+-------------------------+-----------------------------------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
 | CloudAdmin | OpenNebula (Sunstone)   | Cloud Administrator               | Cloud Administrator. Run any task in OpenNebula, including creating other users.                                                                                                                   |
 +------------+-------------------------+-----------------------------------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+
+Different :ref:`cloud roles <users_and_roles>` can be used in order to offer and consume cloud provisioning services in Sunstone (vOneCloud Web UI). These roles can be defined through Sunstone, and in particular CloudAdmin comes preconfigured as the Cloud Administrator.
 
 `root` linux account
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -27,14 +27,14 @@ Please note that ssh acccess to the root account is disabled by default in the a
 
 .. note::
 
-    Console access to the appliance is not required by vOneCloud. Use it only under special circumstances. If you are a vOneCloud paying customer, make sure any changes applied in the appliance are supported by the vOneCloud support.
+    Console access to the appliance is not required by vOneCloud. Use it only under special circumstances. If you are a user with an active support subscription, make sure any changes applied in the appliance are supported by the vOneCloud support.
 
 `oneadmin` account
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 The main use of this account is to access the vOneCloud Control Panel (http://<appliance_ip>:8000). Only this account will have access to the Control Panel, no other user will be allowed to log in.
 
-However, the `oneadmin` account is also a valid OpenNebula (Sunstone) account, but we **strongly recommend not to use this account to access the Sunstone Web UI**, relying instead in the pre-existing `CloudAdmin` account (see below).
+However, the `oneadmin` account is also a valid Sunstone account, but we **strongly recommend not to use this account to access the Sunstone Web UI**, relying instead in the pre-existing `CloudAdmin` account (see below).
 
 The `oneadmin` account password is set by the admin user during the initial configuration of the vOneCloud Control Console. The **password can only be changed in the vOneCloud Control Console**. After changing it the user **must** restart the OpenNebula service in the :ref:`vOneCloud Control Panel <control_panel>`.
 
