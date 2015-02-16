@@ -13,13 +13,11 @@ vOneCloud is an `OpenNebula <http://docs.opennebula.org/4.10/design_and_installa
 
 vOneCloud is distributed as a virtual appliance in OVA format for vSphere. It contains all required OpenNebula services within a single CentOS Linux appliance. All components are fully open-source and have been certified to work in enterprise environments, vOneCloud 1.2 includes:
 
-+----------------+--------+
-|   **CentOS**   |  7.0   |
-+----------------+--------+
-| **OpenNebula** | 4.10.2 |
-+----------------+--------+
-
-.. todo:: OpenNebula 4.10.3
++----------------+------+
+|   **CentOS**   | 7.0  |
++----------------+------+
+| **OpenNebula** | 4.10 |
++----------------+------+
 
 .. image:: /images/cloud_vonecloud_image.png
     :align: center

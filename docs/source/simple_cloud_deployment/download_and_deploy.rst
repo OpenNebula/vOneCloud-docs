@@ -22,8 +22,6 @@ Follow the next steps to deploy a fully functional vOneCloud:
 Step 1. Deploying the OVA
 --------------------------------------------------------------------------------
 
-.. todo:: update screenshots
-
 Login to your vCenter installation and select the appropriate datacenter and cluster, where you want to deploy the appliance. Select the ``Deploy OVF Template``.
 
 .. image:: /images/vOneCloud-download-deploy-001.png
@@ -52,7 +50,7 @@ Select the datastore:
 .. image:: /images/vOneCloud-download-deploy-005.png
     :align: center
 
-Select the Network. You will need to choose a network that has access to the vCenter hosts.
+Select the Network. You will need to choose a network that has access to the ESX hosts.
 
 .. todo:: ESX hosts might be more clear?
 

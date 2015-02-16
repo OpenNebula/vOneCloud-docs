@@ -6,8 +6,6 @@ Control Console
 
 This is a text-based interface available used to run basic configuration tasks in the vOneCloud appliance.
 
-.. todo:: update screenshot
-
 .. image:: /images/control-console.png
     :align: center
 
