@@ -52,8 +52,6 @@ Select the datastore:
 
 Select the Network. You will need to choose a network that has access to the ESX hosts.
 
-.. todo:: ESX hosts might be more clear?
-
 .. image:: /images/vOneCloud-download-deploy-006.png
     :align: center
 
