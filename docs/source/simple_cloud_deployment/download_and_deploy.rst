@@ -9,8 +9,6 @@ Download links:
 - `vOneCloud-1.2.ova <http://downloads.vonecloud.com>`__
 - `md5sum.txt <http://appliances.opennebula.systems/vOneCloud/md5sum.txt>`__
 
-.. todo:: Real link
-
 You can import this OVA appliance to your vCenter infrastructure. It is based on
 `CentOS 7 <http://www.centos.org/>`__ and has the VMware tools enabled.
 
