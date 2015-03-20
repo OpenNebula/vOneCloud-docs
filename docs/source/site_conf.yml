@@ -2,12 +2,14 @@
 versions:
 - - "latest"
   - http://docs.vonecloud.today/latest
-- - "1.2"
+- - "1.2.1"
   - http://docs.vonecloud.today/1.2
 - - "1.0"
   - http://docs.vonecloud.today/1.0
 
 downloads:
+- - "1.2.1"
+  - http://docs.vonecloud.today/pdf/vOneCloud-1.2.1.pdf
 - - "1.2"
   - http://docs.vonecloud.today/pdf/vOneCloud-1.2.pdf
 - - "1.0"
