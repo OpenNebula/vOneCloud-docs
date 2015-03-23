@@ -23,22 +23,3 @@ The following :ref:`components <components>` have been introduced in vOneCloud 1
 - The vOneCloud :ref:`Control Panel <control_panel>` is a slick web interface oriented to the configuration of the vOneCloud services as well as used to upgrade to a newer version of vOneCloud. It also includes the possibility to access the OpenNebula logs.
 
 The :ref:`Automated Upgrade process <control_panel_automatic_upgrades>` implemented by the :ref:`Control Panel <control_panel>` will only be available to users with an active support subscription. With this functionality users will be notified when a new vOneCloud release is available for download and they will be able to upgrade the vOneCloud platform with a single click.
-
-.. _resolved_issues:
-
-Resolved Issues
-================================================================================
-
-The following issues present in vOneCloud 1.0 have been solved in 1.2:
-
-+-----------------------------+-----------------------------------------------------------------------------------------------+
-|           **Name**          |                                        **Description**                                        |
-+-----------------------------+-----------------------------------------------------------------------------------------------+
-| Removed unused VM actions   | VM actions which do not apply in vCenter VM like for instance, VM resize and undeploy actions |
-+-----------------------------+-----------------------------------------------------------------------------------------------+
-| Fixes for hybrid connectors | Various fixes in configuration, information display and usability                             |
-+-----------------------------+-----------------------------------------------------------------------------------------------+
-| Fix support in HTTP Proxy   | Now available for all vOneCloud services                                                      |
-+-----------------------------+-----------------------------------------------------------------------------------------------+
-| Removed unused views        | Sunstone views that did not apply were removed to avoid confusion                             |
-+-----------------------------+-----------------------------------------------------------------------------------------------+
