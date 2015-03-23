@@ -6,9 +6,6 @@ What's New vOneCloud 1.2
 
 vOneCloud 1.2 is powered by OpenNebula Fox Fur, and, as such, includes all the functionality present in `OpenNebula 4.10 Fox Fur <http://docs.opennebula.org/4.10/release_notes/release_notes/index.html>`__.
 
-New Features
-================================================================================
-
 The following Cloud Management features have been introduced in vOneCloud 1.2:
 
 - :ref:`Import running VMs <import_running_vms>`. vCenter running Virtual Machines can be now be imported seamlessly in vOneCloud without powering them off and hence without any downtime!
