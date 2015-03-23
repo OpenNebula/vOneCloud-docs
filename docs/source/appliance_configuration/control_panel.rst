@@ -58,6 +58,11 @@ Any of this actions will trigger one or more tasks. If one of this tasks fails, 
 
 .. _control_panel_automatic_upgrades:
 
+Log Access
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+The Control Panel features the possibility to access the OpenNebula logs.
+
 Automatic Upgrades
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 

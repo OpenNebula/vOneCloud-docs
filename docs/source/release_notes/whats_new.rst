@@ -20,7 +20,7 @@ The following Cloud Management features have been introduced in vOneCloud 1.2:
 The following :ref:`components <components>` have been introduced in vOneCloud 1.2:
 
 - The new vOneCloud :ref:`Control Console <control_console>` is a text based wizard to aid in the OneCloud bootstrap process.
-- The vOneCloud :ref:`Control Panel <control_panel>` is a slick web interface oriented to the configuration of the vOneCloud services as well as used to upgrade to a newer version of vOneCloud.
+- The vOneCloud :ref:`Control Panel <control_panel>` is a slick web interface oriented to the configuration of the vOneCloud services as well as used to upgrade to a newer version of vOneCloud. It also includes the possibility to access the OpenNebula logs.
 
 The :ref:`Automated Upgrade process <control_panel_automatic_upgrades>` implemented by the :ref:`Control Panel <control_panel>` will only be available to users with an active support subscription. With this functionality users will be notified when a new vOneCloud release is available for download and they will be able to upgrade the vOneCloud platform with a single click.
 
