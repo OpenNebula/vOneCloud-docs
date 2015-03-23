@@ -1,5 +1,8 @@
 .. _resolved_issues_120:
 
+Resolved Issues in 1.2.0
+------------------------
+
 The following issues present in vOneCloud 1.0 have been solved in 1.2:
 
 +-----------------------------+-----------------------------------------------------------------------------------------------+
