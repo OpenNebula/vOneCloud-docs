@@ -57,7 +57,7 @@ Review the settings selection and click finish. Wait for the Virtual Machine to 
 .. image:: /images/vOneCloud-download-deploy-007.png
     :align: center
 
-Now you can power on the Virtual Machine:
+Now you can power on the Virtual Machine (to edit settings before, :ref:`read this section <edit_vonecloud_appliance>`):
 
 .. image:: /images/vOneCloud-download-deploy-008.png
     :align: center
@@ -72,7 +72,7 @@ When the VM boots up you will see in the vCenter console in vCenter the :ref:`vO
 .. image:: /images/control-console.png
     :align: center
 
-In this wizard you should **configure the network**. If you are using DHCP you can simply skip to the next item.
+In this wizard you need to **configure the network**. If you are using DHCP you can simply skip to the next item.
 
 If you are using a static network configuration, answer yes and you will need to use a ncurses interface to:
 
@@ -82,6 +82,11 @@ If you are using a static network configuration, answer yes and you will need to
 - Input the desired IP address/24 in Addresses
 - Input Gateway and DNS Servers
 - Select OK and then quit the dialog.
+
+An example of static network configuration on the available network interface (see :ref:`Editing the vOneCloud Appliance <edit_vonecloud_appliance>` for information on how to add new interfaces to vOneCloud) on the 10.0.1.x class C network, with a gateway in 10.0.1.1 and using 8.8.8.8 as the DNS server:
+
+.. image:: /images/network-conf-example.png
+    :align: center
 
 Next, you can **configure the proxy** if your network topology requires a proxy to access the internet. However please note that it's absolutely fine to use vOneCloud without any internet access at all, as you will be able to do most of the things, except for automatic upgrades and hybrid cloud access.
 
@@ -127,3 +132,22 @@ Login to the Appliance
 All the functionality you need to run your vOneCloud can be accessed via Sunstone, and all the support configuration parameters are available either in the :ref:`vOneCloud Control Console <control_console>` or in the :ref:`vOneCloud Control Panel <control_panel>`.
 
 To access the :ref:`vOneCloud command line interface <cli_interface>` open the vCenter console of the vOneCloud Virtual Machine appliance and change the tty (Ctrl + Alt + F2). Afterwards, log in with the `root` account and the password you used in the :ref:`initial configuration <download_and_deploy_control_console>`, and switch to the `oneadmin` user.
+
+.. _edit_vonecloud_appliance:
+
+Editing the vOneCloud Appliance
+--------------------------------------------------------------------------------
+
+After importing the vOneCloud OVA, and before powering it on, the vOneCloud Virtual Machine can be edited to, for instance, add a new network interface, increase the amount of RAM, the available CPUs for performance, etc.
+
+In order to achieve this, please right click on the vOneCloud VM, and select Edit Settings. The next dialog should pop up:
+
+.. image:: /images/edit-settings.png
+    :align: center
+
+If you want for instance to add a new network interface, select Network from the dropdown in New device (at the botton of the dialog):
+
+.. image:: /images/add-nic.png
+    :align: center
+
+
