@@ -77,6 +77,14 @@ vCenter VM Templates can be imported and reacquired using a similar procedure fr
 
 .. note:: The vCenter VM Templates, Networks, Distributed vSwitches and running Virtual Machines can be imported regardless of their position inside VM Folders, since vOneCloud will search recursively for them.
 
+.. note:: Running VMs with open VNC ports are imported with the ability to stablish VNC connection to them via vOneCloud. To activate the VNC ports, you need to right click on the VM while it is shut down and click on "Edit Settings", and set the ``remotedisplay.*`` settings show in the following images.
+
+.. image:: /images/vm_advanced_settings.png
+    :align: center
+
+.. image:: /images/set_vnc_port.png
+    :align: center
+
 Step 4. Check Resources
 -----------------------
 
