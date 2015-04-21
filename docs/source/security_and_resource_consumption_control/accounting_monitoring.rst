@@ -15,7 +15,7 @@ Accounting information is available from the vCenter View:
 .. image:: /images/accounting_vcenter_view.png
     :align: center
 
-From the VDC Admin View:
+From the Group Admin View:
 
 .. image:: /images/accounting_vdcadmin_view.png
     :align: center
@@ -25,4 +25,4 @@ And from the vCenter Cloud View:
 .. image:: /images/accounting_cloud_view.png
     :align: center
 
-Learn more on the `monitoring <http://docs.opennebula.org/4.10/administration/monitoring/mon.html>`__ and `accounting <http://docs.opennebula.org/4.10/administration/users_and_groups/accounting.html>`__ subsystems
+Learn more on the :doc:`monitoring <administration/monitoring/mon.html>` and :doc:`accounting <administration/users_and_groups/accounting.html>` subsystems

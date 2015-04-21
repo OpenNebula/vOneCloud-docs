@@ -35,7 +35,7 @@ sys.path.append(os.path.abspath('ext'))
 # extensions coming with Sphinx (named 'sphinx.ext.*') or your custom
 # ones.
 extensions = [
-    'sphinx.ext.todo', 'versions'
+    'sphinx.ext.todo', 'versions', 'sphinx.ext.extlinks'
 ]
 
 todo_include_todos = True
@@ -71,6 +71,8 @@ copyright = '2015, OpenNebula Systems'
 #
 # The short X.Y version.
 version = '1.4'
+
+extlinks = {'doc': ('http://docs.opennebula.org/4.12/%s', 'doc ')}
 
 # The full version, including alpha/beta/rc tags.
 release = '1.4.0'

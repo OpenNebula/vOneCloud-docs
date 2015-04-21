@@ -39,7 +39,7 @@ The capacity that you attach to this region will define the maximum number and t
 
 Follow the tool tips that appear on mouse over to correctly configure the parameters.
 
-You need the Access and Secret key to be retrieved from your AWS account. More information on Amazon EC2 support can be found `here <http://docs.opennebula.org/4.10/advanced_administration/cloud_bursting/ec2g.html>`__.
+You need the Access and Secret key to be retrieved from your AWS account. More information on Amazon EC2 support can be found :doc:`here <advanced_administration/cloud_bursting/ec2g.html>`.
 
 **MS Azure**
 
@@ -87,7 +87,7 @@ You need the Pem Management Certificate to be retrieved from your AWS account. F
 
 Afterwards, copy the context of the .pem certificate in the clipboard and paste it in the text area of the Control Panel Pem Management Certificate field.
 
-More information on MS Azure support can be found `here <http://docs.opennebula.org/4.10/advanced_administration/cloud_bursting/azg.html>`__.
+More information on MS Azure support can be found :doc:`here <advanced_administration/cloud_bursting/azg.html>`.
 
 .. note:: Azure hybrid connectors only support non authenticated http proxies
 
@@ -110,7 +110,7 @@ The capacity that you attach to this region will define the maximum number and t
 
 Follow the tool tips that appear on mouse over to correctly configure the parameters.
 
-You need your SoftLayer Username and the API Key that can be retrieved from your SoftLayer Control Panel. More information on IBM SoftLayer support can be found `here <http://docs.opennebula.org/4.10/advanced_administration/cloud_bursting/slg.html>`__.
+You need your SoftLayer Username and the API Key that can be retrieved from your SoftLayer Control Panel. More information on IBM SoftLayer support can be found :doc:`here <advanced_administration/cloud_bursting/slg.html>`.
 
 .. warning:: If vOneCloud is running behind a corporate http proxy, the SoftLayer hybrid connectors won't be available
 
@@ -145,4 +145,4 @@ Once templates are ready, they can be consumed at VM creation time from the Clou
 .. image:: /images/hybrid_cloud_view.png
     :align: center
 
-Learn more about `hybrid support <http://docs.opennebula.org/4.10/advanced_administration/cloud_bursting/introh.html>`__.
+Learn more about :doc:`hybrid support <advanced_administration/cloud_bursting/introh.html>`.

@@ -8,16 +8,27 @@ The provisioning model by default in vOneCloud is based on three different :ref:
 
 *vOneCloud* user comes preconfigured and is the **Cloud Administrator**, in full control of all the physical and virtual resources and using the vCenter view.
 
-The whole cloud can be divided in isolated partitions, called Virtual Datacenters, or VDCs. VDC are defined as group of users with access to a set of physical hosts and their associated resources in a transparent way. A **VDC Admin** manages her partition of the cloud, including user management, but only within her VDC, not for the whole cloud like the **Cloud Administrator**.
+A Virtual Datacenter (VDC) defines an assignment of one or several groups to a pool of physical resources. This pool of physical resources consists of resources from one or several clusters, which are logical agroupations of hosts and virtual networks. VDCs are a great way to partition your cloud into smaller clouds, and asign them to groups with their administrators and users, completely isolated from other groups.
 
-Let's create a VDC named *ProductionVDC* with an administrator called **vdcadmin**:
+A **Group Admin** manages her partition of the cloud, including user management, but only within the VDCs assigned to the Group, not for the whole cloud like the **Cloud Administrator**.
+
+Let's create a Group (under System) named *Production* with an administrator called **prodadmin**:
 
 .. image:: /images/create_vdc_adminview.png
     :align: center
 
-In the *Resources* tab you can chose which physical resources are assigned to the VDC. By default it will use all the available resources.
 
-Now login again using this newly created **vdcadmin**. The VDC Admin view will kick in. Try it out creating the first *vdcuser* and assign them quotas on resource usage:
+Let's create a VDCs (under System) named *ProductionVDC*, and assign the *Production* group to use it:
+
+.. image:: /images/create_prod_vdc.png
+    :align: center
+
+Let's add resources to the VDC under the "Resources" tab, the vCenter and a Virtual Network:
+
+.. image:: /images/assign_resources_to_vdc.png
+    :align: center
+
+Now login again using the newly created **prodadmin**. The Group Admin view will kick in. Try it out creating the first *produser* and assign them quotas on resource usage:
 
 .. image:: /images/create_vdc_vdcview.png
     :align: center
@@ -29,9 +40,9 @@ As *vOneCloud* user, in the vCenter View, you will be able to see all the VM Tem
 
 The same applies for Virtual Networks these VM Templates may use.
 
-If you log with *vdcuser*, the view will change to the vCenter Cloud View, where **vdcuser** can start consuming VMs based on the VM Template shared by the **cloud administrator** and allowed by the **vdcadmin**:
+If you log with *produser*, the view will change to the vCenter Cloud View, where **vdcuser** can start consuming VMs based on the VM Template shared by the **Cloud Administrator** and allowed by the **vdcadmin**:
 
 .. image:: /images/create_vdc_cloudview.png
     :align: center
 
-Read more about `VDC managing <http://docs.opennebula.org/4.10/administration/users_and_groups/manage_groups.html#managing-vdc-and-virtual-resources>`__.
+Read more about :doc:`Group <administration/users_and_groups/manage_groups.html#managing-vdc-and-virtual-resources>` and :doc:`VDC <administration/users_and_groups/manage_vdcs.html>` managing.

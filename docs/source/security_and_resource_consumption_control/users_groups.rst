@@ -13,38 +13,36 @@ User & Roles
 
 vOneCloud can manage different types of users, attending to the permissions they have over infrastructure and logical resources.
 
-+----------------------+-----------------------------------------------------------------+----------+
-|    **User Type**     |                         **Permissions**                         | **View** |
-+----------------------+-----------------------------------------------------------------+----------+
-| Cloud Administrators | enough privileges to perform any operation on any object        | vcenter  |
-+----------------------+-----------------------------------------------------------------+----------+
-| VDC Administrators   | manage a limited set of resources and users                     | vdcadmin |
-+----------------------+-----------------------------------------------------------------+----------+
-| VDC & End Users      | access a simplified view with limited actions to create new VMs | cloud    |
-+----------------------+-----------------------------------------------------------------+----------+
++----------------------+-----------------------------------------------------------------+------------+
+|    **User Type**     |                         **Permissions**                         |  **View**  |
++----------------------+-----------------------------------------------------------------+------------+
+| Cloud Administrators | enough privileges to perform any operation on any object        | vcenter    |
++----------------------+-----------------------------------------------------------------+------------+
+| Group Administrators | manage a limited set and users within VDCs                      | groupadmin |
++----------------------+-----------------------------------------------------------------+------------+
+| End Users            | access a simplified view with limited actions to create new VMs | cloud      |
++----------------------+-----------------------------------------------------------------+------------+
 
 .. note:: VDC is the acronym for Virtual Datacenter
 
 .. image:: /images/sunstone_user_list.png
     :align: center
 
-Learn more about user management `here <http://docs.opennebula.org/4.10/administration/users_and_groups/manage_users.html>`__.
+Learn more about user management :doc:`here <administration/users_and_groups/manage_users.html>`.
 
 .. _vdc_management:
 
 Group & VDC Management
 ----------------------
 
-A **group** in vOneCloud is an authorization boundary for users, but it can also be used to partition the cloud infrastructure and define what resources are available to each group.
+A **group** of users makes it possible to isolate users and resources. A user can see and use the shared resources from other users. The **group** is an authorization boundary for the users, but you can also partition your cloud infrastructure and define what resources are available to each group using Virtual Data Centers (VDC).
 
-A **resource provider** is a set of physical hosts and associated datastores and virtual networks, which is logically grouped into a cluster. When you assign a resource provider to a group, users in that group will be able to use resources of that cluster.
-
-A group and an associated resource provider forms a **Virtual Datacenter (VDC)**. VDCs are a great way to partition your cloud into smaller clouds, with their administrator and users, completely isolated from other VDCs.
+A VDC defines an assignment of one or several groups to a pool of physical resources. This pool of physical resources consists of resources from one or several clusters, which are logical agroupations of hosts and virtual networks. VDCs are a great way to partition your cloud into smaller clouds, and asign them to groups with their administrators and users, completely isolated from other groups.
 
 .. image:: /images/sunstone_group_list.png
     :align: center
 
-Read more about `groups <http://docs.opennebula.org/4.10/administration/users_and_groups/manage_groups.html>`__ and `VDCs <http://docs.opennebula.org/4.10/administration/users_and_groups/manage_groups.html#managing-vdc-and-resource-providers>`__.
+Read more about :doc:`groups <administration/users_and_groups/manage_groups.html>` and :doc:`VDCs <administration/users_and_groups/manage_groups.html#managing-vdc-and-resource-providers>`.
 
 Access Control Lists
 --------------------
@@ -54,5 +52,5 @@ vOneCloud implements a very useful ACL mechanism that enables fine-tuning of all
 .. image:: /images/sunstone_acl_list.png
     :align: center
 
-Writing (or even reading) ACL rules is not trivial, more information about `ACLs here <http://docs.opennebula.org/4.10/administration/users_and_groups/manage_acl.html>`__.
+Writing (or even reading) ACL rules is not trivial, more information about :doc:`ACLs here <administration/users_and_groups/manage_acl.html>`.
 

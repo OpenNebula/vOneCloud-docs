@@ -42,7 +42,7 @@ After the vCenter cluster is selected in Step 2, a list of vCenter VM Templates 
 
 Additionally, these vOneCloud VM templates can be edited to add information to be passed into the instantiated VM. This process is called :ref:`Contextualization <build_template_context>`.
 
-Also, Virtual Networks can be further refined with the inclusion of different `Address Ranges <http://docs.opennebula.org/4.10/user/virtual_resource_management/vgg.html#the-address-range-ar>`__. This refinement can be done at import time, defining the size of the network one of the following supported Address Ranges:
+Also, Virtual Networks can be further refined with the inclusion of different :doc:`Address Ranges <user/virtual_resource_management/vgg.html#the-address-range-ar>`. This refinement can be done at import time, defining the size of the network one of the following supported Address Ranges:
 
 - IPv4: Need to define at least starting IP address. MAC address can be defined as well
 - IPv6: Can optionally define starting MAC adddress, GLOBAL PREFIX and ULA PREFIX
@@ -100,4 +100,4 @@ Step 5. Instantiate a VM Template
 
 Everything is ready! Now vOneCloud is prepared to manage Virtual Machines. In Sunstone, go to ``Virtual Resources --> Templates``, select one of the templates imported in **Step 2** and click on Instantiate. Now you will be able to control the lifecycle of the VM.
 
-More information on available operations over VMs `here <http://docs.opennebula.org/4.10/user/virtual_resource_management/vm_guide_2.html>`__.
+More information on available operations over VMs :doc:`here <user/virtual_resource_management/vm_guide_2.html>`.

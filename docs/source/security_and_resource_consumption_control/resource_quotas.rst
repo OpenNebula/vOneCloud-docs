@@ -23,9 +23,9 @@ Quotas can be updated either from the vCenter View:
 .. image:: /images/sunstone_update_quota.png
     :align: center
 
-Or from the VDC Admin View:
+Or from the Group Admin View:
 
 .. image:: /images/vdc_admin_update_quota.png
     :align: center
 
-Refer to `this guide <http://docs.opennebula.org/4.10/administration/users_and_groups/quota_auth.html>`__ to find out more.
+Refer to :doc:`this guide <administration/users_and_groups/quota_auth.html>` to find out more.

@@ -16,11 +16,11 @@ End users can consume services from the Cloud View:
 .. image:: /images/oneflow_cloud_view.png
     :align: center
 
-`Elasticity <http://docs.opennebula.org/4.10/advanced_administration/application_flow_and_auto-scaling/appflow_use_cli.html#elasticity>`__ of each service can be defined in relation with chosen Key Performance Indicators as reported by the hypervisor.
+:doc:`Elasticity <advanced_administration/application_flow_and_auto-scaling/appflow_use_cli.html#elasticity>` of each service can be defined in relation with chosen Key Performance Indicators as reported by the hypervisor.
 
 .. note::
 
     vOneCloud does not include the ``onegate`` component which is mentioned at some places in the application flow guide.
 
-More information on this component in the `OneFlow guide <http://docs.opennebula.org/4.10/advanced_administration/application_flow_and_auto-scaling/oneapps_overview.html>`__. Also, extended information on how to manage multi-tier applications is available `this guide <http://docs.opennebula.org/4.10/advanced_administration/application_flow_and_auto-scaling/appflow_use_cli.html>`__.
+More information on this component in the :doc:`OneFlow guide <advanced_administration/application_flow_and_auto-scaling/oneapps_overview.html>`. Also, extended information on how to manage multi-tier applications is available :doc:`this guide <advanced_administration/application_flow_and_auto-scaling/appflow_use_cli.html>`.
 

@@ -6,7 +6,7 @@ vOneCloud Features
 
 .. _features_outofthebox:
 
-vOneCloud leverages the `functionality of OpenNebula <http://docs.opennebula.org/4.10/release_notes/release_notes/features.html>`__. The following features come preconfigured and can be used **out-of-the-box** with vOneCloud:
+vOneCloud leverages the :doc:`functionality of OpenNebula <release_notes/release_notes/features.html>`. The following features come preconfigured and can be used **out-of-the-box** with vOneCloud:
 
 * **Cloud User Interfaces**
 
@@ -25,7 +25,7 @@ vOneCloud leverages the `functionality of OpenNebula <http://docs.opennebula.org
 
 * **On-demand Provision of Virtual Data Centers**
 
-  * Dynamic creation of Virtual Data Centers (VDCs) as fully-isolated virtual infrastructure environments where a group of users, under the control of the VDC administrator, can create and manage compute capacity
+  * Dynamic creation of Virtual Data Centers (VDCs) as fully-isolated virtual infrastructure environments where a group of users, under the control of the group administrator, can create and manage compute capacity
   * Placement of VDCs to multiple vCenters
 
 * **Hybrid Cloud**
@@ -76,14 +76,14 @@ If you feel that there is a particular feature interesting for the general publi
 
 vOneCloud can leverage all the functionality that OpenNebula delivers, but some of it needs **additional configuration** steps:
 
-* `Centralized Management of Multiple Zones <http://docs.opennebula.org/4.10/release_notes/release_notes/features.html#centralized-management-of-multiple-zones>`__. Federate different datacenters by joining several vOneCloud instances.
+* :doc:`Centralized Management of Multiple Zones <release_notes/release_notes/features.html#centralized-management-of-multiple-zones>`. Federate different datacenters by joining several vOneCloud instances.
 
-* `Community Virtual Appliance Marketplace <http://docs.opennebula.org/4.10/release_notes/release_notes/features.html#community-virtual-appliance-marketplace>`__. Create your own marketplace or benefit from community contributions with an online catalog of ready-to-run virtual appliances.
+* :doc:`Community Virtual Appliance Marketplace <release_notes/release_notes/features.html#community-virtual-appliance-marketplace>`. Create your own marketplace or benefit from community contributions with an online catalog of ready-to-run virtual appliances.
 
-* `Broad Commodity and Enterprise Platform Support <http://docs.opennebula.org/4.10/release_notes/release_notes/features.html#broad-commodity-and-enterprise-platform-support>`__. Underlying OpenNebula software features an amazingly flexible and plugin oriented architecture that eases the integration with existing datacenter components. Do no reinvent your datacenter, evolve it!
+* :doc:`Broad Commodity and Enterprise Platform Support <release_notes/release_notes/features.html#broad-commodity-and-enterprise-platform-support>`. Underlying OpenNebula software features an amazingly flexible and plugin oriented architecture that eases the integration with existing datacenter components. Do no reinvent your datacenter, evolve it!
 
-* `Virtual <http://docs.opennebula.org/4.10/release_notes/release_notes/features.html#advanced-control-and-monitoring-of-virtual-infrastructure>`__ & `Physical <http://docs.opennebula.org/4.10/release_notes/release_notes/features.html#advanced-control-and-monitoring-of-physical-infrastructure>`__ Infrastructure Control. Manage all aspects of your physical (hypervisors, storage backends, etc) & virtualized (VM lifecycle, VM images, virtual networks, etc) from a centralized web interface (Sunstone).
+* :doc:`Virtual <release_notes/release_notes/features.html#advanced-control-and-monitoring-of-virtual-infrastructure>` & :doc:`Physical <release_notes/release_notes/features.html#advanced-control-and-monitoring-of-physical-infrastructure>` Infrastructure Control. Manage all aspects of your physical (hypervisors, storage backends, etc) & virtualized (VM lifecycle, VM images, virtual networks, etc) from a centralized web interface (Sunstone).
 
-* `Management of multi-VM application (services) through the OneFlow component <http://docs.opennebula.org/4.10/advanced_administration/application_flow_and_auto-scaling/oneapps_overview.html>`__. OneFlow allows users and administrators to define, execute and manage multi-tiered applications, or services composed of interconnected Virtual Machines with deployment dependencies between them. Each group of Virtual Machines is deployed and managed as a single entity.
+* :doc:`Management of multi-VM application (services) through the OneFlow component <advanced_administration/application_flow_and_auto-scaling/oneapps_overview.html>`. OneFlow allows users and administrators to define, execute and manage multi-tiered applications, or services composed of interconnected Virtual Machines with deployment dependencies between them. Each group of Virtual Machines is deployed and managed as a single entity.
 
 Although the configuration is tailored for vCenter infrastructures, all the power of OpenNebula is contained in vOneCloud and it can be unleashed!
