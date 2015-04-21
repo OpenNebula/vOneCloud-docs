@@ -13,9 +13,6 @@ These known issues will be addressed in future versions of vOneCloud.
 | **Hybrid IP addresses not shown in Sunstone VM datatable** | They are displayed in the info panel of the VM, which appears below the datatable |
 |                                                            | after clicking the VM in the datatable                                            |
 +------------------------------------------------------------+-----------------------------------------------------------------------------------+
-| **Running VMs are imported without VNC**                   | All running VMs are imported without VNC capabilities in vOneCloud, regardless of |
-|                                                            | the availability of an open VNC port on said VMs                                  |
-+------------------------------------------------------------+-----------------------------------------------------------------------------------+
 
 If you find any new issue, please let us know in the `Community Questions section of the vOneCloud Support Portal <https://support.vonecloud.com/hc/communities/public/questions>`__.
 
@@ -45,8 +42,6 @@ These limitations will be addressed in future versions of vOneCloud:
 |                                     | username and password.                                                                                          |
 +-------------------------------------+-----------------------------------------------------------------------------------------------------------------+
 | **No FILES support in context**     | Contextualization in vOneCloud does not support passing files to Virtual Machines                               |
-+-------------------------------------+-----------------------------------------------------------------------------------------------------------------+
-| **No multi-VM app support**         | OneFlow component is not yet shipped with vOneCloud                                                             |
 +-------------------------------------+-----------------------------------------------------------------------------------------------------------------+
 | **Cannot import "one-" VMs**        | VMs deployed by another instance of vOneCloud, or machines named with a leading "one-" cannot be imported again |
 +-------------------------------------+-----------------------------------------------------------------------------------------------------------------+

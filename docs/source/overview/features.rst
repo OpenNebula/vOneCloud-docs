@@ -34,8 +34,9 @@ vOneCloud leverages the `functionality of OpenNebula <http://docs.opennebula.org
 
 * **Fast Provisioning**
 
-  * Automatic provision of Virtual Machines from a Template catalog
+  * Automatic provision of Virtual Machines and Services (Multi-VM applications) from a Template catalog
   * VM Template cloning and editing capabilities to maintain Template catalog
+  * Automatic execution and scaling of multi-tiered applications
   * Snapshotting
 
 * **Security and Resource Consumption Control**
@@ -63,7 +64,7 @@ vOneCloud additionally brings new configuration and upgrade tools:
 * **Appliance and Services Configuration**
 
   * Control Console for vOneCloud appliance configuration
-  * Control Panel (Web UI) for vOneCloud services configuration
+  * Control Panel (Web UI) for vOneCloud services configuration and debugging
 
 * **Smooth Upgrade Process**
 

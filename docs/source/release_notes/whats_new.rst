@@ -1,22 +1,18 @@
 .. _whats_new:
 
 ========================
-What's New vOneCloud 1.2
+What's New vOneCloud 1.4
 ========================
 
-vOneCloud 1.2 is powered by OpenNebula Fox Fur, and, as such, includes all the functionality present in `OpenNebula 4.10 Fox Fur <http://docs.opennebula.org/4.10/release_notes/release_notes/index.html>`__.
+vOneCloud 1.4 is powered by OpenNebula Cotton Candy, and, as such, includes all the functionality present in `OpenNebula 4.12 Cotton Candy <http://docs.opennebula.org/4.12/release_notes/release_notes/index.html>`__.
 
-The following Cloud Management features have been introduced in vOneCloud 1.2:
+The following Cloud Management features have been introduced in vOneCloud 1.4:
 
-- :ref:`Import running VMs <import_running_vms>`. vCenter running Virtual Machines can be now be imported seamlessly in vOneCloud without powering them off and hence without any downtime!
-- :ref:`Support for vCenter Networks <acquire_resources>`. vCenter Networks and Distributed vSwitches can now be imported into vOneCloud, and then used in VM Templates to define network interfaces in vCenter virtual machines attached to these Networks and Distributed vSwitches
-- :ref:`Attach/Detach network interfaces <vmtemplates_and_networks>`. Virtual Machines can now dynamically (ie, while running) have networks interfaces attached or removed.
-- :ref:`HTTP proxy support <control_console>`. Corporate HTTP proxies are supported now in vOneCloud.
-- :ref:`New Cloud vCenter view <vcenter_cloud_view>`. Designed for provision end users with vCenter resources in a simple way through vOneCloud.
+- :ref:`Import running VMs <import_running_vms> with VNC capabilities`. vCenter running VMs with VNC ports set to open will be imported with VNC capabilities in vOneCloud
+- :ref:`Multi-VM capabilities <multi_vm_applications>`. Management of sets of VMs (services) through the OneFlow component
+- :ref:`Debug capabilities embedded in Control Panel <debug_control_panel>`. Useful to gather all the details of your infrastructure and get the best support.
+- :ref:`Improved import and reacquire resources (VM, VM Templates and Networks) <import_running_vms>`. Separated dialogs for each resource instead of performing this actions through the host creation dialog.
 
-The following :ref:`components <components>` have been introduced in vOneCloud 1.2:
+Multiple bugfixes and documentation improvements have been included in this version. Moreover, vOneCloud 1.4 has been certified with :ref:`support for vSphere 6.0 <system_requirements>`.
 
-- The new vOneCloud :ref:`Control Console <control_console>` is a text based wizard to aid in the OneCloud bootstrap process.
-- The vOneCloud :ref:`Control Panel <control_panel>` is a slick web interface oriented to the configuration of the vOneCloud services as well as used to upgrade to a newer version of vOneCloud. It also includes the possibility to access the OpenNebula logs.
-
-The :ref:`Automated Upgrade process <control_panel_automatic_upgrades>` implemented by the :ref:`Control Panel <control_panel>` will only be available to users with an active support subscription. With this functionality users will be notified when a new vOneCloud release is available for download and they will be able to upgrade the vOneCloud platform with a single click.
+The :ref:`Automated Upgrade process <control_panel_automatic_upgrades>` implemented by the :ref:`Control Panel <control_panel>` will only be available to users with an active support subscription. With this functionality users will be notified when a new vOneCloud release is available for download and they will be able to upgrade the vOneCloud platform with a single click. However, this release (1.4) has been marked as public so everyone can upgrade from previous versions using the Control Panel.
