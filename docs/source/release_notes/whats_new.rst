@@ -8,7 +8,7 @@ vOneCloud 1.4 is powered by OpenNebula Cotton Candy, and, as such, includes all 
 
 The following Cloud Management features have been introduced in vOneCloud 1.4:
 
-- :doc:`Showback functionality <showback>`. New toolset that reports resource usage cost, and allows the integration with chargeback and billing platforms.
+- :ref:`Showback functionality <showback>`. New toolset that reports resource usage cost, and allows the integration with chargeback and billing platforms.
 - :ref:`Import running VMs with VNC capabilities <import_running_vms>`. vCenter running VMs with VNC ports set to open will be imported with VNC capabilities in vOneCloud
 - :ref:`Multi-VM capabilities <multi_vm_applications>`. Management of sets of VMs (services) through the OneFlow component
 - :ref:`Improved import and reacquire resources (VM, VM Templates and Networks) <import_running_vms>`. Separated dialogs for each resource instead of performing this actions through the host creation dialog

@@ -48,6 +48,7 @@ vOneCloud leverages the :doc:`functionality of OpenNebula <release_notes/release
   * Powerful user, group and role management
   * vCenter Network and Distributed vSwitch support
   * Attach/detach network interfaces funcionality
+  * Showback functionality to report resource usage cost
 
 * **Enterprise Datacenter Component Integration Capabilities**
 
@@ -83,7 +84,5 @@ vOneCloud can leverage all the functionality that OpenNebula delivers, but some 
 * :doc:`Broad Commodity and Enterprise Platform Support <release_notes/release_notes/features.html#broad-commodity-and-enterprise-platform-support>`. Underlying OpenNebula software features an amazingly flexible and plugin oriented architecture that eases the integration with existing datacenter components. Do no reinvent your datacenter, evolve it!
 
 * :doc:`Virtual <release_notes/release_notes/features.html#advanced-control-and-monitoring-of-virtual-infrastructure>` & :doc:`Physical <release_notes/release_notes/features.html#advanced-control-and-monitoring-of-physical-infrastructure>` Infrastructure Control. Manage all aspects of your physical (hypervisors, storage backends, etc) & virtualized (VM lifecycle, VM images, virtual networks, etc) from a centralized web interface (Sunstone).
-
-* :doc:`Management of multi-VM application (services) through the OneFlow component <advanced_administration/application_flow_and_auto-scaling/oneapps_overview.html>`. OneFlow allows users and administrators to define, execute and manage multi-tiered applications, or services composed of interconnected Virtual Machines with deployment dependencies between them. Each group of Virtual Machines is deployed and managed as a single entity.
 
 Although the configuration is tailored for vCenter infrastructures, all the power of OpenNebula is contained in vOneCloud and it can be unleashed!

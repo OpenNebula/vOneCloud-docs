@@ -4,7 +4,7 @@
 Showback
 ========
 
-vOneCloud ships with functionality to reports resource usage cost. Showback reports are genereted daily (at midnight)using the information retrieved from OpenNebula.
+vOneCloud ships with functionality to report resource usage cost. Showback reports are genereted daily (at midnight)using the information retrieved from OpenNebula.
 
 **Set the VM Cost**
 
