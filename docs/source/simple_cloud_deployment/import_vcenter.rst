@@ -65,6 +65,8 @@ Regarding the vCenter VM Templates and Networks, is important to take into accou
 
 If the vCenter infrastructure has running Virtual Machines, vOneCloud can import and subsequently manage them. To import running vCenter VMs follow the next steps:
 
+.. note:: Special attention deserves point 3, imported VMs will appear in Pending state for a short while until the scheduler passes them to Running automatically.
+
 1. Proceed to the ``Virtual Resources --> Virtual Machines`` tab and click on the "Import" green icon.  Fill in the credentials and the IP or hostname of vCenter and click on the "Get Running VMs" button.
 2. You will now see running vCenter VMs that can be imported in vOneCloud (only VMs running on previously imported cluster will be shown for import). Select the VMs that need to be imported one and click import button.
 3. VMs will appear in the Pending state in vOneCloud until the scheduler automatically passes them to Running, there is no need to force the deployment.
