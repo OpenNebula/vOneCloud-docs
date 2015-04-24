@@ -6,7 +6,7 @@ Download and Deploy
 
 Download links:
 
-- `vOneCloud-1.2.1.ova <http://downloads.vonecloud.com>`__ (md5sum: c4ca5770230d18be4dc8dd985c1c2d6f)
+- `vOneCloud-1.4.0.ova <http://downloads.vonecloud.com>`__ (md5sum: d64cfc84cbe958ac234aa6ace815f50e)
 
 You can import this OVA appliance to your vCenter infrastructure. It is based on
 `CentOS 7 <http://www.centos.org/>`__ and has the VMware tools enabled.
