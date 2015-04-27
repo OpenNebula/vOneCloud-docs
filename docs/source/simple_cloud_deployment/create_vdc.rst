@@ -17,13 +17,14 @@ Let's create a Group (under System) named *Production* with an administrator cal
 .. image:: /images/create_vdc_adminview.png
     :align: center
 
-
 Let's create a VDCs (under System) named *ProductionVDC*, and assign the *Production* group to use it:
 
 .. image:: /images/create_prod_vdc.png
     :align: center
 
-Let's add resources to the VDC under the "Resources" tab, the vCenter and a Virtual Network:
+Let's add resources to the VDC under the "Resources" tab, for instance a vCenter instance and a Virtual Network:
+
+.. note:: Only Clusters, vCenters and Virtual Networks can be assigned to VDCs, current versions of vOneCloud do not manage vCenter datastores.
 
 .. image:: /images/assign_resources_to_vdc.png
     :align: center
