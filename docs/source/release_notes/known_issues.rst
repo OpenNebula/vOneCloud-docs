@@ -9,10 +9,27 @@ Known Issues
 
 These known issues will be addressed in future versions of vOneCloud.
 
-+------------------------------------------------------------+-----------------------------------------------------------------------------------+
-| **Hybrid IP addresses not shown in Sunstone VM datatable** | They are displayed in the info panel of the VM, which appears below the datatable |
-|                                                            | after clicking the VM in the datatable                                            |
-+------------------------------------------------------------+-----------------------------------------------------------------------------------+
+Hybrid IP addresses not shown in Sunstone VM datatable
+------------------------------------------------------
+
+They are displayed in the info panel of the VM, which appears below the datatable after clicking the VM in the datatable
+
+Error during upgrades if Proxy is configured
+--------------------------------------------
+
+There is a problem when upgrading from 1.2.x to 1.4.0 if proxy is configured that requires a manual intervention. Upgrade normally, and you will see that the start job has failed. Login to the vOneCloud console as explained :ref:`here <advanced_login>`, and execute the following commands:
+
+.. code::
+
+    echo export http_proxy=<yourproxy> > /etc/profile.d/proxy.sh
+    source /etc/profile.d/proxy.sh
+    gem install mysql --no-ri --no-rdoc
+    sudo -u oneadmin onedb upgrade -u oneadmin -p oneadmin -d opennebula
+    /usr/lib/one/vonecloud-control-center/scripts/opennebula-server.sh restart
+
+
+Found more?
+-----------
 
 If you find any new issue, please let us know in the `Community Questions section of the vOneCloud Support Portal <https://support.vonecloud.com/hc/communities/public/questions>`__.
 
