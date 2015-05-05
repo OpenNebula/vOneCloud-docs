@@ -79,6 +79,13 @@ If the vCenter infrastructure has running Virtual Machines, vOneCloud can import
 .. image:: /images/import_running_vms.png
     :align: center
 
+The following operations *cannot* be performed on an imported VM:
+
+- Delete --recreate
+- Undeploy (and Undeploy --hard)
+- Migrate (and Migrate --live)
+- Stop
+
 vCenter VM Templates can be imported and reacquired using a similar procedure from the ``Import`` button in ``Virtual Resources --> Templates``. Moreover, Networks and Distributed vSwitches can also be imported / reacquired from using a similar ``Import`` button in ``Infrastructure --> Virtual Networks``.
 
 .. note:: The vCenter VM Templates, Networks, Distributed vSwitches and running Virtual Machines can be imported regardless of their position inside VM Folders, since vOneCloud will search recursively for them.
