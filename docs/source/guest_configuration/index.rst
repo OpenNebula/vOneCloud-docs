@@ -8,6 +8,6 @@ Guest Configuration
    :maxdepth: 2
 
    Introduction <introduction_gc>
-   Building a Template for Contextulization <template_building>
+   Building a Template for Contextualization <template_building>
    Guest Contextualization <guest_contextualization>
 

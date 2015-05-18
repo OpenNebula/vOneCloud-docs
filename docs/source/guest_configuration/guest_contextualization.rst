@@ -6,6 +6,8 @@ Guest Contextualization
 
 The information defined at the :ref:`VM Template building <build_template_context>` time is presented to the VM using the VMware VMCI channel. This information comes encoded in base64 can be gathered using the VMware Tools.
 
+.. note:: VMware tools are needed in the guestOS to enable several features (contextualization and networking feedback). Please install `VMware Tools (for Windows) <https://www.vmware.com/support/ws55/doc/new_guest_tools_ws.html>`__ or `Open Virtual Machine Tools <http://open-vm-tools.sourceforge.net/>`__ (for \*nix) in the guestOS.
+
 In order to make your VMs aware of OpenNebula, you **must** install the :ref:`official packages <guest_contextualization_packages>`. Packages for both Linux and Windows exist that can collect this data and configure the supported parameters.
 
 +----------------+---------------------------------------------------------+
