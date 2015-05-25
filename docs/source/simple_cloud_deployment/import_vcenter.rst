@@ -63,18 +63,11 @@ Regarding the vCenter VM Templates and Networks, is important to take into accou
 (Optional) Step 3. Import / Reacquire Virtual Machines, VM Templates and Networks
 ---------------------------------------------------------------------------------
 
-If the vCenter infrastructure has running Virtual Machines, vOneCloud can import and subsequently manage them. To import running vCenter VMs follow the next steps:
+If the vCenter infrastructure has running (or powered off) Virtual Machines, vOneCloud can import and subsequently manage them. To import vCenter VMs follow the next steps:
 
-.. note:: Special attention deserves point 3, imported VMs will appear in Pending state for a short while until the scheduler passes them to Running automatically.
-
-1. Proceed to the ``Virtual Resources --> Virtual Machines`` tab and click on the "Import" green icon.  Fill in the credentials and the IP or hostname of vCenter and click on the "Get Running VMs" button.
-2. You will now see running vCenter VMs that can be imported in vOneCloud (only VMs running on previously imported cluster will be shown for import). Select the VMs that need to be imported one and click import button.
-3. VMs will appear in the Pending state in vOneCloud until the scheduler automatically passes them to Running, there is no need to force the deployment. If there is over commitment of CPU and/or memory in vCenter, manual deploy of the imported VMs is neccesary to reach the running state. Select the imported VM in Pending state in vOneCloud and click on the deploy button, selecting afterwards the vCenter host from which the VM has been imported
-
-.. image:: /images/manual_deploy.png
-    :align: center
-
-4. After the VMs are in the Running state, you can operate on their lifecycle, asign them to particular users, attach or detach network interfaces, create snapshots, etc. All the funcionality that vOneCloud supports for regular VMs is present for imported VMs.
+1. Proceed to the ``Infrastructure --> Hosts`` tab and click on the Host representing the vCenter cluster where the VMs are running or poweredoff. Click on the WILDS info tab.
+2. You will now see running vCenter VMs that can be imported in vOneCloud. Select the VMs that need to be imported one and click import button.
+3. After the VMs are in the Running (or Poweroff) state, you can operate on their lifecycle, asign them to particular users, attach or detach network interfaces, create snapshots, etc. All the funcionality that vOneCloud supports for regular VMs is present for imported VMs.
 
 .. image:: /images/import_running_vms.png
     :align: center
@@ -86,7 +79,10 @@ The following operations *cannot* be performed on an imported VM:
 - Migrate (and Migrate --live)
 - Stop
 
-vCenter VM Templates can be imported and reacquired using a similar procedure from the ``Import`` button in ``Virtual Resources --> Templates``. Moreover, Networks and Distributed vSwitches can also be imported / reacquired from using a similar ``Import`` button in ``Infrastructure --> Virtual Networks``.
+vCenter VM Templates can be imported and reacquired using the ``Import`` button in ``Virtual Resources --> Templates``. Fill in the credentials and the IP or hostname of vCenter and click on the "Get Templates" button. Similarly, Networks and Distributed vSwitches can also be imported / reacquired from using a similar ``Import`` button in ``Infrastructure --> Virtual Networks``.
+
+.. image:: /images/import_vcenter_templates.png
+    :align: center
 
 .. note:: The vCenter VM Templates, Networks, Distributed vSwitches and running Virtual Machines can be imported regardless of their position inside VM Folders, since vOneCloud will search recursively for them.
 
