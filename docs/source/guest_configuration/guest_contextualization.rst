@@ -10,27 +10,31 @@ The information defined at the :ref:`VM Template building <build_template_contex
 
 In order to make your VMs aware of OpenNebula, you **must** install the :ref:`official packages <guest_contextualization_packages>`. Packages for both Linux and Windows exist that can collect this data and configure the supported parameters.
 
-+----------------+---------------------------------------------------------+
-| **Parameter**  |                     **Description**                     |
-+================+=========================================================+
-| SET_HOST       | Change the hostname of the VM. In Windows the machine   |
-|                | needs to be restarted.                                  |
-+----------------+---------------------------------------------------------+
-| SSH_PUBLIC_KEY | SSH public keys to add to authorized_keys file.         |
-|                | This parameter only works with Linux guests.            |
-+----------------+---------------------------------------------------------+
-| USERNAME       | Create a new administrator user with the given          |
-|                | user name. Only for Windows guests.                     |
-+----------------+---------------------------------------------------------+
-| PASSWORD       | Password for the new administrator user. Used with      |
-|                | ``USERNAME`` and only for Windows guests.               |
-+----------------+---------------------------------------------------------+
-| DNS            | Add DNS entries to ``resolv.conf`` file. Only for Linux |
-|                | guests.                                                 |
-+----------------+---------------------------------------------------------+
-| NETWORK        | If set to "YES" vOneCloud will pass Networking          |
-|                | for the different NICs onto the VM                      |
-+----------------+---------------------------------------------------------+
++---------------------+------------------------------------------------------------------------------------+
+|    **Parameter**    |                                  **Description**                                   |
++=====================+====================================================================================+
+| SET_HOST            | Change the hostname of the VM. In Windows the machine                              |
+|                     | needs to be restarted.                                                             |
++---------------------+------------------------------------------------------------------------------------+
+| SSH_PUBLIC_KEY      | SSH public keys to add to authorized_keys file.                                    |
+|                     | This parameter only works with Linux guests.                                       |
++---------------------+------------------------------------------------------------------------------------+
+| USERNAME            | Create a new administrator user with the given                                     |
+|                     | user name. Only for Windows guests.                                                |
++---------------------+------------------------------------------------------------------------------------+
+| PASSWORD            | Password for the new administrator user. Used with                                 |
+|                     | ``USERNAME`` and only for Windows guests.                                          |
++---------------------+------------------------------------------------------------------------------------+
+| DNS                 | Add DNS entries to ``resolv.conf`` file. Only for Linux                            |
+|                     | guests.                                                                            |
++---------------------+------------------------------------------------------------------------------------+
+| NETWORK             | If set to "YES" vOneCloud will pass Networking                                     |
+|                     | for the different NICs onto the VM                                                 |
++---------------------+------------------------------------------------------------------------------------+
+| START_SCRIPT        | Shell script to be executed at boot time by the VM to provision software within it |
++---------------------+------------------------------------------------------------------------------------+
+| START_SCRIPT_BASE64 | Same as START_SCRIPT but will be base64 decoded prior to be executed               |
++---------------------+------------------------------------------------------------------------------------+
 
 In Linux guests, the information can be consumed using the following command (and acted accordingly):
 
@@ -46,7 +50,7 @@ In Linux guests, the information can be consumed using the following command (an
 Linux Packages
 ==============
 
-The linux packages can be downloaded from its `project page <https://github.com/OpenNebula/addon-context-linux/releases/tag/v4.10.0>`__ and installed in the guest OS. There is one rpm file for Debian and Ubuntu and an rpm for RHEL and CentOS. After installing the package shutdown the machine and create a new template.
+The linux packages can be downloaded from its `project page <https://github.com/OpenNebula/addon-context-linux/releases/tag/v4.14.0>`__ and installed in the guest OS. There is one rpm file for Debian and Ubuntu and an rpm for RHEL and CentOS. After installing the package shutdown the machine and create a new template.
 
 
 Windows Package

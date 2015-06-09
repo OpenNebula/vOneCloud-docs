@@ -39,8 +39,13 @@ The end user will then be presented with the following form when instantiating t
 .. image:: /images/end_user_input.png
     :align: center
 
+.. _customer_vars:
 
 Custom vars
 -----------
 
 These are personalized information to pass directly to the VM, in the form of Key - Value.
+
+There are two special custom variables which are very useful for VM software provisioning. They are called START_SCRIPTS and START_SCRIPTS_BASE64 (they are equivalent, only the latter gets base64 decoded before being executed at boot time). They can be use for any general purpose (pull a Chef recipe and running it for instance, configure a software component, perform a configuration task in the OS, etc). For instance, the following will add a DNS name **nfs-share** pointing to a particular IP in a Linux based VM:
+
+  START_SCRIPT = "echo 'nfs-share 10.0.1.23' > /etc/hosts"

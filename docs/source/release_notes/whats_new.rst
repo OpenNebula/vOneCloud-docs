@@ -1,23 +1,19 @@
 .. _whats_new:
 
 ========================
-What's New vOneCloud 1.4
+What's New vOneCloud 1.6
 ========================
 
-vOneCloud 1.4 is powered by OpenNebula Cotton Candy, and, as such, includes all the functionality present in :doc:`OpenNebula 4.12 Cotton Candy <release_notes/release_notes/index.html>`. 
+vOneCloud 1.6 is powered by OpenNebula Cotton Candy, and, as such, includes all the functionality present in :doc:`OpenNebula 4.12 Cotton Candy <release_notes/release_notes/index.html>`. 
 
-The following Cloud Management features have been introduced in vOneCloud 1.4:
+The following Cloud Management features have been introduced in vOneCloud 1.6:
 
-- :ref:`Showback functionality <showback>`. New toolset that reports resource usage cost, and allows the integration with chargeback and billing platforms.
-- :ref:`Import running VMs with VNC capabilities <import_running_vms>`. vCenter running VMs with VNC ports set to open will be imported with VNC capabilities in vOneCloud
-- :ref:`Multi-VM capabilities <multi_vm_applications>`. Management of sets of VMs (services) through the OneFlow component, including elasticity capabilities for the dynamic reshaping of services
-- :ref:`Improved import and reacquire resources (VM, VM Templates and Networks) <import_running_vms>`. Separated dialogs for each resource instead of performing this actions through the host creation dialog
-- :ref:`Improved Group/VDC provisioning model <create_vdc>`. Making VDCs a separate resource has several advantages over the previous Group/VDC concept, since they can have one or more Groups added to them
+- :ref:`Capacity honoring in VM Templates <operations_on_templates>`. VM Templates can be adjusted in terms of CPU and Memory. vOneCloud will modify these parameters at the time of cloning a Template into a Virtual Machine
+- :ref:`Capacity resizing <operations_on_running_vms>`. Running VMs can be poweroff and having their capacity (CPU and/or Memory) changed.
+- :ref:`Resource Pool <resource_pool>`. vOneCloud can be confined into a Resource Pool, to allow only a fraction of the vCenter infrastructure to be used by vOneCloud users
+- :ref:`Provisioning scripts <customer_vars>`. vOneCloud can instruct VMs to run generic scripts at boot time to further configure the guest OS or any software package
+- :ref:`Keymap support for VNC connections <operations_on_templates>`. Now the keyboard layout can be defined to improve the VNC connection experience
 
-The Control Panel has also been extended in this release:
+Multiple bugfixes and documentation improvements have been included in this version. vOneCloud 1.6 has been certified with :ref:`support for vSphere 5.5 and 6.0 <system_requirements>`.
 
-- :ref:`Debug capabilities embedded in Control Panel <app_conf_trouble_debug>`. Useful to gather all the details of your infrastructure and get the best support
-
-Multiple bugfixes and documentation improvements have been included in this version. Moreover, vOneCloud 1.4 has been certified with :ref:`support for vSphere 6.0 <system_requirements>`.
-
-The :ref:`Automated Upgrade process <control_panel_automatic_upgrades>` implemented by the :ref:`Control Panel <control_panel>` will only be available to users with an active support subscription. With this functionality users will be notified when a new vOneCloud release is available for download and they will be able to upgrade the vOneCloud platform with a single click. However, this release (1.4) has been marked as public so everyone can upgrade from previous versions using the Control Panel.
+The :ref:`Automated Upgrade process <control_panel_automatic_upgrades>` implemented by the :ref:`Control Panel <control_panel>` will only be available to users with an active support subscription. With this functionality users will be notified when a new vOneCloud release is available for download and they will be able to upgrade the vOneCloud platform with a single click. However, this release (1.6) has been marked as public so everyone can upgrade from previous versions using the Control Panel.

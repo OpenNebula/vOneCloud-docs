@@ -40,7 +40,14 @@ In the dialog that pops up, select vCenter as Type in the dropdown. You now need
 
 After the vCenter cluster is selected in Step 2, a list of vCenter VM Templates and both Networks and Distributed vSwitches will be presented to be imported into vOneCloud. Select all the Templates, Networks and Distributed vSwitches you want to import, and vOneCloud will generate vOneCloud VM Template and Virtual Networks resources representing the vCenter VM templates and vCenter Networks and Distributed vSwitches respectively.
 
-Additionally, these vOneCloud VM templates can be edited to add information to be passed into the instantiated VM. This process is called :ref:`Contextualization <build_template_context>`.
+.. _operations_on_templates:
+
+These vOneCloud VM templates can be modified selecting the VM Template in ``Virtual Resources --> Templates`` and clicking on the Update button, so the resulting VMs are adjusted to user needs. Among other options available through the Sunstone web interface:
+
+- Information can be passed into the instantiated VM. This process is called :ref:`Contextualization <build_template_context>`. 
+- Network interface cards can be added to give VMs access to different networks
+- Capacity (MEMORY and CPU) can be modified
+- VNC capabilities can be enabled
 
 Also, Virtual Networks can be further refined with the inclusion of different :doc:`Address Ranges <user/virtual_resource_management/vgg.html#the-address-range-ar>`. This refinement can be done at import time, defining the size of the network one of the following supported Address Ranges:
 
@@ -74,7 +81,9 @@ If the vCenter infrastructure has running (or powered off) Virtual Machines, vOn
 .. image:: /images/manual_deploy.png
     :align: center
 
-4. After the VMs are in the Running state, you can operate on their lifecycle, assign them to particular users, attach or detach network interfaces, create snapshots, etc. All the funcionality that vOneCloud supports for regular VMs is present for imported VMs.
+.. _operations_on_running_vms:
+
+4. After the VMs are in the Running state, you can operate on their lifecycle, assign them to particular users, attach or detach network interfaces, create snapshots, do capacity resizing (change CPU and MEMORY after powering the VMs off), etc. All the funcionality that vOneCloud supports for regular VMs is present for imported VMs.
 
 Running VMs with open VNC ports are imported with the ability to stablish VNC connection to them via vOneCloud. To activate the VNC ports, you need to right click on the VM while it is shut down and click on "Edit Settings", and set the ``remotedisplay.*`` settings show in the following images.
 

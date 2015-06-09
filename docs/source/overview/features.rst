@@ -27,6 +27,7 @@ vOneCloud leverages the :doc:`functionality of OpenNebula <release_notes/release
 
   * Dynamic creation of Virtual Data Centers (VDCs) as fully-isolated virtual infrastructure environments where a group of users, under the control of the group administrator, can create and manage compute capacity
   * Placement of VDCs to multiple vCenters
+  * Resource Pool Confinment, restrict vOneCloud users to a subset of hardware specified by a Resource Pool
 
 * **Hybrid Cloud**
 
@@ -38,6 +39,7 @@ vOneCloud leverages the :doc:`functionality of OpenNebula <release_notes/release
   * VM Template cloning and editing capabilities to maintain Template catalog
   * Automatic execution and scaling of multi-tiered applications
   * Snapshotting
+  * Contextualization capabilities, including the ability to run any script at VM boot time
 
 * **Security and Resource Consumption Control**
 
@@ -45,10 +47,13 @@ vOneCloud leverages the :doc:`functionality of OpenNebula <release_notes/release
   * Fine-grained accounting and monitoring
   * Complete isolated VDCs and organizations
   * Fine-grained ACLs and user quotas
+  * VM capacity resizing (CPU and Memory)
   * Powerful user, group and role management
   * vCenter Network and Distributed vSwitch support
   * Attach/detach network interfaces funcionality
+  * Capacity (CPU and MEMORY) resizing
   * Showback functionality to report resource usage cost
+  * VNC connection to VMs, including the ability to set keymap
 
 * **Enterprise Datacenter Component Integration Capabilities**
 
