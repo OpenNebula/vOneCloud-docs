@@ -49,8 +49,8 @@ These limitations will be addressed in future versions of vOneCloud:
 |            **Limitation**           |                                                 **Description**                                                 |
 +-------------------------------------+-----------------------------------------------------------------------------------------------------------------+
 | **VM Unsupported Operations**       | The following operations are only supported from vCenter:                                                       |
-|                                     |  - Attach/detach disk to a running VM                                                                           |
-|                                     |  - Migrate VM to different ESX clusters                                                                         |
+|                                     | - Attach/detach disk to a running VM                                                                            |
+|                                     | - Migrate VM to different ESX clusters                                                                          |
 +-------------------------------------+-----------------------------------------------------------------------------------------------------------------+
 | **No MultivCenter Templates**       | vOneCloud Templates representing two or more vCenter VM                                                         |
 |                                     | Templates cannot currently be defined.                                                                          |
@@ -66,6 +66,8 @@ These limitations will be addressed in future versions of vOneCloud:
 | **No FILES support in context**     | Contextualization in vOneCloud does not support passing files to Virtual Machines                               |
 +-------------------------------------+-----------------------------------------------------------------------------------------------------------------+
 | **Cannot import "one-" VMs**        | VMs deployed by another instance of vOneCloud, or machines named with a leading "one-" cannot be imported again |
++-------------------------------------+-----------------------------------------------------------------------------------------------------------------+
+| **vCenter password length**         | Cannot be more than 22 characters                                                                               |
 +-------------------------------------+-----------------------------------------------------------------------------------------------------------------+
 
 If you find any new limitation, feel free to add a feature request in `Community - Feature Request section of the vOneCloud Support Portal <https://support.vonecloud.com/hc/communities/public/topics/200215442-Community-Feature-Requests>`__.
