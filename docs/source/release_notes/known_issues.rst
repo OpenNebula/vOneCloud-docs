@@ -14,6 +14,11 @@ VCENTER_PASSWORD gets double encrypted in host update
 
 Each time a vOneCloud host representing a vCenter cluster has one attribute updated (for instance, to set the :ref:`resource pool <resource_pool>` tag), the VCENTER_PASSWORD gets encrypted. The workaround is to reenter the VCENTER_PASSWORD after the vOneCloud host attribute is updated.
 
+Poweroff + Delete leaves VM defined in vCenter
+----------------------------------------------
+
+Whenever a VM is powered off and delete subsequently, the VM is left defined in vCenter.
+
 Hybrid IP addresses not shown in Sunstone VM datatable
 ------------------------------------------------------
 
