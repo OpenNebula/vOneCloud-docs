@@ -44,6 +44,8 @@ To create a new **vOneCloud VM Template**, let's see an example:
 
   If a user instantiates one of these templates, the :doc:`vOneCloud scheduler <administration/references/schg.html>` will pick the right vCenter in which to instantiate the VM Template.
 
+  The variable KEEP_DISKS_ON_DONE can be used in the VM template to instruct vOneCloud not to erase the VM disks after it enters the DONE state (either through shutdown or cancel)
+
 Using :ref:`the automated process for importing vCenter infrastructures <import_vcenter>`, vOneCloud will generate the above template for you at the time of importing vCenterA.
 
 **vCenter Networks/Distributed vSwitches** and **running VMs** for a particular vCenter cluster can be imported in vOneCloud after the cluster is imported using the `same procedure <import_running_vms>`__ to import the vCenter cluster, making use of the ``Infrastructure --> Hosts`` tab in the vCenter View.
