@@ -131,7 +131,9 @@ Login to the Appliance
 
 All the functionality you need to run your vOneCloud can be accessed via Sunstone, and all the support configuration parameters are available either in the :ref:`vOneCloud Control Console <control_console>` or in the :ref:`vOneCloud Control Panel <control_panel>`.
 
-To access the :ref:`vOneCloud command line interface <cli_interface>` open the vCenter console of the vOneCloud Virtual Machine appliance and change the tty (Ctrl + Alt + F2). Afterwards, log in with the `root` account and the password you used in the :ref:`initial configuration <download_and_deploy_control_console>`, and switch to the `oneadmin` user.
+To access the :ref:`vOneCloud command line interface <cli_interface>`, first :ref:`enable SSH <control_panel_system_options_ssh>` and ssh to the host using the `root` account and password. In OS X and Linux environments, simply use `ssh` to log into the root account of vOneCloud's IP. For Windows environments you can use software like `PuTTY <http://www.chiark.greenend.org.uk/~sgtatham/putty/download.html>`__ or even SFTP clients like `WinSCP <https://winscp.net/>`__ if you are simply uploading or downloading-modifying-uploading files in order to make customization as documented by the :ref:`Advanced Customizations <advanced_customizations>` section.
+
+Alternatively,  open the vCenter console of the vOneCloud Virtual Machine appliance and change the tty (Ctrl + Alt + F2). Afterwards, log in with the `root` account and the password you used in the :ref:`initial configuration <download_and_deploy_control_console>`, and switch to the `oneadmin` user.
 
 .. _edit_vonecloud_appliance:
 

@@ -46,8 +46,37 @@ The configuration action handles the supported configuration of the vOneCloud ap
 
 * :ref:`Hybrid drivers (Amazon EC2, IBM SoftLayer, MS Azure) <hybrid_cloud>`.
 * :ref:`Active Directory or LDAP integration <authentication>`.
+* :ref:`System Options - Enable SSH <control_panel_system_options_ssh>`.
+* :ref:`System Options - Enable SSL <control_panel_system_options_ssl>`.
 
 If the configuration is changed while OpenNebula is running, it will need to be restarted. A warning will appear in the dashboard reminding the user to restart the OpenNebula service.
+
+System options
+^^^^^^^^^^^^^^
+
+It is possible to configure SSH and SSL:
+
+.. image:: /images/system_options.png
+    :align: center
+
+.. _control_panel_system_options_ssh:
+
+SSH
+"""
+
+By default SSH access is disabled. If you want to enable it, simply enable the checbock.
+
+.. _control_panel_system_options_ssl:
+
+SSL
+"""
+
+If you want to enable SSL you will need to:
+
+* Enable the `SSL enabled` checkbox
+* Provide a Certificate (copy&paste the contents of the file)
+* Provide a Key Certificate (copy&paste the contents of the file)
+* Optionally, provide the CA Certificate (copy&paste the contents of the file)
 
 Service Management
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^

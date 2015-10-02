@@ -10,4 +10,5 @@ Appliance Configuration
    Introduction <app_conf_intro>
    Control Console <control_console>
    Control Panel <control_panel>
+   Advanced Customizations <advanced_customizations>
    Troubleshooting <app_conf_trouble>
