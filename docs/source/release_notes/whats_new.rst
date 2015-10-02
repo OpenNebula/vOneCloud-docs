@@ -1,10 +1,10 @@
 .. _whats_new:
 
 ========================
-What's New vOneCloud 1.6
+What's New vOneCloud 1.8
 ========================
 
-vOneCloud 1.6 is powered by OpenNebula Cotton Candy, and, as such, includes all the functionality present in :doc:`OpenNebula 4.12 Cotton Candy <release_notes/release_notes/index.html>`. 
+vOneCloud 1.6 is powered by OpenNebula Cotton Candy, and, as such, includes all the functionality present in :doc:`OpenNebula 4.12 Cotton Candy <release_notes/release_notes/index.html>`.
 
 The following Cloud Management features have been introduced in vOneCloud 1.6:
 
