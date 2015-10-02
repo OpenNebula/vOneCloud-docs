@@ -10,4 +10,5 @@ Guest Configuration
    Introduction <introduction_gc>
    Building a Template for Contextualization <template_building>
    Guest Contextualization <guest_contextualization>
+   vCenter Customization Specification <vcenter_customization>
 
