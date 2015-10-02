@@ -13,8 +13,8 @@ There are a couple of things to take into account:
 * This method can be used in all the `Guest OSs supported by vCenter <https://pubs.vmware.com/vsphere-60/index.jsp?topic=%2Fcom.vmware.vsphere.vm_admin.doc%2FGUID-E63B6FAA-8D35-428D-B40C-744769845906.html>`__.
 
 
-Applying Customization to one Template Using Sunstone
-=====================================================
+Template Customization Using Sunstone
+=====================================
 
 For vcenter templates there are two options in the context tab. To use vCenter Customization select "vCenter" in the as "Contextualization type". This will show a dropdown with all the customizations from all the hosts. There you can select from these possibilities:
 
