@@ -50,11 +50,23 @@ In Linux guests, the information can be consumed using the following command (an
 Linux Packages
 ==============
 
+The following Linux distributions are supported supported:
+
+* CentOS/RedHat 6 and 7
+* Debian 7 and 8
+* Ubuntu from 12.04 to 15.05
+
 The linux packages can be downloaded from its `project page <https://github.com/OpenNebula/addon-context-linux/releases/tag/v4.14.0>`__ and installed in the guest OS. There is one rpm file for Debian and Ubuntu and an rpm for RHEL and CentOS. After installing the package shutdown the machine and create a new template.
 
 
 Windows Package
 ===============
+
+The Windows versions are supported:
+
+* Windows 2008 R2
+* Windows 2012
+* Windows 2012 R2
 
 The official `addon-opennebula-context <https://github.com/OpenNebula/addon-context-windows>`__ provides all the necessary files to run the contextualization in Windows 2008 R2.
 
