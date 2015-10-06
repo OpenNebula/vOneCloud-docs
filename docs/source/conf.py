@@ -72,7 +72,7 @@ copyright = '2015, OpenNebula Systems'
 # The short X.Y version.
 version = '1.8'
 
-extlinks = {'doc': ('http://docs.opennebula.org/4.12/%s', 'doc ')}
+extlinks = {'doc': ('http://docs.opennebula.org/4.14/%s', 'doc ')}
 
 # The full version, including alpha/beta/rc tags.
 release = '1.8.0'

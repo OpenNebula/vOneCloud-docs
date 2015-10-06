@@ -9,25 +9,15 @@ Known Issues
 
 These known issues will be addressed in future versions of vOneCloud.
 
-VCENTER_PASSWORD gets double encrypted in host update
------------------------------------------------------
+Importing vms from EC2 provides a wrong CPU value
+-------------------------------------------------
 
-Each time a vOneCloud host representing a vCenter cluster has one attribute updated (for instance, to set the :ref:`resource pool <resource_pool>` tag), the VCENTER_PASSWORD gets encrypted. The workaround is to reenter the VCENTER_PASSWORD after the vOneCloud host attribute is updated.
-
-Poweroff + Delete leaves VM defined in vCenter
-----------------------------------------------
-
-Whenever a VM is powered off and delete subsequently, the VM is left defined in vCenter.
-
-Hybrid IP addresses not shown in Sunstone VM datatable
-------------------------------------------------------
-
-They are displayed in the info panel of the VM, which appears below the datatable after clicking the VM in the datatable
+CPU consumption shown in vOneCloud is 100x the real value
 
 Error during upgrades if Proxy is configured
 --------------------------------------------
 
-There is a problem when upgrading from 1.2.x to 1.4.0 if proxy is configured that requires a manual intervention. Upgrade normally, and you will see that the start job has failed. Login to the vOneCloud console as explained :ref:`here <advanced_login>`, and execute the following commands:
+There is a problem when upgrading from 1.2.x if proxy is configured that requires a manual intervention. Upgrade normally, and you will see that the start job has failed. Login to the vOneCloud console as explained :ref:`here <advanced_login>`, and execute the following commands:
 
 .. code::
 
@@ -56,9 +46,6 @@ These limitations will be addressed in future versions of vOneCloud:
 | **VM Unsupported Operations**       | The following operations are only supported from vCenter:                                                       |
 |                                     | - Attach/detach disk to a running VM                                                                            |
 |                                     | - Migrate VM to different ESX clusters                                                                          |
-+-------------------------------------+-----------------------------------------------------------------------------------------------------------------+
-| **No MultivCenter Templates**       | vOneCloud Templates representing two or more vCenter VM                                                         |
-|                                     | Templates cannot currently be defined.                                                                          |
 +-------------------------------------+-----------------------------------------------------------------------------------------------------------------+
 | **No spaces in Clusters**           | VMware Clusters with space in their names are not supported                                                     |
 +-------------------------------------+-----------------------------------------------------------------------------------------------------------------+

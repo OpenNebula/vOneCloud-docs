@@ -38,16 +38,24 @@ In the dialog that pops up, select vCenter as Type in the dropdown. You now need
 .. image:: /images/vcenter_create.png
     :align: center
 
-After the vCenter cluster is selected in Step 2, a list of vCenter VM Templates and both Networks and Distributed vSwitches will be presented to be imported into vOneCloud. Select all the Templates, Networks and Distributed vSwitches you want to import, and vOneCloud will generate vOneCloud VM Template and Virtual Networks resources representing the vCenter VM templates and vCenter Networks and Distributed vSwitches respectively.
+After the vCenter cluster is selected in Step 2, a paginated list of vCenter VM Templates and both Networks and Distributed vSwitches will be presented to be imported into vOneCloud. Select all the Templates, Networks and Distributed vSwitches you want to import, and vOneCloud will generate vOneCloud VM Template and Virtual Networks resources representing the vCenter VM templates and vCenter Networks and Distributed vSwitches respectively.
+
+.. _cluster_prefix:
+
+Networks, Distributes vSwitches and VM Templates resources imported from vCenter will have their names appended with a the name of the cluster where this resources belong in vCenter, to ease their identification within vOneCloud.
 
 .. _operations_on_templates:
 
 These vOneCloud VM templates can be modified selecting the VM Template in ``Virtual Resources --> Templates`` and clicking on the Update button, so the resulting VMs are adjusted to user needs. Among other options available through the Sunstone web interface:
 
-- Information can be passed into the instantiated VM. This process is called :ref:`Contextualization <build_template_context>`. 
+- Information can be passed into the instantiated VM, through either :ref:`Contextualization or Customization <guest_configuration>`.
 - Network interface cards can be added to give VMs access to different networks
 - Capacity (MEMORY and CPU) can be modified
 - VNC capabilities can be enabled
+
+.. _name_suffix_note:
+
+.. note:: VMs instantiated through vOneCloud will be named in vCenter as 'one-<vid>-<VM Name>', where <vid> is the id of the VM and VM Name is the name given to the VM in vOneCloud.
 
 Also, Virtual Networks can be further refined with the inclusion of different :doc:`Address Ranges <user/virtual_resource_management/vgg.html#the-address-range-ar>`. This refinement can be done at import time, defining the size of the network one of the following supported Address Ranges:
 
@@ -70,20 +78,17 @@ Regarding the vCenter VM Templates and Networks, is important to take into accou
 (Optional) Step 3. Import / Reacquire Virtual Machines, VM Templates and Networks
 ---------------------------------------------------------------------------------
 
-If the vCenter infrastructure has running (or powered off) Virtual Machines, vOneCloud can import and subsequently manage them. To import vCenter VMs follow the next steps:
+If the vCenter infrastructure has running (or powered off) Virtual Machines, vOneCloud can import and subsequently manage them. To import vCenter VMs, proceed to the  WILDS tab in the Host info tab representing the vCenter cluster where the VMs are running in, select the VMs to be imported and click on the import button.
 
-.. note:: Special attention deserves point 3, imported VMs will appear in Pending state for a short while until the scheduler passes them to Running automatically.
-
-1. Proceed to the ``Virtual Resources --> Virtual Machines`` tab and click on the "Import" green icon.  Fill in the credentials and the IP or hostname of vCenter and click on the "Get Running VMs" button.
-2. You will now see running vCenter VMs that can be imported in vOneCloud (only VMs running on previously imported cluster will be shown for import). Select the VMs that need to be imported one and click import button.
-3. VMs will appear in the Pending state in vOneCloud until the scheduler automatically passes them to Running, there is no need to force the deployment. If there is over commitment of CPU and/or memory in vCenter, manual deploy of the mported VMs is neccesary to reach the running state. Select the imported VM in Pending state in vOneCloud and click n the deploy button, selecting afterwards the vCenter host from which the VM has been imported
-
-.. image:: /images/manual_deploy.png
+.. image:: /images/import_wild_vms.png
+    :width: 90%
     :align: center
 
 .. _operations_on_running_vms:
 
-4. After the VMs are in the Running state, you can operate on their lifecycle, assign them to particular users, attach or detach network interfaces, create snapshots, do capacity resizing (change CPU and MEMORY after powering the VMs off), etc. All the funcionality that vOneCloud supports for regular VMs is present for imported VMs.
+After the VMs are in the Running state, you can operate on their lifecycle, assign them to particular users, attach or detach network interfaces, create snapshots, do capacity resizing (change CPU and MEMORY after powering the VMs off), etc. All the funcionality that vOneCloud supports for regular VMs is present for imported VMs.
+
+.. note:: This ability to import VMs also applies to hybrid hosts, it is possible through this same machanism to import VMs from SoftLayer, Azure and EC2.
 
 Running VMs with open VNC ports are imported with the ability to stablish VNC connection to them via vOneCloud. To activate the VNC ports, you need to right click on the VM while it is shut down and click on "Edit Settings", and set the ``remotedisplay.*`` settings show in the following images.
 

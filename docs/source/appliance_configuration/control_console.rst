@@ -23,7 +23,7 @@ The initial bootstrap is a configuration wizard which is part of the deployment 
 * Configure Network
 * Set the root password
 * Change the password for oneadmin in OpenNebula
-* Configure proxy
+* Configure http proxy
 
 Once this wizard has been executed the user is ready to open the vOneCloud Control Panel at `http://<appliance_ip>:8000` in order to continue with the deployment configuration and to start the OpenNebula service.
 

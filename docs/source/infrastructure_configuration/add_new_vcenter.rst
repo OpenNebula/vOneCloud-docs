@@ -8,6 +8,9 @@ vOneCloud can manage an unlimited number of vCenters. Each vCenter is going to b
 
 The suggested usage is to build vOneCloud templates for each VM Template in each vCenter. The built in scheduler in vOneCloud will decide which vCenter has the VM Template needed to launch the VM.
 
+Add New vCenter Cluster
+-----------------------
+
 The mechanism to add a **new vCenter** is exactly the same as the one used to :ref:`import the first one into vOneCloud <import_vcenter>`. It can be performed graphically from the vCenter View:
 
 .. image:: /images/add_new_vcenter.png
@@ -18,6 +21,9 @@ The mechanism to add a **new vCenter** is exactly the same as the one used to :r
 .. note::
 
    vOneCloud will create a special key at boot time and save it in /var/lib/one/.one/one_key. This key will be used as a private key to encrypt and decrypt all the passwords for all the vCenters that vOneCloud can access. Thus, the password shown in the vOneCloud host representing the vCenter is the original password encrypted with this special key.
+
+Add New VM Template
+-------------------
 
 .. _add_new_vm_template:
 
@@ -48,7 +54,43 @@ To create a new **vOneCloud VM Template**, let's see an example:
 
 Using :ref:`the automated process for importing vCenter infrastructures <import_vcenter>`, vOneCloud will generate the above template for you at the time of importing vCenterA.
 
-**vCenter Networks/Distributed vSwitches** and **running VMs** for a particular vCenter cluster can be imported in vOneCloud after the cluster is imported using the `same procedure <import_running_vms>`__ to import the vCenter cluster, making use of the ``Infrastructure --> Hosts`` tab in the vCenter View.
+.. _add_multi_cluster_vm_template:
+
+Add Multi Cluster VM Template
+-----------------------------
+
+A single vOneCloud VM Template can be used to represent different vCenter VM Templates in different vCenter clusters. These multi cluster templates must be created using the Advanced tab in the VM Template creation dialog of vOneCloud, stating two or more PUBLIC_CLOUD tags, one per vCenter VM Template that wants to be referenced.
+
+The list of attributes that can be used to create vOneCloud VM Templates through the Advanced tab follows:
+
+
++--------------------+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+|     Attribute      |                                                                                                                      Meaning                                                                                                                      |
++--------------------+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| CPU                | Physical CPUs to be used by the VM. This does not have to relate to the CPUs used by the vCenter VM Template, OpenNebula will change the value accordingly                                                                                        |
++--------------------+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| MEMORY             | Physical Memory in MB to be used by the VM. This does not have to relate to the CPUs used by the vCenter VM Template, OpenNebula will change the value accordingly                                                                                |
++--------------------+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| NIC                | Valid MODELs are: virtuale1000, virtuale1000e, virtualpcnet32, virtualsriovethernetcard, virtualvmxnetm, virtualvmxnet2, virtualvmxnet3.                                                                                                          |
++--------------------+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| GRAPHICS           | Multi-value - Only VNC supported.                                                                                                                                                                                                                 |
++--------------------+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| PUBLIC_CLOUD       | Multi-value. TYPE must be set to vcenter, VM_TEMPLATE must point to the uuid of the vCenter VM that is being represented and HOST must refer to the name of the vCenter Cluster (represented by a vOneCloud host) where the template is available |
++--------------------+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| SCHED_REQUIREMENTS | NAME="name of the vCenter cluster where this VM Template can instantiated into a VM".                                                                                                                                                             |
++--------------------+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| CONTEXT            | All sections will be honored except FILES                                                                                                                                                                                                         |
++--------------------+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| KEEP_DISKS_ON_DONE | (Optional) Prevent OpenNebula from erasing the VM disks upon reaching the done state (either via shutdown or cancel)                                                                                                                              |
++--------------------+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+
+  .. image:: /images/vcenter_wizard.png
+    :align: center
+
+Add New Network/Distributed vSwitch
+-----------------------------------
+
+**vCenter Networks/Distributed vSwitches** for a particular vCenter cluster can be imported in vOneCloud after the cluster is imported using the `same procedure <import_running_vms>`__ to import vCenter clusters, making use of the ``Infrastructure --> Hosts`` tab in the vCenter View.
 
 A representation of a vCenter Network or Distributed vSwitch in vOneCloud can be created in vOneCloud by creating a Virtual Network and setting the BRIDGE property to **exactly the same name as the vCenter Network**. Leave "Default" network model if you don't need to define VLANs for htis network, otherwise chose the "VMware" network model.
 
@@ -56,5 +98,14 @@ A representation of a vCenter Network or Distributed vSwitch in vOneCloud can be
   :align: center
 
 Several different Address Ranges can be added as well in the Virtual Network creation and/or Update dialog, pretty much in the same way as it can be done at the time of acquiring the resources explained in the :ref:`Import vCenter guide <acquire_resources>`.
+
+Import Running VMs
+------------------
+
+**Running** and **Powered Off VMs** can be imported through the WILDS tab in the Host info tab representing the vCenter cluster where the VMs are running in.
+
+.. image:: /images/import_wild_vms.png
+    :width: 90%
+    :align: center
 
 Read more about the :doc:`vCenter drivers <administration/virtualization/vcenterg.html>`.
