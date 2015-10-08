@@ -4,9 +4,12 @@
 What's New vOneCloud 1.8
 ========================
 
-vOneCloud 1.8 is powered by OpenNebula Great A'Tuin, and, as such, includes all the functionality present in :doc:`OpenNebula 4.14 Great A'Tuin <release_notes/release_notes/index.html>`.
+vOneCloud 1.8 is powered by OpenNebula Great A'Tuin, and, as such, includes functionality present in :doc:`OpenNebula 4.14 Great A'Tuin <release_notes/release_notes/index.html>` relevant to vOneCloud:
 
-The following Cloud Management features have been introduced in vOneCloud 1.8:
+- :ref:`Import VMs from public clouds <operations_on_running_vms>`. vOneCloud 1.8 introduces the management of VMs not launched by vOneCloud in either Amazon EC2, Microsoft Azure and IBM SoftLayer.
+- :ref:`Keep the VM disks after deletion <add_multi_cluster_vm_template>`. A new attribute, KEEP_DISKS_ON_DONE will instruct vOneCloud on leaving or deleting the VM disks when they finish their lifecycle.
+
+Additionally, vOneCloud 1.8 add new features related with the vCenter drievr not yet present in any OpenNebula release:
 
 - :ref:`Pagination added to vCenter import dialog <acquire_resources>`. In large scale deployments, this will aid in the importation of large numbers of VM Templates and Networks.
 - :ref:`Support for Guest Customization <vcenter_customization>`. At the time of creating or modifying an imported VM Template, it is now possible to associate a Guest Customization profile to configure guest OS parameters such as the computer name, network settings, setting and expiring the administrator/root password, SID change for Windows Operating systems, and so on.
@@ -14,8 +17,6 @@ The following Cloud Management features have been introduced in vOneCloud 1.8:
 - :ref:`Append name to "one-*" name in vCenter display name <name_suffix_note>`. VM Name as shown in vOneCloud is appended in vCenter VM name for easier VM tracking.
 - :ref:`Imported resources suffixed with their source cluster name <cluster_prefix>`. This feature aids in the resource identification in the vCenter portal by mapping it to the vOneCloud representation name.
 - :ref:`Multi cluster VM Template definition <add_multi_cluster_vm_template>`. Create vOneCloud VM Templates that reference more than one vCenter VM Template in different vCenter clusters.
-- :ref:`Keep the VM disks after deletion <add_multi_cluster_vm_template>`. A new attribute, KEEP_DISKS_ON_DONE will instruct vOneCloud on leaving or deleting the VM disks when they finish their lifecycle.
-- :ref:`Import VMs from public clouds <operations_on_running_vms>`. vOneCloud 1.8 introduces the management of VMs not launched by vOneCloud in either Amazon EC2, Microsoft Azure and IBM SoftLayer.
 
 The Control Panel has also been extended in this release:
 
