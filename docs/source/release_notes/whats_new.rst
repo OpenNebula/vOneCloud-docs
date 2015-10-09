@@ -9,7 +9,7 @@ vOneCloud 1.8 is powered by OpenNebula Great A'Tuin, and, as such, includes func
 - :ref:`Import VMs from public clouds <operations_on_running_vms>`. vOneCloud 1.8 introduces the management of VMs not launched by vOneCloud in either Amazon EC2, Microsoft Azure and IBM SoftLayer.
 - :ref:`Keep the VM disks after deletion <add_multi_cluster_vm_template>`. A new attribute, KEEP_DISKS_ON_DONE will instruct vOneCloud on leaving or deleting the VM disks when they finish their lifecycle.
 
-Additionally, vOneCloud 1.8 adds new features related with the vCenter driver not yet present in any OpenNebula release:
+Additionally, vOneCloud 1.8 add new features related with the vCenter driver not yet present in any OpenNebula release:
 
 - :ref:`Pagination added to vCenter import dialog <acquire_resources>`. In large scale deployments, this will aid in the importation of large numbers of VM Templates and Networks.
 - :ref:`Support for Guest Customization <vcenter_customization>`. At the time of creating or modifying an imported VM Template, it is now possible to associate a Guest Customization profile to configure guest OS parameters such as the computer name, network settings, setting and expiring the administrator/root password, SID change for Windows Operating systems, and so on.
@@ -29,4 +29,4 @@ Additionally, a new documentation category starts with vOneCloud 1.8 to explain 
 
 Multiple bugfixes and documentation improvements have been included in this version. vOneCloud 1.8 has been certified with :ref:`support for vSphere 5.5 and 6.0 <system_requirements>`.
 
-The :ref:`Automated Upgrade process <control_panel_automatic_upgrades>` implemented by the :ref:`Control Panel <control_panel>` will only be available to users with an active support subscription. With this functionality users will be notified when a new vOneCloud release is available for download and they will be able to upgrade the vOneCloud platform with a single click. However, this release (1.8) has been marked as public so everyone can upgrade from previous versions using the Control Panel.
+The :ref:`Automated Upgrade process <control_panel_automatic_upgrades>` implemented by the :ref:`Control Panel <control_panel>` will only be available to users with an active support subscription. With this functionality users will be notified when a new vOneCloud release is available for download and they will be able to upgrade the vOneCloud platform with a single click.
