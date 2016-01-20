@@ -54,6 +54,8 @@ vOneCloud leverages the :doc:`functionality of OpenNebula <release_notes/release
   * Capacity (CPU and MEMORY) resizing
   * Showback functionality to report resource usage cost
   * VNC connection to VMs, including the ability to set keymap
+  * Attach/detach disk functionality
+  * Chose datastore where VMs will be deployed to
 
 * **Enterprise Datacenter Component Integration Capabilities**
 

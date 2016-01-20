@@ -24,8 +24,6 @@ Let's create a VDCs (under System) named *ProductionVDC*, and assign the *Produc
 
 Let's add resources to the VDC under the "Resources" tab, for instance a vCenter instance and a Virtual Network:
 
-.. note:: Only Clusters, vCenters and Virtual Networks can be assigned to VDCs, current versions of vOneCloud do not manage vCenter datastores.
-
 .. image:: /images/assign_resources_to_vdc.png
     :align: center
 
