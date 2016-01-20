@@ -50,7 +50,7 @@ In Linux guests, the information can be consumed using the following command (an
 Linux Packages
 ==============
 
-The following Linux distributions are supported supported:
+The following Linux distributions are supported:
 
 * CentOS/RedHat 6 and 7
 * Debian 7 and 8
