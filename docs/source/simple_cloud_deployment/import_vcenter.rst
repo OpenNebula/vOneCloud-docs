@@ -55,7 +55,7 @@ These vOneCloud VM templates can be modified selecting the VM Template in ``Virt
 
 .. _name_suffix_note:
 
-.. note:: VMs instantiated through vOneCloud will be named in vCenter as 'one-<vid>-<VM Name>', where <vid> is the id of the VM and VM Name is the name given to the VM in vOneCloud.
+.. note:: VMs instantiated through vOneCloud will be named in vCenter as 'one-<vid>-<VM Name>', where <vid> is the id of the VM and VM Name is the name given to the VM in vOneCloud. This value can be changed using a special attribute set in the vCenter cluster representation in vOneCloud, ie, the OpenNebula host. This attribute is called "VM_PREFIX", and will evaluate one variable, $i, to the id of the VM. A value of "one-$i-" in that parameter would have the same behaviour as the default. This attribute can be set in the "Attributes" section of the vOneCloud host, in the info panel that shows after clicking on the desire host.
 
 Also, Virtual Networks can be further refined with the inclusion of different :doc:`Address Ranges <user/virtual_resource_management/vgg.html#the-address-range-ar>`. This refinement can be done at import time, defining the size of the network one of the following supported Address Ranges:
 
