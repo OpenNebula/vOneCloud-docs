@@ -7,7 +7,8 @@ What's New vOneCloud 1.8
 vOneCloud 1.8 is powered by OpenNebula Great A'Tuin, and, as such, includes functionality present in :doc:`OpenNebula 4.14 Great A'Tuin <release_notes/release_notes/index.html>` relevant to vOneCloud:
 
 NOTE: Add Storage functionality link
-NOTE: Add VM_PREFIX section _name_suffix_note   
+NOTE: Add VM_PREFIX section _name_suffix_note
+NOTE: Add new resource pool mode
 
 - :ref:`Import VMs from public clouds <operations_on_running_vms>`. vOneCloud 1.8 introduces the management of VMs not launched by vOneCloud in either Amazon EC2, Microsoft Azure and IBM SoftLayer.
 - :ref:`Keep the VM disks after deletion <add_multi_cluster_vm_template>`. A new attribute, KEEP_DISKS_ON_DONE will instruct vOneCloud on leaving or deleting the VM disks when they finish their lifecycle.
