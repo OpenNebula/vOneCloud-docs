@@ -79,5 +79,22 @@ Make sure you replace ``%YOURIMAGE%`` in the above example with the name of your
 
 And we should upload it to ``/usr/lib/one/sunstone/public/images/server.jpg``.
 
+VM Template Logos
+-----------------
+
+It is possible to add new logos for the VM Templates to be displayed in Sunstone:
+
+* Create your logo in PNG format (90 x 96 pixels).
+
+* Log in into the appliance and place it in /usr/lib/one/sunstone/public/images/logos
+
+* chmod +644 on the uploaded file
+
+* In Sunstone vCenter Admin view, update the desired VM Template and select any of the built in logos. 
+
+* Click on update again and switch to Advanced view.
+
+* Change the the LOGO= line to LOGO="images/logos/<mylogo>.png
+
 
 After any of these changes it's necessary to restart OpenNebula in the Control Panel.
