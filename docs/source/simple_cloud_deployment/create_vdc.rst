@@ -32,7 +32,7 @@ Now login again using the newly created **prodadmin**. The Group Admin view will
 .. image:: /images/create_vdc_vdcview.png
     :align: center
 
-As *vOneCloud* user, in the vCenter View, you will be able to see all the VM Templates that have been automatically created when importing the vCenter infrastructure. You can assign any of these VM Templates to the VDC:
+As *vOneCloud* user, in the vCenter View, you will be able to see all the VM Templates that have been automatically created when importing the vCenter infrastructure. You can assign any of these VM Templates to the VDC by assigned them to the Group associated to the VDC:
 
 .. image:: /images/create_vdc_change_template.png
     :align: center
