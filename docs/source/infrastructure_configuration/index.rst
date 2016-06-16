@@ -10,4 +10,4 @@ Infrastructure Configuration
    Hybrid Clouds <hybrid_cloud>
    Multi-VM Applications <multi_vm_applications>
    Authentication <authentication>
-   Resource Pool Confinment <resource_pool>
+   Resource Pool Confinement <resource_pool>
