@@ -1,10 +1,13 @@
 .. _resource_pool:
 
-========================
-Resource Pool Confinment
-========================
+================================================================================
+Resource Pool Confinement
+================================================================================
 
-vOneCloud can be configured to place VMs in different Resource Pools. There are two approachs to achieve this, fixed per Cluster basis or flexible per VM Template basis.
+vOneCloud can be configured to place VMs in different Resource Pools. There are two approaches to achieve this, fixed per Cluster basis or flexible per VM Template basis.
+
+Fix Resource Pool per Cluster
+-----------------------------
 
 In the fixed per Cluster basis approach, the vCenter credentials that vOneCloud use can be confined into a Resource Pool, to allow only a fraction of the vCenter infrastructure to be used by vOneCloud users. The steps to confine vOneCloud users into a Resource Pool are:
 
