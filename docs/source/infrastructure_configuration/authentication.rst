@@ -67,13 +67,4 @@ For changes to take effect, you need to restart vOneCloud services and wait for 
     :align: center
 
 
-You can find more infromation on the integration with Active Directory :doc:`in this guide <administration/authentication/ldap.html#active-directory>`.
-
-vOneCloud supports are a variety of other authentication methods with advanced configuration, follow the links to find the configuration steps needed (:ref:`Advanced Login <advanced_login>` needed):
-
-+-------------------------------------------------------------------------------------+-------------------------------------------------------------------------+
-| :doc:`X509 Authentication <administration/authentication/x509_auth.html#x509-auth>` | Strengthen your cloud infrastructure security                           |
-+-------------------------------------------------------------------------------------+-------------------------------------------------------------------------+
-| :doc:`SSH Authentication <administration/authentication/ssh_auth.html#ssh-auth>`    | Users will generate login tokens based on standard ssh rsa keypairs for |
-|                                                                                     | authentication                                                          |
-+-------------------------------------------------------------------------------------+-------------------------------------------------------------------------+
+You can find more information on the integration with Active Directory :doc:`in this guide <deployment/authentication_setup/ldap.html>`.

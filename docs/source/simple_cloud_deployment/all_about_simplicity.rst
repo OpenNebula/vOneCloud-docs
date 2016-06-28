@@ -4,7 +4,7 @@
 All About Simplicity
 ====================
 
-vOneCloud is preconfigured to be plugged into your existing vCenter infrastructure and quickly start using its cloud features. vOneCloud is the perfect choice for companies that want to create a self-service cloud environment on top of their VMware infrastructure without having to abandon their investment in VMware and retool the entire stack.
+vOneCloud is pre configured to be plugged into your existing vCenter infrastructure and quickly start using its cloud features. vOneCloud is the perfect choice for companies that want to create a self-service cloud environment on top of their VMware infrastructure without having to abandon their investment in VMware and retool the entire stack.
 
 +-------------------+-----------------------------------------------------------------------------------------------+
 | Simple to Use     | Simple graphical interfaces for cloud consumers, and VDC and cloud administrators.            |

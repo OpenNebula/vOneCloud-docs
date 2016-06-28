@@ -67,17 +67,24 @@ Now you can power on the Virtual Machine (to edit settings before, :ref:`read th
 Step 2. vOneCloud Control Console - Initial Configuration
 --------------------------------------------------------------------------------
 
-When the VM boots up you will see in the vCenter console in vCenter the :ref:`vOneCloud Control Console <control_console>`, showing this wizard:
+When the VM boots up you will see in the VM console in vCenter the :ref:`vOneCloud Control Console <control_console>`, showing this wizard:
 
 .. image:: /images/control-console.png
     :align: center
+
+If you are presented instead with the following:
+
+.. image:: /images/control-console-wrong.png
+    :align: center
+
+You are being presented with the wrong tty. You will need to press CTRL+ALT+F1 to access the Control Console.
 
 In this wizard you need to **configure the network**. If you are using DHCP you can simply skip to the next item.
 
 If you are using a static network configuration, answer yes and you will need to use a ncurses interface to:
 
 - "Edit a connection"
-- Select "Wirect connection 1"
+- Select "Wired connection 1"
 - Change IPv4 CONFIGURATION from <Automatic> to <Manual> and select "Show"
 - Input the desired IP address/24 in Addresses
 - Input Gateway and DNS Servers

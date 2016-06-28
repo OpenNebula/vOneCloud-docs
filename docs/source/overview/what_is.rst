@@ -9,15 +9,15 @@ What Is?
 
 **The Open Replacement for vCloud**
 
-vOneCloud is an :doc:`OpenNebula <design_and_installation/building_your_cloud/intro.html>` distribution optimized to work on existing VMware vCenter deployments. It deploys an enterprise-ready OpenNebula cloud just in a few minutes where the infrastructure is managed by already familiar VMware tools, such as vSphere and vCenter Operations Manager, and the provisioning, elasticity, multi-tenancy, elasticity and multi-vm cloud features are offered by OpenNebula. It inherits all the `benefits <http://opennebula.org/about/technology/>`__ from the open source cloud managment platform, adding an easy to deploy, easy to use aspect due to pre configuration of the OpenNebula install contained within the appliance.
+vOneCloud is an :doc:`OpenNebula <intro_release_notes/concepts_terminology/intro.html>` distribution optimized to work on existing VMware vCenter deployments. It deploys an enterprise-ready OpenNebula cloud just in a few minutes where the infrastructure is managed by already familiar VMware tools, such as vSphere and vCenter Operations Manager, and the provisioning, elasticity, multi-tenancy, elasticity and multi-vm cloud features are offered by OpenNebula. It inherits all the `benefits <http://opennebula.org/about/technology/>`__ from the open source cloud management platform, adding an easy to deploy, easy to use aspect due to pre configuration of the OpenNebula install contained within the appliance.
 
-vOneCloud is distributed as a virtual appliance in OVA format for vSphere. It contains all required OpenNebula services within a single CentOS Linux appliance. All components are fully open-source and have been certified to work in enterprise environments, vOneCloud 1.8 includes:
+vOneCloud is distributed as a virtual appliance in OVA format for vSphere. It contains all required OpenNebula services within a single CentOS Linux appliance. All components are fully open-source and have been certified to work in enterprise environments, vOneCloud 2.0 includes:
 
-+----------------+--------+
-|   **CentOS**   |  7.0   |
-+----------------+--------+
-| **OpenNebula** | 4.14.1 |
-+----------------+--------+
++----------------+-------+
+|   **CentOS**   |  7.0  |
++----------------+-------+
+| **OpenNebula** | 5.0.1 |
++----------------+-------+
 
 .. image:: /images/cloud_vonecloud_image.png
     :align: center
@@ -34,7 +34,7 @@ The following table summarizes the benefits of vOneCloud:
 | **Powerful**         | | Virtual data centers, self-service, datacenter federation, hybrid cloud on VMware  |
 |                      | | environments                                                                       |
 +----------------------+--------------------------------------------------------------------------------------+
-| **Cost Effective**   | | Free, there are no license costs, all componentes are fully open-source software   |
+| **Cost Effective**   | | Free, there are no license costs, all components are fully open-source software    |
 +----------------------+--------------------------------------------------------------------------------------+
 | **Flexible**         | | Completely open, customizable and modular, so it can be adapted to your needs      |
 +----------------------+--------------------------------------------------------------------------------------+

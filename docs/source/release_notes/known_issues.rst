@@ -9,11 +9,6 @@ Known Issues
 
 These known issues will be addressed in future versions of vOneCloud.
 
-Importing vms from EC2 provides a wrong CPU value
--------------------------------------------------
-
-CPU consumption shown in vOneCloud is 100x the real value
-
 Error during upgrades if Proxy is configured
 --------------------------------------------
 
@@ -27,6 +22,10 @@ There is a problem when upgrading from 1.2.x if proxy is configured that require
     sudo -u oneadmin onedb upgrade -u oneadmin -p oneadmin -d opennebula
     /usr/lib/one/vonecloud-control-center/scripts/opennebula-server.sh restart
 
+Control Panel link not working with SSL activated
+--------------------------------------------------------------------------------
+
+Control Panel link in Sunstone is known not to work in SSL configurations. Please remove the 's' in 'https' in the URL in order to properly access the Control Panel.
 
 Found more?
 -----------
@@ -40,28 +39,29 @@ Limitations
 
 These limitations will be addressed in future versions of vOneCloud:
 
-+-------------------------------------+------------------------------------------------------------------------------------------------------------------------------------------------------------+
-|            **Limitation**           |                                                                      **Description**                                                                       |
-+-------------------------------------+------------------------------------------------------------------------------------------------------------------------------------------------------------+
-| **VM Unsupported Operations**       | The following operations are only supported from vCenter:                                                                                                  |
-|                                     | - Attach/detach disk to a running VM                                                                                                                       |
-|                                     | - Migrate VM to different ESX clusters                                                                                                                     |
-+-------------------------------------+------------------------------------------------------------------------------------------------------------------------------------------------------------+
-| **No spaces in Clusters**           | VMware Clusters with space in their names are not supported                                                                                                |
-+-------------------------------------+------------------------------------------------------------------------------------------------------------------------------------------------------------+
-| **No proxy support for SoftLayer**  | If vOneCloud is running behind a corporate http proxy, the SoftLayer hybrid connectors                                                                     |
-|                                     | won't be available                                                                                                                                         |
-+-------------------------------------+------------------------------------------------------------------------------------------------------------------------------------------------------------+
-| **No auth proxy support for Azure** | Azure driver only supports proxies without authentication. That is, without                                                                                |
-|                                     | username and password.                                                                                                                                     |
-+-------------------------------------+------------------------------------------------------------------------------------------------------------------------------------------------------------+
-| **No FILES support in context**     | Contextualization in vOneCloud does not support passing files to Virtual Machines                                                                          |
-+-------------------------------------+------------------------------------------------------------------------------------------------------------------------------------------------------------+
-| **Cannot import "one-" VMs**        | VMs deployed by another instance of vOneCloud, or machines named with a leading "one-" cannot be imported again                                            |
-+-------------------------------------+------------------------------------------------------------------------------------------------------------------------------------------------------------+
-| **vCenter password length**         | Cannot be more than 22 characters                                                                                                                          |
-+-------------------------------------+------------------------------------------------------------------------------------------------------------------------------------------------------------+
-| **Browser support**                 | Internet Explorer (>= 9), Firefox (> 3.5) and Chrome browsers are supported. Oher browsers, including Safari, are **not** supported and may not work well. |
-+-------------------------------------+------------------------------------------------------------------------------------------------------------------------------------------------------------+
++---------------------------------+-------------------------------------------------------------------------------------------------------------------------------------------------------------+
+|          **Limitation**         |                                                                       **Description**                                                                       |
++---------------------------------+-------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| **VM Unsupported Operations**   | The following operations are only supported from vCenter:                                                                                                   |
+|                                 | - Migrate VM to different ESX clusters                                                                                                                      |
++---------------------------------+-------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| **No spaces in Clusters**       | VMware Clusters with space in their names are not supported                                                                                                 |
++---------------------------------+-------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| **No spaces in VMDKs**          | VMDKs with spaces in their names or paths (ie, folders that contain them) are not supported for importing, attaching or uploading                           |
++---------------------------------+-------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| **No spaces in Datastores**     | Datastore names cannot contain spaces to be managed from vOneCloud                                                                                          |
++---------------------------------+-------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| **No CDROM drive creation**     | Attaching a new CDROM ISO will add a new (or change the existing) ISO to an already existing CDROM drive that needs to be present in the VM                 |
++---------------------------------+-------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| **No FILES support in context** | Contextualization in vOneCloud does not support passing files to Virtual Machines                                                                           |
++---------------------------------+-------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| **Cannot import "one-" VMs**    | VMs deployed by another instance of vOneCloud, or machines named with a leading "one-" cannot be imported again                                             |
++---------------------------------+-------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| **vCenter password length**     | Cannot be more than 22 characters                                                                                                                           |
++---------------------------------+-------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| **Browser support**             | Internet Explorer (>= 9), Firefox (> 3.5) and Chrome browsers are supported. Other browsers, including Safari, are **not** supported and may not work well. |
++---------------------------------+-------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| **Browser Adblock plug ins**    | Features like VNC and VM log viewer may be affected by Adblock plug ins. Please disable these plug ins if you are experiencing issues                       |
++---------------------------------+-------------------------------------------------------------------------------------------------------------------------------------------------------------+
 
 If you find any new limitation, feel free to add a feature request in `Community - Feature Request section of the vOneCloud Support Portal <https://support.vonecloud.com/hc/communities/public/topics/200215442-Community-Feature-Requests>`__.

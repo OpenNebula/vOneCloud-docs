@@ -25,4 +25,4 @@ And from the vCenter Cloud View:
 .. image:: /images/accounting_cloud_view.png
     :align: center
 
-Learn more on the :doc:`monitoring <administration/monitoring/mon.html>` and :doc:`accounting <administration/users_and_groups/accounting.html>` subsystems
+Learn more on the :doc:`monitoring <deployment/open_cloud_host_setup/monitoring.html>` and :doc:`accounting <operation/users_groups_management/accounting.html>` subsystems

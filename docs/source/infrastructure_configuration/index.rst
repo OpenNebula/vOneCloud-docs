@@ -6,8 +6,8 @@ Infrastructure Configuration
    :maxdepth: 2
 
    Introduction <introduction_inf_conf>
-   Add New vCenters, VM Templates and Networks <add_new_vcenter>
-   Hybrid Clouds <hybrid_cloud>
+   Add New vCenter Resources <add_new_vcenter>
    Multi-VM Applications <multi_vm_applications>
+   Virtual Router <virtual_routers>
    Authentication <authentication>
    Resource Pool Confinement <resource_pool>

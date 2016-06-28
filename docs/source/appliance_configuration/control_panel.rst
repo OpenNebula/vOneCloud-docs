@@ -44,7 +44,6 @@ Configuration Management
 
 The configuration action handles the supported configuration of the vOneCloud appliance:
 
-* :ref:`Hybrid drivers (Amazon EC2, IBM SoftLayer, MS Azure) <hybrid_cloud>`.
 * :ref:`Active Directory or LDAP integration <authentication>`.
 * :ref:`System Options - Enable SSH <control_panel_system_options_ssh>`.
 * :ref:`System Options - Enable SSL <control_panel_system_options_ssl>`.

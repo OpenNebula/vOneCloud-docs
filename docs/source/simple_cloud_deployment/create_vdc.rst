@@ -6,9 +6,9 @@ Create a Virtual Datacenter
 
 The provisioning model by default in vOneCloud is based on three different :ref:`roles <user_groups>` using three different web :ref:`interfaces <interfaces>`.
 
-*vOneCloud* user comes preconfigured and is the **Cloud Administrator**, in full control of all the physical and virtual resources and using the vCenter view.
+*vOneCloud* user comes pre configured and is the **Cloud Administrator**, in full control of all the physical and virtual resources and using the vCenter view.
 
-A Virtual Datacenter (VDC) defines an assignment of one or several groups to a pool of physical resources. This pool of physical resources consists of resources from one or several clusters, which are logical agroupations of hosts and virtual networks. VDCs are a great way to partition your cloud into smaller clouds, and asign them to groups with their administrators and users, completely isolated from other groups.
+A Virtual Datacenter (VDC) defines an assignment of one or several groups to a pool of physical resources. This pool of physical resources consists of resources from one or several clusters, which are logical groups of hosts, virtual networks and datastores, which can be shared between VDCs. VDCs are a great way to partition your cloud into smaller clouds, and assign them to groups with their administrators and users, completely isolated from other groups.
 
 A **Group Admin** manages her partition of the cloud, including user management, but only within the VDCs assigned to the Group, not for the whole cloud like the **Cloud Administrator**.
 
@@ -44,4 +44,4 @@ If you log with *produser*, the view will change to the vCenter Cloud View, wher
 .. image:: /images/create_vdc_cloudview.png
     :align: center
 
-Read more about :doc:`Group <administration/users_and_groups/manage_groups.html#managing-vdc-and-virtual-resources>` and :doc:`VDC <administration/users_and_groups/manage_vdcs.html>` managing.
+Read more about :doc:`Group <operation/users_groups_management/manage_groups.html>` and :doc:`VDC <operation/users_groups_management/manage_vdcs.html>` managing.

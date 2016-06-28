@@ -28,7 +28,7 @@ vOneCloud can manage different types of users, attending to the permissions they
 .. image:: /images/sunstone_user_list.png
     :align: center
 
-Learn more about user management :doc:`here <administration/users_and_groups/manage_users.html>`.
+Learn more about user management :doc:`here <operation/users_groups_management/manage_users.html>`.
 
 .. _vdc_management:
 
@@ -37,12 +37,12 @@ Group & VDC Management
 
 A **group** of users makes it possible to isolate users and resources. A user can see and use the shared resources from other users. The **group** is an authorization boundary for the users, but you can also partition your cloud infrastructure and define what resources are available to each group using Virtual Data Centers (VDC).
 
-A VDC defines an assignment of one or several groups to a pool of physical resources. This pool of physical resources consists of resources from one or several clusters, which are logical agroupations of hosts and virtual networks. VDCs are a great way to partition your cloud into smaller clouds, and asign them to groups with their administrators and users, completely isolated from other groups.
+A VDC defines an assignment of one or several groups to a pool of physical resources. This pool of physical resources consists of resources from one or several clusters, which are logical groups of hosts and virtual networks. VDCs are a great way to partition your cloud into smaller clouds, and asign them to groups with their administrators and users, completely isolated from other groups.
 
 .. image:: /images/sunstone_group_list.png
     :align: center
 
-Read more about :doc:`groups <administration/users_and_groups/manage_groups.html>` and :doc:`VDCs <administration/users_and_groups/manage_groups.html#managing-vdc-and-resource-providers>`.
+Read more about :doc:`groups <operation/users_groups_management/manage_groups.html>` and :doc:`VDCs <operation/users_groups_management/manage_vdcs.html>`.
 
 Access Control Lists
 --------------------
@@ -52,5 +52,5 @@ vOneCloud implements a very useful ACL mechanism that enables fine-tuning of all
 .. image:: /images/sunstone_acl_list.png
     :align: center
 
-Writing (or even reading) ACL rules is not trivial, more information about :doc:`ACLs here <administration/users_and_groups/manage_acl.html>`.
+Writing (or even reading) ACL rules is not trivial, more information about :doc:`ACLs here <operation/users_groups_management/chmod.html#managing-acl-rules>`.
 

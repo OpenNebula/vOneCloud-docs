@@ -6,7 +6,7 @@ vOneCloud Features
 
 .. _features_outofthebox:
 
-vOneCloud leverages the :doc:`functionality of OpenNebula <release_notes/release_notes/features.html>`. The following features come preconfigured and can be used **out-of-the-box** with vOneCloud:
+vOneCloud leverages the :doc:`functionality of OpenNebula <intro_release_notes/concepts_terminology/key_features.html>`. The following features come pre-configured and can be used out-of-the-box with vOneCloud:
 
 * **Cloud User Interfaces**
 
@@ -21,17 +21,14 @@ vOneCloud leverages the :doc:`functionality of OpenNebula <release_notes/release
 
   * Import existing vCenter VM Templates
   * Import existing vCenter Networks and Distributed vSwitches
-  * Import existing running Virtual Machines
+  * Import existing running and powered off Virtual Machines
+  * Import existing Datastores and VMDK images
 
 * **On-demand Provision of Virtual Data Centers**
 
   * Dynamic creation of Virtual Data Centers (VDCs) as fully-isolated virtual infrastructure environments where a group of users, under the control of the group administrator, can create and manage compute capacity
   * Placement of VDCs to multiple vCenters
-  * Resource Pool Confinment, restrict vOneCloud users to a subset of hardware specified by a Resource Pool
-
-* **Hybrid Cloud**
-
-  * Cloud-bursting of VMs to public clouds
+  * Resource Pool Confinement, restrict vOneCloud users/groups to a subset of hardware specified by a Resource Pool
 
 * **Fast Provisioning**
 
@@ -50,12 +47,14 @@ vOneCloud leverages the :doc:`functionality of OpenNebula <release_notes/release
   * VM capacity resizing (CPU and Memory)
   * Powerful user, group and role management
   * vCenter Network and Distributed vSwitch support
-  * Attach/detach network interfaces funcionality
+  * Connect Virtual Networks using a Virtual Router
+  * Attach/detach network interfaces functionality
   * Capacity (CPU and MEMORY) resizing
   * Showback functionality to report resource usage cost
   * VNC connection to VMs, including the ability to set keymap
   * Attach/detach disk functionality
-  * Chose datastore where VMs will be deployed to
+  * Chose datastore and Resource Pool where VMs will be deployed to
+  * Instantiate to persistent to easily crate a VM Template catalog
 
 * **Enterprise Datacenter Component Integration Capabilities**
 
@@ -65,7 +64,7 @@ vOneCloud leverages the :doc:`functionality of OpenNebula <release_notes/release
 * **Reliability, Efficiency and Massive Scalability**
 
   * Profit from years of testing and production use
-  * Be sure that your Cloud Mangement Platform will be up to the task
+  * Be sure that your Cloud Management Platform will be up to the task
   
 vOneCloud additionally brings new configuration and upgrade tools:
   
@@ -82,14 +81,4 @@ If you feel that there is a particular feature interesting for the general publi
 
 .. _features_advanceconf:
 
-vOneCloud can leverage all the functionality that OpenNebula delivers, but some of it needs **additional configuration** steps:
-
-* :doc:`Centralized Management of Multiple Zones <release_notes/release_notes/features.html#centralized-management-of-multiple-zones>`. Federate different datacenters by joining several vOneCloud instances.
-
-* :doc:`Community Virtual Appliance Marketplace <release_notes/release_notes/features.html#community-virtual-appliance-marketplace>`. Create your own marketplace or benefit from community contributions with an online catalog of ready-to-run virtual appliances.
-
-* :doc:`Broad Commodity and Enterprise Platform Support <release_notes/release_notes/features.html#broad-commodity-and-enterprise-platform-support>`. Underlying OpenNebula software features an amazingly flexible and plugin oriented architecture that eases the integration with existing datacenter components. Do no reinvent your datacenter, evolve it!
-
-* :doc:`Virtual <release_notes/release_notes/features.html#advanced-control-and-monitoring-of-virtual-infrastructure>` & :doc:`Physical <release_notes/release_notes/features.html#advanced-control-and-monitoring-of-physical-infrastructure>` Infrastructure Control. Manage all aspects of your physical (hypervisors, storage backends, etc) & virtualized (VM lifecycle, VM images, virtual networks, etc) from a centralized web interface (Sunstone).
-
-Although the configuration is tailored for vCenter infrastructures, all the power of OpenNebula is contained in vOneCloud and it can be unleashed!
+If you are building a large-scale cloud, are interested in the federation of multiple controller instances, or want to integrate with third party components, customize the product or manage open source hypervisors, we recommend an installation of `OpenNebula <http://opennebula.org>`__.
