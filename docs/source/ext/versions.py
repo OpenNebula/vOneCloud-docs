@@ -11,6 +11,6 @@ def create_versions(app, docname, templatename, ctx, doctree):
 
     ctx['display_github'] = True
     ctx['github_user']    = 'OpenNebula'
-    ctx['github_repo']    = 'vOneCloud'
+    ctx['github_repo']    = 'vOneCloud-docs'
     ctx['github_version'] = 'master/'
     ctx['conf_py_path']   = 'docs/source/'
