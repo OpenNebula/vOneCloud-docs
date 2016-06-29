@@ -53,9 +53,6 @@ Fill the needed fields following the criteria described in the next table
 | User Group Field      | user field that that is in in the group group_field, if not set 'dn' will be used                     |
 +-----------------------+-------------------------------------------------------------------------------------------------------+
 
-.. image:: /images/cp_ad_conf.png
-    :align: center
-
 Click on the "Apply Settings" button when done.
 
 Step 2. Restart vOneCloud services

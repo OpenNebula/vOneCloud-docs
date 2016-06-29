@@ -95,7 +95,7 @@ An example of static network configuration on the available network interface (s
 .. image:: /images/network-conf-example.png
     :align: center
 
-Next, you can **configure the proxy** if your network topology requires a proxy to access the internet. However please note that it's absolutely fine to use vOneCloud without any internet access at all, as you will be able to do most of the things, except for automatic upgrades and hybrid cloud access.
+Next, you can **configure the proxy** if your network topology requires a proxy to access the internet. However please note that it's absolutely fine to use vOneCloud without any Internet access at all, as you will be able to do most of the things, except for automatic upgrades.
 
 Afterwards you need to define a **root password.** You won't be using this very often, so write it down somewhere safe. It's your master password to the appliance.
 
@@ -109,7 +109,7 @@ Step 3. vOneCloud Control Panel - Manage Services
 The :ref:`vOneCloud Control Panel <control_panel>` will allow the administrator to:
 
 - Check for new vOneCloud versions and manage upgrades.
-- Configure Active Directory / LDAP integration and hybrid cloud drivers: Amazon EC2, Windows Azure and IBM SoftLayer.
+- Configure Active Directory / LDAP integration
 - Start the OpenNebula services
 - Manage automatic upgrades.
 

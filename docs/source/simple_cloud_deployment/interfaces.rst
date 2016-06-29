@@ -16,7 +16,7 @@ vOneCloud web interface, called Sunstone, offers three main views:
 .. image:: /images/vcenter_view.png
     :align: center
 
-- :onedoc:`Sunstone Group Admin View <deployment/sunstone_setup/suns_views.html#group-admin-view>`: Aimed at Group administrators, this interface is designed to manage all the virtual resources accesible by a group of users, including the creation of new users.
+- :doc:`Sunstone Group Admin View <deployment/sunstone_setup/suns_views.html#group-admin-view>`: Aimed at Group administrators, this interface is designed to manage all the virtual resources accessible by a group of users, including the creation of new users.
 
 .. image:: /images/vdcadmin_dash.png
     :align: center

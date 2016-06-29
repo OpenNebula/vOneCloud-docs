@@ -11,6 +11,7 @@ vOneCloud Documentation
    simple_cloud_deployment/index
    security_and_resource_consumption_control/index
    guest_configuration/index
+   cloud_end_user/index
    infrastructure_configuration/index
    appliance_configuration/index
 

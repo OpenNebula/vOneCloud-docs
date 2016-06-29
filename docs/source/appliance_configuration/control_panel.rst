@@ -98,5 +98,3 @@ When a new vOneCloud release is available for download users will be notified. U
 
 .. note::
     Before running an automatic upgrade users are recommend to create a vCenter snapshot of the vOneCloud appliance in order to revert back to it in case of failure.
-
-

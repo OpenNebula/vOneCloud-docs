@@ -1,8 +1,8 @@
 .. _features:
 
-==================
+================================================================================
 vOneCloud Features
-==================
+================================================================================
 
 .. _features_outofthebox:
 
@@ -30,13 +30,21 @@ vOneCloud leverages the :onedoc:`functionality of OpenNebula <intro_release_note
   * Placement of VDCs to multiple vCenters
   * Resource Pool Confinement, restrict vOneCloud users/groups to a subset of hardware specified by a Resource Pool
 
-* **Fast Provisioning**
+* **Fast Provisioning and Virtualization Management**
 
   * Automatic provision of Virtual Machines and Services (Multi-VM applications) from a Template catalog
   * VM Template cloning and editing capabilities to maintain Template catalog
   * Automatic execution and scaling of multi-tiered applications
   * Snapshotting
   * Contextualization capabilities, including the ability to run any script at VM boot time
+  * VM capacity resizing (CPU and Memory)
+  * vCenter Network and Distributed vSwitch support
+  * Connect Virtual Networks using a Virtual Router
+  * Attach/detach network interfaces functionality
+  * VNC connection to VMs, including the ability to set keymap
+  * Attach/detach disk functionality
+  * Chose datastore and Resource Pool where VMs will be deployed to
+  * Instantiate to persistent to easily crate a VM Template catalog
 
 * **Security and Resource Consumption Control**
 
@@ -44,17 +52,8 @@ vOneCloud leverages the :onedoc:`functionality of OpenNebula <intro_release_note
   * Fine-grained accounting and monitoring
   * Complete isolated VDCs and organizations
   * Fine-grained ACLs and user quotas
-  * VM capacity resizing (CPU and Memory)
   * Powerful user, group and role management
-  * vCenter Network and Distributed vSwitch support
-  * Connect Virtual Networks using a Virtual Router
-  * Attach/detach network interfaces functionality
-  * Capacity (CPU and MEMORY) resizing
   * Showback functionality to report resource usage cost
-  * VNC connection to VMs, including the ability to set keymap
-  * Attach/detach disk functionality
-  * Chose datastore and Resource Pool where VMs will be deployed to
-  * Instantiate to persistent to easily crate a VM Template catalog
 
 * **Enterprise Datacenter Component Integration Capabilities**
 

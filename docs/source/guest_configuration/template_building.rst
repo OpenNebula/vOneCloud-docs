@@ -64,10 +64,8 @@ In this example some commands will be executed using ``bash`` shell that will in
 
 If you are using complex scripts, it is a good idea to use the "encode script in Base64" option.
 
-Advanced Contextualization
---------------------------
 
-There are more options that can be set in the contextualization section. You can read about them in the :onedoc:`Virtual Machine Definition File reference section <operation/references/template.html#template-context>`
+There are more options that can be set in the contextualization section. You can read about them in the :doc:`Virtual Machine Definition File reference section <operation/references/template.html#template-context>`
 
 User Inputs
 -----------
@@ -90,4 +88,7 @@ Custom vars
 -----------
 
 These are personalized information to pass directly to the VM, in the form of Key - Value.
+
+
+.. note:: There are more options that can be set in the contextualization section. You can read about them in the :doc:`Virtual Machine Definition File reference section <operation/references/template.html#template-context>`
 
