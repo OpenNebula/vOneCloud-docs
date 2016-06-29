@@ -77,6 +77,8 @@ If you want to enable SSL you will need to:
 * Provide a Key Certificate (copy&paste the contents of the file)
 * Optionally, provide the CA Certificate (copy&paste the contents of the file)
 
+..note:: If you are going to use a self-signed SSL certificate, and do not have the CA certificate, you will need to have your browser trust that certificate, in both 443 and 29876 ports in the vOneCloud IP or FQDN. Otherwise VNC may not work
+
 Service Management
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 

@@ -15,7 +15,7 @@ This component runs in two stages. The initial bootstrap stage, and the basic co
 
 .. _constrol_console_initial_bootstrap:
 
-Initial Boostrap
+Initial Bootstrap
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 The initial bootstrap is a configuration wizard which is part of the deployment process of vOneCloud, and it **must** be run. During this step the user will be prompted to configure the following aspects:
