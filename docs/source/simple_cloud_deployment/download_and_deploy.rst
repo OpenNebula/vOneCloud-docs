@@ -110,6 +110,8 @@ The :ref:`vOneCloud Control Panel <control_panel>` will allow the administrator 
 
 - Check for new vOneCloud versions and manage upgrades.
 - Configure Active Directory / LDAP integration
+- Configure SSL (https) access
+- Enable/Disable ssh
 - Start the OpenNebula services
 - Manage automatic upgrades.
 

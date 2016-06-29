@@ -77,7 +77,7 @@ If you want to enable SSL you will need to:
 * Provide a Key Certificate (copy&paste the contents of the file)
 * Optionally, provide the CA Certificate (copy&paste the contents of the file)
 
-..note:: If you are going to use a self-signed SSL certificate, and do not have the CA certificate, you will need to have your browser trust that certificate, in both 443 and 29876 ports in the vOneCloud IP or FQDN. Otherwise VNC may not work
+.. note:: If you are going to use a self-signed SSL certificate, and do not have the CA certificate, you will need to have your browser trust that certificate, in both 443 and 29876 ports in the vOneCloud IP or FQDN. Otherwise VNC may not work
 
 Service Management
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -96,7 +96,7 @@ The Control Panel features the possibility to access the OpenNebula logs.
 Automatic Upgrades
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-When a new vOneCloud release is available for download users will be notified. User with an active support subscription will be able to upgrade with a single click. In the main Dashboard area the user will be notified if there is a new release available. In that case the user will be able to click a button that will start the upgrade.
+When a new vOneCloud release is available for download users will be notified both in Sunstone and in the Control Panel. Users with an active support subscription will be able to upgrade with a single click. In the main Dashboard area the user will be notified if there is a new release available. In that case the user will be able to click a button that will start the upgrade.
 
 .. note::
     Before running an automatic upgrade users are recommend to create a vCenter snapshot of the vOneCloud appliance in order to revert back to it in case of failure.
