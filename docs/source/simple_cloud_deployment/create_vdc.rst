@@ -44,4 +44,4 @@ If you log with *produser*, the view will change to the vCenter Cloud View, wher
 .. image:: /images/create_vdc_cloudview.png
     :align: center
 
-Read more about :doc:`Group <operation/users_groups_management/manage_groups.html>` and :doc:`VDC <operation/users_groups_management/manage_vdcs.html>` managing.
+Read more about :onedoc:`Group <operation/users_groups_management/manage_groups.html>` and :onedoc:`VDC <operation/users_groups_management/manage_vdcs.html>` managing.

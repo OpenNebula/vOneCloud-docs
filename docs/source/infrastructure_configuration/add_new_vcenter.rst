@@ -59,7 +59,7 @@ Let's see an example:
 
   Fill in with UUID **uuidA** in and select host vCenterA. Repeat for vCenterB.
 
-  If a user instantiates one of these templates, the :doc:`vOneCloud scheduler <operation/host_cluster_management/scheduler.html>` will pick the right vCenter in which to instantiate the VM Template.
+  If a user instantiates one of these templates, the :onedoc:`vOneCloud scheduler <operation/host_cluster_management/scheduler.html>` will pick the right vCenter in which to instantiate the VM Template.
 
 .. _keep_disks_one_done:
 
@@ -223,4 +223,4 @@ Import Running and Powered Off VMs
     :width: 90%
     :align: center
 
-Read more about the :doc:`vCenter drivers <deployment/vmware_infrastructure_setup/vcenter_driver.html>`. Regarding the vCenter datastores in vOneCloud, refer to the :doc:`vCenter datastore guide <deployment/vmware_infrastructure_setup/datastore_setup.html>`
+Read more about the :onedoc:`vCenter drivers <deployment/vmware_infrastructure_setup/vcenter_driver.html>`. Regarding the vCenter datastores in vOneCloud, refer to the :onedoc:`vCenter datastore guide <deployment/vmware_infrastructure_setup/datastore_setup.html>`

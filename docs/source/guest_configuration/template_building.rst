@@ -35,7 +35,7 @@ Network Configuration
 
 vOneCloud does not rely on a DHCP server to configure networking in the Virtual Machines. To do this configuration it injects the network information in the contextualization section. This is done checking the "Add Network configuration" check box. When vOneCloud finds this option it adds the IP information for each of the network interfaces configured plus extra information that resides in the Virtual Network template, like DNS, gateway and network mask.
 
-The parameters used from the Virtual Network template are explained in the OpenNebula documentation, :doc:`Managing Virtual Networks section <operation/network_management/manage_vnets.html#manage-vnets>`.
+The parameters used from the Virtual Network template are explained in the OpenNebula documentation, :onedoc:`Managing Virtual Networks section <operation/network_management/manage_vnets.html#manage-vnets>`.
 
 User Credentials
 ----------------
@@ -67,7 +67,7 @@ If you are using complex scripts, it is a good idea to use the "encode script in
 Advanced Contextualization
 --------------------------
 
-There are more options that can be set in the contextualization section. You can read about them in the :doc:`Virtual Machine Definition File reference section <operation/references/template.html#template-context>`
+There are more options that can be set in the contextualization section. You can read about them in the :onedoc:`Virtual Machine Definition File reference section <operation/references/template.html#template-context>`
 
 User Inputs
 -----------

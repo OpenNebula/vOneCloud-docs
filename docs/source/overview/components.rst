@@ -17,7 +17,7 @@ vCenter infrastructure
 OpenNebula (Cloud Manager)
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-- :doc:`OpenNebula <intro_release_notes/concepts_terminology/intro.html>` acts as the Cloud Manager of vOneCloud, responsible for managing your virtual vCenter resources and adding a Cloud layer on top of it.
+- :onedoc:`OpenNebula <intro_release_notes/concepts_terminology/intro.html>` acts as the Cloud Manager of vOneCloud, responsible for managing your virtual vCenter resources and adding a Cloud layer on top of it.
 
 - **Sunstone** is the web-based graphical interface of OpenNebula. It is available at `http://<appliance_ip>`. This interface is at the same time the main administration interface for you cloud infrastructure, and consumer interface for the final users of the cloud.
 

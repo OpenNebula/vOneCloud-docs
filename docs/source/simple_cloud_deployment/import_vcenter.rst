@@ -104,7 +104,7 @@ Regarding the vCenter VM Templates and Networks, is important to take into accou
 
 Similarly, **Networks** and Distributed vSwitches can also be imported / reacquired from using a similar ``Import`` button in ``Infrastructure --> Virtual Networks``. 
 
-Virtual Networks can be further refined with the inclusion of different :doc:`Address Ranges <operation/network_management/manage_vnets.html#address-space>`. This refinement can be done at import time, defining the size of the network one of the following supported Address Ranges:
+Virtual Networks can be further refined with the inclusion of different :onedoc:`Address Ranges <operation/network_management/manage_vnets.html#address-space>`. This refinement can be done at import time, defining the size of the network one of the following supported Address Ranges:
 
 - IPv4: Need to define at least starting IP address. MAC address can be defined as well
 - IPv6: Can optionally define starting MAC address, GLOBAL PREFIX and ULA PREFIX
@@ -144,4 +144,4 @@ Step 5. Instantiate a VM Template
 
 Everything is ready! Now vOneCloud is prepared to manage Virtual Machines. In Sunstone, go to ``Virtual Resources --> Templates``, select one of the templates imported in **Step 3** and click on Instantiate. Now you will be able to control the life cycle of the VM.
 
-More information on available operations over VMs :doc:`here <operation/vm_management/vm_instances.html>`.
+More information on available operations over VMs :onedoc:`here <operation/vm_management/vm_instances.html>`.

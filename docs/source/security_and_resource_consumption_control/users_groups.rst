@@ -28,7 +28,7 @@ vOneCloud can manage different types of users, attending to the permissions they
 .. image:: /images/sunstone_user_list.png
     :align: center
 
-Learn more about user management :doc:`here <operation/users_groups_management/manage_users.html>`.
+Learn more about user management :onedoc:`here <operation/users_groups_management/manage_users.html>`.
 
 .. _vdc_management:
 
@@ -42,7 +42,7 @@ A VDC defines an assignment of one or several groups to a pool of physical resou
 .. image:: /images/sunstone_group_list.png
     :align: center
 
-Read more about :doc:`groups <operation/users_groups_management/manage_groups.html>` and :doc:`VDCs <operation/users_groups_management/manage_vdcs.html>`.
+Read more about :onedoc:`groups <operation/users_groups_management/manage_groups.html>` and :onedoc:`VDCs <operation/users_groups_management/manage_vdcs.html>`.
 
 Access Control Lists
 --------------------
@@ -52,5 +52,5 @@ vOneCloud implements a very useful ACL mechanism that enables fine-tuning of all
 .. image:: /images/sunstone_acl_list.png
     :align: center
 
-Writing (or even reading) ACL rules is not trivial, more information about :doc:`ACLs here <operation/users_groups_management/chmod.html#managing-acl-rules>`.
+Writing (or even reading) ACL rules is not trivial, more information about :onedoc:`ACLs here <operation/users_groups_management/chmod.html#managing-acl-rules>`.
 

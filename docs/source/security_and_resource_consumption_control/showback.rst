@@ -30,4 +30,4 @@ And clicking on the Showback tab, obtain the cost consumed by clicking on the "G
 .. image:: /images/show_showback.png
     :align: center
 
-Learn more on the :doc:`Showback functionality <operation/users_groups_management/showback.html>`.
+Learn more on the :onedoc:`Showback functionality <operation/users_groups_management/showback.html>`.

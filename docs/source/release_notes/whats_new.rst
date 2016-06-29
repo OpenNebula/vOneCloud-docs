@@ -4,7 +4,7 @@
 What's New vOneCloud 2.0
 ========================
 
-vOneCloud 2.0 is powered by OpenNebula Wizard, and, as such, includes functionality present in :doc:`OpenNebula 5.0 Wizard <intro_release_notes/release_notes/index.html>` relevant to vOneCloud:
+vOneCloud 2.0 is powered by OpenNebula Wizard, and, as such, includes functionality present in :onedoc:`OpenNebula 5.0 Wizard <intro_release_notes/release_notes/index.html>` relevant to vOneCloud:
 
 - :ref:`Datastore <add_new_datastore>` and :ref:`VMDK image <add_new_images>` management, as well as :ref:`import <import_images_and_ds>`.
 - :ref:`New Virtual Router Resource <virtual_routers>`, to allow routing between isolated virtual networks.

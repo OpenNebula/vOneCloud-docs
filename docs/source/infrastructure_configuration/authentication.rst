@@ -67,4 +67,4 @@ For changes to take effect, you need to restart vOneCloud services and wait for 
     :align: center
 
 
-You can find more information on the integration with Active Directory :doc:`in this guide <deployment/authentication_setup/ldap.html>`.
+You can find more information on the integration with Active Directory :onedoc:`in this guide <deployment/authentication_setup/ldap.html>`.

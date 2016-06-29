@@ -28,4 +28,4 @@ Or from the Group Admin View:
 .. image:: /images/vdc_admin_update_quota.png
     :align: center
 
-Refer to :doc:`this guide <operation/users_groups_management/quota_auth.html>` to find out more.
+Refer to :onedoc:`this guide <operation/users_groups_management/quota_auth.html>` to find out more.

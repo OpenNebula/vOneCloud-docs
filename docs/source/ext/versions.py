@@ -1,6 +1,6 @@
 def setup(app):
-    app.add_config_value('versions', False, 'html')
-    app.add_config_value('downloads', False, 'html')
+    app.add_config_value('versions', [], 'html')
+    app.add_config_value('downloads', [], 'html')
 
     app.connect('html-page-context', create_versions)
 

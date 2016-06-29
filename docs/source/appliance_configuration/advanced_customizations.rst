@@ -28,7 +28,7 @@ It is possible to change the logos of the Sunstone interface by replacing these 
 
 The background of the login screen can be customized by replacing ``/usr/lib/one/sunstone/views/login.erb``, with these contents:
 
-.. code-block:: html
+.. code-block:: none
     :emphasize-lines: 21
 
     <!DOCTYPE html>
@@ -90,7 +90,7 @@ It is possible to add new logos for the VM Templates to be displayed in Sunstone
 
 * chmod +644 on the uploaded file
 
-* In Sunstone vCenter Admin view, update the desired VM Template and select any of the built in logos. 
+* In Sunstone vCenter Admin view, update the desired VM Template and select any of the built in logos.
 
 * Click on update again and switch to Advanced view.
 
