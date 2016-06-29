@@ -55,9 +55,7 @@ If the vCenter infrastructure has running or powered off **Virtual Machines**, v
 
 After the VMs are in the Running state, you can operate on their life-cycle, assign them to particular users, attach or detach network interfaces, create snapshots, do capacity resizing (change CPU and MEMORY after powering the VMs off), etc. All the funcionality that vOneCloud supports for regular VMs is present for imported VMs.
 
-.. note:: This ability to import VMs also applies to hybrid hosts, it is possible through this same machanism to import VMs from SoftLayer, Azure and EC2.
-
-Running VMs with open VNC ports are imported with the ability to stablish VNC connection to them via vOneCloud. To activate the VNC ports, you need to right click on the VM while it is shut down and click on "Edit Settings", and set the ``remotedisplay.*`` settings show in the following images.
+Running VMs with open VNC ports are imported with the ability to establish VNC connection to them via vOneCloud. To activate the VNC ports, you need to right click on the VM while it is shut down and click on "Edit Settings", and set the ``remotedisplay.*`` settings show in the following images.
 
 .. image:: /images/vm_advanced_settings.png
     :align: center

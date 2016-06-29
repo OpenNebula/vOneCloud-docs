@@ -31,7 +31,7 @@ vOneCloud is distributed as a virtual appliance in OVA format for vSphere. It co
 The following table summarizes the benefits of vOneCloud:
 
 +----------------------+--------------------------------------------------------------------------------------+
-| **Powerful**         | | Virtual data centers, self-service, datacenter federation, hybrid cloud on VMware  |
+| **Powerful**         | | Virtual data centers, self-service, Virtual Routers on VMware                      |
 |                      | | environments                                                                       |
 +----------------------+--------------------------------------------------------------------------------------+
 | **Cost Effective**   | | Free, there are no license costs, all components are fully open-source software    |
