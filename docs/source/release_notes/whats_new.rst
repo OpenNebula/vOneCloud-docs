@@ -18,6 +18,6 @@ vOneCloud 2.0 is powered by OpenNebula Wizard, and, as such, includes functional
 
 An important effort has been carried out focusing on optimizations, allowing vOneCloud to manage vCenter instances with large number of VM Templates, VMs and Networks. Also, multiple bugfixes and documentation improvements have been included in this version. vOneCloud 2.0 has been certified with :ref:`support for vSphere 5.5 and 6.0 <system_requirements>`.
 
-Hybrid cloud functionality has been removed to simplify maintenance and upgrades.
+Hybrid cloud functionality has been removed to simplify maintenance and upgrades. If you are building a large-scale cloud, are interested in the federation of multiple controller instances, hybrid deployments, or want to integrate with third party components, customize the product or manage open source hypervisors, we recommend an installation of OpenNebula.
 
 The :ref:`Automated Upgrade process <control_panel_automatic_upgrades>` implemented by the :ref:`Control Panel <control_panel>` will only be available to users with an active support subscription. With this functionality users will be notified when a new vOneCloud release is available for download and they will be able to upgrade the vOneCloud platform with a single click.
