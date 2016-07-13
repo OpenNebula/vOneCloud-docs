@@ -32,7 +32,7 @@ Save As Template feature not working
 
 Save As Template button in the Cloud View triggers a feature that is not present in vOneCloud. The preferred way to create new templates is the :ref:`"Instantiate to Persistent" <instantiate_to_persistent>` button at instantiation time.
 
-To disable this button, you need to :ref:`login <_advanced_login>` into the appliance and change line 57 of /etc/one/sunstone-views/cloud.yaml to read:
+To disable this button, you need to :ref:`login <advanced_login>` into the appliance and change line 57 of /etc/one/sunstone-views/cloud.yaml to read:
 
    VM.save_as_template: false
 
