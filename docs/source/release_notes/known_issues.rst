@@ -27,6 +27,17 @@ Control Panel link not working with SSL activated
 
 Control Panel link in Sunstone is known not to work in SSL configurations. Please remove the 's' in 'https' in the URL in order to properly access the Control Panel.
 
+Save As Template feature not working
+--------------------------------------------------------------------------------
+
+Save As Template button in the Cloud View triggers a feature that is not present in vOneCloud. The preferred way to create new templates is the "Instantiate to Persistent" button at instantiation time.
+
+To disable this button, you need to `login <_advanced_login>` into the appliance and change line 57 of /etc/one/sunstone-views/cloud.yaml to read:
+
+   VM.save_as_template: false
+
+and restart OpenNebula through the Control Panel.
+
 Found more?
 -----------
 
