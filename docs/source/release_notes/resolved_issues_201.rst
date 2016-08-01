@@ -1,11 +1,12 @@
 Resolved Issues in 2.0.1
+================================================================================
+
+vOneCloud 2.0.1 is based in OpenNebula 5.0.2 and as such it includes all the bug fixes and functionalities introduced in 5.0.2: `OpenNebula 5.0.2 Release Notes <http://docs.opennebula.org/5.0/intro_release_notes/release_notes/index.html>`__.
+
+The following issues are noteworthy:
+
+New functionality
 --------------------------------------------------------------------------------
-
-vOneCloud 2.0.1 is based in OpenNebula 5.0.2 and as such it includes all the bug fixes and functionalities introduced in 5.0.1: `OpenNebula 5.0.2 Release Notes <http://docs.opennebula.org/5.0/intro_release_notes/release_notes/index.html>`__.
-
-In particular, regarding vOneCloud these issues are noteworthy:
-
-### New functionality
 
 - `Resize capabilities for VR context <http://dev.opennebula.org/issues/4621>`__.
 - `Modify cardinality of VR HA <http://dev.opennebula.org/issues/4597>`__.
@@ -15,7 +16,8 @@ In particular, regarding vOneCloud these issues are noteworthy:
 - `New action: VR Template instantiate <http://dev.opennebula.org/issues/4530>`__.
 - `Service create dialog in admin view <http://dev.opennebula.org/issues/4348>`__.
 
-### Bug Fixes
+Bug Fixes
+--------------------------------------------------------------------------------
 
 - `VM configuration tab can now be enabled in cloud view <http://dev.opennebula.org/issues/4626>`__.
 - `Fix for VM modals in Cloud View <http://dev.opennebula.org/issues/4615>`__.
