@@ -63,7 +63,7 @@ It is possible to configure SSH and SSL:
 SSH
 """
 
-By default SSH access is disabled. If you want to enable it, simply enable the checbock.
+By default SSH access is disabled. If you want to enable it, simply enable the checkbox.
 
 .. _control_panel_system_options_ssl:
 
