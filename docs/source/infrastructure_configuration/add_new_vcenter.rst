@@ -148,6 +148,22 @@ A representation of a vCenter Network or Distributed vSwitch in vOneCloud can be
 
 Several different Address Ranges can be added as well in the Virtual Network creation and/or Update dialog, pretty much in the same way as it can be done at the time of acquiring the resources explained in the :ref:`Import vCenter guide <acquire_resources>`.
 
+In order to get VM traffic shaping to work, the NIC must be controlled by vOneCloud and it needs to be connected to a Distributed vSwitch. The following requirements also needs to be met:
+
+* Verify that vSphere Distributed Switch is version 6.0.0 and later.
+* Verify that Network I/O Control on the switch is version 3.
+* Verify that Network I/O Control is enabled. 
+* Verify that the virtual machine system traffic has a configured bandwidth reservation. 
+
+Steps to achieve the above configuration can be found `here <https://pubs.vmware.com/vsphere-60/index.jsp?topic=%2Fcom.vmware.vsphere.networking.doc%2FGUID-FECAC41A-2C7A-4AD6-B740-7D8D44BADB52.html>`_
+
+Four values can be used in both the Virtual Network Template or the NIC to achieve traffic shaping. Take into account that only total traffic (inbound and outbound) is limited, the minimum between inbound and outbound is picked.
+
+* Minimum between **INBOUND_AVG_BW** and  **OUTBOUND_AVG_BW**. Expressed in kilobytes/second, this value is used to set the Reservation. This value cannot be set to a greater value than the Peak_BW.
+
+* Minimum between **INBOUND_PEAK_BW** and  **OUTBOUND_PEAK_BW**. Expressed in kilobytes/second, this value is used to set the limit, or maximum bitrate for the interface of the VM. This value cannot be less than 1024 kilobytes/second.
+
+
 .. _add_new_datastore:
 
 Add New Datastore
