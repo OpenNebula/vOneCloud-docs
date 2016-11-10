@@ -23,7 +23,7 @@ Different :ref:`cloud roles <users_and_roles>` can be used in order to offer and
 
 vOneCloud runs on top of Linux (in particular `CentOS 7 <http://www.centos.org/>`), therefore the administrators of the vOneCloud appliance should be able to have console access to the appliance. The appliance comes with a `root` account with an undefined password. This password **must** be set during the first boot of the appliance. The :ref:`vOneCloud Control Console <control_console>` will prompt the administrator for a new root password.
 
-Please note that ssh acccess to the root account is disabled by default in the appliance, the only possible way of logging in, is to log in using an alternate TTY in the vCenter console of the vOneCloud appliance and logging in.
+Please note that ssh access is disabled by default in the appliance. You can log in either opening an alternate TTY on a Virtual Machine Console in vSphere’s client or enabling SSH using vOneCloud’s Control Panel.
 
 .. note::
 

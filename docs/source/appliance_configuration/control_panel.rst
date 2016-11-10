@@ -30,7 +30,7 @@ In the dashboard of the Control Panel you will be able to see the following info
 | Upgrade Date      | Records the date of last vOneCloud upgrade.                                                                                                                                        |
 +-------------------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
 
-.. image:: /images/control_panel_dashboard.png
+.. image:: /images/control_panel_dashboard_2.png
     :align: center
 
 Additionally vOneCloud will report the subscription status:

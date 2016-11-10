@@ -60,7 +60,7 @@ Step 2. Restart vOneCloud services
 
 For changes to take effect, you need to restart vOneCloud services and wait for OpenNebula state to be ON.
 
-.. image:: /images/cp_restart_one.png
+.. image:: /images/cp_restart_one_2.png
     :align: center
 
 

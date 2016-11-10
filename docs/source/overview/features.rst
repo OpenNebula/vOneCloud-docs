@@ -14,7 +14,7 @@ vOneCloud leverages the :onedoc:`functionality of OpenNebula <intro_release_note
 
 * **Cloud Admin Interfaces**
 
-  * SunStone Portal for administrators and advanced users
+  * Sunstone Portal for administrators and advanced users
   * Powerful CLI that resembles typical UNIX commands applications
 
 * **Import Existing Resources**
@@ -64,9 +64,9 @@ vOneCloud leverages the :onedoc:`functionality of OpenNebula <intro_release_note
 
   * Profit from years of testing and production use
   * Be sure that your Cloud Management Platform will be up to the task
-  
+
 vOneCloud additionally brings new configuration and upgrade tools:
-  
+
 * **Appliance and Services Configuration**
 
   * Control Console for vOneCloud appliance configuration
@@ -74,7 +74,7 @@ vOneCloud additionally brings new configuration and upgrade tools:
 
 * **Smooth Upgrade Process**
 
-  * Automatic upgrade process and notifications through the Control Panel available for users with an active support subscription 
+  * Automatic upgrade process and notifications through the Control Panel available for users with an active support subscription
 
 If you feel that there is a particular feature interesting for the general public, feel free to add a feature request in `Community - Feature Request section of the vOneCloud Support Portal <https://support.vonecloud.com/hc/communities/public/topics/200215442-Community-Feature-Requests>`__.
 

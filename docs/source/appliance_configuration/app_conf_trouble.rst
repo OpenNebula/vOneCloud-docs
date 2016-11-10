@@ -36,7 +36,7 @@ An Admin Task called ``Debug Info`` generates a gzipped tar file which can be do
 
 To generate the debug information follow these steps:
 
-.. image:: /images/generate_debug_info.png
+.. image:: /images/generate_debug_info_2.png
     :align: center
 
 To download the file click on the ``Debug Info`` job and download the file:
@@ -50,6 +50,3 @@ Job Failure
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 A job should never fail. If it fails you should submit a support ticket with the attached Job Crashed Report (link found in the Job page) to `vOneCloud Support <https://support.vonecloud.com/>`__.
-
-
-
