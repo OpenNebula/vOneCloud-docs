@@ -74,7 +74,7 @@ These limitations will be addressed in future versions of vOneCloud:
 +---------------------------------+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
 | **Browser Adblock plug ins**    | Features like VNC and VM log viewer may be affected by Adblock plug ins. Please disable these plug ins if you are experiencing issues                                                       |
 +---------------------------------+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-| **Cloning imported VMs**        | Cloning in vCenter an import VM will result in a VM that cannot be imported again. Please instantiate from templates and import the resulting VMs, instead of cloning already imported VMs. |
+| **Cloning imported VMs**        | Cloning in vCenter an imported VM will result in a VM that cannot be imported again. Please instantiate from templates and import the resulting VMs, instead of cloning already imported VMs. |
 +---------------------------------+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
 
 If you find any new limitation, feel free to add a feature request in `Community - Feature Request section of the vOneCloud Support Portal <https://support.vonecloud.com/hc/communities/public/topics/200215442-Community-Feature-Requests>`__.
