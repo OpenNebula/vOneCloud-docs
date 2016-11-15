@@ -4,7 +4,7 @@
 Guest Contextualization
 =======================
 
-The information defined at the :ref:`VM Template building <build_template_context>` time is presented to the VM using the VMware VMCI channel. This information comes encoded in base64 can be gathered using the VMware Tools.
+The information defined at the :ref:`VM Template building <build_template_context>` time is presented to the VM using the VMware VMCI channel. This information comes encoded in base64 and can be gathered using the VMware Tools.
 
 .. note:: VMware tools are needed in the guestOS to enable several features (contextualization and networking feedback). Please install `VMware Tools (for Windows) <https://www.vmware.com/support/ws55/doc/new_guest_tools_ws.html>`__ or `Open Virtual Machine Tools <https://github.com/vmware/open-vm-tools>`__ (for \*nix) in the guestOS.
 
@@ -137,4 +137,3 @@ These are the steps needed to finish the preparation and import it to OpenNebula
 * Import the template in OpenNebula
 
 Alternatively use the :ref:`instantiate as persistent <instantiate_to_persistent>` functionality for this step, that will create the new VM Template as soon as you terminate the VM.
-

@@ -57,6 +57,18 @@ Review the settings selection and click finish. Wait for the Virtual Machine to 
 .. image:: /images/vOneCloud-download-deploy-007.png
     :align: center
 
+After importing the vOneCloud OVA, and before powering it on, the vOneCloud Virtual Machine can be edited to, for instance, add a new network interface, increase the amount of RAM, the available CPUs for performance, etc.
+
+In order to achieve this, please right click on the vOneCloud VM, and select Edit Settings. The next dialog should pop up:
+
+.. image:: /images/edit-settings.png
+    :align: center
+
+If you want for instance to add a new network interface, select Network from the dropdown in New device (at the botton of the dialog):
+
+.. image:: /images/add-nic.png
+    :align: center
+
 Now you can power on the Virtual Machine (to edit settings before, :ref:`read this section <edit_vonecloud_appliance>`):
 
 .. image:: /images/vOneCloud-download-deploy-008.png
@@ -101,19 +113,20 @@ Afterwards you need to define a **root password.** You won't be using this very 
 
 The next item is the **oneadmin account password**. You will only need this to login to the vOneCloud Control Panel, a web-based configuration interface we will see very shortly. Check the :ref:`Accounts section <accounts>` to learn more about vOneCloud roles and users.
 
-We have now finished the vOneCloud Control Console initial configuration wizard. As the wizard itself will point out now you can open the vOneCloud Control Panel by pointing your browser to `http://<appliance_ip>:8000` and using the `oneadmin` account and password just chosen.
+We have now finished the vOneCloud Control Console initial configuration wizard.
 
 Step 3. vOneCloud Control Panel - Manage Services
 --------------------------------------------------------------------------------
 
+The wizard points out that you can open the vOneCloud Control Panel by visiting `http://<appliance_ip>:8000` in your browser and using the `oneadmin` account and password just chosen.
+
 The :ref:`vOneCloud Control Panel <control_panel>` will allow the administrator to:
 
-- Check for new vOneCloud versions and manage upgrades.
+- Check for new vOneCloud versions and manage automatic upgrades.
 - Configure Active Directory / LDAP integration
 - Configure SSL (https) access
 - Enable/Disable ssh
 - Start the OpenNebula services
-- Manage automatic upgrades.
 
 Click on the configuration icon if you need to configure one of the supported options. Keep in mind that you can run this configuration at any moment. We recommend to start inspecting vOneCloud's functionality before delving into advanced configuration options like the aforementioned ones.
 
@@ -145,20 +158,3 @@ To access the :ref:`vOneCloud command line interface <cli_interface>`, first :re
 Alternatively,  open the vCenter console of the vOneCloud Virtual Machine appliance and change the tty (Ctrl + Alt + F2). Afterwards, log in with the `root` account and the password you used in the :ref:`initial configuration <download_and_deploy_control_console>`, and switch to the `oneadmin` user.
 
 .. _edit_vonecloud_appliance:
-
-Editing the vOneCloud Appliance
---------------------------------------------------------------------------------
-
-After importing the vOneCloud OVA, and before powering it on, the vOneCloud Virtual Machine can be edited to, for instance, add a new network interface, increase the amount of RAM, the available CPUs for performance, etc.
-
-In order to achieve this, please right click on the vOneCloud VM, and select Edit Settings. The next dialog should pop up:
-
-.. image:: /images/edit-settings.png
-    :align: center
-
-If you want for instance to add a new network interface, select Network from the dropdown in New device (at the botton of the dialog):
-
-.. image:: /images/add-nic.png
-    :align: center
-
-

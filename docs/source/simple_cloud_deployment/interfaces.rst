@@ -6,12 +6,18 @@ vOneCloud Interfaces
 
 vOneCloud offers a rich set of interfaces to interact with your cloud infrastructure, tailored for specific needs of cloud administrators and cloud users alike.
 
+You can select one of the available views clicking in the username at the top right of the screen and selecting the Views entry.
+
+.. image:: /images/select_view.png
+    :align: center
+
+
 Web Interface (Sunstone)
 ------------------------
 
 vOneCloud web interface, called Sunstone, offers three main views:
 
-- :onedoc:`Sunstone vCenter view <deployment/sunstone_setup/suns_views.html#admin-view>`: Aimed at cloud administrators, this view is tailored to present all the available options to manage the physical and virtual aspects of your vCenter infrastructure.
+- **:onedoc:`Sunstone Admin view <deployment/sunstone_setup/suns_views.html#admin-view>`: Aimed at cloud administrators, this view is tailored to present all the available options to manage the physical and virtual aspects of your vCenter infrastructure.
 
 .. image:: /images/vcenter_view.png
     :align: center
@@ -23,7 +29,7 @@ vOneCloud web interface, called Sunstone, offers three main views:
 
 .. _vcenter_cloud_view:
 
-- **Sunstone vCenter Cloud View**: Aimed at end users, this interface eases virtual resource provisioning and hides all the complexity of the cloud that is going on behind the scenes. It is a tailored version of the Sunstone :onedoc:`Cloud View <deployment/sunstone_setup/suns_views.html#cloud-view>`, with adjusted functionality relevant to vOneCloud and vCenter.
+- **Sunstone Cloud View**: Aimed at end users, this interface eases virtual resource provisioning and hides all the complexity of the cloud that is going on behind the scenes. It is a tailored version of the Sunstone :onedoc:`Cloud View <deployment/sunstone_setup/suns_views.html#cloud-view>`, with adjusted functionality relevant to vOneCloud and vCenter.
 
 .. image:: /images/cloud_dash.png
     :align: center

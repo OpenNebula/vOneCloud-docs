@@ -21,7 +21,7 @@ In this scenario the cloud administrator must prepare a set of templates and ima
 Access the VMs with SSH Keys
 --------------------------------------------------------------------------------
 
-Any user can provide his own ssh public key to be included in the VMs created through this view. Note that the template has to be configured to include it.
+Any user can provide his own ssh public key to be included in the VMs created through this view. Note that the template has to be configured to include it. User can provide the ssh key clicking on its name in the top right of the screen, selecting "Settings" and then "Add SSH Key".
 
 |cloud_add_ssh_key|
 

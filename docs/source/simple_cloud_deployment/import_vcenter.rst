@@ -4,14 +4,87 @@
 Import Existing vCenter
 =======================
 
-Importing a vCenter infrastructure into vOneCloud can be carried out easily through the Sunstone Web UI. Follow the next steps to import an existing vCenter as well as any already defined VM Template and Networks.
+Importing a vCenter infrastructure into vOneCloud can be carried out easily through the Sunstone Web UI. Follow the next steps to import an existing vCenter cluster as well as any already defined VM Template and Networks.
 
-You will need the IP or hostname of the vCenter server, as well as an administrator credentials to successfully import resources from vCenter.
+You will need the IP or hostname of the vCenter server, as well as a user declared as Administrator in vCenter.
+
+Alternatively, in some enterprise environments declaring the user as Administrator is not allowed, in that case, you will need to grant the following permissions to a user depending on what OpenNebula's functionality you want to enable:
+
++------------------------+---------------------------------------------+---------------------------------------------------+
+|   vCenter Operation    |      Privileges required by OpenNebula      |             OpenNebula's functionality            |
++------------------------+---------------------------------------------+---------------------------------------------------+
+| CloneVM_Task           | VirtualMachine.Provisioning.DeployTemplate  | Creates a clone of a particular VM                |
++------------------------+---------------------------------------------+---------------------------------------------------+
+| ReconfigVM_Task        | VirtualMachine.Interact.DeviceConnection    | Reconfigures a particular virtual machine.        |
+|                        | VirtualMachine.Interact.SetCDMedia          |                                                   |
+|                        | VirtualMachine.Interact.SetFloppyMedia      |                                                   |
+|                        | VirtualMachine.Config.Rename                |                                                   |
+|                        | VirtualMachine.Config.Annotation            |                                                   |
+|                        | VirtualMachine.Config.AddExistingDisk       |                                                   |
+|                        | VirtualMachine.Config.AddNewDisk            |                                                   |
+|                        | VirtualMachine.Config.RemoveDisk            |                                                   |
+|                        | VirtualMachine.Config.CPUCount              |                                                   |
+|                        | VirtualMachine.Config.Memory                |                                                   |
+|                        | VirtualMachine.Config.RawDevice             |                                                   |
+|                        | VirtualMachine.Config.AddRemoveDevice       |                                                   |
+|                        | VirtualMachine.Config.Settings              |                                                   |
+|                        | VirtualMachine.Config.AdvancedConfig        |                                                   |
+|                        | VirtualMachine.Config.SwapPlacement         |                                                   |
+|                        | VirtualMachine.Config.HostUSBDevice         |                                                   |
+|                        | VirtualMachine.Config.DiskExtend            |                                                   |
+|                        | VirtualMachine.Config.ChangeTracking        |                                                   |
+|                        | VirtualMachine.Provisioning.ReadCustSpecs   |                                                   |
+|                        | VirtualMachine.Inventory.CreateFromExisting |                                                   |
+|                        | VirtualMachine.Inventory.CreateNew          |                                                   |
+|                        | VirtualMachine.Inventory.Move               |                                                   |
+|                        | VirtualMachine.Inventory.Register           |                                                   |
+|                        | VirtualMachine.Inventory.Remove             |                                                   |
+|                        | VirtualMachine.Inventory.Unregister         |                                                   |
+|                        | DVSwitch.CanUse                             |                                                   |
+|                        | DVPortgroup.CanUse                          |                                                   |
+|                        | Datastore.AllocateSpace                     |                                                   |
+|                        | Datastore.BrowseDatastore                   |                                                   |
+|                        | Datastore.LowLevelFileOperations            |                                                   |
+|                        | Datastore.RemoveFile                        |                                                   |
+|                        | Network.Assign                              |                                                   |
+|                        | Resource.AssignVirtualMachineToResourcePool |                                                   |
++------------------------+---------------------------------------------+---------------------------------------------------+
+| PowerOnVM_Task         | VirtualMachine.Interact.PowerOn             | Powers on a virtual machine                       |
++------------------------+---------------------------------------------+---------------------------------------------------+
+| PowerOffVM_Task        | VirtualMachine.Interact.PowerOff            | Powers off a virtual machine                      |
++------------------------+---------------------------------------------+---------------------------------------------------+
+| Destroy_Task           | VirtualMachine.Inventory.Delete             | Deletes a VM (including disks)                    |
++------------------------+---------------------------------------------+---------------------------------------------------+
+| SuspendVM_Task         | VirtualMachine.Interact.Suspend             | Suspends a VM                                     |
++------------------------+---------------------------------------------+---------------------------------------------------+
+| RebootGuest            | VirtualMachine.Interact.Reset               | Reboots VM's guest Operating System               |
++------------------------+---------------------------------------------+---------------------------------------------------+
+| ResetVM_Task           | VirtualMachine.Interact.Reset               | Resets power on a virtual machine                 |
++------------------------+---------------------------------------------+---------------------------------------------------+
+| ShutdownGuest          | VirtualMachine.Interact.PowerOff            | Shutdown guest Operating System                   |
++------------------------+---------------------------------------------+---------------------------------------------------+
+| CreateSnapshot_Task    | VirtualMachine.State.CreateSnapshot         | Creates a new snapshot of a virtual machine.      |
++------------------------+---------------------------------------------+---------------------------------------------------+
+| RemoveSnapshot_Task    | VirtualMachine.State.RemoveSnapshot         | Removes a snapshot form a virtual machine         |
++------------------------+---------------------------------------------+---------------------------------------------------+
+| RevertToSnapshot_Task  | VirtualMachine.State.RevertToSnapshot       | Revert a virtual machine to a particular snapshot |
++------------------------+---------------------------------------------+---------------------------------------------------+
+| CreateVirtualDisk_Task | Datastore.FileManagement                    | On all VMFS datastores represented by OpenNebula  |
++------------------------+---------------------------------------------+---------------------------------------------------+
+| CopyVirtualDisk_Task   | Datastore.FileManagement                    | On all VMFS datastores represented by OpenNebula  |
++------------------------+---------------------------------------------+---------------------------------------------------+
+| DeleteVirtualDisk_Task | Datastore.FileManagement                    | On all VMFS datastores represented by OpenNebula  |
++------------------------+---------------------------------------------+---------------------------------------------------+
+
+.. note:: For security reasons, you may define different users to access different ESX Clusters. A different user can be defined in OpenNebula per ESX cluster, which is encapsulated in OpenNebula as an OpenNebula host.
 
 Step 1. Sunstone login
 -----------------------
 
 Log in into Sunstone as **CloudAdmin**, as explained in :ref:`the previous section <download_and_deploy>`.
+
+The *CloudAdmin* user comes pre configured and is the **Cloud Administrator**, in full control of all the physical and virtual resources and using the vCenter view. Views will be explained later in its own section.
+
 
 .. _acquire_resources:
 
@@ -40,6 +113,13 @@ In the dialog that pops up, select vCenter as Type in the drop-down. You now nee
 
 .. _import_running_vms:
 
+Now it's time to check that the vCenter import has been successful. In ``Infrastructure --> Hosts`` check if vCenter cluster has been imported, and if all the ESX hosts are available in the ESX tab.
+
+.. note:: Take into account that one vCenter cluster (with all its ESX hosts) will be represented as one vOneCloud host.
+
+.. image:: /images/import_vcenter_esx_view.png
+    :align: center
+
 Step 3. Import / Reacquire vCenter Resources
 ---------------------------------------------------------------------------------
 
@@ -53,7 +133,15 @@ If the vCenter infrastructure has running or powered off **Virtual Machines**, v
 
 .. _operations_on_running_vms:
 
-After the VMs are in the Running state, you can operate on their life-cycle, assign them to particular users, attach or detach network interfaces, create snapshots, do capacity resizing (change CPU and MEMORY after powering the VMs off), etc. All the funcionality that vOneCloud supports for regular VMs is present for imported VMs.
+After the VMs are in the Running state, you can operate on their life-cycle, assign them to particular users, attach or detach network interfaces, create snapshots, do capacity resizing (change CPU and MEMORY after powering the VMs off), etc.
+
+All the funcionality that vOneCloud supports for regular VMs is present for imported VMs with some exceptions. The following operations *cannot* be performed on an imported VM:
+
+- Recover --recreate
+- Undeploy (and Undeploy --hard)
+- Migrate (and Migrate --live)
+- Stop
+
 
 Running VMs with open VNC ports are imported with the ability to establish VNC connection to them via vOneCloud. To activate the VNC ports, you need to right click on the VM while it is shut down and click on "Edit Settings", and set the ``remotedisplay.*`` settings shown in the following images.
 
@@ -65,16 +153,9 @@ Running VMs with open VNC ports are imported with the ability to establish VNC c
 .. image:: /images/set_vnc_port.png
     :align: center
 
-The following operations *cannot* be performed on an imported VM:
-
-- Recover --recreate
-- Undeploy (and Undeploy --hard)
-- Migrate (and Migrate --live)
-- Stop
-
 **VM Templates**
 
-vCenter **VM Templates** can be imported and reacquired using the ``Import`` button in ``Virtual Resources --> Templates``. Fill in the credentials and the IP or hostname of vCenter and click on the "Get Templates" button. 
+vCenter **VM Templates** can be imported and reacquired using the ``Import`` button in ``Virtual Resources --> Templates``. Fill in the credentials and the IP or hostname of vCenter and click on the "Get Templates" button.
 
 .. image:: /images/import_vcenter_templates.png
     :align: center
@@ -102,7 +183,7 @@ Regarding the vCenter VM Templates and Networks, is important to take into accou
 
 **Networks**
 
-Similarly, **Networks** and Distributed vSwitches can also be imported / reacquired from using a similar ``Import`` button in ``Infrastructure --> Virtual Networks``. 
+Similarly, **Networks** and Distributed vSwitches can also be imported / reacquired from using a similar ``Import`` button in ``Infrastructure --> Virtual Networks``.
 
 Virtual Networks can be further refined with the inclusion of different :onedoc:`Address Ranges <operation/network_management/manage_vnets.html#address-space>`. This refinement can be done at import time, defining the size of the network one of the following supported Address Ranges:
 
@@ -125,21 +206,13 @@ Datastore will be monitored for free space and availability. Images can be used 
 
 .. _cluster_prefix:
 
+.. note:: vOneCloud does not support spaces in VMDK and datastores names.
+
 .. note:: Resources imported from vCenter will have their names appended with a the name of the cluster where this resources belong in vCenter, to ease their identification within vOneCloud.
 
 .. note:: vCenter VM Templates, Networks, Distributed vSwitches, Datastores, VMDKs and Virtual Machines can be imported regardless of their position inside VM Folders, since vOneCloud will search recursively for them.
 
-Step 4. Check Resources
------------------------
-
-Now it's time to check that the vCenter import has been successful. In ``Infrastructure --> Hosts`` check vCenter has been imported, and if all the ESX hosts are available.
-
-.. note:: Take into account that one vCenter cluster (with all its ESX hosts) will be represented as one vOneCloud host.
-
-.. image:: /images/import_vcenter_esx_view.png
-    :align: center
-
-Step 5. Instantiate a VM Template
+Step 4. Instantiate a VM Template
 ---------------------------------
 
 Everything is ready! Now vOneCloud is prepared to manage Virtual Machines. In Sunstone, go to ``Virtual Resources --> Templates``, select one of the templates imported in **Step 3** and click on Instantiate. Now you will be able to control the life cycle of the VM.

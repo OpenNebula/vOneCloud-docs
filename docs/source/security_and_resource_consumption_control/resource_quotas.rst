@@ -18,14 +18,9 @@ Tracking the usage on:
 .. warning::
     OpenNebula supports additional quotas for **Datastores** (control amount of storage capacity), **Network** (limit number of IPs), **Images** (limit VM instances per image). However these quotas are not available for the vCenter drivers.
 
-Quotas can be updated either from the vCenter View:
+Quotas can be updated either from the vCenter View or from the Group Admin View.
 
 .. image:: /images/sunstone_update_quota.png
-    :align: center
-
-Or from the Group Admin View:
-
-.. image:: /images/vdc_admin_update_quota.png
     :align: center
 
 Refer to :onedoc:`this guide <operation/users_groups_management/quota_auth.html>` to find out more.

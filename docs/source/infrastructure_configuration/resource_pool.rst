@@ -14,9 +14,9 @@ In the fixed per Cluster basis approach, the vCenter credentials that vOneCloud 
 - Create a new vCenter user
 - Create a Resource Pool in vCenter and assign the subset of Datacenter hardware resources wanted to be exposed through vOneCloud
 - Give vCenter user Resource Pool Administration rights over the Resource Pool
-- Give vCenter user Resource Pool Administration (or equivalent) over the Datastores the VMs are going to be running on
+- Give vCenter user Resource Pool Administration (or equivalent) over the Datastores where the VMs are going to be running on
 
-Afterwards, these credentials can be used to add to vOneCloud the host representing the vCenter cluster. Add a new tag called VCENTER_RESOURCE_POOL to the host template representing the vCenter cluster (for instance, in the info tab of the host, or in the CLI), with the name of the Resource Pool.
+Afterwards, these credentials can be used to add to vOneCloud the host representing the vCenter cluster. Add a new attribute called VCENTER_RESOURCE_POOL to the host template representing the vCenter cluster (for instance, in the info tab of the host, or in the CLI), with the name of the Resource Pool.
 
 .. image:: /images/vcenter_rp.png
    :width: 90%
@@ -46,5 +46,3 @@ Nested Resource Pools can be represented using '/'. For instance, a Resource Poo
       HOST="Cluster",
       TYPE="vcenter",
       VM_TEMPLATE="4223067b-ed9b-8f73-82ba-b1a98c3ff96e" ]
-
-
