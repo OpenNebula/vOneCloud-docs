@@ -101,6 +101,8 @@ Whenever the VM life-cycle ends, vOneCloud will instruct vCenter to create a new
 
 This functionality is very useful to create new VM Templates from a original VM Template, changing the VM configuration and/or installing new software, to create a complete VM Template catalog.
 
+.. note:: A new vOneCloud VM Template will be created pointing to this new VM Template, so it can be instantiated through vOneCloud. This new vOneCloud VM Template will be pointing to the original template until the VM is shutdown, at which point it will be converted to a vCenter VM Template and the vOneCloud VM Template updated to point to this new vCentre VM Template.
+
 .. _add_multi_cluster_vm_template:
 
 **Advanced VM Template Editing**
@@ -159,12 +161,43 @@ A representation of a vCenter Network or Distributed vSwitch can be created in v
 
 Several different Address Ranges can be added as well in the Virtual Network creation and/or Update dialog, pretty much in the same way as it can be done at the time of acquiring the resources explained in the :ref:`Import vCenter guide <acquire_resources>`.
 
+In order to get VM traffic shaping to work, the NIC must be controlled by vOneCloud and it needs to be connected to a Distributed vSwitch. The following requirements also needs to be met:
+
+* Verify that vSphere Distributed Switch is version 6.0.0 and later.
+* Verify that Network I/O Control on the switch is version 3.
+* Verify that Network I/O Control is enabled.
+* Verify that the virtual machine system traffic has a configured bandwidth reservation.
+
+Steps to achieve the above configuration can be found `here <https://pubs.vmware.com/vsphere-60/index.jsp?topic=%2Fcom.vmware.vsphere.networking.doc%2FGUID-FECAC41A-2C7A-4AD6-B740-7D8D44BADB52.html>`_
+
+Four values can be used in both the Virtual Network Template or the NIC to achieve traffic shaping. Take into account that only total traffic (inbound and outbound) is limited, the minimum between inbound and outbound is picked.
+
+* Minimum between **INBOUND_AVG_BW** and  **OUTBOUND_AVG_BW**. Expressed in kilobytes/second, this value is used to set the Reservation. This value cannot be set to a greater value than the Peak_BW.
+
+* Minimum between **INBOUND_PEAK_BW** and  **OUTBOUND_PEAK_BW**. Expressed in kilobytes/second, this value is used to set the limit, or maximum bitrate for the interface of the VM. This value cannot be less than 1024 kilobytes/second.
+
 .. _add_new_datastore:
 
 Add New Datastore
 -----------------
 
 **Datastores** for a particular vCenter cluster can be imported in vOneCloud after the cluster is imported using the :ref:`same procedure <import_running_vms>` to import vCenter clusters, making use of the Import button in the ``Storage --> Datastores`` tab in the vCenter View.
+
+In order to create an image in vOneCloud that represents a vCenter datastore, use the following parameters:
+
++------------------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+|    Attribute     |                                                                                                                                                                                                   Description                                                                                                                                                                                                   |
++==================+=================================================================================================================================================================================================================================================================================================================================================================================================================+
+| ``NAME``         | Arbitrary name of the image                                                                                                                                                                                                                                                                                                                                                                                     |
++------------------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| ``PERSISTENT``   | Must be set to 'YES'                                                                                                                                                                                                                                                                                                                                                                                            |
++------------------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| ``PATH``         | Path of the VMDK file in the datastore. For instance, an image win10.vmdk in a Windows folder should be set to Windows/win10.vmdk                                                                                                                                                                                                                                                                               |
++------------------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| ``ADAPTER_TYPE`` | Possible values (careful with the case): lsiLogic, ide, busLogic. More information `in the VMware documentation <http://pubs.vmware.com/vsphere-60/index.jsp#com.vmware.wssdk.apiref.doc/vim.VirtualDiskManager.VirtualDiskAdapterType.html>`__                                                                                                                                                                 |
++------------------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| ``DISK_TYPE``    | The type of disk has implications on performance and occupied space. Values (careful with the case): delta,eagerZeroedThick,flatMonolithic,preallocated,raw,rdm,rdmp,seSparse,sparse2Gb,sparseMonolithic,thick,thick2Gb,thin. More information `in the VMware documentation <http://pubs.vmware.com/vsphere-60/index.jsp?topic=%2Fcom.vmware.wssdk.apiref.doc%2Fvim.VirtualDiskManager.VirtualDiskType.html>`__ |
++------------------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
 
 The vCenter datastore in vOneCloud is tied to a vCenter OpenNebula host in the sense that all operations to be performed in the datastore are going to be performed through the vCenter instance associated to the vOneCloud host, which hold the needed credentials to access the vCenter instance.
 
