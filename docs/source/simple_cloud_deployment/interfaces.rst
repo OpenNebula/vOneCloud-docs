@@ -17,7 +17,7 @@ Web Interface (Sunstone)
 
 vOneCloud web interface, called Sunstone, offers three main views:
 
-- **:onedoc:`Sunstone Admin view <deployment/sunstone_setup/suns_views.html#admin-view>`: Aimed at cloud administrators, this view is tailored to present all the available options to manage the physical and virtual aspects of your vCenter infrastructure.
+- :onedoc:`Sunstone Admin view <deployment/sunstone_setup/suns_views.html#admin-view>`: Aimed at cloud administrators, this view is tailored to present all the available options to manage the physical and virtual aspects of your vCenter infrastructure.
 
 .. image:: /images/vcenter_view.png
     :align: center

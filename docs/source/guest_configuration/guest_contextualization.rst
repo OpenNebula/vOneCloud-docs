@@ -46,22 +46,25 @@ CentOS/RHEL
 
 .. code::
 
-    # wget https://github.com/OpenNebula/addon-context-linux/releases/download/v5.0.0/one-context_5.0.0.rpm
+    # wget https://github.com/OpenNebula/addon-context-linux/releases/download/v5.0.3/one-context_5.0.3.rpm
 
 Debian/Ubuntu
 ~~~~~~~~~~~~~
 
 .. code::
 
-    # wget https://github.com/OpenNebula/addon-context-linux/releases/download/v5.0.0/one-context_5.0.0.deb
+    # wget https://github.com/OpenNebula/addon-context-linux/releases/download/v5.0.3/one-context_5.0.3.deb
 
 Windows
 ~~~~~~~
 
-Downloads these two files to ``C:\``:
+Download and install the MSI package (preferred way) into ``C:\``:
+https://github.com/OpenNebula/addon-context-windows/releases/download/v5.2.0/one-context-5.2.0.msi
 
-* https://raw.githubusercontent.com/OpenNebula/addon-context-windows/master/context.ps1
-* https://raw.githubusercontent.com/OpenNebula/addon-context-windows/master/startup.vbs
+Or download particular contextualization scripts to ``C:\``:
+
+* https://raw.githubusercontent.com/OpenNebula/addon-context-windows/v5.2.0/context.ps1
+* https://raw.githubusercontent.com/OpenNebula/addon-context-windows/v5.2.0/startup.vbs
 
 Step 3. Install Contextualization Packages and Dependencies
 -----------------------------------------------------------
