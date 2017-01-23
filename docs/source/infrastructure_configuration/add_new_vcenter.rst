@@ -201,6 +201,25 @@ In order to create an image in vOneCloud that represents a vCenter datastore, us
 
 The vCenter datastore in vOneCloud is tied to a vCenter OpenNebula host in the sense that all operations to be performed in the datastore are going to be performed through the vCenter instance associated to the vOneCloud host, which hold the needed credentials to access the vCenter instance.
 
+.. _vcenter_ds:
+
+Storage DRS and datastore cluster
+--------------------------------------------------------------------------------
+
+Storage DRS allows you to manage the aggregated resources of a datastore cluster. A StoragePod data object aggregates the storage resources of associated Datastores in a datastore cluster managed by Storage DRS.
+
+In OpenNebula, a StoragePod can be imported as a datastore using Sunstone or CLI's onevcenter datastore command. The StoragePod will be imported as a SYSTEM datastore so it won't be possible to use it to store images but it will be possible to deploy VMs on it.
+
+Datastores which are member of the cluster, represented by the StoragePod, can be imported as individual IMAGE datastores where VMs can be deployed and images can be stored.
+
+Current support has the following limitations:
+
+* Images in StoragePods can't be imported through Sunstone or CLI's onevcenter command though it's possible to import them from a datastore, which is a member of a storage cluster, if it has been imported previously as an individual datastore.
+
+* New images like VMDK files cannot be created or uploaded to the StoragePod as it's set as a SYSTEM datastore. However, it's possible to create an image and upload it to a datastore which is a member of a storage cluster it has been imported previously as an individual datastore.
+
+.. warning:: When a VM is deployed, a cloning operation is involved. The moveAllDisksBackingsAndDisallowSharing move type is used when target datastore is a StoragePod. According to VMWare's documentation all of the virtual disk's backings should be moved to the new datastore. It is not acceptable to attach to a disk backing with the same content ID on the destination datastore. During a clone operation any delta disk backings will be consolidated. The moveChildMostDiskBacking is used for datastores which are not StoragePods in the cloning operation.
+
 .. _add_new_images:
 
 Add New Images / CDROMS
