@@ -23,6 +23,7 @@ vOneCloud leverages the :onedoc:`functionality of OpenNebula <intro_release_note
   * Import existing vCenter Networks and Distributed vSwitches
   * Import existing running and powered off Virtual Machines
   * Import existing Datastores and VMDK images
+  * Import existing Storage Pods
 
 * **On-demand Provision of Virtual Data Centers**
 
@@ -45,6 +46,7 @@ vOneCloud leverages the :onedoc:`functionality of OpenNebula <intro_release_note
   * Attach/detach disk functionality
   * Chose datastore and Resource Pool where VMs will be deployed to
   * Instantiate to persistent to easily crate a VM Template catalog
+  * Limit and monitor VM network consumption
 
 * **Security and Resource Consumption Control**
 

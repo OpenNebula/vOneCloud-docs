@@ -181,6 +181,8 @@ Regarding the vCenter VM Templates and Networks, is important to take into accou
 
 - We recommend therefore to use **VM Templates in vCenter without defined NICs**, to add them later on in the vOneCloud VM Templates
 
+.. _import_networks:
+
 **Networks**
 
 Similarly, **Networks** and Distributed vSwitches can also be imported / reacquired from using a similar ``Import`` button in ``Infrastructure --> Virtual Networks``.
@@ -192,6 +194,11 @@ Virtual Networks can be further refined with the inclusion of different :onedoc:
 - Ethernet: Does not manage IP addresses but rather MAC addresses. If a starting MAC is not provided, vOneCloud will generate one.
 
 The networking information will also be passed onto the VM in the :ref:`Contextualization <build_template_context>` process.
+
+It is possible to limit the bandwidth of any VM NIC associated to a particular virtual network by using the Inbound/Outbound Traffic QoS values as seen in the next image.
+
+.. image:: /images/limit_network_bw.png
+    :align: center
 
 .. _import_images_and_ds:
 
