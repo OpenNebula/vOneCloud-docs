@@ -52,7 +52,5 @@ These limitations will be addressed in future versions of vOneCloud:
 +---------------------------------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
 | **VLAN ID not reported**        | Only networks of type DistributedVirtualPortgroup actually import the VLAN ID                                                                                                                 |
 +---------------------------------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-| **vCenter Password Length**     | The vCenter password can only be 22 characters long.                                                                                                                                          |
-+---------------------------------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
 
 If you find any new limitation, feel free to add a feature request in `Community - Feature Request section of the vOneCloud Support Portal <https://support.vonecloud.com/hc/communities/public/topics/200215442-Community-Feature-Requests>`__.
