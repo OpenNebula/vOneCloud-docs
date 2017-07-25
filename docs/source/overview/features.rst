@@ -36,17 +36,23 @@ vOneCloud leverages the :onedoc:`functionality of OpenNebula <intro_release_note
   * Automatic provision of Virtual Machines and Services (Multi-VM applications) from a Template catalog
   * VM Template cloning and editing capabilities to maintain Template catalog
   * Automatic execution and scaling of multi-tiered applications
-  * Snapshotting
+  * Snapshot management
+  * Folder management
   * Contextualization capabilities, including the ability to run any script at VM boot time
   * VM capacity resizing (CPU and Memory)
-  * vCenter Network and Distributed vSwitch support
+  * Full networking support: vCenter Network and Distributed vSwitch import and creation
+  * Full storage support: non persistent images and volatile disks
+  * Import VM Templates with network and storage information
   * Connect Virtual Networks using a Virtual Router
   * Attach/detach network interfaces functionality
   * VNC connection to VMs, including the ability to set keymap
   * Attach/detach disk functionality
   * Chose datastore and Resource Pool where VMs will be deployed to
   * Instantiate to persistent to easily crate a VM Template catalog
-  * Limit and monitor VM network consumption
+  * Save a running VM as a VM Template 
+  * Limit and monitor VM network and disk consumption
+  * Linked clone support
+  * Disk resize at boot time and in poweroff state
 
 * **Security and Resource Consumption Control**
 

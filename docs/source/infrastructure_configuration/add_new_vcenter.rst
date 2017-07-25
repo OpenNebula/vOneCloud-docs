@@ -1,8 +1,8 @@
 .. _add_new_vcenter:
 
-=========================
-Add New vCenter Resources
-=========================
+===============================================
+Add New vCenter Resources and Advanced Features
+===============================================
 
 vOneCloud can manage an unlimited number of vCenters. Each vCenter is going to be represented by an vOneCloud host, which in turn abstracts all the ESX hosts managed by that particular instance of vCenter.
 
@@ -20,7 +20,7 @@ The following resource are deleted in vCenter when deleted in OpenNebula:
 * Virtual Machines
 
 Add New vCenter Cluster
------------------------
+--------------------------------------------------------------------------------
 
 The mechanism to add a **new vCenter** is exactly the same as the one used to :ref:`import the first one into vOneCloud <import_vcenter>`. It can be performed graphically from the vCenter View:
 
@@ -71,22 +71,20 @@ Let's see an example:
 
   If a user instantiates one of these templates, the :onedoc:`vOneCloud scheduler <operation/host_cluster_management/scheduler.html>` will pick the right vCenter in which to instantiate the VM Template.
 
-.. _keep_disks_one_done:
-
-The variable KEEP_DISKS_ON_DONE can be used in the VM template to instruct vOneCloud not to erase the VM disks after it enters the DONE state (either through shutdown or cancel).
-
-.. image:: /images/keep_disks_on.png
-  :align: center
-
 Using :ref:`the automated process for importing vCenter infrastructures <import_vcenter>`, vOneCloud will generate the above template for you at the time of importing vCenter.
 
-Datastore and Resource Pool where a VM is going to be deployed to can be modified from the VM Template. These attributes can be set in two ways in the vOneCloud VM Template, and can be set/modified at the time of creating/updating the VM Template in vOneCloud:
+The Resource Pool where a VM is going to be deployed to can be modified from the VM Template. These attributes can be set in two ways in the vOneCloud VM Template, and can be set/modified at the time of creating/updating the VM Template in vOneCloud:
 
-* **Fixed**: Pick a certain Resource Pool / Datastore where this VM will be contained
-* **Delegated to User**: Provide a comma separated list of the different Resource Pools / Datastores available for this VM Template, that the end user will be able to chose at VM launch time. A default can be selected.
+* **Fixed**: Pick a certain Resource Pool where this VM will be contained
+* **Delegated to User**: Provide a comma separated list of the different Resource Pools available for this VM Template, that the end user will be able to chose at VM launch time. A default can be selected.
 
 .. image:: /images/ds_rp_selecting.png
     :align: center
+
+.. _advanced_features:
+
+Advanced Features
+--------------------------------------------------------------------------------
 
 .. _instantiate_to_persistent:
 
@@ -102,6 +100,41 @@ Whenever the VM life-cycle ends, vOneCloud will instruct vCenter to create a new
 This functionality is very useful to create new VM Templates from a original VM Template, changing the VM configuration and/or installing new software, to create a complete VM Template catalog.
 
 .. note:: A new vOneCloud VM Template will be created pointing to this new VM Template, so it can be instantiated through vOneCloud. This new vOneCloud VM Template will be pointing to the original template until the VM is shutdown, at which point it will be converted to a vCenter VM Template and the vOneCloud VM Template updated to point to this new vCentre VM Template.
+
+.. _save_as_template:
+
+**Save as Template**
+
+After a VM has been launched, end users in Cloud View can chose to save a VM into a VM Template, provided the VM is in poweroff state. A new VM Template will be created that, upon instantation, will hold all the changes performed to the original VM at the time of hitting the Save As Template button.
+
+.. image:: /images/save_as_template.png
+    :align: center
+
+.. _vm_placement:
+
+**VM Placement - Folders**
+
+In OpenNebula, by default, a new virtual machine cloned from a vCenter template will be displayed in the same folder where the template lives in vSphere’s VM and Templates inventory. However you have the chance to select in which folder you want to see the VM’s based on that template.
+
+For example, if you have the following directory tree and you want VMs to be placed in the VMs folder under Management, the path to that folder from the datacenter root would be /Management/VMs. You can use that path in different vOneCloud actions e.g when a template is imported.
+
+.. image:: /images/vm_in_folder.png
+    :align: center
+
+.. _linked_clones:
+
+**Linked Clones**
+
+In vOneCloud, a new VM is deployed when a clone of an existing vCenter template is created, that’s why vOneCloud requires that templates are first created in vCenter and then imported into vOneCloud.
+
+In VMWare there are two types of cloning operations:
+
+- The Full Clone. A full clone is an independent copy of a template that shares nothing with the parent template after the cloning operation. Ongoing operation of a full clone is entirely separate from the parent template. This is the default clone action in OpenNebula.
+- The Linked Clone. A linked clone is a copy of a template that shares virtual disks with the parent template in an ongoing manner. This conserves disk space, and allows multiple virtual machines to use the same software installation.
+
+In order to activate the linked clones functionality VM Templates **must** be imported through the ''onevcenter'' command line tool, as this functionality is not present through the web interface. To achieve this :ref:`login<advanced_login>` into the appliance and then use the onevcenter tool as described :onedoc:`here<deployment/vmware_infrastructure_setup/vcenter_driver.html#import-a-template-with-onevcenter>`, answerying ''yes'' when prompted if you want to use linked clones. This operation will modify the template so you may prefer that OpenNebula creates a copy of the template and modify that template instead, the onevcenter tool will allow you to choose what you prefer to do.
+
+.. warning:: Linked clone disks cannot be resized.
 
 .. _add_multi_cluster_vm_template:
 
@@ -149,15 +182,104 @@ The following operations can be performed on a running or powered off VM, and th
 * Add/Remove NICs
 * Change contextualization values
 
+.. _vcenter_enhanced_networking:
+
 Add New Network/Distributed vSwitch
 -----------------------------------
 
-**vCenter Networks/Distributed vSwitches** for a particular vCenter cluster can be imported in vOneCloud after the cluster is imported using the :ref:`same procedure <import_running_vms>` to import vCenter clusters, making use of the Import button in the ``Network --> Virtual Networks`` tab in the vCenter View.
+Virtual Networks from vCenter can be represented using vOneCloud virtual networks, where a one-to-one relationship exists between an vOneCloud’s virtual network and a vSphere’s port group. When adding NICs in a VM template or when attaching a NIC (hot-plugging) to a running VM in vOneCloud, a network interface can be attached to an vOneCloud's Virtual Network.
 
-A representation of a vCenter Network or Distributed vSwitch can be created in vOneCloud by creating a Virtual Network and setting the BRIDGE property to **exactly the same name as the vCenter Network**. Leave "Default" network model if you don't need to define VLANs for this network, otherwise chose the "VMware" network model.
+**vCenter Networks/Distributed vSwitches** for a particular vCenter cluster can be imported in vOneCloud after the cluster is imported using the :ref:`same procedure <import_running_vms>` to import vCenter clusters, making use of the Import button in the ``Network --> Virtual Networks`` tab in the vCenter View. 
 
-.. image:: /images/vnet_bridge.png
-  :align: center
+Also, these two kind of networks can be created from vOneCloud.
+
+**Creating Port Groups from OpenNebula**
+
+This is the workflow when you want vOneCloud to create a vCenter network, regardles of it being a standard or distributed one:
+
+1. Create a new OpenNebula Virtual Network template. Add the required attributes to the template including the OpenNebula's Host ID which represents the vCenter cluster where the network elements will be created.
+2. When the Virtual Network is created, vOneCloud will create the network elements required on each ESX host that are members of the specified vCenter cluster.
+3. The Virtual Network will be automatically assigned to the vOneCloud cluster which includes the vCenter cluster represented as an vOneCloud host.
+4. vOneCloud network creation works asynchronously so you may have to refresh the Virtual Network information until you find the VCENTER_NET_STATE attribute. If it completes the actions successfully that attribute will be set to READY and hence you can use it from VMs and templates. If the network creation task fails VCENTER_NET_STATE will be set to ERROR and the VCENTER_NET_ERROR attribute will offer more information.
+5. When a Virtual Network is removed, for each ESX host found in the vCenter cluster assigned to the template, vOneCloud removes both the port group and the switch. If the switch has no more port groups left then the switch will be removed too.
+
+.. image:: /images/vcenter_network_created.png
+    :width: 50%
+    :align: center
+
+.. warning:: If a port group or switch is in use e.g a VM is running and have a NIC attached to that port group the remove operation will fail so please ensure that you have no VMs or templates using that port group before trying to remove the Virtual Network representation.
+
+.. _vcenter_network_attributes:
+
+**vCenter Network attributes**
+
+Here's the table with the attributes that a virtual network representation in vOneCloud understands:
+
++-----------------------------+------------+------------------------------------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+|      Attribute              | Type       | Mandatory                          |                                                                                                                                                                                                                                                                                                 Description                                                                                                                                                                                                                                                                                                          |
++=============================+============+====================================+======================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================+
+| ``VN_MAD``                  | string     | Yes                                | Must be set to ``vcenter``                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                           |
++-----------------------------+------------+------------------------------------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| ``BRIDGE``                  | string     | Yes                                | It's the port group name.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            |
++-----------------------------+------------+------------------------------------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| ``PHYDEV``                  | string     | No                                 | If you want to assign uplinks to your switch you can specify the names of the physical network interface cards of your ESXi hosts that will be used. You can use several physical NIC names using a comma between them e.g vmnic0,vmnic1. Note that two switches cannot share the same physical nics and that you must be sure that the same physical interface name exists and it's available for every ESX host in the cluster. This attribute will be ignored if the switch already exists.                                                                                                                       |
++-----------------------------+------------+------------------------------------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| ``VCENTER_PORTGROUP_TYPE``  | string     | Yes                                | There are two possible values Port Group and Distributed Port Group. Port Group means a Standard Port Group                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          |
++-----------------------------+------------+------------------------------------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| ``VCENTER_ONE_HOST_ID``     | integer    | Yes                                | The OpenNebula host id which represents the vCenter cluster where the nework will be created.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        |
++-----------------------------+------------+------------------------------------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| ``VCENTER_SWITCH_NAME``     | string     | Yes                                | The name of the virtual switch where the port group will be created. If the vcenter switch already exists it won't update it to avoid accidental connectivity issues                                                                                                                                                                                                                                                                                                                                                                                                                                                 |
++-----------------------------+------------+------------------------------------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| ``VCENTER_SWITCH_NPORTS``   | integer    | No                                 | The number of ports assigned to a virtual standard switch or the number of uplink ports assigned to the Uplink port group in a Distributed Virtual Switch. This attribute will be ignored if the switch already exists.                                                                                                                                                                                                                                                                                                                                                                                              |
++-----------------------------+------------+------------------------------------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| ``MTU``                     | integer    | No                                 | The maximum transmission unit setting for the virtual switch. This attribute will be ignored if the switch already exists.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                           |
++-----------------------------+------------+------------------------------------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| ``VLAN_ID``                 | integer    | Yes (unless ``AUTOMATIC_VLAN_ID``) | The VLAN ID, will be generated if not defined and AUTOMATIC_VLAN_ID is set to YES                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    |
++-----------------------------+------------+------------------------------------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| ``AUTOMATIC_VLAN_ID``       | boolean    | Yes (unless ``VLAN_ID``)           | Mandatory and must be set to YES if VLAN_ID hasn't been defined so OpenNebula created a VLAN ID automatically                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        |
++-----------------------------+------------+------------------------------------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+
+OpenNebula uses the following values when creating virtual switches and port groups in vCenter according to what the vSphere's Web Client uses in the same operations:
+
+- VLAN ID is set to 0, which means that no VLANs are used.
+- MTU value is set to 1500.
+
+Standard port groups created by OpenNebula have the following settings:
+
+- Number of ports is set to Elastic. According to VMWare's documentation, the Elastic mode is used to ensure efficient use of resources on ESXi hosts where the ports of virtual switches are dynamically scaled up and down. In any case, the default port number for standard switches is 128.
+- Security - Promiscuous mode is set to Reject, which means that the virtual network adapter only receives frames that are meant for it.
+- Security - MAC Address Changes is set to Accept, so the ESXi host accepts requests to change the effective MAC address to other than the initial MAC address.
+- Security - Forged transmits is set to Accept, which means that the ESXi host does not compare source and effective MAC addresses.
+- Traffic Shaping policies to control the bandwidth and burst size on a port group are disabled. You can still set QoS for each NIC in the template.
+- Physical NICs. The physical NICs used as uplinks are bridged in a bond bridge with teaming capabilities.
+
+Distributed port groups created by OpenNebula have the following settings:
+
+- Number of ports is set to Elastic. According to VMWare's documentation, the Elastic mode is used to ensure efficient use of resources on ESXi hosts where the ports of virtual switches are dynamically scaled up and down. The default port number for distributed switches is 8.
+- Static binding. When you connect a virtual machine to a distributed port group, a port is immediately assigned and reserved for it, guaranteeing connectivity at all times. The port is disconnected only when the virtual machine is removed from the port group.
+- Auto expand is enabled. When the port group is about to run out of ports, the port group is expanded automatically by a small predefined margin.
+- Early Bindind is enabled. A free DistributedVirtualPort will be selected to assign to a Virtual Machine when the Virtual Machine is reconfigured to connect to the port group.
+
+
+A sample session to create a Virtual Network follow. The first step requires you to introduce the virtual network's name:
+
+.. image:: /images/vcenter_create_virtual_network_name.png
+    :width: 50%
+    :align: center
+
+In the Conf tab, select vCenter from the Network Mode menu, so the vcenter network driver is used (the ``VN_MAD=vcenter`` attribute will be added to OpenNebula's template). The Bridge name will be the name of the port group, and by default it's the name of the Virtual Network but you can choose a different port group name.
+
+.. image:: /images/vcenter_network_mode.png
+    :width: 50%
+    :align: center
+
+Once you've selected the vCenter network mode, Sunstone will show several network attributes that can be defined.
+
+.. image:: /images/vcenter_network_attributes.png
+    :width: 50%
+    :align: center
+
+**Address Ranges**
 
 Several different Address Ranges can be added as well in the Virtual Network creation and/or Update dialog, pretty much in the same way as it can be done at the time of acquiring the resources explained in the :ref:`Import vCenter guide <acquire_resources>`.
 
@@ -176,49 +298,74 @@ Four values can be used in both the Virtual Network Template or the NIC to achie
 
 * Minimum between **INBOUND_PEAK_BW** and  **OUTBOUND_PEAK_BW**. Expressed in kilobytes/second, this value is used to set the limit, or maximum bitrate for the interface of the VM. This value cannot be less than 1024 kilobytes/second.
 
+**Network Monitoring**
+
+vOneCloud gathers network monitoring info for each VM. Real-time data is retrieved from vCenter thanks to the Performance Manager which collects data every 20 seconds and maintains it for one hour. Real-time samples are used so no changes have to be applied to vCenter's Statistics setings. Network metrics for transmitted and received traffic are provided as an average using KB/s unit.
+
+The graphs provided by Sunstone are different from those found in vCenter under the Monitor -> Performance Tab when selecting Realtime in the Time Range drop-down menu or in the Advanced view selecting the Network View. The reason is that Sunstone uses polling time as time reference while vCenter uses sample time on their graphs, so an approximation to the real values aggregating vCenter's
+
 .. _add_new_datastore:
 
 Add New Datastore
 -----------------
 
-**Datastores** for a particular vCenter cluster can be imported in vOneCloud after the cluster is imported using the :ref:`same procedure <import_running_vms>` to import vCenter clusters, making use of the Import button in the ``Storage --> Datastores`` tab in the vCenter View.
+**Datastores** for a particular vCenter cluster can be imported in vOneCloud after the cluster is imported using the :ref:`same procedure <import_running_vms>` to import vCenter clusters, making use of the Import button in the ``Storage --> Datastores`` tab.
 
-In order to create an image in vOneCloud that represents a vCenter datastore, use the following parameters:
+In order to create a OpenNebula vCenter datastore that represents a vCenter VMFS datastore, a new OpenNebula datastore needs to be created with the following attributes. This can be achieved using the '+' sign in ``Storage --> Datastores`` tab.
 
-+------------------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-|    Attribute     |                                                                                                                                                                                                   Description                                                                                                                                                                                                   |
-+==================+=================================================================================================================================================================================================================================================================================================================================================================================================================+
-| ``NAME``         | Arbitrary name of the image                                                                                                                                                                                                                                                                                                                                                                                     |
-+------------------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-| ``PERSISTENT``   | Must be set to 'YES'                                                                                                                                                                                                                                                                                                                                                                                            |
-+------------------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-| ``PATH``         | Path of the VMDK file in the datastore. For instance, an image win10.vmdk in a Windows folder should be set to Windows/win10.vmdk                                                                                                                                                                                                                                                                               |
-+------------------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-| ``ADAPTER_TYPE`` | Possible values (careful with the case): lsiLogic, ide, busLogic. More information `in the VMware documentation <http://pubs.vmware.com/vsphere-60/index.jsp#com.vmware.wssdk.apiref.doc/vim.VirtualDiskManager.VirtualDiskAdapterType.html>`__                                                                                                                                                                 |
-+------------------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-| ``DISK_TYPE``    | The type of disk has implications on performance and occupied space. Values (careful with the case): delta,eagerZeroedThick,flatMonolithic,preallocated,raw,rdm,rdmp,seSparse,sparse2Gb,sparseMonolithic,thick,thick2Gb,thin. More information `in the VMware documentation <http://pubs.vmware.com/vsphere-60/index.jsp?topic=%2Fcom.vmware.wssdk.apiref.doc%2Fvim.VirtualDiskManager.VirtualDiskType.html>`__ |
-+------------------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
++-----------------------------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+|      Attribute              |                                                                                                                                                                                                                                                                                                     Description                                                                                                                                                                                                                                                                                                      |
++=============================+======================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================+
+| ``DS_MAD``                  | Must be set to ``vcenter`` if TYPE is SYSTEM_DS                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      |
++-----------------------------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| ``TM_MAD``                  | Must be set ``vcenter``                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              |
++-----------------------------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| ``TYPE``                    | Must be set to ``SYSTEM_DS`` or ``IMAGE_DS``                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                         |
++-----------------------------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| ``VCENTER_ADAPTER_TYPE``    | Default adapter type used by virtual disks to plug inherited to VMs for the images in the datastore. It is inherited by images and can be overwritten if specified explicitly in the image. Possible values (careful with the case): lsiLogic, ide, busLogic. More information `in the VMware documentation <http://pubs.vmware.com/vsphere-60/index.jsp#com.vmware.wssdk.apiref.doc/vim.VirtualDiskManager.VirtualDiskAdapterType.html>`__. Known as "Bus adapter controller" in Sunstone.                                                                                                                          |
++-----------------------------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| ``VCENTER_DISK_TYPE``       | Type of disk to be created when a DATABLOCK is requested. This value is inherited from the datastore to the image but can be explicitly overwritten. The type of disk has implications on performance and occupied space. Values (careful with the case): delta,eagerZeroedThick,flatMonolithic,preallocated,raw,rdm,rdmp,seSparse,sparse2Gb,sparseMonolithic,thick,thick2Gb,thin. More information `in the VMware documentation <http://pubs.vmware.com/vsphere-60/index.jsp?topic=%2Fcom.vmware.wssdk.apiref.doc%2Fvim.VirtualDiskManager.VirtualDiskType.html>`__. Known as "Disk Provisioning Type" in Sunstone. |
++-----------------------------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| ``VCENTER_DS_REF``          | Managed Object Reference of the vCenter datastore. Please visit the :ref:`Managed Object Reference<vcenter_managed_object_reference>` section to know more about these references.                                                                                                                                                                                                                                                                                                                                                                                                                                   |
++-----------------------------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| ``VCENTER_DC_REF``          | Managed Object Reference of the vCenter datacenter. Please visit the :ref:`Managed Object Reference<vcenter_managed_object_reference>` section to know more about these references.                                                                                                                                                                                                                                                                                                                                                                                                                                  |
++-----------------------------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| ``VCENTER_INSTANCE_ID``     | The vCenter instance ID. Please visit the :ref:`Managed Object Reference<vcenter_managed_object_reference>` section to know more about these references.                                                                                                                                                                                                                                                                                                                                                                                                                                                             |
++-----------------------------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| ``VCENTER_HOST``            | Hostname or IP of the vCenter host                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                   |
++-----------------------------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| ``VCENTER_USER``            | Name of the vCenter user.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            |
++-----------------------------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| ``VCENTER_PASSWORD``        | Password of the vCenter user. It's encrypted when the datastore template is updated using the secret stored in the ``/var/lib/one/.one/one_key`` an                                                                                                                                                                                                                                                                                                                                                                                                                                                                  |
++-----------------------------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| ``VCENTER_DS_IMAGE_DIR``    | (Optional) Specifies what folder under the root directory of the datastore will host persistent and non-persistent images e.g one                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    |
++-----------------------------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| ``VCENTER_DS_VOLATILE_DIR`` | (Optional) Specifies what folder under the root directory of the datastore will host the volatile disks                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              |
++-----------------------------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
 
-The vCenter datastore in vOneCloud is tied to a vCenter OpenNebula host in the sense that all operations to be performed in the datastore are going to be performed through the vCenter instance associated to the vOneCloud host, which hold the needed credentials to access the vCenter instance.
+All OpenNebula datastores are actively monitoring, and the scheduler will refuse to deploy a VM onto a vCenter datastore with insufficient free space.
 
 .. _vcenter_ds:
 
 Storage DRS and datastore cluster
 --------------------------------------------------------------------------------
 
-Storage DRS allows you to manage the aggregated resources of a datastore cluster. A StoragePod data object aggregates the storage resources of associated Datastores in a datastore cluster managed by Storage DRS.
+Thanks to vOneCloud's scheduler, you can manage your datastores clusters with load distribution but you may already be using `vCenter’s Storage DRS <http://pubs.vmware.com/vsphere-60/index.jsp?topic=%2Fcom.vmware.vsphere.hostclient.doc%2FGUID-598DF695-107E-406B-9C95-0AF961FC227A.html>`__ capabilities. Storage DRS allows you to manage the aggregated resources of a datastore cluster. If you're using Storage DRS, vOneCloud can delegate the decision of selecting a datastore to the Storage DRS cluster (SDRS) but as this behavior interferes with vOneCloud's scheduler and vSphere’s API impose some restrictions, there will be some limitations in StorageDRS support in vOneCloud.
 
-In OpenNebula, a StoragePod can be imported as a datastore using Sunstone or CLI's onevcenter datastore command. The StoragePod will be imported as a SYSTEM datastore so it won't be possible to use it to store images but it will be possible to deploy VMs on it.
+When you import a SDRS cluster using onevcenter or Sunstone:
 
-Datastores which are member of the cluster, represented by the StoragePod, can be imported as individual IMAGE datastores where VMs can be deployed and images can be stored.
+* The cluster will be imported as a SYSTEM datastore only.
+* vOneCloud detects the datastores grouped by the SDRS cluster so you can still import those datastores as both IMAGE and SYSTEM datastores.
+* Non-persistent images are not supported by a SDRS as vSphere’s API does not provide a way to create, copy or delete files to a SDRS cluster as a whole, however you can use persistent and volatile images with the VMs backed by your SDRS.
+* Linked clones over SDRS are not supported by vOneCloud, so when a VM clone is created a full clone is performed.
+
+In order to delegate the datastore selection to the SDRS cluster you must inform vOneCloud's scheduler that you want to use specifically the SYSTEM datastore representing the storage cluster. You can edit a VM template and select the storage cluster in the Scheduling tab. 
 
 Current support has the following limitations:
 
-* Images in StoragePods can't be imported through Sunstone or CLI's onevcenter command though it's possible to import them from a datastore, which is a member of a storage cluster, if it has been imported previously as an individual datastore.
-
+* Images in StoragePods can't be imported through Sunstone although it's possible to import them from a datastore, which is a member of a storage cluster, if it has been imported previously as an individual datastore.
 * New images like VMDK files cannot be created or uploaded to the StoragePod as it's set as a SYSTEM datastore. However, it's possible to create an image and upload it to a datastore which is a member of a storage cluster it has been imported previously as an individual datastore.
 
-.. warning:: When a VM is deployed, a cloning operation is involved. The moveAllDisksBackingsAndDisallowSharing move type is used when target datastore is a StoragePod. According to VMWare's documentation all of the virtual disk's backings should be moved to the new datastore. It is not acceptable to attach to a disk backing with the same content ID on the destination datastore. During a clone operation any delta disk backings will be consolidated. The moveChildMostDiskBacking is used for datastores which are not StoragePods in the cloning operation.
 
 .. _add_new_images:
 
@@ -226,8 +373,6 @@ Add New Images / CDROMS
 -----------------------
 
 Adding a new datastore and representing existing VMDK images enables disk attach/detach functionality.
-
-vCenter VMDK images managed by vOneCloud are always persistent, ie, vOneCloud won't copy them for new VMs, but rather the originals will be used. This means that only one VM can use one image at the same time.
 
 There are three ways of adding VMDK representations in vOneCloud:
 
@@ -242,7 +387,7 @@ The following image template attributes need to be considered for vCenter VMDK i
 +------------------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
 |    Attribute     |                                                                                                                                                                                                   Description                                                                                                                                                                                                   |
 +==================+=================================================================================================================================================================================================================================================================================================================================================================================================================+
-| ``PERSISTENT``   | Must be set to 'YES'                                                                                                                                                                                                                                                                                                                                                                                            |
+| ``PERSISTENT``   | At the time of instantiating a VM with a disk using this image as backing, wheter vOneCloud will copy this image (Set to NO) or if the original will be used (Set to YES)                                                                                                                                                                                                                                       |
 +------------------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
 | ``PATH``         | This can be either:                                                                                                                                                                                                                                                                                                                                                                                             |
 |                  |                                                                                                                                                                                                                                                                                                                                                                                                                 |

@@ -39,10 +39,3 @@ This attribute can be set in two ways in the vOneCloud VM Template, and can be s
 
 Nested Resource Pools can be represented using '/'. For instance, a Resource Pool "RPChild" nested under "RPAncestor" can be represented both in VCENTER_RESOURCE_POOL and RESOURCE_POOL attributes as "RPAncestor/RPChild".
 
-.. code::
-
-    RESOURCE_POOL="RPAncestor/RPChild"
-    PUBLIC_CLOUD=[
-      HOST="Cluster",
-      TYPE="vcenter",
-      VM_TEMPLATE="4223067b-ed9b-8f73-82ba-b1a98c3ff96e" ]

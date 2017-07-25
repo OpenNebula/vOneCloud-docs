@@ -11,14 +11,13 @@ vOneCloud 3.0 is powered by OpenNebula 5.4.0 'Medusa', and, as such, includes fu
 * **Enhanced storage management**, vOneCloud is fully aware of all VMs disks. Non-persistent images and volatiles disks are now supported.
 * **Storage quotas and datastore capacity check**, never run out of capacity correctly dimensioning the available datastores and the storage quotas given to end users
 * **Balance storage load** of VMs across datastores automatically without the need of Storage DRS
-* **Linked clone support**, add support for linked clones for VMs at the time of importing a VM Template
+* **Linked clone support**, add support for :ref:`linked clones<linked_clones>` for VMs at the time of importing a VM Template
 * **Disk resize capabilities**, resize the capacity of a VM disk at boot time or when the VM is in poweroff
 * **Save disk functionality**, register any VM disk as an image for later use in VMs, either directly from a VM Template or through the disk attach operation
 * **Disk statistics monitoring**, know the disk I/O of any VM
-* **Save as Template functionality**, save any VM as a VM Template at any point during its lifecycle
+* **Save as Template functionality**, :ref:`save any VM as a VM Template<save_as_template>` at any point during its lifecycle
 * **VM lifecycle improvements**, for instance take snapshots of poweroff VMs, recover a snapshot if it is correctly defined in vCenter, etc
 * **Folder management**, define in which vCenter folder you want your VMs into, on a VM to VM basis.
-* **Clearer Clustered datastores**, only imported as system datastores to minimize changes of wrong use
 * **Network creation support**, a new vCenter network mode is available in virtual network definition, standard and different port groups and vSwitches can be created from within OpenNebula. VLAN IDs, MTUs and number of ports can be specified when a port group is created.
 * **Full storage and networking support in imported VM Templates**, images and networks representing disks and network interfaces are created for VM templates and folder placement features.
 * **Improved CDROM management**, now a new CDROM drive is added to the VM if not present when an ISO image is attached
@@ -29,7 +28,8 @@ vOneCloud 3.0 is powered by OpenNebula 5.4.0 'Medusa', and, as such, includes fu
 * **User input sorting**, to ask the information in the correct order to end users (for instance, username before password)
 * **Improved naming conventions**, to allow importing resources with the same name in different vCenter locations
 * **Extended user inputs**, define lists, booleans, and more types in your VM Templates to gather information from end users to configure their Virtual Machines
-* **Numerous wen interface enchancements**, like automatic estimation of VM cost through the Showback mechanism, improved dialogs, better VM information display in Cloud View, image upload resume option, improved user and group management dialogs and many more.
+* **Numerous web interface enchancements**, like automatic estimation of VM cost through the Showback mechanism, improved dialogs, better VM information display in Cloud View, image upload resume option, improved user and group management dialogs and many more.
+* **Better audit trail**, now the history recor of VMs includes the UID of the user that perfomed the action
 
 Additionally, vOneCloud 3.0 add new features related with the vCenter driver not yet present in any OpenNebula release:
 
