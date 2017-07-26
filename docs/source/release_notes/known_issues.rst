@@ -11,6 +11,7 @@ These known issues will be addressed in future versions of vOneCloud:
 
 * `Delete operation leaves a poweroff instance registered in vCenter <http://dev.opennebula.org/issues/4648>`__.
 * `Wrong import of vCenter VM Templates with NICs in Distributed vSwitches or Distributed Ports <https://dev.opennebula.org/issues/5246>`__
+* `Spaces in VMDK names and dirnames not supported <https://dev.opennebula.org/issues/5288>`__
 
 Found more?
 -----------

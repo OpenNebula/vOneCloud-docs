@@ -15,9 +15,6 @@ Tracking the usage on:
 
 - **Compute**: Limit the overall memory, cpu or VM instances
 
-.. warning::
-    OpenNebula supports additional quotas for **Datastores** (control amount of storage capacity), **Network** (limit number of IPs), **Images** (limit VM instances per image). However these quotas are not available for the vCenter drivers.
-
 Quotas can be updated either from the vCenter View or from the Group Admin View.
 
 .. image:: /images/sunstone_update_quota.png

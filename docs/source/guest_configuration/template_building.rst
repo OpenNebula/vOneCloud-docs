@@ -67,6 +67,8 @@ If you are using complex scripts, it is a good idea to use the "encode script in
 
 There are more options that can be set in the contextualization section. You can read about them in the :onedoc:`Virtual Machine Definition File reference section <operation/references/template.html#template-context>`
 
+.. _user_inputs:
+
 User Inputs
 -----------
 

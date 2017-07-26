@@ -10,14 +10,17 @@ The suggested usage is to build vOneCloud templates for each VM Template in each
 
 It is important to note that there are different behavior of the vCenter resources when deleted in OpenNebula. The following resources are NOT deleted in vCenter when deleted in OpenNebula:
 
-* VM Templates
-* Networks
+* VM Templates 
 * Datastores
 
 The following resource are deleted in vCenter when deleted in OpenNebula:
 
 * Images
 * Virtual Machines
+* Networks
+
+If resources are imported in vOneCloud rather than created throught it, they **won't** be deleted in vCenter if deleted in vOneCloud.
+
 
 Add New vCenter Cluster
 --------------------------------------------------------------------------------
@@ -54,7 +57,7 @@ Let's see an example:
   .. image:: /images/import_vm_template.png
     :align: center
 
-  If you want to create the vOneCloud VM Template manually, log in into Sunstone as **CloudAdmin** user as in explained :ref:`here <download_and_deploy>`, proceed to the ``Templates -> VMs``, and click on the **+** sign. Select *vCenter* as the hypervisor, and type in the *vCenter Template UUID*. You can also set a capacity (CPU and Memory) that would be honored at the time of instantiating the VM. In the *Scheduling* tab you can select the hostname of the specific vCenter. The *Context* tab allows to pass information onto the VM to tailor it for its final use (read more about it :ref:`here <build_template_context>`). In *Network* tab a valid Virtual Network (see below) can added to the VM, possible values for the MODEL type of the network card are:
+  If you want to create the vOneCloud VM Template manually, log in into Sunstone as **CloudAdmin** user as in explained :ref:`here <download_and_deploy>`, proceed to the ``Templates -> VMs``, and click on the **+** sign. Select *vCenter* as the hypervisor, and type in the *vCenter Instance ID*, the *vCenter Templated Ref* and the *vCenter Cluster Ref* (more information :onedoc:`here <deployment/vmware_infrastructure_setup/vcenter_driver.html#managed-object-reference>`). You can also set a capacity (CPU and Memory) that would be honored at the time of instantiating the VM. In the *Scheduling* tab you can select the hostname of the specific vCenter. The *Context* tab allows to pass information onto the VM to tailor it for its final use (read more about it :ref:`here <build_template_context>`). In *Network* tab a valid Virtual Network (see below) can added to the VM, possible values for the MODEL type of the network card are:
 
   - virtuale1000
   - virtuale1000e
@@ -67,19 +70,11 @@ Let's see an example:
   .. image:: /images/vcenter_wizard.png
     :align: center
 
-  Fill in with UUID **uuidA** in and select host vCenterA. Repeat for vCenterB.
+  Create one VM Template with informaton about host vCenterA. Repeat for vCenterB.
 
   If a user instantiates one of these templates, the :onedoc:`vOneCloud scheduler <operation/host_cluster_management/scheduler.html>` will pick the right vCenter in which to instantiate the VM Template.
 
 Using :ref:`the automated process for importing vCenter infrastructures <import_vcenter>`, vOneCloud will generate the above template for you at the time of importing vCenter.
-
-The Resource Pool where a VM is going to be deployed to can be modified from the VM Template. These attributes can be set in two ways in the vOneCloud VM Template, and can be set/modified at the time of creating/updating the VM Template in vOneCloud:
-
-* **Fixed**: Pick a certain Resource Pool where this VM will be contained
-* **Delegated to User**: Provide a comma separated list of the different Resource Pools available for this VM Template, that the end user will be able to chose at VM launch time. A default can be selected.
-
-.. image:: /images/ds_rp_selecting.png
-    :align: center
 
 .. _advanced_features:
 
@@ -121,6 +116,21 @@ For example, if you have the following directory tree and you want VMs to be pla
 .. image:: /images/vm_in_folder.png
     :align: center
 
+.. _disk_resize:
+
+**Disk Resize**
+
+VM disks can be resized at booth time of the VM, or when the VM is powered off.
+
+.. image:: /images/disk_resize.png
+    :align: center
+
+.. _disk_save:
+
+**Disk Save As**
+
+VM Disks can be saved as images for later use when the VMs are powered off, the option is present upon clicking a particualr VM and proceeding to the Storage subtab.
+
 .. _linked_clones:
 
 **Linked Clones**
@@ -136,6 +146,15 @@ In order to activate the linked clones functionality VM Templates **must** be im
 
 .. warning:: Linked clone disks cannot be resized.
 
+.. _select_datastore:
+
+** Select Datastore**
+
+The vOneCloud scheduler will pick a valid datastore for a VM, unless the VM Template defines a datastore. To assign a VM Template to a datastore, proceed to the Scheduling tab on the VM Template update dialog and select the desire datastore in the Datastore requirements section.
+
+.. image:: /images/select_ds_for_vcenter_template.png
+    :align: center
+
 .. _add_multi_cluster_vm_template:
 
 **Advanced VM Template Editing**
@@ -143,29 +162,23 @@ In order to activate the linked clones functionality VM Templates **must** be im
 The Advanced tab in the VM Template creation / update dialog of vOneCloud, can be used to quickly edit any aspect of the VM Template. The list of attributes that can be used to create / update vOneCloud VM Templates through the Advanced tab follows:
 
 
-+--------------------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-|     Attribute      |                                                                                                                                      Meaning                                                                                                                                       |
-+--------------------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-| CPU                | Physical CPUs to be used by the VM. This does not have to relate to the CPUs used by the vCenter VM Template, OpenNebula will change the value accordingly                                                                                                                         |
-+--------------------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-| MEMORY             | Physical Memory in MB to be used by the VM. This does not have to relate to the CPUs used by the vCenter VM Template, OpenNebula will change the value accordingly                                                                                                                 |
-+--------------------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-| NIC                | Valid MODELs are: virtuale1000, virtuale1000e, virtualpcnet32, virtualsriovethernetcard, virtualvmxnetm, virtualvmxnet2, virtualvmxnet3.                                                                                                                                           |
-+--------------------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-| GRAPHICS           | Multi-value - Only VNC supported.                                                                                                                                                                                                                                                  |
-+--------------------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-| PUBLIC_CLOUD       | Multi-value. TYPE must be set to vcenter, VM_TEMPLATE must point to the uuid of the vCenter VM that is being represented and HOST must refer to the name of the vCenter Cluster (represented by a vOneCloud host) where the template is available                                  |
-+--------------------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-| SCHED_REQUIREMENTS | NAME="name of the vCenter cluster where this VM Template can instantiated into a VM".                                                                                                                                                                                              |
-+--------------------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-| CONTEXT            | All sections will be honored except FILES                                                                                                                                                                                                                                          |
-+--------------------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-| KEEP_DISKS_ON_DONE | (Optional) Prevent OpenNebula from erasing the VM disks upon reaching the done state (either via shutdown or cancel)                                                                                                                                                               |
-+--------------------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-| VCENTER_DATASTORE  | By default, VM will be deployed to the datastore where the VM Template is bound to. This attribute allows to set the name of the datastore where this VM will be deployed.  This can be overwritten explicitly at deployment time from the CLI or Sunstone                         |
-+--------------------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-| RESOURCE_POOL      | By default, VM will be deployed to the default Resource Pool. This attribute allows to set the name of the resource pool where this VM will be deployed.  This can be overwritten explicitly at deployment time from the CLI or Sunstone. More information `here <resource_pool>`. |
-+--------------------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
++-----------------------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+|       Attribute       |                                                                                                                                      Meaning                                                                                                                                       |
++-----------------------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| CPU                   | Physical CPUs to be used by the VM. This does not have to relate to the CPUs used by the vCenter VM Template, OpenNebula will change the value accordingly                                                                                                                         |
++-----------------------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| MEMORY                | Physical Memory in MB to be used by the VM. This does not have to relate to the CPUs used by the vCenter VM Template, OpenNebula will change the value accordingly                                                                                                                 |
++-----------------------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| NIC                   | Valid MODELs are: virtuale1000, virtuale1000e, virtualpcnet32, virtualsriovethernetcard, virtualvmxnetm, virtualvmxnet2, virtualvmxnet3.                                                                                                                                           |
++-----------------------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| GRAPHICS              | Multi-value - Only VNC supported.                                                                                                                                                                                                                                                  |
++-----------------------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| SCHED_REQUIREMENTS    | NAME="name of the vCenter cluster where this VM Template can instantiated into a VM".                                                                                                                                                                                              |
++-----------------------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| CONTEXT               | All sections will be honored except FILES                                                                                                                                                                                                                                          |
++-----------------------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| VCENTER_RESOURCE_POOL | By default, VM will be deployed to the default Resource Pool. This attribute allows to set the name of the resource pool where this VM will be deployed.  This can be overwritten explicitly at deployment time from the CLI or Sunstone. More information `here <resource_pool>`. |
++-----------------------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
 
   .. image:: /images/template_advanced_tab.png
     :align: center
@@ -283,6 +296,8 @@ Once you've selected the vCenter network mode, Sunstone will show several networ
 
 Several different Address Ranges can be added as well in the Virtual Network creation and/or Update dialog, pretty much in the same way as it can be done at the time of acquiring the resources explained in the :ref:`Import vCenter guide <acquire_resources>`.
 
+**Traffic Shaping**
+
 In order to get VM traffic shaping to work, the NIC must be controlled by vOneCloud and it needs to be connected to a Distributed vSwitch. The following requirements also needs to be met:
 
 * Verify that vSphere Distributed Switch is version 6.0.0 and later.
@@ -314,7 +329,7 @@ Add New Datastore
 In order to create a OpenNebula vCenter datastore that represents a vCenter VMFS datastore, a new OpenNebula datastore needs to be created with the following attributes. This can be achieved using the '+' sign in ``Storage --> Datastores`` tab.
 
 +-----------------------------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-|      Attribute              |                                                                                                                                                                                                                                                                                                     Description                                                                                                                                                                                                                                                                                                      |
+|          Attribute          |                                                                                                                                                                                                                                                                                                     Description                                                                                                                                                                                                                                                                                                      |
 +=============================+======================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================+
 | ``DS_MAD``                  | Must be set to ``vcenter`` if TYPE is SYSTEM_DS                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      |
 +-----------------------------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
@@ -326,11 +341,11 @@ In order to create a OpenNebula vCenter datastore that represents a vCenter VMFS
 +-----------------------------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
 | ``VCENTER_DISK_TYPE``       | Type of disk to be created when a DATABLOCK is requested. This value is inherited from the datastore to the image but can be explicitly overwritten. The type of disk has implications on performance and occupied space. Values (careful with the case): delta,eagerZeroedThick,flatMonolithic,preallocated,raw,rdm,rdmp,seSparse,sparse2Gb,sparseMonolithic,thick,thick2Gb,thin. More information `in the VMware documentation <http://pubs.vmware.com/vsphere-60/index.jsp?topic=%2Fcom.vmware.wssdk.apiref.doc%2Fvim.VirtualDiskManager.VirtualDiskType.html>`__. Known as "Disk Provisioning Type" in Sunstone. |
 +-----------------------------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-| ``VCENTER_DS_REF``          | Managed Object Reference of the vCenter datastore. Please visit the :ref:`Managed Object Reference<vcenter_managed_object_reference>` section to know more about these references.                                                                                                                                                                                                                                                                                                                                                                                                                                   |
+| ``VCENTER_DS_REF``          | Managed Object Reference of the vCenter datastore. Please visit the :onedoc:`Managed Object Reference<deployment/vmware_infrastructure_setup/vcenter_driver.html#managed-object-reference>` section to know more about these references.                                                                                                                                                                                                                                                                                                                                                                             |
 +-----------------------------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-| ``VCENTER_DC_REF``          | Managed Object Reference of the vCenter datacenter. Please visit the :ref:`Managed Object Reference<vcenter_managed_object_reference>` section to know more about these references.                                                                                                                                                                                                                                                                                                                                                                                                                                  |
+| ``VCENTER_DC_REF``          | Managed Object Reference of the vCenter datacenter. Please visit the :onedoc:`Managed Object Reference<deployment/vmware_infrastructure_setup/vcenter_driver.html#managed-object-reference>` section to know more about these references.                                                                                                                                                                                                                                                                                                                                                                            |
 +-----------------------------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-| ``VCENTER_INSTANCE_ID``     | The vCenter instance ID. Please visit the :ref:`Managed Object Reference<vcenter_managed_object_reference>` section to know more about these references.                                                                                                                                                                                                                                                                                                                                                                                                                                                             |
+| ``VCENTER_INSTANCE_ID``     | The vCenter instance ID. Please visit the :onedoc:`Managed Object Reference<deployment/vmware_infrastructure_setup/vcenter_driver.html#managed-object-reference>` section to know more about these references.                                                                                                                                                                                                                                                                                                                                                                                                       |
 +-----------------------------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
 | ``VCENTER_HOST``            | Hostname or IP of the vCenter host                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                   |
 +-----------------------------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
@@ -365,7 +380,6 @@ Current support has the following limitations:
 
 * Images in StoragePods can't be imported through Sunstone although it's possible to import them from a datastore, which is a member of a storage cluster, if it has been imported previously as an individual datastore.
 * New images like VMDK files cannot be created or uploaded to the StoragePod as it's set as a SYSTEM datastore. However, it's possible to create an image and upload it to a datastore which is a member of a storage cluster it has been imported previously as an individual datastore.
-
 
 .. _add_new_images:
 
@@ -407,6 +421,7 @@ VMDK images in vCenter datastores can be:
 - Deleted
 - Hotplugged to VMs
 
+.. _import_vms:
 
 Import Running and Powered Off VMs
 ----------------------------------
@@ -416,6 +431,8 @@ Import Running and Powered Off VMs
 .. image:: /images/import_wild_vms.png
     :width: 90%
     :align: center
+
+VNC caoacibilities will be automatically add to imoported VMs.
 
 In the ZOMBIES tab you'll find VMs that were launched from OpenNebula but, for whatever reason, OpenNebula is not aware of this, e.g coming from a different OpenNebula installation, or being managed from a different vOneCloud. Zombie VMs are meant to be a warning of a VM that need manual clean-up.
 

@@ -236,6 +236,8 @@ Datastore will be monitored for free space and availability. Images can be used 
 - disk attach/detach on VMs
 - enrich VM Templates to add additional disks or CDROMs
 
+.. _import_vm_templates:
+
 **VM Templates**
 
 .. warning:: Since datastores are going to be used to hold the images from VM Templates, all datastore **must** be imported before VM Template import.

@@ -46,7 +46,7 @@ The Group admin can create new resources in the same way as a regular user does 
 Prepare Resources for Other Users
 ================================================================================
 
-Any user of the Cloud View or Group Admin View can save the changes made to a VM back to a new Template, and use this Template to instantiate new VMs later. See the :ref:`how to instantiate a VM to persistent <instantiate_to_persistent>` for more information.
+Any user of the Cloud View or Group Admin View can save the changes made to a VM back to a new Template, and use this Template to instantiate new VMs later. See the :ref:`how to instantiate a VM to persistent <instantiate_to_persistent>` and :ref:`how to save as template <save_as_template>` for more information.
 
 The Group admin can also share his own Saved Templates with the rest of the group. For example the Group admin can instantiate a clean VM prepared by the cloud administrator, install software needed by other users in his Group, save it in a new Template and make it available for the rest of the group.
 

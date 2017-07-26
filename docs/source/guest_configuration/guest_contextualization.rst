@@ -46,25 +46,28 @@ CentOS/RHEL
 
 .. code::
 
-    # wget https://github.com/OpenNebula/addon-context-linux/releases/download/v5.0.3/one-context_5.0.3.rpm
+    # CentOS 6.x
+    # wget https://github.com/OpenNebula/addon-context-linux/releases/download/v5.4.0/one-context-5.4.0-1.el6.noarch.rpm
+    # CentOS 7.x
+    # wget https://github.com/OpenNebula/addon-context-linux/releases/download/v5.4.0/one-context-5.4.0-1.el7.noarch.rpm
 
 Debian/Ubuntu
 ~~~~~~~~~~~~~
 
 .. code::
 
-    # wget https://github.com/OpenNebula/addon-context-linux/releases/download/v5.0.3/one-context_5.0.3.deb
+    # wget https://github.com/OpenNebula/addon-context-linux/releases/download/v5.4.0/one-context_5.4.0-1.deb
 
 Windows
 ~~~~~~~
 
 Download and install the MSI package (preferred way) into ``C:\``:
-https://github.com/OpenNebula/addon-context-windows/releases/download/v5.2.0/one-context-5.2.0.msi
+https://github.com/OpenNebula/addon-context-windows/releases/download/v5.4.0/one-context-5.4.0.msi
 
 Or download particular contextualization scripts to ``C:\``:
 
-* https://raw.githubusercontent.com/OpenNebula/addon-context-windows/v5.2.0/context.ps1
-* https://raw.githubusercontent.com/OpenNebula/addon-context-windows/v5.2.0/startup.vbs
+* https://raw.githubusercontent.com/OpenNebula/addon-context-windows/v5.4.0/context.ps1
+* https://raw.githubusercontent.com/OpenNebula/addon-context-windows/v5.4.0/startup.vbs
 
 Step 3. Install Contextualization Packages and Dependencies
 -----------------------------------------------------------
@@ -131,12 +134,12 @@ In vCenter open the VM menu, go to "Guest OS" section, click in "Install VMware 
 Step 5. Power Off the Machine and Save it
 -----------------------------------------
 
-These are the steps needed to finish the preparation and import it to OpenNebula:
+These are the steps needed to finish the process:
 
 * Power off the machine so it is in a consistent state the next time it boots
-* Make sure that you take out any installation media used in the previous steps
-* Remove the network interfaces from the VM
-* Convert the VM into a Template
-* Import the template in OpenNebula
+* Click on the Save As Template button in the Cloud View
+
+.. image:: /images/save_as_template.png
+    :align: center
 
 Alternatively use the :ref:`instantiate as persistent <instantiate_to_persistent>` functionality for this step, that will create the new VM Template as soon as you terminate the VM.
