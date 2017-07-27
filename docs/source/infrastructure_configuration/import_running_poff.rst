@@ -11,7 +11,7 @@ Import Running and Powered Off VMs
     :width: 90%
     :align: center
 
-VNC caoacibilities will be automatically add to imoported VMs.
+VNC capacibilities will be automatically add to imoported VMs.
 
 In the ZOMBIES tab you'll find VMs that were launched from OpenNebula but, for whatever reason, OpenNebula is not aware of this, e.g coming from a different OpenNebula installation, or being managed from a different vOneCloud. Zombie VMs are meant to be a warning of a VM that need manual clean-up.
 
