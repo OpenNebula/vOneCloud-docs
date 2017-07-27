@@ -21,7 +21,6 @@ The following resource are deleted in vCenter when deleted in OpenNebula:
 
 If resources are imported in vOneCloud rather than created throught it, they **won't** be deleted in vCenter if deleted in vOneCloud.
 
-
 Add New vCenter Cluster
 --------------------------------------------------------------------------------
 
@@ -76,11 +75,9 @@ Let's see an example:
 
 Using :ref:`the automated process for importing vCenter infrastructures <import_vcenter>`, vOneCloud will generate the above template for you at the time of importing vCenter.
 
+The following advanced features can be used in the VM Templates and VMs.
+
 .. _advanced_features:
-
-Advanced Features
---------------------------------------------------------------------------------
-
 .. _instantiate_to_persistent:
 
 **VM Instantiate to Persistent**
@@ -148,7 +145,7 @@ In order to activate the linked clones functionality VM Templates **must** be im
 
 .. _select_datastore:
 
-** Select Datastore**
+**Select Datastore**
 
 The vOneCloud scheduler will pick a valid datastore for a VM, unless the VM Template defines a datastore. To assign a VM Template to a datastore, proceed to the Scheduling tab on the VM Template update dialog and select the desire datastore in the Datastore requirements section.
 
@@ -360,27 +357,6 @@ In order to create a OpenNebula vCenter datastore that represents a vCenter VMFS
 
 All OpenNebula datastores are actively monitoring, and the scheduler will refuse to deploy a VM onto a vCenter datastore with insufficient free space.
 
-.. _vcenter_ds:
-
-Storage DRS and datastore cluster
---------------------------------------------------------------------------------
-
-Thanks to vOneCloud's scheduler, you can manage your datastores clusters with load distribution but you may already be using `vCenter’s Storage DRS <http://pubs.vmware.com/vsphere-60/index.jsp?topic=%2Fcom.vmware.vsphere.hostclient.doc%2FGUID-598DF695-107E-406B-9C95-0AF961FC227A.html>`__ capabilities. Storage DRS allows you to manage the aggregated resources of a datastore cluster. If you're using Storage DRS, vOneCloud can delegate the decision of selecting a datastore to the Storage DRS cluster (SDRS) but as this behavior interferes with vOneCloud's scheduler and vSphere’s API impose some restrictions, there will be some limitations in StorageDRS support in vOneCloud.
-
-When you import a SDRS cluster using onevcenter or Sunstone:
-
-* The cluster will be imported as a SYSTEM datastore only.
-* vOneCloud detects the datastores grouped by the SDRS cluster so you can still import those datastores as both IMAGE and SYSTEM datastores.
-* Non-persistent images are not supported by a SDRS as vSphere’s API does not provide a way to create, copy or delete files to a SDRS cluster as a whole, however you can use persistent and volatile images with the VMs backed by your SDRS.
-* Linked clones over SDRS are not supported by vOneCloud, so when a VM clone is created a full clone is performed.
-
-In order to delegate the datastore selection to the SDRS cluster you must inform vOneCloud's scheduler that you want to use specifically the SYSTEM datastore representing the storage cluster. You can edit a VM template and select the storage cluster in the Scheduling tab. 
-
-Current support has the following limitations:
-
-* Images in StoragePods can't be imported through Sunstone although it's possible to import them from a datastore, which is a member of a storage cluster, if it has been imported previously as an individual datastore.
-* New images like VMDK files cannot be created or uploaded to the StoragePod as it's set as a SYSTEM datastore. However, it's possible to create an image and upload it to a datastore which is a member of a storage cluster it has been imported previously as an individual datastore.
-
 .. _add_new_images:
 
 Add New Images / CDROMS
@@ -420,20 +396,3 @@ VMDK images in vCenter datastores can be:
 - Cloned
 - Deleted
 - Hotplugged to VMs
-
-.. _import_vms:
-
-Import Running and Powered Off VMs
-----------------------------------
-
-**Running** and **Powered Off VMs** can be imported through the WILDS tab in the Host info tab representing the vCenter cluster where the VMs are running in.
-
-.. image:: /images/import_wild_vms.png
-    :width: 90%
-    :align: center
-
-VNC caoacibilities will be automatically add to imoported VMs.
-
-In the ZOMBIES tab you'll find VMs that were launched from OpenNebula but, for whatever reason, OpenNebula is not aware of this, e.g coming from a different OpenNebula installation, or being managed from a different vOneCloud. Zombie VMs are meant to be a warning of a VM that need manual clean-up.
-
-Read more about the :onedoc:`vCenter drivers <deployment/vmware_infrastructure_setup/vcenter_driver.html>`. Regarding the vCenter datastores in vOneCloud, refer to the :onedoc:`vCenter datastore guide <deployment/vmware_infrastructure_setup/datastore_setup.html>`

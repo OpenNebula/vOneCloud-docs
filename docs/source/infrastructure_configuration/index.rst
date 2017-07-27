@@ -6,7 +6,9 @@ Infrastructure Configuration
    :maxdepth: 2
 
    Introduction <introduction_inf_conf>
-   Add New vCenter Resources and Advanced Features <add_new_vcenter>
+   Add New vCenter Resources <add_new_vcenter>
+   Import Running and Powered Off VMs <import_running_poffvms>
+   Storage DRS and datastore cluster <vcenter_ds>
    Multi-VM Applications <multi_vm_applications>
    Virtual Router <virtual_routers>
    Authentication <authentication>
