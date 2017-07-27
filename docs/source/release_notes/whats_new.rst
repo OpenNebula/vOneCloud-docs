@@ -6,8 +6,6 @@ What's New vOneCloud 3.0
 
 vOneCloud 3.0 is powered by OpenNebula 5.4.0 'Medusa', and, as such, includes functionality present in :onedoc:`Medusa <intro_release_notes/release_notes/index.html>` relevant to vOneCloud:
 
-.. _todo: link to documentation of each functionality
-
 * **Enhanced storage management**, vOneCloud is fully aware of all :ref:`VMs disks <import_vm_templates>`. Non-persistent images and volatiles disks are now supported.
 * **Storage quotas and datastore capacity check**, never run out of capacity correctly dimensioning the available datastores and the storage :ref:`quotas <resource_quotas>` given to end users
 * **Balance storage load** of :ref:`VMs across datastores <select_datastore>` automatically without the need of Storage DRS
@@ -28,10 +26,12 @@ vOneCloud 3.0 is powered by OpenNebula 5.4.0 'Medusa', and, as such, includes fu
 * **Numerous web interface enchancements**, like automatic estimation of VM cost through the Showback mechanism, better VM information display in :ref:`Cloud View <cloud_view>`, image upload resume option, improved user and group management dialogs and many more.
 * **Better audit trail**, now the history records of VMs includes the UID of the user that perfomed the action
 
+Multiple bugfixes and documentation improvements have been included in this version. For instance, deleting SSH keys from cloud view, importing images with correct size, VM contextualization persistance across reboots, disk not removed if detached in poweroff state, context disk not displayed in Sunstone, skip import of resources if no permissions available, and a long list of other bugfixes and enhancements that can be consulted in the `development portal <https://dev.opennebula.org/projects/opennebula/issues?utf8=%E2%9C%93&set_filter=1&f%5B%5D=fixed_version_id&op%5Bfixed_version_id%5D=%3D&v%5Bfixed_version_id%5D%5B%5D=86&f%5B%5D=&c%5B%5D=tracker&c%5B%5D=status&c%5B%5D=priority&c%5B%5D=subject&c%5B%5D=assigned_to&c%5B%5D=updated_on&group_by=>`__.
+
 Additionally, vOneCloud 3.0 add new features related with the vCenter driver not yet present in any OpenNebula release:
 
-Multiple bugfixes and documentation improvements have been included in this version. For instance, deleting SSH keys from cloud view, importing images with correct size, VM contextualization persistance across reboots, disk not removed if detached in poweroff state, context disk not displayed in Sunstone, skip import of resources if no permissions available, and a long list of other bugfixes and enhancements that can be consulted in the `development portal <https://dev.opennebula.org/projects/opennebula/issues?utf8=%E2%9C%93&set_filter=1&f%5B%5D=fixed_version_id&op%5Bfixed_version_id%5D=%3D&v%5Bfixed_version_id%5D%5B%5D=86&f%5B%5D=&c%5B%5D=tracker&c%5B%5D=status&c%5B%5D=priority&c%5B%5D=subject&c%5B%5D=assigned_to&c%5B%5D=updated_on&group_by=>`__.
+
 
 vOneCloud 3.0.0 has been certified with :ref:`support for vSphere 5.5, 6.0 and 6.5 <system_requirements>`.
 
-Upgrade to 3.0.0 from previous versions cannot be performed automatically. If you hold an active support subscription, please `contact OpenNebula Systems <mailto:support@opennebula.systems&subject="Upgrade to vOneCloud 3.0.0">`__ to schedule a vOneCloud upgrade.
+.. warning:: Upgrade to 3.0.0 from previous versions cannot be performed automatically. If you hold an active support subscription, please `contact OpenNebula Systems <mailto:support@opennebula.systems&subject="Upgrade to vOneCloud 3.0.0">`__ to schedule a vOneCloud upgrade.

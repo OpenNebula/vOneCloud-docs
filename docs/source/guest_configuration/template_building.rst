@@ -17,18 +17,18 @@ In order to pass information to the instantiated VM template, the Context sectio
 
 Different kinds of context information can be passed onto the VMs:
 
-OneGate Token
--------------
-
-vOneCloud has a centralized service to share data between Virtual Machines and the main daemon, useful to set monitoring information that can be gathered inside the VM and configuration data. It also lets you send scaling actions when the Virtual Machine belongs to a Service.
-
-To do so the client installed with the contextualization packages (``onegate``) needs some information:
-
-* **Token**: it's the key specific to each VM used to authenticate with the
-  service
-* **OneGate endpoint**: the address where the OneGate daemon is reachable
-
-To fill this information you have to click the "Add OneGate token" check box.
+.. OneGate Token
+.. -------------
+.. 
+.. vOneCloud has a centralized service to share data between Virtual Machines and the main daemon, useful to set monitoring information that can be gathered inside the VM and configuration data. It also lets you send .. scaling actions when the Virtual Machine belongs to a Service.
+.. 
+.. To do so the client installed with the contextualization packages (``onegate``) needs some information:
+.. 
+.. * **Token**: it's the key specific to each VM used to authenticate with the
+..   service
+.. * **OneGate endpoint**: the address where the OneGate daemon is reachable
+.. 
+.. To fill this information you have to click the "Add OneGate token" check box.
 
 Network Configuration
 ---------------------
