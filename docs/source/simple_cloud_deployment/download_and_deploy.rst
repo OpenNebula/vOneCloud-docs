@@ -120,6 +120,8 @@ Step 3. vOneCloud Control Panel - Manage Services
 
 The wizard points out that you can open the vOneCloud Control Panel by visiting `http://<appliance_ip>:8000` in your browser and using the `oneadmin` account and password just chosen.
 
+.. warning:: Are you using a self-signed certificate? If that's the case you must accept it too in port 29876. In order to do so open https://...:29876 and verify that there is no SSL related warning. Click :onedoc:`here <deployment/sunstone_setup/suns_advance.html#running-sunstone-behind-nginx-ssl-proxy>` for more information.
+
 The :ref:`vOneCloud Control Panel <control_panel>` will allow the administrator to:
 
 - Check for new vOneCloud versions and manage automatic upgrades.
