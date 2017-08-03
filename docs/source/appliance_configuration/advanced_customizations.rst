@@ -29,19 +29,21 @@ It is possible to change the logos of the Sunstone interface by replacing these 
 The background of the login screen can be customized by replacing ``/usr/lib/one/sunstone/views/login.erb``, with these contents:
 
 .. code-block:: none
-    :emphasize-lines: 21
+    :emphasize-lines: 22-28
 
     <!DOCTYPE html>
     <html>
       <head>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-        <link rel="shortcut icon" href="images/favicon.ico" />
+
         <title>OpenNebula Sunstone Login</title>
+
+        <!--[if IE]><link rel="shortcut icon" href="images/favicon.ico"><![endif]-->
+        <link rel="apple-touch-icon-precomposed" href="images/apple-touch-icon-precomposed.png">
+        <link rel="icon" href="images/favicon.png">
+
         <link rel="stylesheet" type="text/css" href="css/login.css" />
-        <!--[if IE]>
-        <script type="text/javascript" src="vendor/crypto-js/core-min.js"></script>
-        <script type="text/javascript" src="vendor/crypto-js/enc-base64-min.js"></script>
-        <![endif]-->
 
         <% if $conf[:env] == 'dev' %>
           <script src="bower_components/requirejs/require.js" data-main="app/login"></script>
@@ -58,14 +60,14 @@ The background of the login screen can be customized by replacing ``/usr/lib/one
       background-size: cover;
       ">
 
-        <% if settings.config[:auth] == "x509" %>
+        <% if (settings.config[:auth] == "x509") || (settings.config[:auth] == "remote") %>
         <%= erb :_login_x509 %>
         <% else %>
         <%= erb :_login_standard %>
         <% end %>
 
         <div id="footer" style="overflow:visible;">
-          <a href="http://opennebula.org" target="_blank">OpenNebula 4.13.85</a>
+          <a href="http://opennebula.org" target="_blank">OpenNebula 5.4.0</a>
           by
           <a href="http://opennebula.systems" target="_blank">OpenNebula Systems</a>
           .
@@ -73,9 +75,16 @@ The background of the login screen can be customized by replacing ``/usr/lib/one
       </body>
     </html>
 
+
 Make sure you replace ``%YOURIMAGE%`` in the above example with the name of your background. Upload your background image to ``/usr/lib/one/sunstone/public/images/``. For example, if we have a logo called ``server.jpg``, that line should read:
 
+.. code:: css
+
     background: url(images/server.jpg) no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
 
 And we should upload it to ``/usr/lib/one/sunstone/public/images/server.jpg``.
 
@@ -85,16 +94,12 @@ VM Template Logos
 It is possible to add new logos for the VM Templates to be displayed in Sunstone:
 
 * Create your logo in PNG format (90 x 96 pixels).
-
-* Log in into the appliance and place it in /usr/lib/one/sunstone/public/images/logos
-
-* chmod +644 on the uploaded file
-
+* Log in into the appliance and place it in ``/usr/lib/one/sunstone/public/images/logos``.
+* Run ``chmod +644`` on the uploaded file.
 * In Sunstone vCenter Admin view, update the desired VM Template and select any of the built in logos.
-
 * Click on update again and switch to Advanced view.
+* Change the the ``LOGO=`` line to ``LOGO="images/logos/<mylogo>.png``.
 
-* Change the the LOGO= line to LOGO="images/logos/<mylogo>.png
+.. note::
 
-
-After any of these changes it's necessary to restart OpenNebula in the Control Panel.
+  After any of these changes it's necessary to restart OpenNebula in the Control Panel.

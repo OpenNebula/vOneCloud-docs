@@ -4,12 +4,9 @@
 Control Panel
 ================================================================================
 
-This is a web based interface available at `http://<appliance_ip>:8000` which handles many aspects of the vOneCloud platform configuration. The Control Panel can be reached at any time from the Sunstone GUI using the Control Panel link in the bottom of the left hand side menu.
+This is a web based interface available at ``http://<appliance_ip>:8000`` which handles many aspects of the vOneCloud platform configuration.
 
-.. image:: /images/control_panel_link.png
-    :align: center
-
-To log in the administrator will need the `oneadmin` account, which is set in the initial configuration of the Control Console.
+To log in the administrator will need the ``oneadmin`` account, which is set in the initial configuration of the Control Console.
 
 The next section documents the available information and actions in this interface
 
@@ -63,7 +60,9 @@ It is possible to configure SSH and SSL:
 SSH
 """
 
-By default SSH access is disabled. If you want to enable it, simply enable the checkbox.
+By default SSH access is disabled. If you want to enable it, enable the ``SSH Password Authentication`` checkbox.
+
+You can choose whether to allow password based authentication. If you only want public ssh key authentication you need to fill in the ``SSH Authorized Public Key(s) for root`` field.
 
 .. _control_panel_system_options_ssl:
 
@@ -72,7 +71,7 @@ SSL
 
 If you want to enable SSL you will need to:
 
-* Enable the `SSL enabled` checkbox
+* Enable the ``SSL enabled`` checkbox
 * Provide a Certificate (copy&paste the contents of the file)
 * Provide a Key Certificate (copy&paste the contents of the file)
 * Optionally, provide the CA Certificate (copy&paste the contents of the file)
@@ -100,3 +99,11 @@ When a new vOneCloud release is available for download users will be notified bo
 
 .. note::
     Before running an automatic upgrade users are recommend to create a vCenter snapshot of the vOneCloud appliance in order to revert back to it in case of failure.
+
+Opening the Control Panel from Sunstone
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+Once OpenNebula and Sunstone have been started in the Control Panel, you will be able to see a link the Sunstone GUI to go back to the Control Panel. Of course, you can also manually open ``http://<appliance_ip>:8000``.
+
+.. image:: /images/control_panel_link.png
+    :align: center
