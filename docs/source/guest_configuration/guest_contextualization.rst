@@ -41,22 +41,33 @@ If you already happen to have a VM or Template in vCenter with the installed OS 
 Step 2. Download Contextualization Packages to the VM
 -----------------------------------------------------
 
-CentOS/RHEL
-~~~~~~~~~~~
+CentOS/RHEL 6.x
+~~~~~~~~~~~~~~~
 
 .. code::
 
-    # CentOS 6.x
-    # wget https://github.com/OpenNebula/addon-context-linux/releases/download/v5.4.0/one-context-5.4.0-1.el6.noarch.rpm
-    # CentOS 7.x
-    # wget https://github.com/OpenNebula/addon-context-linux/releases/download/v5.4.0/one-context-5.4.0-1.el7.noarch.rpm
+    # wget https://github.com/OpenNebula/addon-context-linux/releases/download/v5.4.1/one-context-5.4.1-1.el6.noarch.rpm
 
-Debian/Ubuntu
-~~~~~~~~~~~~~
+CentOS/RHEL 7.x
+~~~~~~~~~~~~~~~
 
 .. code::
 
-    # wget https://github.com/OpenNebula/addon-context-linux/releases/download/v5.4.0/one-context_5.4.0-1.deb
+    # wget https://github.com/OpenNebula/addon-context-linux/releases/download/v5.4.1/one-context-5.4.1-1.el7.noarch.rpm
+
+OpenSUSE
+~~~~~~~~
+
+.. code::
+
+    # wget https://github.com/OpenNebula/addon-context-linux/releases/download/v5.4.1/one-context-5.4.1-1.suse.noarch.rpm
+
+Debian/Ubuntu/Devuan
+~~~~~~~~~~~~~~~~~~~~
+
+.. code::
+
+    # wget https://github.com/OpenNebula/addon-context-linux/releases/download/v5.4.1/one-context_5.4.1-1.deb
 
 Windows
 ~~~~~~~
@@ -77,33 +88,41 @@ CentOS/RHEL 6
 
 .. code::
 
-    # rpm -Uvh one-context*rpm
     # yum install -y epel-release
-    # yum install ruby # only needed for onegate command
-    # yum install -i dracut-modules-growroot
-    # dracut -f
+    # yum install -y one-context*el6*rpm
 
 CentOS/RHEL 7
 ~~~~~~~~~~~~~
 
 .. code::
 
-    # rpm -Uvh one-context*rpm
     # yum install -y epel-release
-    # yum install ruby # only needed for onegate command
-    # yum install -y cloud-utils-growpart
+    # yum install -y one-context*el7*rpm
+
+OpenSUSE
+~~~~~~~~
+
+.. code::
+
+    # zypper install -y one-context*suse*rpm
 
 Debian/Ubuntu
 ~~~~~~~~~~~~~
 
 .. code::
 
-    # dpkg -i one-context*deb
-    # apt-get install ruby # only needed for onegate command
-    # apt-get install -y cloud-utils
+    # apt-get purge -y cloud-init
+    # dpkg -i one-context*deb || apt-get install -fy
 
 Windows
 ~~~~~~~
+
+* double-click on the downloaded MSI package icon in the same way you open other documents to install it
+* execute ``sysprep`` to prepare the OS for duplication. You can find more information at:
+
+https://technet.microsoft.com/en-us/library/cc721940(v=ws.10).aspx
+
+Or for particular contextualization scripts:
 
 * Open the Local Group Policy Dialog by running ``gpedit.msc``.
 * Go to *Computer Configuration* -> *Windows Settings* -> *Scripts* -> *startup* (right click).
@@ -112,19 +131,10 @@ Windows
 Step 4. Install VMware Tools
 ----------------------------
 
-CentOS
-~~~~~~
+CentOS, Debian/Ubuntu
+~~~~~~~~~~~~~~~~~~~~~
 
-.. code::
-
-    # yum install open-vm-tools
-
-Debian/Ubuntu
-~~~~~~~~~~~~~
-
-.. code::
-
-    # apt-get install open-vm-tools
+``open-vm-tools`` are installed as a dependency of contextualization package.
 
 Windows
 ~~~~~~~
