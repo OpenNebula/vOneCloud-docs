@@ -12,6 +12,30 @@ These known issues will be addressed in future versions of vOneCloud:
 * `Delete operation leaves a poweroff instance registered in vCenter <http://dev.opennebula.org/issues/4648>`__.
 * `Wrong import of vCenter VM Templates with NICs in Distributed vSwitches or Distributed Ports <https://dev.opennebula.org/issues/5246>`__
 * `Spaces in VMDK names and dirnames not supported <https://dev.opennebula.org/issues/5288>`__
+* `Cloud vcenter view does not allow creation of VMs <https://dev.opennebula.org/issues/5313>`__
+
+Fix VM creation problem in 3.0.0
+--------------------------------
+
+Release 3.0.0 has a problem in the cloud views that do not let users create new VMs (already fixed in 3.0.1). Here are the steps to fix this problem in 3.0.0 appliances:
+
+* Enable ssh access to the vOneCloud appliance following :ref:`these instructions <control_panel_system_options_ssh>`
+
+* Connect as root to the frontend using ssh. If you are using windows you can use the software PUTTY, for Linux or Mac OS X you can use the terminal:
+
+.. code::
+
+    ssh root@<your frontend>
+
+* Execute this command, do a copy and paste as any change to the command can make it fail:
+
+.. code::
+
+    sed -i 's/^            templates: false$/            templates: true/' /etc/one/sunstone-views/cloud.yaml
+
+* Close the ssh terminal an return to vOneCloud control panel
+
+* Restart OpenNebula
 
 Found more?
 -----------
