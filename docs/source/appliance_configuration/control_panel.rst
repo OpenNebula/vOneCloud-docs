@@ -36,6 +36,8 @@ Additionally vOneCloud will report the subscription status:
 * Active subscription
 * Expired subscription
 
+.. warning:: If you click on **Upgrade** or **Upgrade Now** (to upgrade the vOneCloud version, or the system packages, respectively), you will see that a few jobs appear in `pending` state in the job queue. You will not receive any further user feedback until it finishes executing. This may take a long time: 15 minutes for **Upgrade**, and even more than an hour for **Upgrade Now**, depending on your internet access speed. If a job failed, it will turn to red, if it's successful, it will turn to green. So please, **be patient until all the jobs finish executing**.
+
 Configuration Management
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
