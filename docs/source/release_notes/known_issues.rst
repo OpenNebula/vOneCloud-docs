@@ -17,7 +17,7 @@ These known issues will be addressed in future versions of vOneCloud:
 Fix VM creation problem in 3.0.0
 --------------------------------
 
-Release 3.0.0 has a problem in the cloud views that do not let users create new VMs (already fixed in 3.0.1). Here are the steps to fix this problem in 3.0.0 appliances:
+Release 3.0.0 has a problem in the cloud views that do not let users create new VMs (already fixed in 3.0.1+). Here are the steps to fix this problem in 3.0.0 appliances:
 
 * Enable ssh access to the vOneCloud appliance following :ref:`these instructions <control_panel_system_options_ssh>`
 
@@ -55,11 +55,9 @@ These limitations will be addressed in future versions of vOneCloud:
 | **VM Unsupported Operations**          | The following operations are only supported from vCenter:                                                                                                                                     |
 |                                        | - Migrate VM to different ESX clusters                                                                                                                                                        |
 +----------------------------------------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-| **No spaces in VMDKs**                 | VMDKs with spaces in their names or paths (ie, folders that contain them) are not supported for importing, attaching or uploading                                                             |
-+----------------------------------------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
 | **No FILES support in context**        | Contextualization in vOneCloud does not support passing files to Virtual Machines                                                                                                             |
 +----------------------------------------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-| **Cannot import "one-" VMs**           | VMs deployed by another instance of vOneCloud, or machines named with a leading "one-" cannot be imported again                                                                               |
+| **Cannot import "one-<id>" VMs**       | VMs deployed by another instance of vOneCloud, or machines named with a leading "one-" cannot be imported again                                                                               |
 +----------------------------------------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
 | **vCenter password length**            | Cannot be more than 22 characters                                                                                                                                                             |
 +----------------------------------------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+

@@ -4,7 +4,7 @@
 What's New vOneCloud 3.0
 ========================
 
-vOneCloud 3.0 is powered by OpenNebula 5.4.0 'Medusa', and, as such, includes functionality present in :onedoc:`Medusa <intro_release_notes/release_notes/index.html>` relevant to vOneCloud:
+vOneCloud 3.0 is powered by OpenNebula 5.4 'Medusa', and, as such, includes functionality present in :onedoc:`Medusa <intro_release_notes/release_notes/index.html>` relevant to vOneCloud:
 
 * **Enhanced storage management**, vOneCloud is fully aware of all :ref:`VMs disks <import_vm_templates>`. Non-persistent images and volatiles disks are now supported.
 * **Storage quotas and datastore capacity check**, never run out of capacity correctly dimensioning the available datastores and the storage :ref:`quotas <resource_quotas>` given to end users
