@@ -1,3 +1,4 @@
-docs/build
-*pyc
-
+*.DS_Store
+build
+*.pyc
+.gitignore
