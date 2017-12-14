@@ -1,5 +1,5 @@
 =============================
-Release Notes vOneCloud 3.0.3
+Release Notes vOneCloud 3.0.4
 =============================
 
 .. toctree::
@@ -9,6 +9,7 @@ Release Notes vOneCloud 3.0.3
    Resolved Issues in 3.0.1 <resolved_issues_3.0.1>
    Resolved Issues in 3.0.2 <resolved_issues_3.0.2>
    Resolved Issues in 3.0.3 <resolved_issues_3.0.3>   
+   Resolved Issues in 3.0.4 <resolved_issues_3.0.4>   
    Upgrade <upgrade>
    System Requirements <system_requirements>
    Known Issues and Limitations <known_issues>
