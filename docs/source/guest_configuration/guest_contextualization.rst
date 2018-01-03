@@ -46,28 +46,35 @@ CentOS/RHEL 6.x
 
 .. code::
 
-    # wget https://github.com/OpenNebula/addon-context-linux/releases/download/v5.4.1/one-context-5.4.1-1.el6.noarch.rpm
+    # wget https://github.com/OpenNebula/addon-context-linux/releases/download/v5.4.2/one-context-5.4.2-1.el6.noarch.rpm
 
 CentOS/RHEL 7.x
 ~~~~~~~~~~~~~~~
 
 .. code::
 
-    # wget https://github.com/OpenNebula/addon-context-linux/releases/download/v5.4.1/one-context-5.4.1-1.el7.noarch.rpm
+    # wget https://github.com/OpenNebula/addon-context-linux/releases/download/v5.4.2/one-context-5.4.2-1.el7.noarch.rpm
 
 OpenSUSE
 ~~~~~~~~
 
 .. code::
 
-    # wget https://github.com/OpenNebula/addon-context-linux/releases/download/v5.4.1/one-context-5.4.1-1.suse.noarch.rpm
+    # wget https://github.com/OpenNebula/addon-context-linux/releases/download/v5.4.2/one-context-5.4.2-1.suse.noarch.rpm
 
 Debian/Ubuntu/Devuan
 ~~~~~~~~~~~~~~~~~~~~
 
 .. code::
 
-    # wget https://github.com/OpenNebula/addon-context-linux/releases/download/v5.4.1/one-context_5.4.1-1.deb
+    # wget https://github.com/OpenNebula/addon-context-linux/releases/download/v5.4.2/one-context_5.4.2-1.deb
+
+Alpine Linux
+~~~~~~~~~~~~
+
+.. code::
+
+    # wget https://github.com/OpenNebula/addon-context-linux/releases/download/v5.4.2/one-context-5.4.2-r1.apk
 
 Windows
 ~~~~~~~
@@ -89,7 +96,7 @@ CentOS/RHEL 6
 .. code::
 
     # yum install -y epel-release
-    # yum install -y one-context*el6*rpm
+    # yum install -y one-context-[0-9]*el6*rpm
 
 CentOS/RHEL 7
 ~~~~~~~~~~~~~
@@ -97,22 +104,29 @@ CentOS/RHEL 7
 .. code::
 
     # yum install -y epel-release
-    # yum install -y one-context*el7*rpm
+    # yum install -y one-context-[0-9]*el7*rpm
 
 OpenSUSE
 ~~~~~~~~
 
 .. code::
 
-    # zypper install -y one-context*suse*rpm
+    # zypper --no-gpg-check install -y one-context-[0-9]*suse*rpm
 
-Debian/Ubuntu
-~~~~~~~~~~~~~
+Debian/Ubuntu/Devuan
+~~~~~~~~~~~~~~~~~~~~
 
 .. code::
 
     # apt-get purge -y cloud-init
-    # dpkg -i one-context*deb || apt-get install -fy
+    # dpkg -i one-context_*deb || apt-get install -fy
+
+Alpine Linux
+~~~~~~~~~~~~
+
+.. code::
+
+    # apk add --allow-untrusted one-context-[0-9]*apk
 
 Windows
 ~~~~~~~
