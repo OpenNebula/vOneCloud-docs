@@ -2,7 +2,7 @@
 versions:
 - - "latest"
   - http://docs.vonecloud.today/latest
-- - "3.0.5"
+- - "3.0.6"
   - http://docs.vonecloud.today/3.0
 - - "2.2.0"
   - http://docs.vonecloud.today/2.2
@@ -20,8 +20,8 @@ versions:
   - http://docs.vonecloud.today/1.0
 
 downloads:
-- - "3.0.5"
-  - http://docs.vonecloud.today/pdf/vOneCloud-3.0.5.pdf
+- - "3.0.6"
+  - http://docs.vonecloud.today/pdf/vOneCloud-3.0.6.pdf
 - - "2.2.0"
   - http://docs.vonecloud.today/pdf/vOneCloud-2.2.0.pdf
 - - "2.0.1"
