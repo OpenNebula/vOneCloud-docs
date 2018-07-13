@@ -46,46 +46,46 @@ CentOS/RHEL 6.x
 
 .. code::
 
-    # wget https://github.com/OpenNebula/addon-context-linux/releases/download/v5.4.2.1/one-context-5.4.2.1-1.el6.noarch.rpm
+    # wget https://github.com/OpenNebula/addon-context-linux/releases/download/v5.6.0/one-context-5.6.0-1.el6.noarch.rpm
 
 CentOS/RHEL 7.x
 ~~~~~~~~~~~~~~~
 
 .. code::
 
-    # wget https://github.com/OpenNebula/addon-context-linux/releases/download/v5.4.2.1/one-context-5.4.2.1-1.el7.noarch.rpm
+    # wget https://github.com/OpenNebula/addon-context-linux/releases/download/v5.6.0/one-context-5.6.0-1.el7.noarch.rpm
 
-OpenSUSE
-~~~~~~~~
+OpenSUSE 42,15 / SLES 12
+~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. code::
 
-    # wget https://github.com/OpenNebula/addon-context-linux/releases/download/v5.4.2.1/one-context-5.4.2.1-1.suse.noarch.rpm
+    # wget https://github.com/OpenNebula/addon-context-linux/releases/download/v5.6.0/one-context-5.6.0-1.suse.noarch.rpm
 
 Debian/Ubuntu/Devuan
 ~~~~~~~~~~~~~~~~~~~~
 
 .. code::
 
-    # wget https://github.com/OpenNebula/addon-context-linux/releases/download/v5.4.2.1/one-context_5.4.2.1-1.deb
+    # wget https://github.com/OpenNebula/addon-context-linux/releases/download/v5.6.0/one-context_5.6.0-1.deb
 
 Alpine Linux
 ~~~~~~~~~~~~
 
 .. code::
 
-    # wget https://github.com/OpenNebula/addon-context-linux/releases/download/v5.4.2.1/one-context-5.4.2.1-r1.apk
+    # wget https://github.com/OpenNebula/addon-context-linux/releases/download/v5.6.0/one-context-5.6.0-r1.apk
 
 Windows
 ~~~~~~~
 
 Download and install the MSI package (preferred way) into ``C:\``:
-https://github.com/OpenNebula/addon-context-windows/releases/download/v5.4.1/one-context-5.4.1.msi
+https://github.com/OpenNebula/addon-context-windows/releases/download/v5.6.0/one-context-5.6.0.msi
 
 Or download particular contextualization scripts to ``C:\``:
 
-* https://raw.githubusercontent.com/OpenNebula/addon-context-windows/v5.4.1/context.ps1
-* https://raw.githubusercontent.com/OpenNebula/addon-context-windows/v5.4.1/startup.vbs
+* https://raw.githubusercontent.com/OpenNebula/addon-context-windows/v5.6.0/context.ps1
+* https://raw.githubusercontent.com/OpenNebula/addon-context-windows/v5.6.0/startup.vbs
 
 Step 3. Install Contextualization Packages and Dependencies
 -----------------------------------------------------------
