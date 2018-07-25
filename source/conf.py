@@ -44,7 +44,7 @@ PRODUCTION_DOMAIN = "http://docs.vonecloud.com"
 
 latest = "3.0.7"
 
-site_conf = yaml.load(os.popen('git show origin/master:docs/source/site_conf.yml'))
+site_conf = yaml.load(os.popen('git show origin/master:source/site_conf.yml'))
 
 versions  = site_conf['versions']
 downloads = site_conf['downloads']
