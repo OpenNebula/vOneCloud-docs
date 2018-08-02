@@ -14,3 +14,4 @@ Infrastructure Configuration
    Authentication <authentication>
    Resource Pool Confinement <resource_pool>
    Resource Deletion <resource_deletion>
+   Marketplace <marketplace>

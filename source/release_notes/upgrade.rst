@@ -6,7 +6,7 @@ Upgrade
 
 .. warning:: If you click on **Upgrade** or **Upgrade Now** (to upgrade the vOneCloud version, or the system packages, respectively), you will see that a few jobs appear in `pending` state in the job queue. You will not receive any further user feedback until it finishes executing. This may take a long time: 15 minutes for **Upgrade**, and even more than an hour for **Upgrade Now**, depending on your internet access speed. If a job failed, it will turn to red, if it's successful, it will turn to green. So please, **be patient until all the jobs finish executing**.
 
-Upgrade to 3.0 from previous versions cannot be performed automatically. If you hold an active support subscription, please `contact OpenNebula Systems <mailto:support@opennebula.systems&subject="Upgrade to vOneCloud 3.0">`__ to schedule a vOneCloud upgrade.
+Upgrade from versions previous to 3.0 cannot be performed automatically. If you hold an active support subscription, please `contact OpenNebula Systems <mailto:support@opennebula.systems&subject="Upgrade to vOneCloud 3.0">`__ to schedule a vOneCloud upgrade.
 
 When a new vOneCloud release is available for download, users with an active support subscription will be notified in the Sunstone interface (in particular, in the Control Panel link), as well as in the main Dashboard area of the Control Panel.
 

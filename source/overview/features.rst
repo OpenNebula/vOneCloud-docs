@@ -45,8 +45,9 @@ vOneCloud leverages the :onedoc:`functionality of OpenNebula <intro_release_note
   * Attach/detach network interfaces functionality
   * VNC connection to VMs, including the ability to set keymap
   * Attach/detach disk functionality
-  * Save a running VM as a VM Template 
+  * Save a running VM as a VM Template
   * Disk resize at boot time and in poweroff state
+  * Migrate VMs between vCenter clusters
 
 * **Virtualization Management**
 
@@ -55,7 +56,13 @@ vOneCloud leverages the :onedoc:`functionality of OpenNebula <intro_release_note
   * Linked clone support
   * Import VM Templates with network and storage information
   * Chose datastore and Resource Pool where VMs will be deployed to
-  * Instantiate to persistent to easily crate a VM Template catalog
+  * Instantiate to persistent to easily create a VM Template catalog
+  * Marketplace support
+
+* **Docker provisioning**
+
+  * Create Docker engines
+  * Integration with Docker Machine
 
 * **Security and Resource Consumption Control**
 

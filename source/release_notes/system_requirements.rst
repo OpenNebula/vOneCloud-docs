@@ -28,8 +28,8 @@ The following components are needed to be present in the infrastructure to imple
 
 .. note:: To enable VNC functionality for vOneCloud, repeat the following procedure for each ESX. The following package adds the VNC ruleset (port range 5900-65535) and permits access to these ports.
 
-   - `ZIP <https://downloads.opennebula.org/packages/opennebula-5.4.0/fw-vnc-5.4.0.zip>`__
-   - `VIB <https://downloads.opennebula.org/packages/opennebula-5.4.0/fw-vnc-5.4.0.vib>`__
+   - `ZIP <https://downloads.opennebula.org/packages/opennebula-5.6.0/fw-vnc-5.6.0.zip>`__
+   - `VIB <https://downloads.opennebula.org/packages/opennebula-5.6.0/fw-vnc-5.6.0.vib>`__
 
    * Allow custom VIB package to be installed (in the vSphere client)
 

@@ -10,7 +10,7 @@ The suggested usage is to build vOneCloud templates for each VM Template in each
 
 It is important to note that there are different behavior of the vCenter resources when deleted in OpenNebula. The following resources are NOT deleted in vCenter when deleted in OpenNebula:
 
-* VM Templates 
+* VM Templates
 * Datastores
 
 The following resource are deleted in vCenter when deleted in OpenNebula:
@@ -19,7 +19,7 @@ The following resource are deleted in vCenter when deleted in OpenNebula:
 * Virtual Machines
 * Networks
 
-If resources are imported in vOneCloud rather than created throught it, they **won't** be deleted in vCenter if deleted in vOneCloud.
+If resources are imported in vOneCloud rather than created through it, they **won't** be deleted in vCenter if deleted in vOneCloud.
 
 Add New vCenter Cluster
 --------------------------------------------------------------------------------
@@ -199,15 +199,15 @@ Add New Network/Distributed vSwitch
 
 Virtual Networks from vCenter can be represented using vOneCloud virtual networks, where a one-to-one relationship exists between an vOneCloud’s virtual network and a vSphere’s port group. When adding NICs in a VM template or when attaching a NIC (hot-plugging) to a running VM in vOneCloud, a network interface can be attached to an vOneCloud's Virtual Network.
 
-**vCenter Networks/Distributed vSwitches** for a particular vCenter cluster can be imported in vOneCloud after the cluster is imported using the :ref:`same procedure <import_running_vms>` to import vCenter clusters, making use of the Import button in the ``Network --> Virtual Networks`` tab in the vCenter View. 
+**vCenter Networks/Distributed vSwitches** for a particular vCenter cluster can be imported in vOneCloud after the cluster is imported using the :ref:`same procedure <import_running_vms>` to import vCenter clusters, making use of the Import button in the ``Network --> Virtual Networks`` tab in the vCenter View.
 
 Also, these two kind of networks can be created from vOneCloud.
 
-**Creating Port Groups from OpenNebula**
+**Creating Port Groups from vOneCloud**
 
-This is the workflow when you want vOneCloud to create a vCenter network, regardles of it being a standard or distributed one:
+This is the workflow when you want vOneCloud to create a vCenter network, regardless of it being a standard or distributed one:
 
-1. Create a new OpenNebula Virtual Network template. Add the required attributes to the template including the OpenNebula's Host ID which represents the vCenter cluster where the network elements will be created.
+1. Create a new OpenNebula Virtual Network template. Add the required attributes to the template including the vOneCloud's Host ID which represents the vCenter cluster where the network elements will be created.
 2. When the Virtual Network is created, vOneCloud will create the network elements required on each ESX host that are members of the specified vCenter cluster.
 3. The Virtual Network will be automatically assigned to the vOneCloud cluster which includes the vCenter cluster represented as an vOneCloud host.
 4. vOneCloud network creation works asynchronously so you may have to refresh the Virtual Network information until you find the VCENTER_NET_STATE attribute. If it completes the actions successfully that attribute will be set to READY and hence you can use it from VMs and templates. If the network creation task fails VCENTER_NET_STATE will be set to ERROR and the VCENTER_NET_ERROR attribute will offer more information.
@@ -218,6 +218,8 @@ This is the workflow when you want vOneCloud to create a vCenter network, regard
     :align: center
 
 .. warning:: If a port group or switch is in use e.g a VM is running and have a NIC attached to that port group the remove operation will fail so please ensure that you have no VMs or templates using that port group before trying to remove the Virtual Network representation.
+
+.. note:: You'll need to enable the :onedoc:`network hooks <deployment/vmware_infrastructure_setup/networking_setup.html#enabling-the-vnet-hooks>` for network creation to work.
 
 .. _vcenter_network_attributes:
 

@@ -9,33 +9,12 @@ Known Issues
 
 These known issues will be addressed in future versions of vOneCloud:
 
-* `Delete operation leaves a poweroff instance registered in vCenter <http://dev.opennebula.org/issues/4648>`__.
-* `Wrong import of vCenter VM Templates with NICs in Distributed vSwitches or Distributed Ports <https://dev.opennebula.org/issues/5246>`__
-* `Spaces in VMDK names and dirnames not supported <https://dev.opennebula.org/issues/5288>`__
-* `Cloud vcenter view does not allow creation of VMs <https://dev.opennebula.org/issues/5313>`__
-
-Fix VM creation problem in 3.0.0
---------------------------------
-
-Release 3.0.0 has a problem in the cloud views that do not let users create new VMs (already fixed in 3.0.1+). Here are the steps to fix this problem in 3.0.0 appliances:
-
-* Enable ssh access to the vOneCloud appliance following :ref:`these instructions <control_panel_system_options_ssh>`
-
-* Connect as root to the frontend using ssh. If you are using windows you can use the software PUTTY, for Linux or Mac OS X you can use the terminal:
-
-.. code::
-
-    ssh root@<your frontend>
-
-* Execute this command, do a copy and paste as any change to the command can make it fail:
-
-.. code::
-
-    sed -i 's/^            templates: false$/            templates: true/' /etc/one/sunstone-views/cloud.yaml
-
-* Close the ssh terminal an return to vOneCloud control panel
-
-* Restart OpenNebula
+* `vCenter cant import templates with ISOS <https://github.com/OpenNebula/one/issues/2329>`__.
+* `NIC Model is ignored on VM vCenter Template <https://github.com/OpenNebula/one/issues/2293>`__
+* `VNC on ESXi Can Break Firewall <https://github.com/OpenNebula/one/issues/1728>`__
+* `Wild VM monitoring should not return datastores that contain only swap files <https://github.com/OpenNebula/one/issues/1699>`__
+* `Template delete recursive operation of templates instantiated as persistent does not remove images from the vcenter datastores <https://github.com/OpenNebula/one/issues/1350>`__
+* `Saving a template from a VM that has been instatiated to persistent does not work <https://github.com/OpenNebula/one/issues/1299>`__
 
 Found more?
 -----------
@@ -52,9 +31,6 @@ These limitations will be addressed in future versions of vOneCloud:
 +----------------------------------------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
 |             **Limitation**             |                                                                                                                                                                                                        **Description**                                                                                                                                                                                                        |
 +----------------------------------------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-| **VM Unsupported Operations**          | The following operations are only supported from vCenter:                                                                                                                                                                                                                                                                                                                                                                     |
-|                                        | - Migrate VM to different ESX clusters                                                                                                                                                                                                                                                                                                                                                                                        |
-+----------------------------------------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
 | **No FILES support in context**        | Contextualization in vOneCloud does not support passing files to Virtual Machines                                                                                                                                                                                                                                                                                                                                             |
 +----------------------------------------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
 | **Cannot import "one-<id>" VMs**       | VMs deployed by another instance of vOneCloud, or machines named with a leading "one-" cannot be imported again                                                                                                                                                                                                                                                                                                               |
@@ -65,11 +41,7 @@ These limitations will be addressed in future versions of vOneCloud:
 +----------------------------------------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
 | **Cloning imported VMs**               | Cloning in vCenter an imported VM will result in a VM that cannot be imported again. Please instantiate from templates and import the resulting VMs, instead of cloning already imported VMs.                                                                                                                                                                                                                                 |
 +----------------------------------------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-| **Wrong capcity check at import time** | When a vCenter template or wild VM is imported into OpenNebula, the virtual disks are imported, and vOneCloud tries to fit them in the DS. If not enough space are left, the import may fail.                                                                                                                                                                                                                                 |
-+----------------------------------------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
 | **No user feedback on upgrades**       | If you click on **Upgrade** or **Upgrade Now** (to upgrade the vOneCloud version, or the system packages, respectively), you will see that a few jobs appear in `pending` state in the job queue. You will not receive any further user feedback until it finishes executing. This may take a long time: 15 minutes for **Upgrade**, and even more than an hour for **Upgrade Now**, depending on your internet access speed. |
-+----------------------------------------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-| **Memory change in GB broken**         | Cloud view does not allow changing the Memory in GBs of a VM. The workaround is to change it in MB.                                                                                                                                                                                                                                                                                                                           |
 +----------------------------------------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
 
 
