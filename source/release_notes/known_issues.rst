@@ -9,9 +9,7 @@ Known Issues
 
 These known issues will be addressed in future versions of vOneCloud:
 
-* `vCenter cant import templates with ISOS <https://github.com/OpenNebula/one/issues/2329>`__.
-* `NIC Model is ignored on VM vCenter Template <https://github.com/OpenNebula/one/issues/2293>`__
-* `VNC on ESXi Can Break Firewall <https://github.com/OpenNebula/one/issues/1728>`__
+* `vCenter uploader mangles file names <https://github.com/OpenNebula/one/issues/2464>`__
 * `Wild VM monitoring should not return datastores that contain only swap files <https://github.com/OpenNebula/one/issues/1699>`__
 * `Template delete recursive operation of templates instantiated as persistent does not remove images from the vcenter datastores <https://github.com/OpenNebula/one/issues/1350>`__
 * `Saving a template from a VM that has been instatiated to persistent does not work <https://github.com/OpenNebula/one/issues/1299>`__

@@ -4,7 +4,7 @@
 Upgrade
 =======
 
-.. warning:: If you click on **Upgrade** or **Upgrade Now** (to upgrade the vOneCloud version, or the system packages, respectively), you will see that a few jobs appear in `pending` state in the job queue. You will not receive any further user feedback until it finishes executing. This may take a long time: 15 minutes for **Upgrade**, and even more than an hour for **Upgrade Now**, depending on your internet access speed. If a job failed, it will turn to red, if it's successful, it will turn to green. So please, **be patient until all the jobs finish executing**.
+.. warning:: If you click on **Upgrade** or **Upgrade Now** (to upgrade the vOneCloud version, or the system packages, respectively), you will see that a few jobs appear in `pending` state in the job queue. You will not receive any further user feedback until it finishes executing. This may take a long time: 15 minutes for **Upgrade**, and even more than an hour for **Upgrade Now**, depending on your internet access speed. If a job failed, it will turn to red, if it's successful, it will turn to green. So please, **be patient until all jobs finish executing**.
 
 Upgrade from versions previous to 3.0 cannot be performed automatically. If you hold an active support subscription, please `contact OpenNebula Systems <mailto:support@opennebula.systems&subject="Upgrade to vOneCloud 3.0">`__ to schedule a vOneCloud upgrade.
 
