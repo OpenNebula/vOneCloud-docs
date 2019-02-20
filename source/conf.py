@@ -63,7 +63,7 @@ master_doc = 'index'
 
 # General information about the project.
 project = 'vOneCloud'
-copyright = '2018, OpenNebula Systems'
+copyright = '2019, OpenNebula Systems'
 
 # The version info for the project you're documenting, acts as replacement for
 # |version| and |release|, also used in various other places throughout the
