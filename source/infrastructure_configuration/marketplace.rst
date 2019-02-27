@@ -8,7 +8,7 @@ OpenNebula Systems provides a public and official Marketplace, universally avail
 
 Additionally, admins can create private marketplaces:
 
-  - :onedoc:`HTTP Marketplaces <advanced_components/marketplace/market_http.html`
+  - :onedoc:`HTTP Marketplaces <advanced_components/marketplace/market_http.html>`
   - :onedoc:`S3 Marketplaces <advanced_components/marketplace/market_s3.html>`
 
 .. note:: Please note that if you make changes to /etc/one/oned.conf they'll be overwritten by the automatic update process. You'll need to re add any changes after the update.
