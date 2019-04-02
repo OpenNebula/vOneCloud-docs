@@ -32,6 +32,8 @@ Supported contextualization packages are available for the following OS's:
 * **CentOS/RHEL** >= 6
 * **Debian** >= 6
 * **Ubuntu** >= 11.10
+* **Alpine Linux** >= 3.6, 3.7, 3.8
+* **FreeBSD**, 11, 12
 * **Windows** >= 7
 * **Windows Server** >= 2008
 
@@ -46,46 +48,50 @@ CentOS/RHEL 6.x
 
 .. code::
 
-    # wget https://github.com/OpenNebula/addon-context-linux/releases/download/v5.6.0/one-context-5.6.0-1.el6.noarch.rpm
+    # wget https://github.com/OpenNebula/addon-context-linux/releases/download/v5.8.0/one-context-5.8.0-1.el6.noarch.rpm
 
 CentOS/RHEL 7.x
 ~~~~~~~~~~~~~~~
 
 .. code::
 
-    # wget https://github.com/OpenNebula/addon-context-linux/releases/download/v5.6.0/one-context-5.6.0-1.el7.noarch.rpm
+    # wget https://github.com/OpenNebula/addon-context-linux/releases/download/v5.8.0/one-context-5.8.0-1.el7.noarch.rpm
 
 OpenSUSE 42,15 / SLES 12
 ~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. code::
 
-    # wget https://github.com/OpenNebula/addon-context-linux/releases/download/v5.6.0/one-context-5.6.0-1.suse.noarch.rpm
+    # wget https://github.com/OpenNebula/addon-context-linux/releases/download/v5.8.0/one-context-5.8.0-1.suse.noarch.rpm
 
 Debian/Ubuntu/Devuan
 ~~~~~~~~~~~~~~~~~~~~
 
 .. code::
 
-    # wget https://github.com/OpenNebula/addon-context-linux/releases/download/v5.6.0/one-context_5.6.0-1.deb
+    # wget https://github.com/OpenNebula/addon-context-linux/releases/download/v5.8.0/one-context_5.8.0-1.deb
 
 Alpine Linux
 ~~~~~~~~~~~~
 
 .. code::
 
-    # wget https://github.com/OpenNebula/addon-context-linux/releases/download/v5.6.0/one-context-5.6.0-r1.apk
+    # wget https://github.com/OpenNebula/addon-context-linux/releases/download/v5.8.0/one-context-5.8.0-r1.apk
 
 Windows
 ~~~~~~~
 
 Download and install the MSI package (preferred way) into ``C:\``:
-https://github.com/OpenNebula/addon-context-windows/releases/download/v5.6.0/one-context-5.6.0.msi
 
-Or download particular contextualization scripts to ``C:\``:
+.. code:: 
+  
+    https://github.com/OpenNebula/addon-context-windows/releases/download/v5.8.0/one-context-5.8.0.msi
 
-* https://raw.githubusercontent.com/OpenNebula/addon-context-windows/v5.6.0/context.ps1
-* https://raw.githubusercontent.com/OpenNebula/addon-context-windows/v5.6.0/startup.vbs
+Or execute this command in powershell:
+
+.. code::
+
+    (New-Object Net.WebClient).DownloadFile("https://github.com/OpenNebula/addon-context-windows/releases/download/v5.8.0/one-context-5.8.0.msi", "C:\one-context-5.8.0.msi")
 
 Step 3. Install Contextualization Packages and Dependencies
 -----------------------------------------------------------

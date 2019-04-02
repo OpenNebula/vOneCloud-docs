@@ -171,7 +171,7 @@ In the dialog that pops up, select vCenter as Type in the drop-down. You now nee
 
 Now it's time to check that the vCenter import has been successful. In ``Infrastructure --> Hosts`` check if vCenter cluster has been imported, and if all the ESX hosts are available in the ESX tab.
 
-.. note:: Take into account that one vCenter cluster (with all its ESX hosts) will be represented as one vOneCloud host.
+.. note:: Take into account that one vCenter cluster (with all its ESX hosts) will be represented as one vOneCloud host. Is not possible to import individual ESX hosts, they need to be grouped in vCenter clusters.
 
 .. image:: /images/import_vcenter_esx_view.png
     :align: center

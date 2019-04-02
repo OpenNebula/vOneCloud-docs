@@ -48,6 +48,7 @@ vOneCloud leverages the :onedoc:`functionality of OpenNebula <intro_release_note
   * Save a running VM as a VM Template
   * Disk resize at boot time and in poweroff state
   * Migrate VMs between vCenter clusters
+  * Migrate VMs between vCenter datastores
 
 * **Virtualization Management**
 

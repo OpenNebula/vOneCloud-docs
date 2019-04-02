@@ -54,3 +54,4 @@ If you are a DevOp, you are probably used to build scripts to automate tasks for
 - :onedoc:`xmlrpc API <integration/system_interfaces/api.html>` Talk directly to the OpenNebula core
 - :onedoc:`Ruby OpenNebula Cloud API (OCA) <integration/system_interfaces/ruby.html>` Build tasks in Ruby
 - :onedoc:`Java OpenNebula Cloud API (OCA) <integration/system_interfaces/java.html>` Build tasks in Java
+- :onedoc:`Go OpenNebula Cloud API (OCA) <integration/system_interfaces/go.html>` Build tasks in Go

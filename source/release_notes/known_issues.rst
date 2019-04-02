@@ -9,10 +9,9 @@ Known Issues
 
 These known issues will be addressed in future versions of vOneCloud:
 
-* `vCenter uploader mangles file names <https://github.com/OpenNebula/one/issues/2464>`__
-* `Wild VM monitoring should not return datastores that contain only swap files <https://github.com/OpenNebula/one/issues/1699>`__
-* `Template delete recursive operation of templates instantiated as persistent does not remove images from the vcenter datastores <https://github.com/OpenNebula/one/issues/1350>`__
-* `Saving a template from a VM that has been instatiated to persistent does not work <https://github.com/OpenNebula/one/issues/1299>`__
+* `vCenter storageDRS not working properly <https://github.com/OpenNebula/one/issues/2530>`__
+* `Cannot boot VM with more than one scsi disk with certain bus types <https://github.com/OpenNebula/one/issues/2971>`__
+* `Ocasional Wild VM import error <https://github.com/OpenNebula/one/issues/3057>`__
 
 Found more?
 -----------
@@ -41,6 +40,5 @@ These limitations will be addressed in future versions of vOneCloud:
 +----------------------------------------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
 | **No user feedback on upgrades**       | If you click on **Upgrade** or **Upgrade Now** (to upgrade the vOneCloud version, or the system packages, respectively), you will see that a few jobs appear in `pending` state in the job queue. You will not receive any further user feedback until it finishes executing. This may take a long time: 15 minutes for **Upgrade**, and even more than an hour for **Upgrade Now**, depending on your internet access speed. |
 +----------------------------------------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-
 
 If you find any new limitation, feel free to add a feature request in `Community - Feature Request section of the vOneCloud Support Portal <https://support.vonecloud.com/hc/communities/public/topics/200215442-Community-Feature-Requests>`__.
