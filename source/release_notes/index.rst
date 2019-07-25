@@ -1,5 +1,5 @@
 =============================
-Release Notes vOneCloud 3.4.0
+Release Notes vOneCloud 3.4.1
 =============================
 
 .. toctree::

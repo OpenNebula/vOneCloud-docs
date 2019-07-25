@@ -24,6 +24,8 @@ versions:
   - http://docs.vonecloud.today/1.0
 
 downloads:
+- - "3.4.1"
+  - http://docs.vonecloud.today/pdf/vOneCloud-3.4.1.pdf
 - - "3.4.0"
   - http://docs.vonecloud.today/pdf/vOneCloud-3.4.0.pdf
 - - "3.2.1"
