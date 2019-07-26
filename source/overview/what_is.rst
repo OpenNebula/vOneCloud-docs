@@ -16,7 +16,7 @@ vOneCloud is distributed as a virtual appliance in OVA format for vSphere. It co
 +----------------+--------+
 |   **CentOS**   |  7.5   |
 +----------------+--------+
-| **OpenNebula** | 5.8.5  |
+| **OpenNebula** | 5.8.4  |
 +----------------+--------+
 
 .. image:: /images/cloud_vonecloud_image.png

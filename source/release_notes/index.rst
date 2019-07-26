@@ -6,6 +6,7 @@ Release Notes vOneCloud 3.4.1
    :maxdepth: 2
 
    What's New in 3.4 <whats_new>
+   Resolved Issues in 3.4.1 <resolved_issues_341.rst>
    Upgrade <upgrade>
    System Requirements <system_requirements>
    Known Issues and Limitations <known_issues>
