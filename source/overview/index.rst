@@ -5,8 +5,7 @@ Overview
 .. toctree::
    :maxdepth: 2
 
-   Introduction <overview_intro>
    What Is? <what_is>
-   Features <features>
+   Requirements <requirements>
    Components <components>
    Accounts <accounts>

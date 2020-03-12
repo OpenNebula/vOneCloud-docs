@@ -6,13 +6,8 @@ vOneCloud Documentation
 .. toctree::
    :maxdepth: 2
 
-   release_notes/index
    overview/index
    simple_cloud_deployment/index
-   security_and_resource_consumption_control/index
-   guest_configuration/index
-   cloud_end_user/index
-   infrastructure_configuration/index
    appliance_configuration/index
 
 .. todolist::

@@ -12,9 +12,9 @@ You can import this OVA appliance to your vCenter infrastructure. It is based on
 `CentOS 7 <http://www.centos.org/>`__ and has the VMware tools enabled.
 
 The appliance requirements are kept to a strict minimum so it can be executed in
-any vCenter installation. However, before deploying it, please read the :ref:`system requirements <system_requirements>`.
+any vCenter installation. However, before deploying it, please read the :ref:`system requirements <requirements>`.
 
-Follow the next steps to deploy a fully functional vOneCloud:
+Follow the next steps to deploy a fully functional OpenNebula cloud:
 
 Step 1. Deploying the OVA
 --------------------------------------------------------------------------------
@@ -111,37 +111,12 @@ Next, you can **configure the proxy** if your network topology requires a proxy 
 
 Afterwards you need to define a **root password.** You won't be using this very often, so write it down somewhere safe. It's your master password to the appliance.
 
-The next item is the **oneadmin account password**. You will only need this to login to the vOneCloud Control Panel, a web-based configuration interface we will see very shortly. Check the :ref:`Accounts section <accounts>` to learn more about vOneCloud roles and users.
+The next item is the **oneadmin account password**. You will need this to login to OpenNebula. Check the :ref:`Accounts section <accounts>` to learn more about vOneCloud roles and users.
 
-We have now finished the vOneCloud Control Console initial configuration wizard.
-
-Step 3. vOneCloud Control Panel - Manage Services
+Step 3. Enjoy the Out-of-the-Box Features
 --------------------------------------------------------------------------------
 
-The wizard points out that you can open the vOneCloud Control Panel by visiting `http://<appliance_ip>:8000` in your browser and using the `oneadmin` account and password just chosen.
-
-.. warning:: Are you using a self-signed certificate? If that's the case you must accept it too in port 29876. In order to do so open https://...:29876 and verify that there is no SSL related warning. Click :onedoc:`here <deployment/sunstone_setup/suns_advance.html#running-sunstone-behind-nginx-ssl-proxy>` for more information.
-
-The :ref:`vOneCloud Control Panel <control_panel>` will allow the administrator to:
-
-- Check for new vOneCloud versions and manage automatic upgrades.
-- Configure Active Directory / LDAP integration
-- Configure SSL (https) access
-- Enable/Disable ssh
-- Start the OpenNebula services
-
-Click on the configuration icon if you need to configure one of the supported options. Keep in mind that you can run this configuration at any moment. We recommend to start inspecting vOneCloud's functionality before delving into advanced configuration options like the aforementioned ones.
-
-After clicking on the Start button, proceed to log in to Sunstone (OpenNebula's frontend) by opening: `http://<appliance_ip>` and using the default login `CloudAdmin` / `CloudAdmin` user and password.
-
-.. note::
-
-  There is a guide available that documents the configuration interfaces of the appliance :ref:`here <app_conf>`.
-
-Step 4. Enjoy the Out-of-the-Box Features
---------------------------------------------------------------------------------
-
-After opening the Sunstone interface (`http://<appliance_ip>` with `CloudAdmin` / `CloudAdmin` user and password) you are now ready to enjoy the :ref:`out-of-the-box features <features_outofthebox>` of vOneCloud!
+After opening the Sunstone interface (`http://<appliance_ip>` with oneadmin credentials) you are now ready to enjoy the out-of-the-box features of OpenNebula!
 
 Move on to the :ref:`next section <import_vcenter>` to start using your cloud by importing your vCenter infrastructure.
 
@@ -150,12 +125,7 @@ Move on to the :ref:`next section <import_vcenter>` to start using your cloud by
 Login to the Appliance
 --------------------------------------------------------------------------------
 
-.. warning::
-    If you make **any** changes to OpenNebula configuration files under ``/etc/one`` please note that they **will** be either discarded in the next upgrade, or overwritten by vOneCloud Control Center. Keep in mind that only those features configurable in Sunstone or in vOneCloud Control Console and Control Panel are officially supported. Any other customizations are not supported by `vOneCloud Support <http://vonecloud.today/#support>`__.
-
-All the functionality you need to run your vOneCloud can be accessed via Sunstone, and all the support configuration parameters are available either in the :ref:`vOneCloud Control Console <control_console>` or in the :ref:`vOneCloud Control Panel <control_panel>`.
-
-To access the :ref:`vOneCloud command line interface <cli_interface>`, first :ref:`enable SSH <control_panel_system_options_ssh>` and ssh to the host using the `root` account and password. In OS X and Linux environments, simply use `ssh` to log into the root account of vOneCloud's IP. For Windows environments you can use software like `PuTTY <http://www.chiark.greenend.org.uk/~sgtatham/putty/download.html>`__ or even SFTP clients like `WinSCP <https://winscp.net/>`__ if you are simply uploading or downloading-modifying-uploading files in order to make customization as documented by the :ref:`Advanced Customizations <advanced_customizations>` section.
+To access the OpenNebula command line interface, ssh to vOneCloud using the `root` account and password. In OS X and Linux environments, simply use `ssh` to log into the root account of vOneCloud's IP. For Windows environments you can use software like `PuTTY <http://www.chiark.greenend.org.uk/~sgtatham/putty/download.html>`__ or even SFTP clients like `WinSCP <https://winscp.net/>`__.
 
 Alternatively,  open the vCenter console of the vOneCloud Virtual Machine appliance and change the tty (Ctrl + Alt + F2). Afterwards, log in with the `root` account and the password you used in the :ref:`initial configuration <download_and_deploy_control_console>`, and switch to the `oneadmin` user.
 

@@ -25,8 +25,6 @@ The initial bootstrap is a configuration wizard which is part of the deployment 
 * Change the password for oneadmin in OpenNebula
 * Configure http proxy
 
-Once this wizard has been executed the user is ready to open the vOneCloud Control Panel at `http://<appliance_ip>:8000` in order to continue with the deployment configuration and to start the OpenNebula service.
-
 Note that during this step the `oneadmin` account password will be set, which will be then used to access the vOneCloud Control Panel.
 
 .. _control_console_basic_configuration:
@@ -38,6 +36,4 @@ At any given moment, the vOneCloud administrator may choose to open the vOneClou
 
 * Networking configuration, which is useful if the networking configuration changes at any given time.
 * Proxy configuration.
-* Change the oneadmin password. Note that this step requires that the vOneCloud administrator restarts the OpenNebula service in the :ref:`vOneCloud Control Panel <control_panel>`.
-
-
+* Change the oneadmin password.
