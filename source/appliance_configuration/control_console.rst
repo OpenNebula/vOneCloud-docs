@@ -21,11 +21,8 @@ Initial Bootstrap
 The initial bootstrap is a configuration wizard which is part of the deployment process of vOneCloud, and it **must** be run. During this step the user will be prompted to configure the following aspects:
 
 * Configure Network
-* Set the root password
-* Change the password for oneadmin in OpenNebula
-* Configure http proxy
-
-Note that during this step the `oneadmin` account password will be set, which will be then used to access the vOneCloud Control Panel.
+* Set the Linux root password
+* Change the password for OpenNebula oneadmin user
 
 .. _control_console_basic_configuration:
 
@@ -35,5 +32,4 @@ Basic Configuration
 At any given moment, the vOneCloud administrator may choose to open the vOneCloud appliance console in vCenter to perform some additional configuration:
 
 * Networking configuration, which is useful if the networking configuration changes at any given time.
-* Proxy configuration.
 * Change the oneadmin password.
