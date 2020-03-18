@@ -72,7 +72,7 @@ copyright = '2020, OpenNebula Systems'
 # The short X.Y version.
 version = '5.10'
 
-extlinks = {'onedoc': ('http://docs.opennebula.org/5.8/%s', 'onedoc ')}
+extlinks = {'onedoc': ('http://docs.opennebula.org/5.10/%s', 'onedoc ')}
 
 # The full version, including alpha/beta/rc tags.
 release = '5.10.3'
