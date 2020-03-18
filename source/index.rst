@@ -8,6 +8,5 @@ vOneCloud Documentation
 
    overview/index
    simple_cloud_deployment/index
-   appliance_configuration/index
 
 .. todolist::

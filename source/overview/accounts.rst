@@ -25,7 +25,7 @@ vOneCloud runs on top of Linux (in particular `CentOS 7 <http://www.centos.org/>
 `oneadmin` linux account
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-The main use of this account is to run all OpenNebula services. 
+The main use of this account is to run all OpenNebula services.
 
 
 `oneadmin` OpenNebula (Sunstone) account
