@@ -42,6 +42,10 @@ Select a resource to run the appliance:
 .. image:: /images/vOneCloud-download-deploy-004.png
     :align: center
 
+Review details:
+
+.. image:: /images/vOneCloud-download-deploy-004b.png
+
 Select the datastore:
 
 .. image:: /images/vOneCloud-download-deploy-005.png
