@@ -32,3 +32,18 @@ Now that you have and up and running OpenNebula installatoin thanks to the vOneC
  - Consumption control to limit the usage of the cloud, using :onedoc:`quotas <operation/users_groups_management/quota_auth.html>` with real time monitoring, :onedoc:`accounting <operation/users_groups_management/accounting.html>` and :onedoc:`showback <operation/users_groups_management/showback.html>`.
 
  - :onedoc:`Virtual Router <operation/network_management/vrouter.html>` with NFV capabilities.
+
+What next?
+----------
+
+All the information regarding OpenNebula functionality and operation can be found in the :onedoc:`official documentation <#>`. In particular, you can start by exploring:
+
+  - :onedoc:`Overview <intro_release_notes/concepts_terminology/intro.html>`
+  - :onedoc:`Key Features <intro_release_notes/concepts_terminology/key_features.html>`
+  - :onedoc:`vCenter configuration <deployment/node_installation/vcenter_node_installation.html>`
+  - :onedoc:`vCenter driver setup <deployment/vmware_infrastructure_setup/vcenter_setup.html>`
+  - :onedoc:`vCenter datastores <deployment/vmware_infrastructure_setup/datastore_setup.html>`
+  - :onedoc:`vCenter networking <deployment/vmware_infrastructure_setup/networking_setup.html>`
+  - :onedoc:`NSX setup <deployment/vmware_infrastructure_setup/nsx_setup.html>`
+
+If you need any further help, please use the `community forum <http://forum.opennebula.org/>`__. If you need help to setup and support a production cloud, take a look at `OpenNebula Systems commercial services <https://opennebula.io/enterprise/>`__.

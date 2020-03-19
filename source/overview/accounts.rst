@@ -19,7 +19,7 @@ vOneCloud ships with several pre-created user accounts which will be described i
 `root` linux account
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-vOneCloud runs on top of Linux (in particular `CentOS 7 <http://www.centos.org/>`), therefore the administrators of the vOneCloud appliance should be able to have console access to the appliance. The appliance comes with a `root` account with an undefined password. This password **must** be set during the first boot of the appliance. The :ref:`vOneCloud Control Console <control_console>` will prompt the administrator for a new root password.
+vOneCloud runs on top of Linux (in particular `CentOS 7 <http://www.centos.org/>`__), therefore the administrators of the vOneCloud appliance should be able to have console access to the appliance. The appliance comes with a `root` account with an undefined password. This password **must** be set during the first boot of the appliance. The :ref:`vOneCloud Control Console <control_console>` will prompt the administrator for a new root password.
 
 
 `oneadmin` linux account
