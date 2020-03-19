@@ -17,7 +17,7 @@ Now that you have and up and running OpenNebula installatoin thanks to the vOneC
 
  - Application insight can be extracted using :onedoc:`OneGate <advanced_components/application_insight/index.html>`, to create application aware elasticity rules
 
- - Access to a curated catalog of ready to use appliances, the `OpenNebula public marketplace <http://marketplace.opennebula.systems>`__, as well as the possiblity to create :onedoc:`private marketplaces <iadvanced_components/marketplace/index.html>`.
+ - Access to a curated catalog of ready to use appliances, the `OpenNebula public marketplace <http://marketplace.opennebula.systems>`__, as well as the possiblity to create :onedoc:`private marketplaces <advanced_components/marketplace/index.html>`.
 
  - :onedoc:`NSX support <deployment/vmware_infrastructure_setup/nsx_setup.html>` to leverage the SDN capabilities. Both NSX-t and NSX-v are supported.
 
