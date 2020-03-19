@@ -111,8 +111,6 @@ An example of static network configuration on the available network interface (s
 .. image:: /images/network-conf-example.png
     :align: center
 
-Next, you can **configure the proxy** if your network topology requires a proxy to access the internet. However please note that it's absolutely fine to use vOneCloud without any Internet access at all, as you will be able to do most of the things, except for automatic upgrades.
-
 Afterwards you need to define a **root password.** You won't be using this very often, so write it down somewhere safe. It's your master password to the appliance.
 
 The next item is the **oneadmin account password**. You will need this to login to OpenNebula. Check the :ref:`Accounts section <accounts>` to learn more about vOneCloud roles and users.
