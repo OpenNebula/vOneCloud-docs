@@ -122,6 +122,10 @@ Step 3. Enjoy the Out-of-the-Box Features
 
 After opening the Sunstone interface (`http://<appliance_ip>` with oneadmin credentials) you are now ready to enjoy the out-of-the-box features of OpenNebula!
 
+.. image:: /images/sunstone-login.png
+
+.. image:: /images/sunstone-main.png
+
 Move on to the :ref:`next section <import_vcenter>` to start using your cloud by importing your vCenter infrastructure.
 
 .. _advanced_login:
