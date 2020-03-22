@@ -4,7 +4,7 @@
 Explore OpenNebula Functionality
 ================================================================================
 
-Now that you have and up and running OpenNebula installatoin thanks to the vOneCloud appliance, it is time to explore the cool features for Private Cloud that OpenNebula offers:
+Now that you have and up and running OpenNebula installation thanks to the vOneCloud appliance, it is time to explore the cool features for Private Cloud that OpenNebula offers:
 
 
  - Self service portal for resource provisioning. OpenNebula's :onedoc:`Cloud View <operation/sunstone_enduser/cloud_view.html>` offers a powerful, easy to use point and click interface for cloud resource consumption and management.
