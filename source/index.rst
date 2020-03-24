@@ -8,5 +8,7 @@ vOneCloud Documentation
 
    overview/index
    simple_cloud_deployment/index
+   verification/index
+   explore/index
 
 .. todolist::

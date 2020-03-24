@@ -1,10 +1,10 @@
 .. _import_vcenter:
 
-=======================
-Import Existing vCenter
-=======================
+=================================
+Import Existing vCenter Resources
+=================================
 
-Importing a vCenter infrastructure into vOneCloud can be carried out easily through the Sunstone Web UI. Follow the next steps to import an existing vCenter cluster as well as any already defined VM Template and Networks.
+Importing a vCenter infrastructure into OpenNebula can be carried out easily through the Sunstone Web UI. Follow the next steps to import an existing vCenter cluster as well as any already defined VM Template and Networks.
 
 You will need the IP or hostname of the vCenter server, as well as a user declared as Administrator in vCenter. More information in the :onedoc:`main OpenNebula documentation <deployment/node_installation/vcenter_node_installation.html#permissions-requirement>`.
 
@@ -23,12 +23,12 @@ The *oneadmin* account has full control of all the physical and virtual resource
 Step 2. Acquire vCenter Resources
 ---------------------------------
 
-To import new vCenter clusters to be managed in vOneCloud, proceed in Sunstone to the ``Infrastructure --> Hosts`` tab and click on the "+" green icon.
+To import new vCenter clusters to be managed in OpenNebula, proceed in Sunstone to the ``Infrastructure --> Hosts`` tab and click on the "+" green icon.
 
 .. image:: /images/import_cluster.png
     :align: center
 
-.. warning:: vOneCloud does not support spaces in vCenter cluster names.
+.. warning:: OpenNebula does not support spaces in vCenter cluster names.
 
 In the dialog that pops up, select vCenter as Type in the drop-down. You now need to fill in the data according to the following table:
 
@@ -47,7 +47,7 @@ In the dialog that pops up, select vCenter as Type in the drop-down. You now nee
 
 Now it's time to check that the vCenter import has been successful. In ``Infrastructure --> Hosts`` check if vCenter cluster has been imported, and if all the ESX hosts are available in the ESX tab.
 
-.. note:: Take into account that one vCenter cluster (with all its ESX hosts) will be represented as one vOneCloud host. Is not possible to import individual ESX hosts, they need to be grouped in vCenter clusters.
+.. note:: Take into account that one vCenter cluster (with all its ESX hosts) will be represented as one OpenNebula host. Is not possible to import individual ESX hosts, they need to be grouped in vCenter clusters.
 
 .. image:: /images/import_vcenter_esx_view.png
     :align: center
@@ -57,7 +57,7 @@ Step 3. Import / Reacquire vCenter Resources
 
 **Existing VMs**
 
-If the vCenter infrastructure has running or powered off **Virtual Machines**, vOneCloud can import and subsequently manage them. To import vCenter VMs, proceed to the **Wilds** tab in the Host info tab representing the vCenter cluster where the VMs are running in, select the VMs to be imported and click on the import button.
+If the vCenter infrastructure has running or powered off **Virtual Machines**, OpenNebula can import and subsequently manage them. To import vCenter VMs, proceed to the **Wilds** tab in the Host info tab representing the vCenter cluster where the VMs are running in, select the VMs to be imported and click on the import button.
 
 .. image:: /images/import_wild_vms.png
     :width: 90%
@@ -67,15 +67,14 @@ If the vCenter infrastructure has running or powered off **Virtual Machines**, v
 
 After the VMs are in the Running state, you can operate on their life-cycle, assign them to particular users, attach or detach network interfaces, create snapshots, do capacity resizing (change CPU and MEMORY after powering the VMs off), etc.
 
-All the funcionality that vOneCloud supports for regular VMs is present for imported VMs with some exceptions. The following operations *cannot* be performed on an imported VM:
+All the funcionality that OpenNebula supports for regular VMs is present for imported VMs with some exceptions. The following operations *cannot* be performed on an imported VM:
 
 - Recover --recreate
 - Undeploy (and Undeploy --hard)
-- Migrate (and Migrate --live)
 - Stop
 
 
-Once a Wild VM is imported, vOneCloud will reconfigure the vCenter VM so VNC connections can be established once the VM is monitored.
+Once a Wild VM is imported, OpenNebula will reconfigure the vCenter VM so VNC connections can be established once the VM is monitored.
 
 .. _import_images_and_ds:
 
@@ -92,7 +91,7 @@ For example, if we have a vcenter datastore called ''nfs'', when we import the v
 
 .. note:: If the vCenter instance features a read only datastore, please be aware that you should disable the SYSTEM representation of the datastore after importing it to avoid OpenNebula trying to deploy VMs in it.
 
-When an image or a datastore is imported, vOneCloud will generate a name automatically that prevents conflicts if you try to import several files with the same name but that are located in different folders inside the datastore, or try to import datastores with the same name in different vCenter instances. The image name contains the file’s name, the datastore’s name and a 12 character hash, whereas the datastore contains the datastore name, the vcenter instance name, the datacenter where it lives and the datastore type between parentheses. These names can be changed once the image or datastore has been imported.
+When an image or a datastore is imported, OpenNebula will generate a name automatically that prevents conflicts if you try to import several files with the same name but that are located in different folders inside the datastore, or try to import datastores with the same name in different vCenter instances. These names can be changed once the image or datastore has been imported.
 
 When the vCenter hypervisor is used we have three OpenNebula image types:
 
@@ -118,7 +117,7 @@ Datastore will be monitored for free space and availability. Images can be used 
 
 .. warning:: Since datastores are going to be used to hold the images from VM Templates, all datastore **must** be imported before VM Template import.
 
-In vOneCloud, Virtual Machines are deployed from VMware VM Templates that must exist previously in vCenter and must be imported into vOneCloud. There is a one-to-one relationship between each VMware VM Template and the equivalent vOneCloud VM Template. Users will then instantiate the OpenNebula VM Template and OpenNebula will create a Virtual Machine clone from the vCenter template.
+In OpenNebula, Virtual Machines are deployed from VMware VM Templates that must exist previously in vCenter and must be imported into OpenNebula. There is a one-to-one relationship between each VMware VM Template and the equivalent OpenNebula VM Template. Users will then instantiate the OpenNebula VM Template and OpenNebula will create a Virtual Machine clone from the vCenter template.
 
 vCenter **VM Templates** can be imported and reacquired using the ``Import`` button in ``Virtual Resources --> Templates``. Fill in the credentials and the IP or hostname of vCenter and click on the "Get Templates" button.
 
@@ -128,7 +127,7 @@ vCenter **VM Templates** can be imported and reacquired using the ``Import`` but
 .. _operations_on_templates:
 .. _vmtemplates_and_networks:
 
-When a VMware VM Template is imported, vOneCloud will detect any virtual disk and network interface within the template. For each virtual disk, vOneCloud will create an vOneCloud image representing each disk discovered in the template. In the same way, vOneCloud will create a network representation for each standard or distributed port group associated to virtual network interfaces found in the template. The imported vOneCloud VM templates can be modified selecting the VM Template in ``Virtual Resources --> Templates`` and clicking on the Update button, so the resulting VMs are adjusted to user needs.
+When a VMware VM Template is imported, OpenNebula will detect any virtual disk and network interface within the template. For each virtual disk, OpenNebula will create an image representing each disk discovered in the template. In the same way, OpenNebula will create a network representation for each standard or distributed port group associated to virtual network interfaces found in the template. The imported OpenNebula VM templates can be modified selecting the VM Template in ``Virtual Resources --> Templates`` and clicking on the Update button, so the resulting VMs are adjusted to user needs.
 
 Among other options available through the Sunstone web interface:
 
@@ -140,11 +139,11 @@ Among other options available through the Sunstone web interface:
 
 .. _name_prefix_note:
 
-.. note:: VMs instantiated through vOneCloud will be named in vCenter as 'one-<vid>-<VM Name>', where <vid> is the id of the VM and VM Name is the name given to the VM in vOneCloud. This value can be changed using a special attribute set in the vCenter cluster representation in vOneCloud, ie, the vOneCloud host. This attribute is called "VM_PREFIX", and will evaluate one variable, $i, to the id of the VM. A value of "one-$i-" in that parameter would have the same behaviour as the default. This attribute can be set in the "Attributes" section of the vOneCloud host, in the info panel that shows after clicking on the desire host.
+.. note:: VMs instantiated through OpenNebula will be named in vCenter as 'one-<vid>-<VM Name>', where <vid> is the id of the VM and VM Name is the name given to the VM in OpenNebula. This value can be changed using a special attribute set in the vCenter cluster representation, the OpenNebula hostt. This attribute is called "VM_PREFIX", and will evaluate one variable, $i, to the id of the VM. This attribute can be set in the "Attributes" section of the OpenNebula host.
 
-.. note:: After a VM Template is cloned and booted into a vCenter Cluster it can access VMware advanced features and it can be managed through the OpenNebula provisioning portal -to control the life-cycle, add/remove NICs, make snapshots- or through vCenter (e.g. to move the VM to another datastore or migrate it to another ESX). OpenNebula will poll vCenter to detect these changes and update its internal representation accordingly.
+.. note:: After a VM Template is cloned and booted into a vCenter Cluster it can access VMware advanced features and it can be managed through the OpenNebula provisioning portal -to control the life-cycle, add/remove NICs, make snapshots- or through vCenter (e.g. to move the VM to another datastore or migrate it to another ESX).
 
-.. note:: The name assigned to the template in OpenNebula contains the template’s name, vCenter cluster’s name and a 12 character hash. That name is used to prevent conflicts when several templates with the same name are found in a vCenter instance. Once the vCenter template has been imported, that OpenNebula’s name can be changed to a more human-friendly name.
+.. note:: The name assigned to the VM Template in OpenNebula contains the vCenter VM Template’s name, vCenter cluster’s name and a random string hash. That name is used to prevent conflicts when several templates with the same name are found in a vCenter instance. Once the vCenter template has been imported, the name can be changed to a more human-friendly name.
 
 .. _import_networks:
 
@@ -156,7 +155,7 @@ Virtual Networks can be further refined with the inclusion of different :onedoc:
 
 - IPv4: Need to define at least starting IP address. MAC address can be defined as well
 - IPv6: Can optionally define starting MAC address, GLOBAL PREFIX and ULA PREFIX
-- Ethernet: Does not manage IP addresses but rather MAC addresses. If a starting MAC is not provided, vOneCloud will generate one.
+- Ethernet: Does not manage IP addresses but rather MAC addresses. If a starting MAC is not provided, OpenNebula will generate one.
 
 It is possible to limit the bandwidth of any VM NIC associated to a particular virtual network by using the Inbound/Outbound Traffic QoS values as seen in the next image.
 
@@ -165,15 +164,8 @@ It is possible to limit the bandwidth of any VM NIC associated to a particular v
 
 .. _cluster_prefix:
 
-.. note:: vOneCloud does not support spaces in VMDKs paths nor names.
+.. note:: OpenNebula does not support spaces in VMDKs paths nor names.
 
-.. note:: Resources imported from vCenter will have their names appended with a the name of the cluster where this resources belong in vCenter, to ease their identification within vOneCloud.
+.. note:: Resources imported from vCenter will have their names appended with a the name of the cluster where this resources belong in vCenter, to ease their identification within OpenNebula.
 
-.. note:: vCenter VM Templates, Networks, Distributed vSwitches, Datastores, VMDKs and Virtual Machines can be imported regardless of their position inside VM Folders, since vOneCloud will search recursively for them.
-
-Step 4. Instantiate a VM Template
----------------------------------
-
-Everything is ready! Now vOneCloud is prepared to manage Virtual Machines. In Sunstone, go to ``Virtual Resources --> Templates``, select one of the templates imported in **Step 3** and click on Instantiate. Now you will be able to control the life cycle of the VM.
-
-More information on available operations over VMs :onedoc:`here <operation/vm_management/vm_instances.html>`.
+.. note:: vCenter VM Templates, Networks, Distributed vSwitches, Datastores, VMDKs and Virtual Machines can be imported regardless of their position inside VM Folders, since OpenNebula will search recursively for them.
