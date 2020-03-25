@@ -55,6 +55,24 @@ Status READY means that app is already downloaded.
 
 .. image:: /images/marketplace_template_update_disk.png
 
+- Also you can customize network or context to easily connect by ssh when the instance was deployed.
+
+Select the desired network.
+
+.. image:: /images/marketplace_template_update_net.png
+
+In this example our selected network has an AR associated.
+
+.. image:: /images/marketplace_vnet_ar.png
+
+Modify context parameter to add a SSH public key. Marking as check "Add SSH contextualization"
+
+Mark as check "Add Network contextualization" to allow OpenNebula can modify IP Address on the VM. 
+
+.. image:: /images/marketplace_template_update_context.png
+
+.. note:: Refer to OpenNebula doc "vCenter Contextualization and Customization" for more details about contextualization.
+
 - Now you can follow the steps provice in the previous verification :ref:`Run a Virtual Machine <run_vm>` to instantiate a new VM from this template
 
 - Alternatively you can go to ``Templates --> VMs`` , select the template and click on "Instantiate"
@@ -64,4 +82,12 @@ Status READY means that app is already downloaded.
 - Choose a VM name or leave empty if you want OpenNebula rename the VM, and change the parameters you need to modify as cpu, ram.. and click on "Instantiate"
 
 .. image:: /images/marketplace_template_instantiating.png
+
+Once the instantiating is completed, check the IP in ``Instances --> VMs``
+
+.. image:: /images/marketplace_instance_ip.png
+
+And try to connect by SSH to the VM
+
+.. image:: /images/marketplace_instance_ssh.png
 
