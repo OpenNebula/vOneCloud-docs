@@ -3,3 +3,65 @@
 ================
 Marketplace Apps
 ================
+
+Another verification is importing a marketplace app into your vcenter server.
+When downloading a marketplace app, a template in OpenNebula is created, but int the vCenter scenario, this template is not valid because there is no vCenter template linked to this.
+
+The overall process consists on import into a datastore a marketplace app, and keep its image disk to attach it into a template.
+
+Following the next steps, you will be able to import a marketplace app into vCenter.
+
+- Import a vcenter template. You can follow :ref:`Import a template <import_vm_templates>`. You can create a new empty template, without disks, in vCenter or use an existing vCenter template.
+
+- Remove disks from the imported template. Skip this step if you imported an empty template.
+
+At this point we have a vCenter template ready to attach a marketplace image.
+
+- Access to marketplace and search for the desired app, in this example, we're searching a Centos 7 app. Click on the "Import into datastore" icon.
+
+.. image:: /images/marketplace_apps.png
+
+.. note:: Remember that you can use also KVM apps. KVM apps are in qcow2 format and are converter into vmdk when downloading to a vCenter datastore.
+
+- Select the target datastore, where the image will be saved, change the name if needed and click "Download".
+
+.. image:: /images/marketplace_download.png
+
+- Go to ``Storage --> Images`` and wait until Status change from LOCKED to READY. It may take some time depending on the app size.
+
+Status LOCKED means that app is still in the downloading process.
+
+.. image:: /images/marketplace_downloading.png
+
+Status READY means that app is already downloaded.
+
+.. image:: /images/marketplace_image_ready.png
+
+- Remove the unnecessary template creating at downloading time. This template is not valid for a vCenter environment.
+
+.. image:: /images/marketplace_template_trash.png
+
+- Click on "Delete"
+
+.. image:: /images/marketplace_template_delete.png
+
+.. warning:: Do no click on "Delete all images". If you remove all images you'll remove the app image that is needed to attach to the template.
+
+- Go to ``Templates --> VMs`` , select your imported template and click on "Update"
+
+.. image:: /images/marketplace_template_update.png
+
+- Click on the "Storage" tab and change the disk image to the downloading app image, in our example, CentOS 7 image. Click on update to apply the changes.
+
+.. image:: /images/marketplace_template_update_disk.png
+
+- Now you can follow the steps provice in the previous verification :ref:`Run a Virtual Machine <run_vm>` to instantiate a new VM from this template
+
+- Alternatively you can go to ``Templates --> VMs`` , select the template and click on "Instantiate"
+
+.. image:: /images/marketplace_template_instantiate.png
+
+- Choose a VM name or leave empty if you want OpenNebula rename the VM, and change the parameters you need to modify as cpu, ram.. and click on "Instantiate"
+
+.. image:: /images/marketplace_template_instantiating.png
+
