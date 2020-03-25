@@ -19,13 +19,28 @@ Log in into Sunstone as **oneadmin**, as explained in :ref:`the previous section
 The *oneadmin* account has full control of all the physical and virtual resources.
 
 .. _acquire_resources:
-
+ 
 Step 2. Acquire vCenter Resources
 ---------------------------------
 
 To import new vCenter clusters to be managed in OpenNebula, proceed in Sunstone to the ``Infrastructure --> Hosts`` tab and click on the "+" green icon.
 
-.. image:: /images/import_cluster.png
+.. image:: /images/import_host.png
+    :align: center
+
+Select "VMWare vCenter" into "Type" selector and introduce the hostname, user and password and click on "Get Cluster"
+
+.. image:: /images/import_host_getClusters.png
+    :align: center
+
+Select the vCenter cluster to import as OpenNebula Host and click on "Import".
+
+.. image:: /images/import_host_import.png
+    :align: center
+
+After importing you should see a message indicating that the host was successfully imported.
+
+.. image:: /images/import_host_import_success.png
     :align: center
 
 .. warning:: OpenNebula does not support spaces in vCenter cluster names.
@@ -55,30 +70,10 @@ Now it's time to check that the vCenter import has been successful. In ``Infrast
 Step 3. Import / Reacquire vCenter Resources
 ---------------------------------------------------------------------------------
 
-**Existing VMs**
-
-If the vCenter infrastructure has running or powered off **Virtual Machines**, OpenNebula can import and subsequently manage them. To import vCenter VMs, proceed to the **Wilds** tab in the Host info tab representing the vCenter cluster where the VMs are running in, select the VMs to be imported and click on the import button.
-
-.. image:: /images/import_wild_vms.png
-    :width: 90%
-    :align: center
-
-.. _operations_on_running_vms:
-
-After the VMs are in the Running state, you can operate on their life-cycle, assign them to particular users, attach or detach network interfaces, create snapshots, do capacity resizing (change CPU and MEMORY after powering the VMs off), etc.
-
-All the funcionality that OpenNebula supports for regular VMs is present for imported VMs with some exceptions. The following operations *cannot* be performed on an imported VM:
-
-- Recover --recreate
-- Undeploy (and Undeploy --hard)
-- Stop
-
-
-Once a Wild VM is imported, OpenNebula will reconfigure the vCenter VM so VNC connections can be established once the VM is monitored.
-
 .. _import_images_and_ds:
 
-**Datastores and Images**
+Datastores and Images
+^^^^^^^^^^^^^^^^^^^^^
 
 Datastores and VMDK images can be imported / reacquired from the ``Storage --> Datastores`` and ``Storage --> Images`` respectively. Since datastores are going to be used to hold the images from VM Templates, all datastore **must** be imported before VM Template import.
 
@@ -88,6 +83,28 @@ vCenter datastores hosts VMDK files and other file types so VMs and templates ca
 - System Datastore. Holds disk for running virtual machines, copied or cloned from the Images Datastore.
 
 For example, if we have a vcenter datastore called ''nfs'', when we import the vCenter datastore into OpenNebula, two OpenNebula datastores will be created as an Images datastore and as a System datastore pointing to the same vCenter datastore.
+
+Here are the steps to import a datastore:
+
+First go to ``Storage --> Datastores`` , click on the "+" green icon and click on "Import".
+
+.. image:: /images/import_datastore.png
+    :align: center
+
+Select the Host (vCenter cluster) an"GetDatastores".
+
+.. image:: /images/import_datastore_getDatastores.png
+    :align: center
+
+Select the datastore to import and click on "Import"
+
+.. image:: /images/import_datastore_import.png
+    :align: center
+
+After importing you should see a message indicating that the datastore was successfully imported.
+
+.. image:: /images/import_datastore_import_success.png
+    :align: center
 
 .. note:: If the vCenter instance features a read only datastore, please be aware that you should disable the SYSTEM representation of the datastore after importing it to avoid OpenNebula trying to deploy VMs in it.
 
@@ -111,17 +128,69 @@ Datastore will be monitored for free space and availability. Images can be used 
 - disk attach/detach on VMs
 - enrich VM Templates to add additional disks or CDROMs
 
+.. _import_networks:
+
+Networks
+^^^^^^^^
+
+Similarly, Port Groups, Distributed Port Groups and NSX-T / NSx-V logical switches, can also be imported / reacquired from using a similar ``Import`` button in ``Network --> Virtual Networks``.
+
+.. image:: /images/import_vnet.png
+    :align: center
+
+Select the Host and click on "Get Networks".
+
+.. image:: /images/import_vnet_getNetworks.png
+    :align: center
+
+Select the network to import and click on "Import".
+
+.. image:: /images/import_vnet_import.png
+    :align: center
+
+After importing you should see a message indicating that the network was successfully imported.
+
+.. image:: /images/import_vnet_import_success.png
+    :align: center
+
+Virtual Networks can be further refined with the inclusion of different :onedoc:`Address Ranges <operation/network_management/manage_vnets.html#address-space>`. This refinement can be done at import time, defining the size of the network one of the following supported Address Ranges:
+
+- IPv4: Need to define at least starting IP address. MAC address can be defined as well
+- IPv6: Can optionally define starting MAC address, GLOBAL PREFIX and ULA PREFIX
+- Ethernet: Does not manage IP addresses but rather MAC addresses. If a starting MAC is not provided, OpenNebula will generate one.
+
+It is possible to limit the bandwidth of any VM NIC associated to a particular virtual network by using the Inbound/Outbound Traffic QoS values as seen in the next image.
+
+.. image:: /images/limit_network_bw.png
+    :align: center
+
 .. _import_vm_templates:
 
-**VM Templates**
+VM Templates
+^^^^^^^^^^^^
 
 .. warning:: Since datastores are going to be used to hold the images from VM Templates, all datastore **must** be imported before VM Template import.
 
 In OpenNebula, Virtual Machines are deployed from VMware VM Templates that must exist previously in vCenter and must be imported into OpenNebula. There is a one-to-one relationship between each VMware VM Template and the equivalent OpenNebula VM Template. Users will then instantiate the OpenNebula VM Template and OpenNebula will create a Virtual Machine clone from the vCenter template.
 
-vCenter **VM Templates** can be imported and reacquired using the ``Import`` button in ``Virtual Resources --> Templates``. Fill in the credentials and the IP or hostname of vCenter and click on the "Get Templates" button.
+vCenter **VM Templates** can be imported and reacquired using the ``Import`` button in ``Templates --> VMs``.
 
-.. image:: /images/import_vcenter_templates.png
+.. image:: /images/import_template.png
+    :align: center
+
+Select the Host and click on "Get Templates".
+
+.. image:: /images/import_template_getTemplate.png
+    :align: center
+
+Select the template to import and click on "Import".
+
+.. image:: /images/import_template_import.png
+    :align: center
+
+After importing you should see a message indicating that the template was successfully imported.
+
+.. image:: /images/import_template_import_success.png
     :align: center
 
 .. _operations_on_templates:
@@ -137,6 +206,35 @@ Among other options available through the Sunstone web interface:
 - Capacity (MEMORY and CPU) can be modified
 - VNC capabilities can be disabled
 
+Existing VMs
+^^^^^^^^^^^^
+
+If the vCenter infrastructure has running or powered off **Virtual Machines**, OpenNebula can import and subsequently manage them. To import vCenter VMs, proceed to the **Wilds** tab in the Host info tab representing the vCenter cluster where the VMs are running in, select the VMs to be imported and click on the import button.
+
+.. image:: /images/import_wild.png
+    :align: center
+
+.. image:: /images/import_wild_import.png
+    :align: center
+
+After importing you should see a message indicating that the VM was successfully imported.
+
+.. image:: /images/import_wild_import_success.png
+    :align: center
+
+.. _operations_on_running_vms:
+
+After the VMs are in the Running state, you can operate on their life-cycle, assign them to particular users, attach or detach network interfaces, create snapshots, do capacity resizing (change CPU and MEMORY after powering the VMs off), etc.
+
+All the funcionality that OpenNebula supports for regular VMs is present for imported VMs with some exceptions. The following operations *cannot* be performed on an imported VM:
+
+- Recover --recreate
+- Undeploy (and Undeploy --hard)
+- Stop
+
+
+Once a Wild VM is imported, OpenNebula will reconfigure the vCenter VM so VNC connections can be established once the VM is monitored.
+
 .. _name_prefix_note:
 
 .. note:: VMs instantiated through OpenNebula will be named in vCenter as 'one-<vid>-<VM Name>', where <vid> is the id of the VM and VM Name is the name given to the VM in OpenNebula. This value can be changed using a special attribute set in the vCenter cluster representation, the OpenNebula hostt. This attribute is called "VM_PREFIX", and will evaluate one variable, $i, to the id of the VM. This attribute can be set in the "Attributes" section of the OpenNebula host.
@@ -144,23 +242,6 @@ Among other options available through the Sunstone web interface:
 .. note:: After a VM Template is cloned and booted into a vCenter Cluster it can access VMware advanced features and it can be managed through the OpenNebula provisioning portal -to control the life-cycle, add/remove NICs, make snapshots- or through vCenter (e.g. to move the VM to another datastore or migrate it to another ESX).
 
 .. note:: The name assigned to the VM Template in OpenNebula contains the vCenter VM Template’s name, vCenter cluster’s name and a random string hash. That name is used to prevent conflicts when several templates with the same name are found in a vCenter instance. Once the vCenter template has been imported, the name can be changed to a more human-friendly name.
-
-.. _import_networks:
-
-**Networks**
-
-Similarly, **Networks** and Distributed vSwitches can also be imported / reacquired from using a similar ``Import`` button in ``Infrastructure --> Virtual Networks``.
-
-Virtual Networks can be further refined with the inclusion of different :onedoc:`Address Ranges <operation/network_management/manage_vnets.html#address-space>`. This refinement can be done at import time, defining the size of the network one of the following supported Address Ranges:
-
-- IPv4: Need to define at least starting IP address. MAC address can be defined as well
-- IPv6: Can optionally define starting MAC address, GLOBAL PREFIX and ULA PREFIX
-- Ethernet: Does not manage IP addresses but rather MAC addresses. If a starting MAC is not provided, OpenNebula will generate one.
-
-It is possible to limit the bandwidth of any VM NIC associated to a particular virtual network by using the Inbound/Outbound Traffic QoS values as seen in the next image.
-
-.. image:: /images/limit_network_bw.png
-    :align: center
 
 .. _cluster_prefix:
 
