@@ -11,7 +11,7 @@ This diagram reflects the relationship between the components that compose or in
 vCenter Infrastructure
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-- vOneCloud is an appliance that is executed on vCenter. vOneCloud then leverages this previously set up infrastructure composed of vCenter and ESX nodes.
+- vOneCloud is an appliance that is executed on vCenter. vOneCloud leverages this previously set up infrastructure composed of vCenter and ESX nodes.
 
 OpenNebula
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^

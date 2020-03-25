@@ -4,17 +4,13 @@
 Download and Deploy
 ================================================================================
 
-Download links:
+vOneCloud can be downloaded `here <http://downloads.vonecloud.com>`__.
 
-- `Download <http://downloads.vonecloud.com>`__
+The OVA can be imported in an existing vCenter infrastructure. It is based on `CentOS 8 <http://www.centos.org/>`__ and has VMware tools enabled.
 
-You can import this OVA appliance to your vCenter infrastructure. It is based on
-`CentOS 7 <http://www.centos.org/>`__ and has the VMware tools enabled.
+The appliance requirements are kept to a strict minimum so it can be executed in any vCenter installation. However, before deploying it, please read the :ref:`system requirements <requirements>`.
 
-The appliance requirements are kept to a strict minimum so it can be executed in
-any vCenter installation. However, before deploying it, please read the :ref:`system requirements <requirements>`.
-
-Follow the next steps to deploy a fully functional OpenNebula cloud:
+Follow the next steps to deploy a fully functional OpenNebula cloud.
 
 Step 1. Deploying the OVA
 --------------------------------------------------------------------------------
