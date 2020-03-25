@@ -28,7 +28,20 @@ To import new vCenter clusters to be managed in OpenNebula, proceed in Sunstone 
 .. image:: /images/import_host.png
     :align: center
 
-Select "VMWare vCenter" into "Type" selector and introduce the hostname, user and password and click on "Get Cluster"
+
+
+
+.. warning:: OpenNebula does not support spaces in vCenter cluster names.
+
+In the dialog that pops up, select vCenter as Type in the drop-down. You now need to fill in the data according to the following table:
+
++--------------+------------------------------------------------------+
+| **Hostname** | vCenter hostname (FQDN) or IP address                |
++--------------+------------------------------------------------------+
+| **User**     | Username of a vCenter user with administrator rights |
++--------------+------------------------------------------------------+
+| **Password** | Password for the above user                          |
++--------------+------------------------------------------------------+
 
 .. image:: /images/import_host_getClusters.png
     :align: center
@@ -43,28 +56,13 @@ After importing you should see a message indicating that the host was successful
 .. image:: /images/import_host_import_success.png
     :align: center
 
-.. warning:: OpenNebula does not support spaces in vCenter cluster names.
-
-In the dialog that pops up, select vCenter as Type in the drop-down. You now need to fill in the data according to the following table:
-
-+--------------+------------------------------------------------------+
-| **Hostname** | vCenter hostname (FQDN) or IP address                |
-+--------------+------------------------------------------------------+
-| **User**     | Username of a vCenter user with administrator rights |
-+--------------+------------------------------------------------------+
-| **Password** | Password for the above user                          |
-+--------------+------------------------------------------------------+
-
-.. image:: /images/vcenter_create.png
-    :align: center
-
 .. _import_running_vms:
 
 Now it's time to check that the vCenter import has been successful. In ``Infrastructure --> Hosts`` check if vCenter cluster has been imported, and if all the ESX hosts are available in the ESX tab.
 
 .. note:: Take into account that one vCenter cluster (with all its ESX hosts) will be represented as one OpenNebula host. Is not possible to import individual ESX hosts, they need to be grouped in vCenter clusters.
 
-.. image:: /images/import_vcenter_esx_view.png
+.. image:: /images/import_host_hosts.png
     :align: center
 
 Step 3. Import / Reacquire vCenter Resources
