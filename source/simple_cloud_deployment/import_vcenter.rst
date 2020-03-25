@@ -19,7 +19,7 @@ Log in into Sunstone as **oneadmin**, as explained in :ref:`the previous section
 The *oneadmin* account has full control of all the physical and virtual resources.
 
 .. _acquire_resources:
- 
+
 Step 2. Acquire vCenter Resources
 ---------------------------------
 
@@ -27,9 +27,6 @@ To import new vCenter clusters to be managed in OpenNebula, proceed in Sunstone 
 
 .. image:: /images/import_host.png
     :align: center
-
-
-
 
 .. warning:: OpenNebula does not support spaces in vCenter cluster names.
 
@@ -89,7 +86,7 @@ First go to ``Storage --> Datastores`` , click on the "+" green icon and click o
 .. image:: /images/import_datastore.png
     :align: center
 
-Select the Host (vCenter cluster) an"GetDatastores".
+Select the Host (vCenter cluster) and click on "Get Datastores".
 
 .. image:: /images/import_datastore_getDatastores.png
     :align: center
@@ -131,7 +128,7 @@ Datastore will be monitored for free space and availability. Images can be used 
 Networks
 ^^^^^^^^
 
-Similarly, Port Groups, Distributed Port Groups and NSX-T / NSx-V logical switches, can also be imported / reacquired from using a similar ``Import`` button in ``Network --> Virtual Networks``.
+Similarly, Port Groups, Distributed Port Groups and NSX-T / NSX-V logical switches, can also be imported / reacquired using a similar ``Import`` button in ``Network --> Virtual Networks``.
 
 .. image:: /images/import_vnet.png
     :align: center
@@ -204,8 +201,8 @@ Among other options available through the Sunstone web interface:
 - Capacity (MEMORY and CPU) can be modified
 - VNC capabilities can be disabled
 
-Existing VMs
-^^^^^^^^^^^^
+Existing VMs (Wild VMs)
+^^^^^^^^^^^^^^^^^^^^^^^
 
 If the vCenter infrastructure has running or powered off **Virtual Machines**, OpenNebula can import and subsequently manage them. To import vCenter VMs, proceed to the **Wilds** tab in the Host info tab representing the vCenter cluster where the VMs are running in, select the VMs to be imported and click on the import button.
 
@@ -224,12 +221,11 @@ After importing you should see a message indicating that the VM was successfully
 
 After the VMs are in the Running state, you can operate on their life-cycle, assign them to particular users, attach or detach network interfaces, create snapshots, do capacity resizing (change CPU and MEMORY after powering the VMs off), etc.
 
-All the funcionality that OpenNebula supports for regular VMs is present for imported VMs with some exceptions. The following operations *cannot* be performed on an imported VM:
+All the functionality that OpenNebula supports for regular VMs is present for imported VMs with some exceptions. The following operations *cannot* be performed on an imported VM:
 
 - Recover --recreate
 - Undeploy (and Undeploy --hard)
 - Stop
-
 
 Once a Wild VM is imported, OpenNebula will reconfigure the vCenter VM so VNC connections can be established once the VM is monitored.
 

@@ -15,12 +15,12 @@ Follow the next steps to deploy a fully functional OpenNebula cloud.
 Step 1. Deploying the OVA
 --------------------------------------------------------------------------------
 
-Login to your vCenter installation and select the appropriate datacenter and cluster, where you want to deploy the appliance. Select the ``Deploy OVF Template``.
+Login to your vCenter installation and select the appropriate datacenter and cluster where you want to deploy the appliance. Select ``Deploy OVF Template``.
 
 .. image:: /images/vOneCloud-download-deploy-001.png
     :align: center
 
-You have the option now to input the URL of the appliance (you can find it at the top of this page), or if you have previously downloaded it, you can simply browse to the download path as such:
+You have the option now to browse to the download path of the OVA that can be downloaded from the link above:
 
 .. image:: /images/vOneCloud-download-deploy-001a.png
     :align: center
@@ -64,7 +64,7 @@ In order to achieve this, please right click on the vOneCloud VM, and select Edi
 .. image:: /images/edit-settings.png
     :align: center
 
-If you want for instance to add a new network interface, select Network from the dropdown in New device (at the botton of the dialog):
+If you want for instance to add a new network interface, select Network from the drop-down in New device (at the bottom of the dialog):
 
 .. image:: /images/add-nic.png
     :align: center
@@ -89,7 +89,7 @@ If you are presented instead with the following:
 .. image:: /images/control-console-wrong.png
     :align: center
 
-You are being presented with the wrong tty. You will need to press CTRL+ALT+F1 to access the Control Console.
+You are being presented with the wrong tty. You will need to press Ctrl+Alt+F1 to access the Control Console.
 
 In this wizard you need to **configure the network**. If you are using DHCP you can simply skip to the next item.
 
@@ -100,9 +100,9 @@ If you are using a static network configuration, answer yes and you will need to
 - Change IPv4 CONFIGURATION from <Automatic> to <Manual> and select "Show"
 - Input the desired IP address/24 in Addresses
 - Input Gateway and DNS Servers
-- Select OK and then quit the dialog.
+- Select OK and then quit the dialog
 
-An example of static network configuration on the available network interface (see :ref:`Editing the vOneCloud Appliance <edit_vonecloud_appliance>` for information on how to add new interfaces to vOneCloud) on the 10.0.1.x class C network, with a gateway in 10.0.1.1 and using 8.8.8.8 as the DNS server:
+An example of static network configuration on the available network interface on the 10.0.1.x class C network, with a gateway in 10.0.1.1 and using 8.8.8.8 as the DNS server:
 
 .. image:: /images/network-conf-example.png
     :align: center
@@ -114,20 +114,20 @@ The next item is the **oneadmin account password**. You will need this to login 
 Step 3. Enjoy the Out-of-the-Box Features
 --------------------------------------------------------------------------------
 
-After opening the Sunstone interface (`http://<appliance_ip>` with oneadmin credentials) you are now ready to enjoy the out-of-the-box features of OpenNebula!
+After opening the Sunstone interface (``http://<appliance_ip>`` with oneadmin credentials) you are now ready to enjoy the out-of-the-box features of OpenNebula!
 
 .. image:: /images/sunstone-login.png
 
 .. image:: /images/sunstone-main.png
 
-Move on to the :ref:`next section <import_vcenter>` to start using your cloud by importing your vCenter infrastructure.
+Move on to the :ref:`next section <import_vcenter>` to start using your cloud by importing your existing vCenter infrastructure resources.
 
 .. _advanced_login:
 
 Login to the Appliance
 --------------------------------------------------------------------------------
 
-To access the OpenNebula command line interface, ssh to vOneCloud using the `root` account and password. In OS X and Linux environments, simply use `ssh` to log into the root account of vOneCloud's IP. For Windows environments you can use software like `PuTTY <http://www.chiark.greenend.org.uk/~sgtatham/putty/download.html>`__ or even SFTP clients like `WinSCP <https://winscp.net/>`__.
+To access the OpenNebula command line interface, ssh to vOneCloud using the `root` account and password. In OS X and Linux environments, simply use `ssh` to log into the root account of vOneCloud's IP. For Windows environments you can use software like `PuTTY <http://www.chiark.greenend.org.uk/~sgtatham/putty/download.html>`__ or even SFTzgP clients like `WinSCP <https://winscp.net/>`__.
 
 Alternatively,  open the vCenter console of the vOneCloud Virtual Machine appliance and change the tty (Ctrl + Alt + F2). Afterwards, log in with the `root` account and the password you used in the :ref:`initial configuration <download_and_deploy_control_console>`, and switch to the `oneadmin` user.
 

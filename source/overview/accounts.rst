@@ -13,7 +13,7 @@ vOneCloud ships with several pre-created user accounts which will be described i
 +----------+-----------------------+-------------------------+----------------------------------------------------------------------------------+
 | oneadmin | linux                 | Service user            | Used to run all OpenNebula services                                              |
 +----------+-----------------------+-------------------------+----------------------------------------------------------------------------------+
-| oneadmin | OpenNebula (Sunstone) | Cloud Administrator     | Cloud Administrator. Run any task in OpenNebula, including creating other users. |
+| oneadmin | OpenNebula Sunstone   | Cloud Administrator     | Cloud Administrator. Run any task in OpenNebula, including creating other users. |
 +----------+-----------------------+-------------------------+----------------------------------------------------------------------------------+
 
 `root` linux account
@@ -21,12 +21,10 @@ vOneCloud ships with several pre-created user accounts which will be described i
 
 vOneCloud runs on top of Linux (in particular `CentOS 8 <http://www.centos.org/>`__), therefore the administrators of the vOneCloud appliance should be able to have console access to the appliance. The appliance comes with a `root` account with an undefined password. This password **must** be set during the first boot of the appliance. The :ref:`vOneCloud Control Console <control_console>` will prompt the administrator for a new root password.
 
-
 `oneadmin` linux account
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 The main use of this account is to run all OpenNebula services.
-
 
 `oneadmin` OpenNebula (Sunstone) account
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
