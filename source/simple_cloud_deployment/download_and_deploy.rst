@@ -69,7 +69,7 @@ If you want for instance to add a new network interface, select Network from the
 .. image:: /images/add-nic.png
     :align: center
 
-Now you can power on the Virtual Machine (to edit settings before, :ref:`read this section <edit_vonecloud_appliance>`):
+Now you can power on the Virtual Machine.
 
 .. image:: /images/vOneCloud-download-deploy-008.png
     :align: center
@@ -127,8 +127,6 @@ Move on to the :ref:`next section <import_vcenter>` to start using your cloud by
 Login to the Appliance
 --------------------------------------------------------------------------------
 
-To access the OpenNebula command line interface, ssh to vOneCloud using the `root` account and password. In OS X and Linux environments, simply use `ssh` to log into the root account of vOneCloud's IP. For Windows environments you can use software like `PuTTY <http://www.chiark.greenend.org.uk/~sgtatham/putty/download.html>`__ or even SFTzgP clients like `WinSCP <https://winscp.net/>`__.
+To access the OpenNebula command line interface, ssh to vOneCloud using the `root` account and password. In OS X and Linux environments, simply use `ssh` to log into the root account of vOneCloud's IP. For Windows environments you can use software like `PuTTY <http://www.chiark.greenend.org.uk/~sgtatham/putty/download.html>`__ or even SFTP clients like `WinSCP <https://winscp.net/>`__.
 
 Alternatively,  open the vCenter console of the vOneCloud Virtual Machine appliance and change the tty (Ctrl + Alt + F2). Afterwards, log in with the `root` account and the password you used in the :ref:`initial configuration <download_and_deploy_control_console>`, and switch to the `oneadmin` user.
-
-.. _edit_vonecloud_appliance:

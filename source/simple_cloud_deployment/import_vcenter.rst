@@ -8,7 +8,6 @@ Importing a vCenter infrastructure into OpenNebula can be carried out easily thr
 
 You will need the IP or hostname of the vCenter server, as well as a user declared as Administrator in vCenter. More information in the :onedoc:`main OpenNebula documentation <deployment/node_installation/vcenter_node_installation.html#permissions-requirement>`.
 
-
 .. note:: For security reasons, you may define different users to access different ESX Clusters. A different user can be defined in OpenNebula per ESX cluster, which is encapsulated in OpenNebula as an OpenNebula host.
 
 Step 1. Sunstone login
@@ -191,7 +190,7 @@ After importing you should see a message indicating that the template was succes
 .. _operations_on_templates:
 .. _vmtemplates_and_networks:
 
-When a VMware VM Template is imported, OpenNebula will detect any virtual disk and network interface within the template. For each virtual disk, OpenNebula will create an image representing each disk discovered in the template. In the same way, OpenNebula will create a network representation for each standard or distributed port group associated to virtual network interfaces found in the template. The imported OpenNebula VM templates can be modified selecting the VM Template in ``Virtual Resources --> Templates`` and clicking on the Update button, so the resulting VMs are adjusted to user needs.
+When a VMware VM Template is imported, OpenNebula will detect any virtual disk and network interface within the template. For each virtual disk, OpenNebula will create an image representing each disk discovered in the template. In the same way, OpenNebula will create a network representation for each standard or distributed port group associated to virtual network interfaces found in the template. The imported OpenNebula VM templates can be modified selecting the VM Template in ``Virtual Resources --> Templates`` and clicking on the Update button.
 
 Among other options available through the Sunstone web interface:
 
@@ -231,11 +230,11 @@ Once a Wild VM is imported, OpenNebula will reconfigure the vCenter VM so VNC co
 
 .. _name_prefix_note:
 
-.. note:: VMs instantiated through OpenNebula will be named in vCenter as 'one-<vid>-<VM Name>', where <vid> is the id of the VM and VM Name is the name given to the VM in OpenNebula. This value can be changed using a special attribute set in the vCenter cluster representation, the OpenNebula hostt. This attribute is called "VM_PREFIX", and will evaluate one variable, $i, to the id of the VM. This attribute can be set in the "Attributes" section of the OpenNebula host.
+.. note:: VMs instantiated through OpenNebula will be named in vCenter as 'one-<vid>-<VM Name>', where <vid> is the id of the VM and VM Name is the name given to the VM in OpenNebula. This value can be changed using a special attribute set in the vCenter cluster representation, the OpenNebula host. This attribute is called "VM_PREFIX", and will evaluate one variable, $i, to the id of the VM. This attribute can be set in the "Attributes" section of the OpenNebula host.
 
-.. note:: After a VM Template is cloned and booted into a vCenter Cluster it can access VMware advanced features and it can be managed through the OpenNebula provisioning portal -to control the life-cycle, add/remove NICs, make snapshots- or through vCenter (e.g. to move the VM to another datastore or migrate it to another ESX).
+.. note:: After a VM Template is cloned and booted into a vCenter Cluster it can access VMware advanced features and it can be managed through the OpenNebula provisioning portal.
 
-.. note:: The name assigned to the VM Template in OpenNebula contains the vCenter VM Template’s name, vCenter cluster’s name and a random string hash. That name is used to prevent conflicts when several templates with the same name are found in a vCenter instance. Once the vCenter template has been imported, the name can be changed to a more human-friendly name.
+.. note:: The name assigned to the VM Template in OpenNebula contains the vCenter VM Template’s name, vCenter cluster’s name and a random string hash. This name can be changed after the VM Template is imported.
 
 .. _cluster_prefix:
 
@@ -243,4 +242,4 @@ Once a Wild VM is imported, OpenNebula will reconfigure the vCenter VM so VNC co
 
 .. note:: Resources imported from vCenter will have their names appended with a the name of the cluster where this resources belong in vCenter, to ease their identification within OpenNebula.
 
-.. note:: vCenter VM Templates, Networks, Distributed vSwitches, Datastores, VMDKs and Virtual Machines can be imported regardless of their position inside VM Folders, since OpenNebula will search recursively for them.
+.. note:: vCenter VM Templates, Networks, Distributed vSwitches, Datastores, VMDKs and Virtual Machines can be imported regardless of their position inside VM Folders.

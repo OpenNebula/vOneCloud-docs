@@ -11,18 +11,17 @@ In the left tab, click on ``Instances --> VMs`` to get a (currently empty) list 
 .. image:: /images/run_vm_add.png
     :align: center
 
-Select the imported template, in this example here is a template called: "linuxTemplate". You can add/modify/remove network interfaces, from the template, before instantiate in the "Network" section below.
+Select the imported VM Template, in this example here is a template called: "linuxTemplate". You can add/modify/remove network interfaces, from the template, before instantiate in the "Network" section below.
 
 Click on the Create button to instantiate the virtual machine.
 
 .. image:: /images/run_vm_create.png
     :align: center
 
-When we go back to the list of virtual machines in ``Instances --> VMs``, we can see our new machine. If the virtual machine is still not in RUNNING, click the button with refresh icon to reload the data.
+Going back to the list of virtual machines in ``Instances --> VMs``, we can see our new machine. If the virtual machine is still not in RUNNING, click the button with refresh icon to reload the data.
 
 .. image:: /images/run_vm_running.png
 
-When the virtual machine is running, the "display" icon allows to open a graphical console. Login with the user and password configured in your template.
+When the virtual machine is running, the "display" icon allows to open a graphical console.
 
 .. image:: /images/run_vm_vnc.png
-

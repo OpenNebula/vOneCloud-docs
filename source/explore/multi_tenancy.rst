@@ -10,7 +10,7 @@ Multi Tenancy
 
 OpenNebula offers a powerful mechanism for managing, grouping and assigning roles to groups of users, ensuring they use of a slice of the cloud in a fully automated manner. Permissions and Access Control List mechanisms ensures the ability to allow or forbid access to any resource controlled by OpenNebula, being physical or virtual.
 
-OpenNebula keeps also a record of the comsumption of these resources as well as monitoring their state periodically.
+OpenNebula keeps also a record of the consumption of these resources as well as monitoring their state periodically.
 
 User & Roles
 ------------
@@ -41,7 +41,7 @@ Group & VDC Management
 
 A **group** of users makes it possible to isolate users and resources. A user can see and use the shared resources from other users. The **group** is an authorization boundary for the users, but you can also partition your cloud infrastructure and define what resources are available to each group using Virtual Data Centers (VDC).
 
-A VDC defines an assignment of one or several groups to a pool of physical resources. This pool of physical resources consists of resources from one or several clusters, which are logical groups of hosts and virtual networks. VDCs are a great way to partition your cloud into smaller clouds, and asign them to groups with their administrators and users, completely isolated from other groups.
+A VDC defines an assignment of one or several groups to a pool of physical resources. This pool of physical resources consists of resources from one or several clusters, which are logical groups of hosts and virtual networks. VDCs are a great way to partition your cloud into smaller clouds, and assign them to groups with their administrators and users, completely isolated from other groups.
 
 .. image:: /images/sunstone_group_list.png
     :align: center
@@ -84,7 +84,7 @@ Quota limits can be set for:
 
 Tracking the usage on:
 
-- **Compute**: Limit the overall memory, cpu or VM instances
+- **Compute**: Limit the overall memory, CPU or VM instances
 
 Quotas can be updated either from the vCenter View or from the Group Admin View.
 
@@ -96,11 +96,11 @@ Refer to :onedoc:`this guide <operation/users_groups_management/quota_auth.html>
 Showback
 --------
 
-OpenNebula ships with functionality to report resource usage cost. Showback reports are genereted daily (at midnight)using the information retrieved from OpenNebula.
+OpenNebula ships with functionality to report resource usage cost. Showback reports are generated daily (at midnight)using the information retrieved from OpenNebula.
 
 **Set the VM Cost**
 
-Each VM Template can optionally define a cost. The cost is defined as cost per cpu per hour, and cost per memory MB per hour. The cost units are abstract and their equivalent to monetary or other cost metrics have to be defined in each deployment.
+Each VM Template can optionally define a cost. The cost is defined as cost per CPU per hour, and cost per memory MB per hour. The cost units are abstract and their equivalent to monetary or other cost metrics have to be defined in each deployment.
 
 This cost is defined per VM Template by the Cloud Administrator at the time of creating or updating a VM Template, applying a cost to the total Memory and CPU of the VMs that will be spawn from this VM Template.
 
