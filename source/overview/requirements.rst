@@ -38,4 +38,4 @@ vOneCloud ships with a default of 1 vCPUs and 2 GB of RAM, and as such it has be
 - Up to 1.000 VMs in total, each vCenter managing up to 250 VMs
 - Up to 100 users, being the concurrent limit 10 users accessing the system simultaneously
 
-.. note:: For infrastructures exceeding the aforementioned limits, we recommend an installation of OpenNebula from scratch on a bare metal server, using the :onedoc:`vCenter drivers <deployment/vmware_infrastructure_setup/vcenter_driver.html>`
+.. note:: For infrastructures exceeding the aforementioned limits, we recommend an installation of OpenNebula from scratch on a bare metal server, using the :onedoc:`vCenter drivers <deployment/vmware_infrastructure_setup/vcenter_driver.html>`.
