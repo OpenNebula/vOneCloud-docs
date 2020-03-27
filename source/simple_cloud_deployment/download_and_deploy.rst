@@ -4,7 +4,7 @@
 Download and Deploy
 ================================================================================
 
-vOneCloud can be downloaded `here <http://downloads.vonecloud.com>`__.
+vOneCloud can be downloaded by completing the form `here <http://downloads.vonecloud.com>`__.
 
 The OVA can be imported in an existing vCenter infrastructure. It is based on `CentOS 8 <http://www.centos.org/>`__ and has VMware tools enabled.
 
