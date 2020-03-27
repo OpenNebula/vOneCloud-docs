@@ -11,7 +11,7 @@ vOneCloud ships with several pre-created user accounts which will be described i
 +==========+=======================+=========================+==================================================================================+
 | root     | linux                 | Appliance administrator | This user can log into the appliance (local login, no SSH).                      |
 +----------+-----------------------+-------------------------+----------------------------------------------------------------------------------+
-| oneadmin | linux                 | Service user            | Used to run all OpenNebula services                                              |
+| oneadmin | linux                 | Service user            | Used to run all OpenNebula services.                                              |
 +----------+-----------------------+-------------------------+----------------------------------------------------------------------------------+
 | oneadmin | OpenNebula Sunstone   | Cloud Administrator     | Cloud Administrator. Run any task in OpenNebula, including creating other users. |
 +----------+-----------------------+-------------------------+----------------------------------------------------------------------------------+
