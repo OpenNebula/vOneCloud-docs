@@ -8,25 +8,23 @@ This is a simplified view intended for cloud consumers that just require a porta
 
 |cloud_dash|
 
-Using the Cloud
-================================================================================
-
 Create VM
---------------------------------------------------------------------------------
+================================================================================
 
 In this scenario the cloud administrator must prepare a set of templates and images and make them available to the cloud users. These VM Templates must be ready to be instantiated, i.e. they define all the mandatory attributes. Before using them, users can optionally customize the VM capacity, resize disks, add new network interfaces and provide values required by the template.
 
 |cloud_create_vm|
 
 Access the VMs with SSH Keys
---------------------------------------------------------------------------------
+================================================================================
 
 Any user can provide his own ssh public key to be included in the VMs created through this view. Note that the template has to be configured to include it. User can provide the ssh key clicking on its name in the top right of the screen, selecting "Settings" and then "Add SSH Key".
 
 |cloud_add_ssh_key|
 
 Manage VMs
---------------------------------------------------------------------------------
+================================================================================
+
 
 The status of the VMs can be monitored from the VMs tab.
 
@@ -51,7 +49,7 @@ A user can perform the following actions from this view:
 .. _cloudview_persistent:
 
 Make the VM Changes Persistent
---------------------------------------------------------------------------------
+================================================================================
 
 Users can create a persistent private copy of the available templates. A persistent copy will preserve the changes made to the VM disks after the instance is terminated. This template is private, and will only be listed to the owner user.
 
@@ -70,14 +68,14 @@ Any of the these two actions will create a new Template with the VM name. This t
 .. note:: Avoid making a persistent copy of a persistent copy! Although there are use cases where it is justified, you will end with a long list of Templates and the disk usage quota will decrease quickly.
 
 Create Service
---------------------------------------------------------------------------------
+================================================================================
 
 In this scenario the cloud administrator must prepare a set of Service templates and make them available to the cloud users. These Service templates must be ready to be instantiated, i.e. they define all the mandatory attributes and the templates that are referenced are available for the user. Before using them, users can optionally customize the Service cardinality, define the network interfaces and provide values required by the template.
 
 |cloud_create_service|
 
 Manage Services
---------------------------------------------------------------------------------
+================================================================================
 
 The status of the Services can be monitored from the Services tab
 
@@ -95,7 +93,7 @@ A user can perform the following actions from this view:
 * Recover the Service from a fail status
 
 Usage, Accounting and Showback
---------------------------------------------------------------------------------
+================================================================================
 
 The user can check his current usage and quotas
 
@@ -108,7 +106,7 @@ Also, the user can generate accounting reports for a given range of time
 |cloud_user_showback|
 
 User Settings
--------------
+================================================================================
 
 From the user settings tab, the user can change his password, language, ssh key and view
 
