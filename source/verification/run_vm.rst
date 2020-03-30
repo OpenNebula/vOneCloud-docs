@@ -21,7 +21,9 @@ Click on the Create button to instantiate the virtual machine.
 Going back to the list of virtual machines in ``Instances --> VMs``, we can see our new machine. If the virtual machine is still not in RUNNING, click the button with refresh icon to reload the data.
 
 .. image:: /images/run_vm_running.png
+    :align: center
 
 When the virtual machine is running, the "display" icon allows to open a graphical console.
 
 .. image:: /images/run_vm_vnc.png
+    :align: center
