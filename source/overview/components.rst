@@ -7,6 +7,7 @@ Components
 This diagram reflects the relationship between the components that compose or interacts with vOneCloud.
 
 .. image:: /images/vonecloud_components.png
+    :align: center
 
 vCenter Infrastructure
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
