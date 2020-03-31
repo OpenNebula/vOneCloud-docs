@@ -16,7 +16,7 @@ vOneCloud 5.10.3 ships with the following components under the hood:
 +----------------------+----------------------------------------------------------------------+
 | **MariaDB**          | Default version shipped in CentOS 8                                  |
 +----------------------+----------------------------------------------------------------------+
-| **Apache Passenger** | Default version shipped in CentOS 8 (used to run Sunstone)           |
+| **Apache Passenger** | Default version shipped in CentOS EPEL 8 (used to run Sunstone)      |
 +----------------------+----------------------------------------------------------------------+
 
 OpenNebula
