@@ -96,7 +96,7 @@ In this wizard you need to **configure the network**. If you are using DHCP you 
 If you are using a static network configuration, answer yes and you will need to use a ncurses interface to:
 
 - "Edit a connection"
-- Select "Wired connection 1"
+- Select "System eth0"
 - Change IPv4 CONFIGURATION from <Automatic> to <Manual> and select "Show"
 - Input the desired IP address/24 in Addresses
 - Input Gateway and DNS Servers
