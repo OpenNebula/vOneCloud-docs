@@ -107,9 +107,15 @@ An example of static network configuration on the available network interface on
 .. image:: /images/network-conf-example.png
     :align: center
 
-Afterwards you need to define a **root password.** You won't be using this very often, so write it down somewhere safe. It's your master password to the appliance.
+The second action is the **oneadmin account password**. You will need this to login to OpenNebula. Check the :ref:`Accounts section <accounts>` to learn more about vOneCloud roles and users.
 
-The next item is the **oneadmin account password**. You will need this to login to OpenNebula. Check the :ref:`Accounts section <accounts>` to learn more about vOneCloud roles and users.
+.. image:: /images/set_oneadmin_password.png
+    :align: center
+
+And the in the third action, you need to define a **root password.** You won't be using this very often, so write it down somewhere safe. It's your master password to the appliance.
+
+.. image:: /images/set_root_password.png
+    :align: center
 
 Step 3. Enjoy the Out-of-the-Box Features
 --------------------------------------------------------------------------------
