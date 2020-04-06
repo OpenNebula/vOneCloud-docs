@@ -1,5 +1,5 @@
-{# layout.html #}
-{# Import the theme's layout. #}
-{% extends "!layout.html" %}
+{% extends "thelayout.html" %}
 
-{% set css_files = css_files + ['_static/opennebula.css'] %}
+{% block sidebartitle %}
+    {{ super() }}
+    {% endblock %}
