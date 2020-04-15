@@ -1,5 +1,5 @@
-vOneCloud Documentation
-=======================
+vOneCloud |version| Documentation
+=================================
 
 .. _entry_point:
 
