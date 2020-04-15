@@ -2,3 +2,4 @@
 build
 *.pyc
 .gitignore
+source/toc.html
