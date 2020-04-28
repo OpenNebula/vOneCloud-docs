@@ -1,6 +1,6 @@
-=======
-Explore
-=======
+=================
+OpenNebula Basics
+=================
 
 .. toctree::
    :maxdepth: 2
