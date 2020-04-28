@@ -9,7 +9,7 @@ vOneCloud |version| Documentation
    Overview <overview/index>
    Simple Cloud Deployment <simple_cloud_deployment/index>
    Verification <verification/index>
-   Explore <explore/index>
+   OpenNebula Basics <opennebula_basics/index>
 
 .. raw:: html
    :file: toc.html
