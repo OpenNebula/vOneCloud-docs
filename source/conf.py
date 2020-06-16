@@ -24,7 +24,7 @@ sys.path.append(os.path.abspath('ext'))
 # If extensions (or modules to document with autodoc) are in another directory,
 # add these directories to sys.path here. If the directory is relative to the
 # documentation root, use os.path.abspath to make it absolute, like shown here.
-#sys.path.insert(0, os.path.abspath('.'))
+# sys.path.insert(0, os.path.abspath('.'))
 
 # -- General configuration ------------------------------------------------
 
@@ -59,9 +59,9 @@ author = u'OpenNebula Systems'
 # built documents.
 #
 # The short X.Y version.
-version = '5.10'
+version = '5.12'
 # The full version, including alpha/beta/rc tags.
-release = '5.10.3'
+release = '5.12.0'
 
 site_conf = yaml.load(open('site_conf.yml').read())
 versions = site_conf['versions']

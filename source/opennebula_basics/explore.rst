@@ -6,7 +6,6 @@ Explore OpenNebula Functionality
 
 Now that you have and up and running OpenNebula installation thanks to the vOneCloud appliance, it is time to explore the cool features for Private Cloud that OpenNebula offers:
 
-
  - Self service portal for resource provisioning. OpenNebula's :onedoc:`Cloud View <operation/sunstone_enduser/cloud_view.html>` offers a powerful, easy to use point and click interface for cloud resource consumption and management.
 
  - OpenNebula offers a sophisticated :onedoc:`provisioning model <deployment/cloud_design/opennebula_provisioning_model.html>` enabling real world multi tenancy environments. This model is based on :onedoc:`groups of users <operation/users_groups_management/manage_groups.html>` and their belonging to :onedoc:`Virtual Datacenters <operation/users_groups_management/manage_vdcs.html>`.
@@ -19,7 +18,7 @@ Now that you have and up and running OpenNebula installation thanks to the vOneC
 
  - Access to a curated catalog of ready to use appliances, the `OpenNebula public marketplace <http://marketplace.opennebula.systems>`__, as well as the possibility to create :onedoc:`private marketplaces <advanced_components/marketplace/index.html>`.
 
- - :onedoc:`NSX support <deployment/vmware_infrastructure_setup/nsx_setup.html>` to leverage the SDN capabilities. Both NSX-t and NSX-v are supported.
+ - :onedoc:`NSX support <deployment/vmware_infrastructure_setup/nsx_setup.html>` to leverage the SDN capabilities. Both NSX-t and NSX-v are supported, and integrated with the :onedoc:`Security Group <operation/network_management/security_groups.html>` functionality.
 
  - Different :onedoc:`authentication <deployment/authentication_setup/index.html>` backends other than the native OpenNebula authentication.
 

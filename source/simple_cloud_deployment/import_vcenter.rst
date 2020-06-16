@@ -232,13 +232,9 @@ Once a Wild VM is imported, OpenNebula will reconfigure the vCenter VM so VNC co
 
 .. note:: VMs instantiated through OpenNebula will be named in vCenter as 'one-<vid>-<VM Name>', where <vid> is the id of the VM and VM Name is the name given to the VM in OpenNebula. This value can be changed using a special attribute set in the vCenter cluster representation, the OpenNebula host. This attribute is called "VM_PREFIX", and will evaluate one variable, $i, to the id of the VM. This attribute can be set in the "Attributes" section of the OpenNebula host.
 
-.. note:: After a VM Template is cloned and booted into a vCenter Cluster it can access VMware advanced features and it can be managed through the OpenNebula provisioning portal.
-
-.. note:: The name assigned to the VM Template in OpenNebula contains the vCenter VM Template’s name, vCenter cluster’s name and a random string hash. This name can be changed after the VM Template is imported.
+.. note:: OpenNebula does not support spaces in VMDKs paths nor names.
 
 .. _cluster_prefix:
-
-.. note:: OpenNebula does not support spaces in VMDKs paths nor names.
 
 .. note:: Resources imported from vCenter will have their names appended with a the name of the cluster where this resources belong in vCenter, to ease their identification within OpenNebula.
 
