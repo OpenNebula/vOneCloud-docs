@@ -12,7 +12,7 @@ vOneCloud |release| ships with the following components under the hood:
 +-----------------------+--------------------------------------------------------------------------------------------------+
 |       **CentOS**      |                                                8                                                 |
 +-----------------------+--------------------------------------------------------------------------------------------------+
-| **OpenNebula**        | |release| (:onedoc:`release notes <intro_release_notes/release_notes_community/whats_new.html>`  |
+| **OpenNebula**        | |release| (:onedoc:`release notes <intro_release_notes/release_notes_community/whats_new.html>`) |
 +-----------------------+--------------------------------------------------------------------------------------------------+
 | **MariaDB**           | Default version shipped in CentOS 8                                                              |
 +-----------------------+--------------------------------------------------------------------------------------------------+
