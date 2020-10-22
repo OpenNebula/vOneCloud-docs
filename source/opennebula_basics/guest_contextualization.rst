@@ -21,7 +21,7 @@ In Linux guests, the information can be consumed using the following command:
 .. _guest_contextualization_packages:
 
 
-The Linux packages can be downloaded from its `project page <https://github.com/OpenNebula/addon-context-linux/releases/tag/v5.0.0>`__ and the Windows one from its `project page <https://github.com/OpenNebula/addon-context-windows>`__. The steps to prepare a contextualized VM Template are:
+The Linux packages can be downloaded from its `project page <https://github.com/OpenNebula/addon-context-linux/releases>`__ and the Windows one from its `project page <https://github.com/OpenNebula/addon-context-windows/releases>`__. The steps to prepare a contextualized VM Template are:
 
 
 Step 1. Start a VM with the OS you want to Customize
