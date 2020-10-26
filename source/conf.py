@@ -61,11 +61,10 @@ author = u'OpenNebula Systems'
 # The short X.Y version.
 version = '5.12'
 # The full version, including alpha/beta/rc tags.
-release = '5.12.0.1'
+release = '5.12.0.3'
 
 site_conf = yaml.load(open('site_conf.yml').read())
 versions = site_conf['versions']
-#downloads = site_conf['downloads']
 
 extlinks = {'onedoc': ('http://docs.opennebula.io/' + version + '/%s', 'onedoc ')}
 
